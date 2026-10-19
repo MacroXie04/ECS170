@@ -15,3 +15,6 @@ env/
 # IDEs
 .idea/
 .vscode/
+
+# Instructor-provided data (keep locally; do not publish)
+data/stage_2_data/

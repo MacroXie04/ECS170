@@ -1,0 +1,113 @@
+ECS 170 Artificial Intelligence - Fall 2026<br/>Course Project: Stage 2 Report
+
+<b>Draft:</b> experimental results are complete; team details and a published Stage 2 code link remain to be supplied.
+
+Team Information
+
+[Team name to be supplied]
+
+Student name | Student ID | Email
+
+Student 1: [Name] | [Student ID] | [Email]
+
+Student 2: [Name] | [Student ID] | [Email]
+
+Student 3: [Name] | [Student ID] | [Email]
+
+Student 4: [Name] | [Student ID] | [Email]
+
+Section 1: Task Description
+
+Implement a PyTorch multilayer perceptron (MLP) for the instructor-provided multiclass dataset, following the course module framework. The target was at least 95% test accuracy; this target was not assumed during development. The locked final model achieved 98.26% on the supplied test set.
+
+Section 2: Model Description
+
+Figure 1. Selected architecture. Each hidden layer is fully connected and followed by ReLU and Dropout with probability 0.2. The output consists of raw logits. Cross-entropy combines log-softmax and negative log likelihood internally, so no output Softmax is applied during cross-entropy training. Prediction is the class with the largest logit.
+
+Section 3: Experiment Settings
+
+3.1 Dataset Description
+
+The supplied train.csv contains 60,000 labeled instances and test.csv contains 10,000. There is no header. Each row has 785 integer entries: the first is a label in 0-9 and the remaining 784 are features in 0-255. Features are float32 divided by the fixed constant 255; labels are int64. No preprocessing parameters are estimated from validation or test data.
+
+The instructor train/test boundary is preserved. A fixed stratified holdout from train.csv provides 54,000 fitting and 6,000 validation instances (split seed 42); all configurations use identical indices. No cross-validation is used. File-format auditing inspected both CSVs, but test predictions and metrics were excluded from selection.
+
+3.2 Detailed Experimental Setups
+
+All validation experiments use batch size 128, up to 25 epochs, and seed 42 for Python, NumPy, PyTorch initialization and batch shuffling. Linear layers use PyTorch default initialization (uniform weights and biases bounded by the inverse square root of fan-in). Adam uses lr=0.001; the SGD comparison uses lr=0.05 and momentum=0.9. Weight decay and Dropout are zero unless specified. Each run creates a new model and optimizer; gradients are cleared each batch.
+
+3.2 Detailed Experimental Setups (continued)
+
+At each epoch end, both fitting and validation metrics are measured in eval mode on the same weights. Validation-loss improvement must exceed 1e-6; patience is 5 epochs. The minimum-loss checkpoint is restored for each configuration. Configurations are ranked by validation accuracy (tie breakers: macro F1, then name). Loss magnitudes from different objectives are not compared.
+
+The selected Dropout model had validation accuracy 97.95% at epoch 8. Its configuration and epoch count were locked before final training and test prediction. A fresh model was trained for 8 epochs on all 60,000 training instances. CPU execution used two threads, Python 3.9.6, PyTorch 2.8.0, NumPy 2.0.2, scikit-learn 1.6.1 and Matplotlib 3.9.4. Final fitting took 3.46 seconds, including per-epoch metric computation, but excluding initial CSV loading, post-training evaluation and artifact saving.
+
+3.3 Evaluation Metrics
+
+Accuracy is the fraction of correctly classified instances. Per class, precision measures correct predictions among predicted positives, recall measures recovered true instances, and F1 is their harmonic mean. Macro averages weight all ten classes equally; weighted averages use true class support. Micro Precision/Recall/F1 equal accuracy for this complete single-label multiclass task. Undefined per-class divisions are set to zero. All labels are included explicitly in the metrics and confusion matrix.
+
+3.4 Source Code
+
+Repository reference: <link href="https://github.com/MacroXie04/ECS170" color="#245b86">https://github.com/MacroXie04/ECS170</link>. This independent Stage 2 implementation is currently in the local Zz_Wang branch and has not been published to that repository. <b>Before submission, replace this status with a publicly accessible link to the actual Stage 2 source.</b> The repository main at inspection was 8144e75 and did not include this implementation.
+
+Modules retain the template responsibilities: Dataset_Loader, Method_MLP, Setting, Evaluate and Result_Saver; Plot and the runner handle figures and configuration. The Stage 1 Softmax/cross-entropy pairing, train-mode override and reused-model KFold workflow are not carried into Stage 2. Saved records include seeds, split indices, configurations, data and source hashes, epoch histories, metrics, predictions and checkpoints.
+
+3.5 Training Convergence Plot
+
+Figure 2. Selected configuration on the internal fitting/validation split. Loss and accuracy are measured after each epoch. The dotted line marks epoch 8, whose weights were restored. Later epochs support the early-stopping decision and are not the final selected weights.
+
+3.5 Training Convergence Plot (continued)
+
+Figure 3. Fresh final-model training on all 60,000 examples for the previously locked eight epochs. There is no validation subset in this refit, and no per-epoch test curve was generated.
+
+3.6 Model Performance
+
+Model / data split | Accuracy | Macro P | Macro R | Macro F1
+
+Selected / internal train | 99.4426% | 0.994424 | 0.994412 | 0.994414
+
+Selected / validation | 97.9500% | 0.979460 | 0.979357 | 0.979379
+
+Final / full train | 99.4367% | 0.994390 | 0.994296 | 0.994340
+
+Final / test | 98.2600% | 0.982615 | 0.982334 | 0.982451
+
+The final model correctly classified 9,826 of 10,000 test instances (174 errors). Test weighted Precision/Recall/F1 are 0.982634/0.982600/0.982594, respectively. Micro Precision/Recall/F1 are all 0.982600. Validation refers to the selected holdout model; the final refit has different weights and no separately measured validation performance.
+
+Figure 4. Final test confusion matrix. Rows are true labels; columns are predicted labels. Full per-class support and metrics are stored in final/record.json.
+
+3.7 Ablation Studies
+
+Seven configurations were declared before comparison. Each used the fixed training-only holdout; no additional configuration was chosen after seeing the test result. Each row below describes a checkpoint selected by that configuration's own validation loss.
+
+Experiment / hidden units | Change from reference | Epoch | Val. Acc. | Macro F1
+
+baseline: 128 | Adam + cross-entropy | 19 | 97.8000% | 0.977896
+
+depth2: 256,128 | Wider/deeper than baseline | 6 | 97.7667% | 0.977504
+
+depth3: 256,128,64 | Third hidden layer | 7 | 97.5167% | 0.975007
+
+squared_error: 128 | Probability squared error | 11 | 97.5667% | 0.975556
+
+sgd: 128 | SGD; lr 0.05; momentum 0.9 | 10 | 97.8667% | 0.978641
+
+dropout: 256,128 | depth2 + Dropout 0.2 | 8 | 97.9500% | 0.979379
+
+weight_decay: 256,128 | depth2 + decay 0.0001 | 6 | 97.9000% | 0.978808
+
+Depth: the three-hidden-layer configuration did not improve validation accuracy over the baseline. Width and parameter count also change, so the comparison does not isolate a causal effect of depth. Regularization: Dropout improved over the matching unregularized two-hidden-layer model by 0.1833 percentage points; weight decay also improved that reference.
+
+Loss: the squared-error objective computes the mean per-instance sum of squared differences between softmax probabilities and one-hot targets. It reached 97.5667% validation accuracy, below the cross-entropy baseline in this run. These loss values have different scales. Optimizer: the SGD setting slightly exceeded the Adam baseline, but its learning rate also differs; this is a comparison of specified settings rather than a universal optimizer ranking.
+
+Reliability and Limitations
+
+The baseline improved from 9.95% initial validation accuracy to 97.80%, and targeted checks confirmed finite gradients, small-data fitting, preserved train/eval behavior, correct multiclass metrics and checkpoint consistency. An artifact audit confirmed identical non-overlapping holdout indices, recomputed saved metrics, and reproduced final test predictions from the saved checkpoint.
+
+Only one seed and one holdout were used; small differences are not evidence of statistical significance. No claim of globally optimal hyperparameters is made. The final test score is a single locked-model evaluation, not a guarantee for future data. The final training accuracy of 99.4367% exceeds test accuracy by 1.1767 percentage points. The larger final training set and different held-out samples can explain why test accuracy exceeds the internal validation estimate; neither number substitutes for the other.
+
+References and Reproduction
+
+Course sources: ECS_170_Fall_2026_Project_Description.docx.pdf (Stage 2), Stage_2-5_Report_Template.pdf, and the supplied data ReadMe. Implementation follows the course template; the original-template repository main was 465d116 at inspection.
+
+PyTorch 2.8 CrossEntropyLoss: <link href="https://docs.pytorch.org/docs/2.8/generated/torch.nn.CrossEntropyLoss.html" color="#245b86">official documentation</link>. scikit-learn precision_recall_fscore_support: <link href="https://scikit-learn.org/1.6/modules/generated/sklearn.metrics.precision_recall_fscore_support.html" color="#245b86">official documentation</link>. Run script/stage_2_script/script_mlp.py with baseline, compare, final and plot in order, using a new --output directory. See STAGE2_GUIDE_ZH.md for setup and data flow.
