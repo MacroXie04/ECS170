@@ -15,3 +15,8 @@ env/
 # IDEs
 .idea/
 .vscode/
+
+# Stage 2 instructor data and generated experiment outputs
+/data/train.csv
+/data/test.csv
+/results/
