@@ -30,7 +30,6 @@ class Method_MLP(method, nn.Module):
         if self.config['loss'] == 'cross_entropy':
             return nn.CrossEntropyLoss()
         if self.config['loss'] == 'squared_error':
-            # A genuinely different objective: probability versus one-hot label.
             def squared_error(logits, labels):
                 target = nn.functional.one_hot(labels, logits.shape[1]).float()
                 return ((logits.softmax(dim=1) - target) ** 2).sum(dim=1).mean()
@@ -53,7 +52,6 @@ class Method_MLP(method, nn.Module):
     def fit(self, X, y, validation=None, device='cpu'):
         self.to(device)
         cfg = self.config
-        # A new optimizer is constructed for every new experiment/model.
         if cfg['optimizer'] == 'adam':
             optimizer = torch.optim.Adam(self.parameters(), lr=cfg['lr'],
                                          weight_decay=cfg['weight_decay'])
@@ -80,7 +78,7 @@ class Method_MLP(method, nn.Module):
                     raise ValueError('Non-finite training loss')
                 loss.backward()
                 optimizer.step()
-            # Measure both splits at the SAME end-of-epoch weights in eval mode.
+            # Use the same end-of-epoch weights for train and validation metrics.
             train_loss, train_accuracy = self.measure(X, y, criterion)
             row = {'epoch': epoch, 'train_loss': train_loss,
                    'train_accuracy': train_accuracy}

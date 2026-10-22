@@ -12,28 +12,24 @@ class Dataset_Loader(dataset):
 
     def load_file(self, name, classes=None):
         path = self.folder / name
-        # No header: the first row is a real example, not column names.
         raw = np.loadtxt(path, delimiter=',', dtype=np.float32, ndmin=2)
         if raw.shape[1] < 2 or not np.isfinite(raw).all():
             raise ValueError('CSV must have labels, features, and finite values')
-        if not np.equal(raw, np.floor(raw)).all():
-            raise ValueError('The supplied data specification requires integers')
+        if not np.equal(raw[:, 0], np.floor(raw[:, 0])).all():
+            raise ValueError('Class labels must be integers')
         labels, features = raw[:, 0].astype(np.int64), raw[:, 1:]
-        if features.min() < 0 or features.max() > 255:
-            raise ValueError('Expected features in the documented 0..255 range')
         if classes is None:
-            classes = np.unique(labels)
-        mapping = {int(label): i for i, label in enumerate(classes)}
-        if not set(labels).issubset(mapping):
-            raise ValueError('A label is absent from the training class mapping')
-        y = np.array([mapping[int(v)] for v in labels], dtype=np.int64)
+            classes, y = np.unique(labels, return_inverse=True)
+        else:
+            if not np.isin(labels, classes).all():
+                raise ValueError('A label is absent from the training class mapping')
+            y = np.searchsorted(classes, labels)
         return {
-            'X': np.ascontiguousarray(features / 255.0), 'y': y,
+            'X': np.ascontiguousarray(features / 255.0), 'y': y.astype(np.int64),
             'classes': np.asarray(classes),
             'source': {'file': name, 'rows': len(y), 'features': features.shape[1],
                        'sha256': hashlib.sha256(path.read_bytes()).hexdigest()},
         }
 
     def load(self):
-        # Selection runs load train.csv only. test.csv is loaded in final mode.
         return self.load_file('train.csv')

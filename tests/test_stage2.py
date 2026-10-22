@@ -1,5 +1,4 @@
 """Targeted checks for label position, optimization, modes, and checkpoints."""
-import importlib.util
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,10 +9,7 @@ from local_code.stage_2_code.Method_MLP import Method_MLP
 from local_code.stage_2_code.Evaluate import Evaluate
 from local_code.stage_2_code.Setting import seed_everything
 
-ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location('runner', ROOT / 'script/stage_2_script/script_mlp.py')
-runner = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(runner)
+from script.stage_2_script.script_mlp import BASE
 
 
 class Stage2Tests(unittest.TestCase):
@@ -22,7 +18,7 @@ class Stage2Tests(unittest.TestCase):
             p = Path(folder)
             (p / 'train.csv').write_text('3,0,255\n7,255,0\n')
             loader = Dataset_Loader(folder)
-            data = loader.load()  # Works even when no test.csv exists.
+            data = loader.load()
             np.testing.assert_array_equal(data['y'], [0, 1])
             np.testing.assert_array_equal(data['X'], [[0, 1], [1, 0]])
             (p / 'test.csv').write_text('8,0,0\n')
@@ -31,7 +27,7 @@ class Stage2Tests(unittest.TestCase):
 
     def test_gradient_reduces_loss_and_checkpoint_preserves_predictions(self):
         seed_everything(42)
-        config = dict(runner.BASE, hidden=[16])
+        config = dict(BASE, hidden=[16])
         model = Method_MLP(4, 2, config)
         X = torch.eye(4).repeat(8, 1)
         y = torch.tensor([0, 1, 0, 1]).repeat(8)
@@ -55,7 +51,7 @@ class Stage2Tests(unittest.TestCase):
             np.testing.assert_array_equal(model.test(X.numpy()), restored.test(X.numpy()))
 
     def test_original_train_eval_modes_and_independent_initialization(self):
-        config = dict(runner.BASE, dropout=0.5)
+        config = dict(BASE, dropout=0.5)
         seed_everything(42)
         a = Method_MLP(4, 2, config)
         seed_everything(42)

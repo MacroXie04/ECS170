@@ -1,4 +1,4 @@
-"""Run from any directory: python /path/to/script_mlp.py baseline|compare|final|plot."""
+"""Train a baseline, compare configurations, or evaluate the selected model."""
 import argparse
 import json
 from pathlib import Path
@@ -10,7 +10,6 @@ sys.path.insert(0, str(ROOT))
 from local_code.stage_2_code.Dataset_Loader import Dataset_Loader
 from local_code.stage_2_code.Setting import Setting
 
-# Declared before running comparisons; no test-driven additions.
 BASE = dict(hidden=[128], dropout=0.0, loss='cross_entropy', optimizer='adam',
             lr=0.001, weight_decay=0.0, batch_size=128, epochs=25, patience=5, seed=42)
 CONFIGS = {
@@ -26,7 +25,7 @@ CONFIGS = {
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode', choices=['baseline', 'compare', 'final', 'plot'])
+    parser.add_argument('mode', choices=['baseline', 'compare', 'final'])
     parser.add_argument('--data', type=Path, default=ROOT / 'data/stage_2_data')
     parser.add_argument('--output', type=Path, default=ROOT / 'result/stage_2_result')
     parser.add_argument('--device', choices=['cpu', 'cuda', 'mps'], default='cpu')
@@ -55,9 +54,6 @@ def main():
     elif args.mode == 'final':
         record = setting.final(args.output / 'selection.json')
         print(json.dumps(record['test'], indent=2))
-    else:
-        from local_code.stage_2_code.Plot import plot_all
-        plot_all(args.output)
 
 
 if __name__ == '__main__':

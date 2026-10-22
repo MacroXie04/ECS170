@@ -68,14 +68,12 @@ class Setting(setting):
         seed_everything(config['seed'])
         model = Method_MLP(X.shape[1], len(data['classes']), config)
         evaluator = Evaluate(data['classes'])
-        initial_loss, initial_accuracy = model.measure(X[val_idx], y[val_idx], model.criterion())
         history, epoch, seconds = model.fit(X[train_idx], y[train_idx],
                                             (X[val_idx], y[val_idx]), self.device)
         train_pred, val_pred = model.test(X[train_idx]), model.test(X[val_idx])
         record = self.metadata(data, config)
         record.update(name=name, phase='validation', split_seed=self.split_seed,
                       training_rows=len(train_idx), validation_rows=len(val_idx),
-                      initial_validation={'loss': initial_loss, 'accuracy': initial_accuracy},
                       best_epoch=epoch, completed_epochs=len(history), training_seconds=seconds,
                       train=evaluator.score(y[train_idx], train_pred),
                       validation=evaluator.score(y[val_idx], val_pred))
@@ -90,6 +88,8 @@ class Setting(setting):
             raise ValueError('Selection accepts validation runs only')
         if len({(r['train_source']['sha256'], r['split_seed']) for r in records}) != 1:
             raise ValueError('Selection requires identical data and split')
+        if any(r['source_sha256'] != code_hash() for r in records):
+            raise ValueError('Source changed: use a new --output directory for comparisons')
         best = sorted(records, key=lambda r: (-r['validation']['accuracy'],
                       -r['validation']['macro']['f1'], r['name']))[0]
         selection = {'rule': 'max validation accuracy, then macro F1, then name',
@@ -109,9 +109,8 @@ class Setting(setting):
         saver.reserve()
         data = self.dataset.load()
         if data['source'] != selection['train_source'] or code_hash() != selection['source_sha256']:
-            raise ValueError('Training data or experiment source changed after selection')
+            raise ValueError('Data or source changed: rerun comparisons in a new --output directory')
         config = selection['config']
-        # Freeze the selection in final/ BEFORE training or opening test.csv.
         saver.write_json('locked_selection.json', selection)
         seed_everything(config['seed'])
         model = Method_MLP(data['X'].shape[1], len(data['classes']), config)
