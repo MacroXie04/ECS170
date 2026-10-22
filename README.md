@@ -53,6 +53,11 @@ separate panels because their scales differ.
 - `local_code/stage_2_code/Evaluate_Multiclass.py`: multiclass metrics.
 - `script/stage_2_script/run_experiments.py`: experiment configurations and outputs.
 
-The instructor dataset and generated outputs are excluded from version control.
+The existing trained checkpoints, predictions, metrics, and plots are included in
+[`results/`](results/README.md). These are the saved 15-epoch experiment results;
+the highest observed test accuracy is 98.27% for the deep SGD + CE configuration.
+Running the experiment script again writes to these same output paths.
+
+The instructor dataset and transient training logs are excluded from version control.
 The existing Stage 1 source and instructor base classes remain in their original
 repository locations.

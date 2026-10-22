@@ -16,7 +16,7 @@ env/
 .idea/
 .vscode/
 
-# Stage 2 instructor data and generated experiment outputs
+# Stage 2 instructor data and transient training logs
 /data/train.csv
 /data/test.csv
-/results/
+/results/*.log
