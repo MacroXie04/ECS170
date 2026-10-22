@@ -61,3 +61,31 @@ Running the experiment script again writes to these same output paths.
 The instructor dataset and transient training logs are excluded from version control.
 The existing Stage 1 source and instructor base classes remain in their original
 repository locations.
+
+### Automatic PR training
+
+Pull requests targeting `main` run the four configurations from scratch on a
+GitHub Actions CPU runner. The workflow downloads public MNIST from the same
+HTTPS mirror used by torchvision and recreates CSV files whose SHA-256 hashes
+exactly match the instructor's supplied data. No dataset upload or secret is needed.
+
+Each run uses a separate temporary output directory and validates all four
+results against their saved test predictions before reporting accuracy. For
+branches in this repository, `github-actions[bot]` creates or updates one PR
+comment with the commit, accuracy table, and run link. Failures replace that
+comment with a failure notice; outdated runs cannot replace a newer commit's
+results. Fork PRs can run training, but their read-only tokens cannot post comments.
+
+The run also provides checkpoints, predictions, metrics, plots, and training logs
+as a downloadable artifact retained for seven days. These fresh outputs do not
+overwrite the archived results committed to this repository. CPU/platform
+differences can produce small accuracy changes from the local snapshot.
+
+To reproduce the CI data preparation and output layout locally:
+
+```sh
+python script/ci/prepare_mnist.py --output-dir /tmp/ecs170-data
+python script/stage_2_script/run_experiments.py --device cpu \
+  --data-dir /tmp/ecs170-data --output-dir /tmp/ecs170-results
+python script/ci/summarize_results.py /tmp/ecs170-results
+```

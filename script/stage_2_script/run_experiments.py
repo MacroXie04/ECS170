@@ -13,14 +13,16 @@ from local_code.stage_2_code.Setting_Prepartitioned import Setting_Prepartitione
 
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument('--device',default='cpu',choices=['cpu','mps','cuda'])
+    parser.add_argument('--data-dir',type=Path,default=ROOT/'data')
+    parser.add_argument('--output-dir',type=Path,default=ROOT/'results')
     args=parser.parse_args()
     torch.set_num_threads(4)
-    out=ROOT/'results';out.mkdir(exist_ok=True)
-    data=Dataset_Loader(ROOT/'data').load()
+    out=args.output_dir;out.mkdir(parents=True,exist_ok=True)
+    data=Dataset_Loader(args.data_dir).load()
     meta={'python':platform.python_version(),'pytorch':torch.__version__,'device':args.device,
           'train_shape':list(data['train']['X'].shape),'test_shape':list(data['test']['X'].shape),
           'class_counts':{k:np.bincount(v['y'],minlength=10).tolist() for k,v in data.items()},
-          'data_sha256':{n:hashlib.sha256((ROOT/'data'/n).read_bytes()).hexdigest() for n in ['train.csv','test.csv']}}
+          'data_sha256':{n:hashlib.sha256((args.data_dir/n).read_bytes()).hexdigest() for n in ['train.csv','test.csv']}}
     configs=[dict(name='shallow_adam_ce',hidden=[128],optimizer='Adam',lr=.001,loss='CE'),
              dict(name='deep_adam_ce',hidden=[256,128],optimizer='Adam',lr=.001,loss='CE'),
              dict(name='deep_sgd_ce',hidden=[256,128],optimizer='SGD',lr=.05,loss='CE'),
