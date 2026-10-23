@@ -1,0 +1,15 @@
+{
+  "run_name": "mse_loss",
+  "epochs": 10,
+  "hidden_dims": [
+    128
+  ],
+  "batch_size": 256,
+  "optimizer": "adam",
+  "loss": "mse",
+  "learning_rate": 0.001,
+  "device": "cpu",
+  "seed": 2,
+  "train_limit": null,
+  "test_limit": null
+}
