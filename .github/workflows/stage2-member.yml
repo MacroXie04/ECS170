@@ -175,7 +175,7 @@ jobs:
                 body += ' This implementation saves predictions and a convergence plot, but no model checkpoint. This is one seed, not the historical three-seed mean.';
               }
               if (member === 'zizheng') {
-                body += ' Validation rows describe model selection; only the final row evaluates the held-out test set. Epochs are the selected checkpoint/refit duration, not the total epochs before early stopping.';
+                body += ' Validation rows describe model selection; only the row labeled "Selected model — final test" evaluates the held-out test set. Epochs are the selected checkpoint/refit duration, not the total epochs before early stopping.';
               }
               body += '\n\nCPU/platform differences can cause small changes from archived results.';
             } else {
