@@ -62,11 +62,15 @@ differ slightly with the execution platform.
   unit tests, check the shared launcher, and smoke-test all four members.
   Smoke tests check that training and evaluation work on small inputs; they
   do not report official test accuracy.
-- **Hongzhe full training:** pull requests targeting `Dev` or `main` retain
-  the existing four-configuration, full-dataset training workflow. It verifies
-  fresh results against predictions and updates one PR accuracy comment for
-  same-repository PRs. This comment describes Hongzhe's four models, not a
-  full rerun of every member's experiments. Artifacts are kept for seven days.
+- **Team full training:** pull requests targeting `Dev` or `main` run four
+  independent jobs, one for each member's complete original protocol. Each job
+  trains from scratch on checksum-verified course data and validates its new
+  predictions and training records. A separate bot comment for each member
+  reports the commit, settings, accuracy, macro F1, and artifact link. Re-runs
+  update that member's existing comment; one failure does not stop the others.
+  Zizheng's seven validation results are labeled separately from the final
+  10,000-example test result. Each member's results and logs are retained for
+  seven days. Fork PRs run training but cannot post comments with a write token.
 
 Only the workflows under the root `.github/workflows/` are active. Copies inside
 member snapshots are preserved historical files. Direct pushes to `Dev` run the

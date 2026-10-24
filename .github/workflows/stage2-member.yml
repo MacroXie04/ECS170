@@ -1,0 +1,195 @@
+name: Full training for one Stage 2 member
+
+on:
+  workflow_call:
+    inputs:
+      member:
+        description: Preserved implementation identifier
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  train:
+    name: Train and validate ${{ inputs.member }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    env:
+      MEMBER: ${{ inputs.member }}
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      MPLBACKEND: Agg
+      PYTHONDONTWRITEBYTECODE: '1'
+    outputs:
+      report: ${{ steps.report.outputs.report }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Verify all preserved source snapshots
+        run: python script/integration/verify_sources.py --check-history
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu 'torch==2.14.1'
+          python -m pip install -r requirements.txt
+      - name: Test result validation and comment isolation
+        run: |
+          python -m unittest discover -s tests/ci -p 'test_*.py' -v
+          node tests/ci/test_member_comments.cjs
+      - name: Download and verify the exact course dataset
+        run: python implementations/hongzhe/script/ci/prepare_mnist.py --output-dir "$RUNNER_TEMP/stage2-data"
+      - name: Run this member's complete original protocol
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -u run_stage2.py \
+            --implementation "$MEMBER" \
+            --data-dir "$RUNNER_TEMP/stage2-data" \
+            --output-dir "$RUNNER_TEMP/stage2-run" \
+            2>&1 | tee "$RUNNER_TEMP/stage2-training.log"
+      - name: Validate fresh predictions and summarize results
+        id: report
+        shell: bash
+        run: |
+          set -euo pipefail
+          python script/ci/summarize_member.py \
+            --implementation "$MEMBER" \
+            --results-dir "$RUNNER_TEMP/stage2-run/$MEMBER" \
+            --data-dir "$RUNNER_TEMP/stage2-data" \
+            --log "$RUNNER_TEMP/stage2-training.log" \
+            > "$RUNNER_TEMP/stage2-report.json"
+          report=$(python -c 'import json,os,pathlib; print(json.dumps(json.loads((pathlib.Path(os.environ["RUNNER_TEMP"])/"stage2-report.json").read_text()),separators=(",",":"),allow_nan=False))')
+          printf 'report=%s\n' "$report" >> "$GITHUB_OUTPUT"
+      - name: Save this member's fresh results, report, and logs
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: stage2-${{ inputs.member }}-pr-${{ github.event.pull_request.number }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/stage2-run/
+            ${{ runner.temp }}/stage2-training.log
+            ${{ runner.temp }}/stage2-report.json
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Verify original snapshots remain unchanged
+        if: always()
+        run: python script/integration/verify_sources.py --check-history
+
+  comment:
+    name: Update ${{ inputs.member }} PR comment
+    needs: train
+    if: ${{ always() && !cancelled() && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          MEMBER: ${{ inputs.member }}
+          TRAIN_STATUS: ${{ needs.train.result }}
+          REPORT_JSON: ${{ needs.train.outputs.report }}
+        with:
+          script: |
+            const members = {
+              hongzhe: {
+                name: 'Hongzhe Xie', pr: 1, seed: 42, batchSize: 256, epochs: 15,
+                marker: '<!-- ecs170-stage2-ci -->',
+                protocol: 'Four configurations, each trained for 15 epochs; seed 42, batch size 256, CPU.',
+                models: {shallow_adam_ce: 'Shallow Adam + CE', deep_adam_ce: 'Deep Adam + CE',
+                         deep_sgd_ce: 'Deep SGD + CE', deep_adam_mse: 'Deep Adam + MSE'}
+              },
+              aileen: {
+                name: 'Aileen Zheng', pr: 2, seed: 2, batchSize: 128, epochs: 25,
+                marker: '<!-- ecs170-stage2-ci-aileen -->',
+                protocol: 'Tuned [512, 256] MLP with BatchNorm, label smoothing and cosine learning-rate decay; 25 epochs, seed 2, batch size 128, CPU.',
+                models: {tuned_mlp: 'Tuned SGD + label-smoothed CE'}
+              },
+              zizheng: {
+                name: 'Zizheng Wang', pr: 3, seed: 42, batchSize: 128, epochs: null,
+                marker: '<!-- ecs170-stage2-ci-zizheng -->',
+                protocol: 'Seven configurations selected using 54,000 training / 6,000 validation examples, up to 25 epochs with early stopping. The selected configuration is refit on all 60,000 training examples before the final test. Seed 42, batch size 128, CPU.',
+                models: {baseline: 'Baseline', depth2: 'Two hidden layers', depth3: 'Three hidden layers',
+                         squared_error: 'Squared-error loss', sgd: 'SGD', dropout: 'Dropout',
+                         weight_decay: 'Weight decay', final: 'Selected model — final test'}
+              },
+              xiaoyu: {
+                name: 'Xiaoyu Feng', pr: 4, seed: 2, batchSize: 256, epochs: 10,
+                marker: '<!-- ecs170-stage2-ci-xiaoyu -->',
+                protocol: 'Five configurations, each trained for 10 epochs; seed 2, batch size 256, CPU.',
+                models: {baseline: 'Baseline Adam + CE', deeper: 'Deeper Adam + CE',
+                         sgd_lr_001: 'SGD (learning rate 0.01)', mse_loss: 'MSE loss',
+                         lower_lr: 'Lower learning rate (0.0003)'}
+              }
+            };
+            const member = process.env.MEMBER;
+            if (!Object.hasOwn(members, member)) throw new Error('Unknown member.');
+            const config = members[member];
+            const pr = context.payload.pull_request;
+            const {data: current} = await github.rest.pulls.get({...context.repo, pull_number: pr.number});
+            if (current.state !== 'open' || current.head.sha !== pr.head.sha) {
+              core.info('Skipping a closed PR or an outdated commit.');
+              return;
+            }
+            const repoUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}`;
+            const runUrl = `${repoUrl}/actions/runs/${context.runId}`;
+            let body = `${config.marker}\n## ${config.name} — Stage 2 training results\n\n`;
+            body += `Source: [PR #${config.pr}](${repoUrl}/pull/${config.pr}) · Commit: \`${pr.head.sha}\` · [Run and artifacts](${runUrl})\n\n`;
+            if (process.env.TRAIN_STATUS === 'success') {
+              const report = JSON.parse(process.env.REPORT_JSON);
+              if (!report || report.implementation !== member || report.train_count !== 60000 || report.test_count !== 10000 ||
+                  !report.environment || typeof report.environment !== 'object' || Array.isArray(report.environment) ||
+                  !Array.isArray(report.rows) || report.rows.length !== Object.keys(config.models).length ||
+                  new Set(report.rows.map(row => row?.name)).size !== report.rows.length) {
+                throw new Error('Invalid member, dataset counts, or configuration set.');
+              }
+              for (const row of report.rows) {
+                const split = member === 'zizheng' && row.name !== 'final' ? 'validation' : 'test';
+                if (!row || !Object.hasOwn(config.models, row.name) || row.split !== split ||
+                    ![row.accuracy, row.macro_f1, row.precision_macro, row.recall_macro].every(value => Number.isFinite(value) && value >= 0 && value <= 1) ||
+                    row.seed !== config.seed || row.batch_size !== config.batchSize ||
+                    !Number.isInteger(row.epochs) || row.epochs < 1 || row.epochs > 25 ||
+                    (config.epochs !== null && row.epochs !== config.epochs)) {
+                  throw new Error('Invalid metrics or training protocol.');
+                }
+              }
+              body += `Trained from scratch. ${config.protocol}\n\n`;
+              body += 'Official data: 60,000 training examples and 10,000 test examples; CSV hashes verified.\n\n';
+              body += '| Model | Split | Epochs | Accuracy | Macro F1 |\n|---|---|---:|---:|---:|\n';
+              for (const row of report.rows) {
+                body += `| ${config.models[row.name]} | ${row.split} | ${row.epochs} | ${(100 * row.accuracy).toFixed(2)}% | ${row.macro_f1.toFixed(4)} |\n`;
+              }
+              body += '\nMetrics were recomputed from this run’s saved predictions. Fresh outputs and logs are attached to the run (7-day retention).';
+              if (member === 'aileen') {
+                body += ' This implementation saves predictions and a convergence plot, but no model checkpoint. This is one seed, not the historical three-seed mean.';
+              }
+              if (member === 'zizheng') {
+                body += ' Validation rows describe model selection; only the final row evaluates the held-out test set. Epochs are the selected checkpoint/refit duration, not the total epochs before early stopping.';
+              }
+              body += '\n\nCPU/platform differences can cause small changes from archived results.';
+            } else {
+              const status = ['failure', 'cancelled', 'skipped'].includes(process.env.TRAIN_STATUS) ? process.env.TRAIN_STATUS : 'incomplete';
+              body += `Training/validation **${status}**. No accuracy is reported for this commit; see the run logs for details. Other members run independently.`;
+            }
+            await core.summary.addRaw(body.replace(`${config.marker}\n`, '')).write();
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              ...context.repo, issue_number: pr.number, per_page: 100
+            });
+            const previous = comments.find(comment => comment.user?.login === 'github-actions[bot]' &&
+              comment.body?.startsWith(config.marker));
+            if (previous) {
+              await github.rest.issues.updateComment({...context.repo, comment_id: previous.id, body});
+            } else {
+              await github.rest.issues.createComment({...context.repo, issue_number: pr.number, body});
+            }
