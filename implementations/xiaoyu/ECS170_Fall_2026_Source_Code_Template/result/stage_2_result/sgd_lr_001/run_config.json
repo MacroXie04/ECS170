@@ -1,0 +1,15 @@
+{
+  "run_name": "sgd_lr_001",
+  "epochs": 10,
+  "hidden_dims": [
+    128
+  ],
+  "batch_size": 256,
+  "optimizer": "sgd",
+  "loss": "cross_entropy",
+  "learning_rate": 0.01,
+  "device": "cpu",
+  "seed": 2,
+  "train_limit": null,
+  "test_limit": null
+}
