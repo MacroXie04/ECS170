@@ -1,0 +1,27 @@
+name: Full Stage 2 team training
+
+on:
+  pull_request:
+    branches: [Dev, main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stage2-training-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  member:
+    name: Full training / ${{ matrix.member }}
+    strategy:
+      fail-fast: false
+      matrix:
+        member: [hongzhe, aileen, zizheng, xiaoyu]
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: ./.github/workflows/stage2-member.yml
+    with:
+      member: ${{ matrix.member }}

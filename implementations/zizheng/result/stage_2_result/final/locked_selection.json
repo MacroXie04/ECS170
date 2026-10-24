@@ -1,0 +1,48 @@
+{
+  "rule": "max validation accuracy, then macro F1, then name",
+  "candidates": [
+    "baseline",
+    "depth2",
+    "depth3",
+    "squared_error",
+    "sgd",
+    "dropout",
+    "weight_decay"
+  ],
+  "selected": "dropout",
+  "config": {
+    "hidden": [
+      256,
+      128
+    ],
+    "dropout": 0.2,
+    "loss": "cross_entropy",
+    "optimizer": "adam",
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 128,
+    "epochs": 8,
+    "patience": 5,
+    "seed": 42
+  },
+  "train_source": {
+    "file": "train.csv",
+    "rows": 60000,
+    "features": 784,
+    "sha256": "fb60bc58af4dac3554e394af262b3184479833d3cc540ff8783f274b73492d5d"
+  },
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "source_sha256": "9e63ce613da703776f2025914e24faf701d5680c2deead88d4fbdde2e60fbc63",
+  "validation_accuracy": 0.9795
+}

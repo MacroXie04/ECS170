@@ -1,0 +1,15 @@
+{
+  "run_name": "lower_lr",
+  "epochs": 10,
+  "hidden_dims": [
+    128
+  ],
+  "batch_size": 256,
+  "optimizer": "adam",
+  "loss": "cross_entropy",
+  "learning_rate": 0.0003,
+  "device": "cpu",
+  "seed": 2,
+  "train_limit": null,
+  "test_limit": null
+}
