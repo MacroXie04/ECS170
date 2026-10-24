@@ -1,0 +1,54 @@
+name: Dev integration
+
+on:
+  push:
+    branches: [Dev]
+  pull_request:
+    branches: [Dev, main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dev-integration-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integration:
+    name: Preserve and check all four implementations
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Verify source snapshots
+        run: python script/integration/verify_sources.py --check-history
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu 'torch==2.14.1'
+          python -m pip install -r requirements.txt
+      - name: Test Hongzhe result validation
+        working-directory: implementations/hongzhe
+        run: python -m unittest discover -s tests/ci -p 'test_summarize_results.py' -v
+      - name: Test Zizheng training and evaluation
+        working-directory: implementations/zizheng
+        run: python -m unittest discover -s tests -p 'test_stage2.py' -v
+      - name: Test shared launcher
+        run: python -m unittest discover -s tests/integration -p 'test_launcher.py' -v
+      - name: Smoke-test all four members
+        run: python tests/integration/smoke_member.py --implementation all
+      - name: Verify snapshots remain unchanged
+        if: always()
+        run: python script/integration/verify_sources.py --check-history
