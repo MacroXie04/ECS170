@@ -6,6 +6,7 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+.venv-*/
 venv/
 env/
 
@@ -21,3 +22,9 @@ env/
 /data/stage_2_data/
 /data/train.csv
 /data/test.csv
+
+# Stage 3: instructor data, course documents, and large run outputs stay local.
+/data/stage_3_data/
+/result/stage_3_result/**/checkpoints/
+/result/stage_3_result/**/process_output.log
+/result/stage_3_result/**/.*.*
