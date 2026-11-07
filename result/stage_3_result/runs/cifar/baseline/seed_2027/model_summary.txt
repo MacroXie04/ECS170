@@ -1,0 +1,32 @@
+cifar/baseline: Three stages of two 3x3 convs (32, 64, 128), max pooling, one 256-unit hidden layer
+Input (channels, height, width): (3, 32, 32)
+Classes: 10
+Trainable parameters: 814,570
+
+Layer           Type          Output shape            Params  Settings
+features.0      Conv2d        32x32x32                   864  3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.1      BatchNorm2d   32x32x32                    64  32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.2      ReLU          32x32x32                     0  inplace=True
+features.3      Conv2d        32x32x32                 9,216  32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.4      BatchNorm2d   32x32x32                    64  32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.5      ReLU          32x32x32                     0  inplace=True
+features.6      MaxPool2d     32x16x16                     0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+features.7      Conv2d        64x16x16                18,432  32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.8      BatchNorm2d   64x16x16                   128  64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.9      ReLU          64x16x16                     0  inplace=True
+features.10     Conv2d        64x16x16                36,864  64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.11     BatchNorm2d   64x16x16                   128  64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.12     ReLU          64x16x16                     0  inplace=True
+features.13     MaxPool2d     64x8x8                       0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+features.14     Conv2d        128x8x8                 73,728  64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.15     BatchNorm2d   128x8x8                    256  128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.16     ReLU          128x8x8                      0  inplace=True
+features.17     Conv2d        128x8x8                147,456  128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.18     BatchNorm2d   128x8x8                    256  128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.19     ReLU          128x8x8                      0  inplace=True
+features.20     MaxPool2d     128x4x4                      0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+classifier.0    Flatten       2048                         0  start_dim=1, end_dim=-1
+classifier.1    Linear        256                    524,544  in_features=2048, out_features=256, bias=True
+classifier.2    ReLU          256                          0  inplace=True
+classifier.3    Dropout       256                          0  p=0.3, inplace=False
+classifier.4    Linear        10                       2,570  in_features=256, out_features=10, bias=True

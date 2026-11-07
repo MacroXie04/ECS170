@@ -1,0 +1,145 @@
+{
+  "best_config_rule": "Within a dataset, pick the configuration with the highest mean selected-checkpoint validation accuracy over seeds; break ties by the lowest mean validation cross-entropy, then by the fewest parameters. The final model is the seed of that configuration ranked first by the checkpoint rule. Test metrics play no part in either choice.",
+  "checkpoint_rule": "Within a run, keep the epoch with the highest validation accuracy; break ties by the lowest validation cross-entropy, then by the earliest epoch. The test set is never read during training.",
+  "configs": {
+    "cifar": {
+      "avgpool": {
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "sha256": "031c583d977df92f6f16193ae3aba75db5661a04ce3a0fc87b3509ebdba7443d"
+      },
+      "baseline": {
+        "changed_factor": "none",
+        "description": "Three stages of two 3x3 convs (32, 64, 128), max pooling, one 256-unit hidden layer",
+        "sha256": "8cfeba21c2989e0519ab50f757684adab64a8d43064be99147616a0c4d33a1c8"
+      },
+      "depth_1conv": {
+        "changed_factor": "depth",
+        "description": "One conv per stage instead of two (3 conv layers, not 6)",
+        "sha256": "c6fedbcafe7a3b514835b45757dca72a85c77ae639bef78b437207687221f4fb"
+      },
+      "hidden_small": {
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "sha256": "ed4d42f7de0ce02ded3a791cf191109911bc6f7eab1095df65c52f10ccb52929"
+      },
+      "kernel5": {
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "sha256": "85b0eb027d393cffb4fc00376354b131960d97b8b45f24cf828da8dbd7dbca5e"
+      },
+      "mse_loss": {
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "sha256": "277077ab3b9a0b72b8f045d6ad32ec73bbca01f1b63a18a56cb0b1bd049a4213"
+      },
+      "no_dropout": {
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "sha256": "6abb77ab32b103dc5a24a1cbd9d2425608572fe94c33251c23c2bb7556d3648a"
+      },
+      "stride2": {
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "sha256": "6129fbbfbf7807ee3ee70b0571a091c1c43370da76eb5d7102a4775fe797e1ac"
+      }
+    },
+    "mnist": {
+      "avgpool": {
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "sha256": "8131b19bb6279e43ac4fe063af5cf62cf6f15bfcf1c002af3e6afea5451a373b"
+      },
+      "baseline": {
+        "changed_factor": "none",
+        "description": "Two 3x3 conv stages (32, 64), max pooling, one 128-unit hidden layer",
+        "sha256": "5aeb407b0c5baa69faa5aa53b44942ccc1a017b07409f7975767a89a2de69b01"
+      },
+      "depth_3stage": {
+        "changed_factor": "depth",
+        "description": "A third conv stage (32, 64, 128)",
+        "sha256": "b6893a4d1291eef6b2b502ec191f79ae94dc73f67fea0bdf00b29704082de459"
+      },
+      "hidden_small": {
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 32 instead of 128",
+        "sha256": "e7f29527ee72ef273a9df79e3cc70d833deb12d43f4452cf05203c76976d3b57"
+      },
+      "kernel5": {
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "sha256": "314ed2783f21c9f9938b3abc126113e7bd87a0a091d19ac31d193551d0546515"
+      },
+      "mse_loss": {
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "sha256": "382d0271ebcf03afea1d66ed8eb2abbaf502d613ef0a67dfb3466a84bce586c1"
+      },
+      "no_dropout": {
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "sha256": "8871063c5332d2d49b2a66cf5287e47002dce9dcc52071a8c482c8f1aceadc6b"
+      },
+      "stride2": {
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "sha256": "96f67a0883340aa1e64603c195dca8149abeed197a19e8729b068da774ab2443"
+      }
+    },
+    "orl": {
+      "avgpool": {
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "sha256": "f5decd11479b0848f2128f3c760af41bf1f94a97379059ade3e0a0bc752e27b9"
+      },
+      "baseline": {
+        "changed_factor": "none",
+        "description": "Four 3x3 conv stages (16-128), max pooling, one 256-unit hidden layer",
+        "sha256": "3359ecf0a2c8b44cf8938b77d390ad20daec4034cb1964c4ba7557f57375969b"
+      },
+      "depth_3stage": {
+        "changed_factor": "depth",
+        "description": "Three conv stages (16, 32, 64) instead of four",
+        "sha256": "cff9d998a8a8925644e75a4f3077b08c4c2529fd7d7a754e05a10435e003bbf5"
+      },
+      "hidden_small": {
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "sha256": "b00a52ec25f937fe08a5b358e37673f1ad2f1f58ca079f9c15b94b390bc9bcdf"
+      },
+      "kernel5": {
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "sha256": "35a1a224c3996d30eb0cc150969f9768f695587fd2633ba030b39a8a8c49f3f5"
+      },
+      "mse_loss": {
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "sha256": "291afadca9500c1fd495ff0fd7764f83f4c4ed7bc3824b30c59fd3bd92d1869f"
+      },
+      "no_dropout": {
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "sha256": "482b274a1baf2f804344f68f3429c06f644abb847a7258314bb470fb57f95bd3"
+      },
+      "stride2": {
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "sha256": "f23721fae6ff445009767ae1651d9e1ccc6819456314593b41899301b1bf2fc4"
+      }
+    }
+  },
+  "formal_seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "locked_at": "2026-11-07T07:51:43+00:00",
+  "reference_accuracy": {
+    "cifar": 0.7,
+    "mnist": 0.95,
+    "orl": 0.95
+  },
+  "split_seed": 170,
+  "stage3_source_sha256": "025cc3905614a96eddcf3545fa25eec72722e92ff060e6951609c2733f121f76"
+}

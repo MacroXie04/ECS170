@@ -1,0 +1,44 @@
+2026-11-07T08:10:19+00:00 start cifar/no_dropout seed=2027 device=cuda params=814570
+2026-11-07T08:10:20+00:00 method running...
+2026-11-07T08:10:20+00:00 --start training...
+2026-11-07T08:10:25+00:00 epoch 001/40 lr=0.050000 train_loss=1.48227 train_acc=0.4530 val_ce=1.23414 val_acc=0.5750 best_epoch=1 seconds=4.41
+2026-11-07T08:10:29+00:00 epoch 002/40 lr=0.049923 train_loss=0.99737 train_acc=0.6446 val_ce=1.01952 val_acc=0.6458 best_epoch=2 seconds=4.01
+2026-11-07T08:10:33+00:00 epoch 003/40 lr=0.049692 train_loss=0.79390 train_acc=0.7225 val_ce=0.77539 val_acc=0.7342 best_epoch=3 seconds=3.99
+2026-11-07T08:10:37+00:00 epoch 004/40 lr=0.049309 train_loss=0.68888 train_acc=0.7600 val_ce=0.69833 val_acc=0.7608 best_epoch=4 seconds=4.08
+2026-11-07T08:10:42+00:00 epoch 005/40 lr=0.048776 train_loss=0.61922 train_acc=0.7839 val_ce=0.77336 val_acc=0.7386 best_epoch=4 seconds=4.14
+2026-11-07T08:10:46+00:00 epoch 006/40 lr=0.048097 train_loss=0.57146 train_acc=0.8043 val_ce=0.71574 val_acc=0.7658 best_epoch=6 seconds=4.23
+2026-11-07T08:10:50+00:00 epoch 007/40 lr=0.047275 train_loss=0.53857 train_acc=0.8135 val_ce=0.84403 val_acc=0.7418 best_epoch=6 seconds=4.24
+2026-11-07T08:10:54+00:00 epoch 008/40 lr=0.046316 train_loss=0.50973 train_acc=0.8247 val_ce=0.63568 val_acc=0.7866 best_epoch=8 seconds=3.85
+2026-11-07T08:10:58+00:00 epoch 009/40 lr=0.045225 train_loss=0.48894 train_acc=0.8312 val_ce=0.60573 val_acc=0.7998 best_epoch=9 seconds=3.86
+2026-11-07T08:11:02+00:00 epoch 010/40 lr=0.044010 train_loss=0.46121 train_acc=0.8423 val_ce=0.58303 val_acc=0.8028 best_epoch=10 seconds=3.86
+2026-11-07T08:11:06+00:00 epoch 011/40 lr=0.042678 train_loss=0.44577 train_acc=0.8472 val_ce=0.47674 val_acc=0.8386 best_epoch=11 seconds=3.82
+2026-11-07T08:11:11+00:00 epoch 012/40 lr=0.041236 train_loss=0.43066 train_acc=0.8509 val_ce=0.59755 val_acc=0.8048 best_epoch=11 seconds=3.88
+2026-11-07T08:11:15+00:00 epoch 013/40 lr=0.039695 train_loss=0.41837 train_acc=0.8549 val_ce=0.57878 val_acc=0.8040 best_epoch=11 seconds=3.85
+2026-11-07T08:11:19+00:00 epoch 014/40 lr=0.038062 train_loss=0.39306 train_acc=0.8648 val_ce=0.51688 val_acc=0.8290 best_epoch=11 seconds=3.81
+2026-11-07T08:11:22+00:00 epoch 015/40 lr=0.036350 train_loss=0.38472 train_acc=0.8666 val_ce=0.58727 val_acc=0.8078 best_epoch=11 seconds=3.85
+2026-11-07T08:11:26+00:00 epoch 016/40 lr=0.034567 train_loss=0.37567 train_acc=0.8702 val_ce=0.47136 val_acc=0.8462 best_epoch=16 seconds=3.82
+2026-11-07T08:11:31+00:00 epoch 017/40 lr=0.032725 train_loss=0.35429 train_acc=0.8774 val_ce=0.50063 val_acc=0.8334 best_epoch=16 seconds=3.82
+2026-11-07T08:11:35+00:00 epoch 018/40 lr=0.030836 train_loss=0.34314 train_acc=0.8803 val_ce=0.69641 val_acc=0.7880 best_epoch=16 seconds=3.97
+2026-11-07T08:11:39+00:00 epoch 019/40 lr=0.028911 train_loss=0.32906 train_acc=0.8852 val_ce=0.55359 val_acc=0.8210 best_epoch=16 seconds=3.89
+2026-11-07T08:11:43+00:00 epoch 020/40 lr=0.026961 train_loss=0.31666 train_acc=0.8895 val_ce=0.41232 val_acc=0.8612 best_epoch=20 seconds=3.75
+2026-11-07T08:11:47+00:00 epoch 021/40 lr=0.025000 train_loss=0.30070 train_acc=0.8956 val_ce=0.42651 val_acc=0.8626 best_epoch=21 seconds=3.82
+2026-11-07T08:11:50+00:00 epoch 022/40 lr=0.023039 train_loss=0.28477 train_acc=0.9015 val_ce=0.41995 val_acc=0.8632 best_epoch=22 seconds=3.65
+2026-11-07T08:11:54+00:00 epoch 023/40 lr=0.021089 train_loss=0.27078 train_acc=0.9048 val_ce=0.40088 val_acc=0.8684 best_epoch=23 seconds=4.04
+2026-11-07T08:11:59+00:00 epoch 024/40 lr=0.019164 train_loss=0.25893 train_acc=0.9098 val_ce=0.43765 val_acc=0.8636 best_epoch=23 seconds=4.05
+2026-11-07T08:12:03+00:00 epoch 025/40 lr=0.017275 train_loss=0.24658 train_acc=0.9140 val_ce=0.38822 val_acc=0.8760 best_epoch=25 seconds=4.23
+2026-11-07T08:12:07+00:00 epoch 026/40 lr=0.015433 train_loss=0.23164 train_acc=0.9207 val_ce=0.40708 val_acc=0.8704 best_epoch=25 seconds=4.20
+2026-11-07T08:12:12+00:00 epoch 027/40 lr=0.013650 train_loss=0.21886 train_acc=0.9239 val_ce=0.37781 val_acc=0.8814 best_epoch=27 seconds=4.27
+2026-11-07T08:12:16+00:00 epoch 028/40 lr=0.011938 train_loss=0.20244 train_acc=0.9286 val_ce=0.41834 val_acc=0.8744 best_epoch=27 seconds=4.26
+2026-11-07T08:12:20+00:00 epoch 029/40 lr=0.010305 train_loss=0.18836 train_acc=0.9343 val_ce=0.36275 val_acc=0.8832 best_epoch=29 seconds=4.29
+2026-11-07T08:12:24+00:00 epoch 030/40 lr=0.008764 train_loss=0.17366 train_acc=0.9392 val_ce=0.37198 val_acc=0.8820 best_epoch=29 seconds=3.75
+2026-11-07T08:12:27+00:00 epoch 031/40 lr=0.007322 train_loss=0.15991 train_acc=0.9437 val_ce=0.35591 val_acc=0.8942 best_epoch=31 seconds=3.14
+2026-11-07T08:12:30+00:00 epoch 032/40 lr=0.005990 train_loss=0.14706 train_acc=0.9485 val_ce=0.34496 val_acc=0.8974 best_epoch=32 seconds=2.59
+2026-11-07T08:12:33+00:00 epoch 033/40 lr=0.004775 train_loss=0.13394 train_acc=0.9546 val_ce=0.34748 val_acc=0.8978 best_epoch=33 seconds=2.58
+2026-11-07T08:12:36+00:00 epoch 034/40 lr=0.003684 train_loss=0.12645 train_acc=0.9560 val_ce=0.34319 val_acc=0.9024 best_epoch=34 seconds=2.48
+2026-11-07T08:12:39+00:00 epoch 035/40 lr=0.002725 train_loss=0.11642 train_acc=0.9610 val_ce=0.33853 val_acc=0.8974 best_epoch=34 seconds=2.60
+2026-11-07T08:12:42+00:00 epoch 036/40 lr=0.001903 train_loss=0.10946 train_acc=0.9629 val_ce=0.34052 val_acc=0.8982 best_epoch=34 seconds=2.54
+2026-11-07T08:12:45+00:00 epoch 037/40 lr=0.001224 train_loss=0.10432 train_acc=0.9650 val_ce=0.33649 val_acc=0.9008 best_epoch=34 seconds=2.56
+2026-11-07T08:12:47+00:00 epoch 038/40 lr=0.000691 train_loss=0.09693 train_acc=0.9681 val_ce=0.33751 val_acc=0.9016 best_epoch=34 seconds=2.62
+2026-11-07T08:12:50+00:00 epoch 039/40 lr=0.000308 train_loss=0.09574 train_acc=0.9680 val_ce=0.33587 val_acc=0.9000 best_epoch=34 seconds=2.55
+2026-11-07T08:12:53+00:00 epoch 040/40 lr=0.000077 train_loss=0.09446 train_acc=0.9684 val_ce=0.33328 val_acc=0.9010 best_epoch=34 seconds=2.58
+2026-11-07T08:12:53+00:00 finished: selected epoch 34, val_acc=0.9024, val_ce=0.34319

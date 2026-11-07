@@ -1,0 +1,218 @@
+2026-11-07T07:51:51+00:00 plan: 72 runs, jobs=3, threads=4, device=cuda
+2026-11-07T07:51:51+00:00 train  cifar/baseline seed=2026 (attempt 1)
+2026-11-07T07:51:51+00:00 train  cifar/depth_1conv seed=2026 (attempt 1)
+2026-11-07T07:51:51+00:00 train  cifar/kernel5 seed=2026 (attempt 1)
+2026-11-07T07:54:18+00:00 done   cifar/depth_1conv seed=2026: val_acc=0.8600 in 137s
+2026-11-07T07:54:18+00:00 train  cifar/avgpool seed=2026 (attempt 1)
+2026-11-07T07:55:08+00:00 done   cifar/baseline seed=2026: val_acc=0.9040 in 186s
+2026-11-07T07:55:08+00:00 train  cifar/stride2 seed=2026 (attempt 1)
+2026-11-07T07:55:12+00:00 done   cifar/kernel5 seed=2026: val_acc=0.9074 in 189s
+2026-11-07T07:55:12+00:00 train  cifar/hidden_small seed=2026 (attempt 1)
+2026-11-07T07:57:40+00:00 done   cifar/avgpool seed=2026: val_acc=0.9152 in 196s
+2026-11-07T07:57:40+00:00 train  cifar/mse_loss seed=2026 (attempt 1)
+2026-11-07T07:58:26+00:00 done   cifar/stride2 seed=2026: val_acc=0.8890 in 191s
+2026-11-07T07:58:26+00:00 train  cifar/no_dropout seed=2026 (attempt 1)
+2026-11-07T07:58:29+00:00 done   cifar/hidden_small seed=2026: val_acc=0.9082 in 192s
+2026-11-07T07:58:29+00:00 train  orl/baseline seed=2026 (attempt 1)
+2026-11-07T07:59:00+00:00 done   orl/baseline seed=2026: val_acc=1.0000 in 15s
+2026-11-07T07:59:00+00:00 train  orl/depth_3stage seed=2026 (attempt 1)
+2026-11-07T07:59:59+00:00 done   orl/depth_3stage seed=2026: val_acc=1.0000 in 15s
+2026-11-07T07:59:59+00:00 train  orl/kernel5 seed=2026 (attempt 1)
+2026-11-07T08:00:32+00:00 done   orl/kernel5 seed=2026: val_acc=1.0000 in 16s
+2026-11-07T08:00:32+00:00 train  orl/avgpool seed=2026 (attempt 1)
+2026-11-07T08:00:34+00:00 done   cifar/mse_loss seed=2026: val_acc=0.8992 in 166s
+2026-11-07T08:00:34+00:00 train  orl/stride2 seed=2026 (attempt 1)
+2026-11-07T08:01:03+00:00 done   cifar/no_dropout seed=2026: val_acc=0.9082 in 146s
+2026-11-07T08:01:03+00:00 train  orl/hidden_small seed=2026 (attempt 1)
+2026-11-07T08:01:35+00:00 done   orl/avgpool seed=2026: val_acc=1.0000 in 9s
+2026-11-07T08:01:35+00:00 train  orl/mse_loss seed=2026 (attempt 1)
+2026-11-07T08:01:40+00:00 done   orl/hidden_small seed=2026: val_acc=1.0000 in 7s
+2026-11-07T08:01:40+00:00 train  orl/no_dropout seed=2026 (attempt 1)
+2026-11-07T08:01:42+00:00 done   orl/stride2 seed=2026: val_acc=1.0000 in 8s
+2026-11-07T08:01:42+00:00 train  mnist/baseline seed=2026 (attempt 1)
+2026-11-07T08:02:10+00:00 done   mnist/baseline seed=2026: val_acc=0.9945 in 20s
+2026-11-07T08:02:10+00:00 train  mnist/depth_3stage seed=2026 (attempt 1)
+2026-11-07T08:02:31+00:00 done   orl/mse_loss seed=2026: val_acc=1.0000 in 9s
+2026-11-07T08:02:31+00:00 train  mnist/kernel5 seed=2026 (attempt 1)
+2026-11-07T08:02:32+00:00 done   orl/no_dropout seed=2026: val_acc=1.0000 in 9s
+2026-11-07T08:02:32+00:00 train  mnist/avgpool seed=2026 (attempt 1)
+2026-11-07T08:02:39+00:00 done   mnist/depth_3stage seed=2026: val_acc=0.9953 in 23s
+2026-11-07T08:02:39+00:00 train  mnist/stride2 seed=2026 (attempt 1)
+2026-11-07T08:03:08+00:00 done   mnist/avgpool seed=2026: val_acc=0.9953 in 31s
+2026-11-07T08:03:08+00:00 train  mnist/hidden_small seed=2026 (attempt 1)
+2026-11-07T08:03:08+00:00 done   mnist/kernel5 seed=2026: val_acc=0.9960 in 32s
+2026-11-07T08:03:08+00:00 train  mnist/mse_loss seed=2026 (attempt 1)
+2026-11-07T08:03:12+00:00 done   mnist/stride2 seed=2026: val_acc=0.9940 in 28s
+2026-11-07T08:03:12+00:00 train  mnist/no_dropout seed=2026 (attempt 1)
+2026-11-07T08:03:46+00:00 done   mnist/hidden_small seed=2026: val_acc=0.9928 in 33s
+2026-11-07T08:03:46+00:00 train  cifar/baseline seed=2027 (attempt 1)
+2026-11-07T08:03:47+00:00 done   mnist/mse_loss seed=2026: val_acc=0.9942 in 34s
+2026-11-07T08:03:47+00:00 train  cifar/depth_1conv seed=2027 (attempt 1)
+2026-11-07T08:03:49+00:00 done   mnist/no_dropout seed=2026: val_acc=0.9950 in 32s
+2026-11-07T08:03:49+00:00 train  cifar/kernel5 seed=2027 (attempt 1)
+2026-11-07T08:06:06+00:00 done   cifar/depth_1conv seed=2027: val_acc=0.8580 in 133s
+2026-11-07T08:06:06+00:00 train  cifar/avgpool seed=2027 (attempt 1)
+2026-11-07T08:06:58+00:00 done   cifar/baseline seed=2027: val_acc=0.9106 in 186s
+2026-11-07T08:06:58+00:00 train  cifar/stride2 seed=2027 (attempt 1)
+2026-11-07T08:07:06+00:00 done   cifar/kernel5 seed=2027: val_acc=0.9042 in 189s
+2026-11-07T08:07:06+00:00 train  cifar/hidden_small seed=2027 (attempt 1)
+2026-11-07T08:09:29+00:00 done   cifar/avgpool seed=2027: val_acc=0.9134 in 196s
+2026-11-07T08:09:29+00:00 train  cifar/mse_loss seed=2027 (attempt 1)
+2026-11-07T08:10:16+00:00 done   cifar/stride2 seed=2027: val_acc=0.8924 in 190s
+2026-11-07T08:10:16+00:00 train  cifar/no_dropout seed=2027 (attempt 1)
+2026-11-07T08:10:22+00:00 done   cifar/hidden_small seed=2027: val_acc=0.9076 in 191s
+2026-11-07T08:10:22+00:00 train  orl/baseline seed=2027 (attempt 1)
+2026-11-07T08:10:52+00:00 done   orl/baseline seed=2027: val_acc=1.0000 in 15s
+2026-11-07T08:10:52+00:00 train  orl/depth_3stage seed=2027 (attempt 1)
+2026-11-07T08:11:48+00:00 done   orl/depth_3stage seed=2027: val_acc=1.0000 in 15s
+2026-11-07T08:11:48+00:00 train  orl/kernel5 seed=2027 (attempt 1)
+2026-11-07T08:12:20+00:00 done   orl/kernel5 seed=2027: val_acc=1.0000 in 16s
+2026-11-07T08:12:20+00:00 train  orl/avgpool seed=2027 (attempt 1)
+2026-11-07T08:12:26+00:00 done   cifar/mse_loss seed=2027: val_acc=0.9024 in 167s
+2026-11-07T08:12:26+00:00 train  orl/stride2 seed=2027 (attempt 1)
+2026-11-07T08:12:54+00:00 done   cifar/no_dropout seed=2027: val_acc=0.9024 in 146s
+2026-11-07T08:12:54+00:00 train  orl/hidden_small seed=2027 (attempt 1)
+2026-11-07T08:13:18+00:00 done   orl/avgpool seed=2027: val_acc=1.0000 in 9s
+2026-11-07T08:13:18+00:00 train  orl/mse_loss seed=2027 (attempt 1)
+2026-11-07T08:13:31+00:00 done   orl/hidden_small seed=2027: val_acc=0.9750 in 7s
+2026-11-07T08:13:31+00:00 train  orl/no_dropout seed=2027 (attempt 1)
+2026-11-07T08:13:41+00:00 done   orl/stride2 seed=2027: val_acc=1.0000 in 8s
+2026-11-07T08:13:41+00:00 train  mnist/baseline seed=2027 (attempt 1)
+2026-11-07T08:14:08+00:00 done   mnist/baseline seed=2027: val_acc=0.9952 in 19s
+2026-11-07T08:14:08+00:00 train  mnist/depth_3stage seed=2027 (attempt 1)
+2026-11-07T08:14:22+00:00 done   orl/mse_loss seed=2027: val_acc=1.0000 in 8s
+2026-11-07T08:14:22+00:00 train  mnist/kernel5 seed=2027 (attempt 1)
+2026-11-07T08:14:24+00:00 done   orl/no_dropout seed=2027: val_acc=1.0000 in 8s
+2026-11-07T08:14:24+00:00 train  mnist/avgpool seed=2027 (attempt 1)
+2026-11-07T08:14:41+00:00 done   mnist/depth_3stage seed=2027: val_acc=0.9953 in 27s
+2026-11-07T08:14:41+00:00 train  mnist/stride2 seed=2027 (attempt 1)
+2026-11-07T08:15:00+00:00 done   mnist/kernel5 seed=2027: val_acc=0.9968 in 32s
+2026-11-07T08:15:00+00:00 train  mnist/hidden_small seed=2027 (attempt 1)
+2026-11-07T08:15:01+00:00 done   mnist/avgpool seed=2027: val_acc=0.9960 in 31s
+2026-11-07T08:15:01+00:00 train  mnist/mse_loss seed=2027 (attempt 1)
+2026-11-07T08:15:13+00:00 done   mnist/stride2 seed=2027: val_acc=0.9950 in 27s
+2026-11-07T08:15:13+00:00 train  mnist/no_dropout seed=2027 (attempt 1)
+2026-11-07T08:15:36+00:00 done   mnist/hidden_small seed=2027: val_acc=0.9923 in 32s
+2026-11-07T08:15:36+00:00 train  cifar/baseline seed=2028 (attempt 1)
+2026-11-07T08:15:38+00:00 done   mnist/mse_loss seed=2027: val_acc=0.9942 in 33s
+2026-11-07T08:15:38+00:00 train  cifar/depth_1conv seed=2028 (attempt 1)
+2026-11-07T08:15:50+00:00 done   mnist/no_dropout seed=2027: val_acc=0.9950 in 32s
+2026-11-07T08:15:50+00:00 train  cifar/kernel5 seed=2028 (attempt 1)
+2026-11-07T08:17:55+00:00 done   cifar/depth_1conv seed=2028: val_acc=0.8616 in 130s
+2026-11-07T08:17:55+00:00 train  cifar/avgpool seed=2028 (attempt 1)
+2026-11-07T08:18:45+00:00 done   cifar/baseline seed=2028: val_acc=0.9080 in 183s
+2026-11-07T08:18:45+00:00 train  cifar/stride2 seed=2028 (attempt 1)
+2026-11-07T08:19:09+00:00 done   cifar/kernel5 seed=2028: val_acc=0.9018 in 191s
+2026-11-07T08:19:09+00:00 train  cifar/hidden_small seed=2028 (attempt 1)
+2026-11-07T08:21:18+00:00 done   cifar/avgpool seed=2028: val_acc=0.9100 in 196s
+2026-11-07T08:21:18+00:00 train  cifar/mse_loss seed=2028 (attempt 1)
+2026-11-07T08:22:03+00:00 done   cifar/stride2 seed=2028: val_acc=0.8984 in 191s
+2026-11-07T08:22:03+00:00 train  cifar/no_dropout seed=2028 (attempt 1)
+2026-11-07T08:22:27+00:00 done   cifar/hidden_small seed=2028: val_acc=0.9020 in 192s
+2026-11-07T08:22:27+00:00 train  orl/baseline seed=2028 (attempt 1)
+2026-11-07T08:22:58+00:00 done   orl/baseline seed=2028: val_acc=1.0000 in 15s
+2026-11-07T08:22:58+00:00 train  orl/depth_3stage seed=2028 (attempt 1)
+2026-11-07T08:23:57+00:00 done   orl/depth_3stage seed=2028: val_acc=1.0000 in 15s
+2026-11-07T08:23:57+00:00 train  orl/kernel5 seed=2028 (attempt 1)
+2026-11-07T08:24:16+00:00 done   cifar/mse_loss seed=2028: val_acc=0.8994 in 169s
+2026-11-07T08:24:16+00:00 train  orl/avgpool seed=2028 (attempt 1)
+2026-11-07T08:24:37+00:00 done   orl/kernel5 seed=2028: val_acc=1.0000 in 14s
+2026-11-07T08:24:37+00:00 train  orl/stride2 seed=2028 (attempt 1)
+2026-11-07T08:24:44+00:00 done   cifar/no_dropout seed=2028: val_acc=0.9098 in 150s
+2026-11-07T08:24:44+00:00 train  orl/hidden_small seed=2028 (attempt 1)
+2026-11-07T08:25:24+00:00 done   orl/hidden_small seed=2028: val_acc=0.9750 in 7s
+2026-11-07T08:25:24+00:00 train  orl/mse_loss seed=2028 (attempt 1)
+2026-11-07T08:25:24+00:00 done   orl/avgpool seed=2028: val_acc=1.0000 in 9s
+2026-11-07T08:25:24+00:00 train  orl/no_dropout seed=2028 (attempt 1)
+2026-11-07T08:26:01+00:00 done   orl/stride2 seed=2028: val_acc=1.0000 in 7s
+2026-11-07T08:26:01+00:00 train  mnist/baseline seed=2028 (attempt 1)
+2026-11-07T08:26:29+00:00 done   mnist/baseline seed=2028: val_acc=0.9945 in 20s
+2026-11-07T08:26:29+00:00 train  mnist/depth_3stage seed=2028 (attempt 1)
+2026-11-07T08:26:36+00:00 done   orl/no_dropout seed=2028: val_acc=1.0000 in 8s
+2026-11-07T08:26:36+00:00 train  mnist/kernel5 seed=2028 (attempt 1)
+2026-11-07T08:26:36+00:00 done   orl/mse_loss seed=2028: val_acc=1.0000 in 8s
+2026-11-07T08:26:36+00:00 train  mnist/avgpool seed=2028 (attempt 1)
+2026-11-07T08:27:06+00:00 done   mnist/depth_3stage seed=2028: val_acc=0.9952 in 32s
+2026-11-07T08:27:06+00:00 train  mnist/stride2 seed=2028 (attempt 1)
+2026-11-07T08:27:14+00:00 done   mnist/avgpool seed=2028: val_acc=0.9950 in 33s
+2026-11-07T08:27:14+00:00 train  mnist/hidden_small seed=2028 (attempt 1)
+2026-11-07T08:27:15+00:00 done   mnist/kernel5 seed=2028: val_acc=0.9947 in 34s
+2026-11-07T08:27:15+00:00 train  mnist/mse_loss seed=2028 (attempt 1)
+2026-11-07T08:27:38+00:00 done   mnist/stride2 seed=2028: val_acc=0.9950 in 27s
+2026-11-07T08:27:38+00:00 train  mnist/no_dropout seed=2028 (attempt 1)
+2026-11-07T08:27:50+00:00 done   mnist/hidden_small seed=2028: val_acc=0.9912 in 31s
+2026-11-07T08:27:52+00:00 done   mnist/mse_loss seed=2028: val_acc=0.9942 in 32s
+2026-11-07T08:28:04+00:00 done   mnist/no_dropout seed=2028: val_acc=0.9952 in 21s
+2026-11-07T08:28:07+00:00 test   cifar/baseline seed=2026: evaluated accuracy=0.8972
+2026-11-07T08:28:08+00:00 test   cifar/depth_1conv seed=2026: evaluated accuracy=0.8612
+2026-11-07T08:28:08+00:00 test   cifar/kernel5 seed=2026: evaluated accuracy=0.8971
+2026-11-07T08:28:09+00:00 test   cifar/avgpool seed=2026: evaluated accuracy=0.9054
+2026-11-07T08:28:09+00:00 test   cifar/stride2 seed=2026: evaluated accuracy=0.8911
+2026-11-07T08:28:10+00:00 test   cifar/hidden_small seed=2026: evaluated accuracy=0.8980
+2026-11-07T08:28:10+00:00 test   cifar/mse_loss seed=2026: evaluated accuracy=0.8972
+2026-11-07T08:28:11+00:00 test   cifar/no_dropout seed=2026: evaluated accuracy=0.8985
+2026-11-07T08:28:11+00:00 test   orl/baseline seed=2026: evaluated accuracy=0.9750
+2026-11-07T08:28:11+00:00 test   orl/depth_3stage seed=2026: evaluated accuracy=0.9750
+2026-11-07T08:28:11+00:00 test   orl/kernel5 seed=2026: evaluated accuracy=0.9500
+2026-11-07T08:28:11+00:00 test   orl/avgpool seed=2026: evaluated accuracy=1.0000
+2026-11-07T08:28:11+00:00 test   orl/stride2 seed=2026: evaluated accuracy=0.9750
+2026-11-07T08:28:11+00:00 test   orl/hidden_small seed=2026: evaluated accuracy=0.9500
+2026-11-07T08:28:11+00:00 test   orl/mse_loss seed=2026: evaluated accuracy=1.0000
+2026-11-07T08:28:11+00:00 test   orl/no_dropout seed=2026: evaluated accuracy=0.9750
+2026-11-07T08:28:12+00:00 test   mnist/baseline seed=2026: evaluated accuracy=0.9941
+2026-11-07T08:28:12+00:00 test   mnist/depth_3stage seed=2026: evaluated accuracy=0.9958
+2026-11-07T08:28:13+00:00 test   mnist/kernel5 seed=2026: evaluated accuracy=0.9957
+2026-11-07T08:28:14+00:00 test   mnist/avgpool seed=2026: evaluated accuracy=0.9950
+2026-11-07T08:28:14+00:00 test   mnist/stride2 seed=2026: evaluated accuracy=0.9930
+2026-11-07T08:28:15+00:00 test   mnist/hidden_small seed=2026: evaluated accuracy=0.9915
+2026-11-07T08:28:16+00:00 test   mnist/mse_loss seed=2026: evaluated accuracy=0.9941
+2026-11-07T08:28:16+00:00 test   mnist/no_dropout seed=2026: evaluated accuracy=0.9935
+2026-11-07T08:28:17+00:00 test   cifar/baseline seed=2027: evaluated accuracy=0.9005
+2026-11-07T08:28:17+00:00 test   cifar/depth_1conv seed=2027: evaluated accuracy=0.8563
+2026-11-07T08:28:18+00:00 test   cifar/kernel5 seed=2027: evaluated accuracy=0.8987
+2026-11-07T08:28:18+00:00 test   cifar/avgpool seed=2027: evaluated accuracy=0.9077
+2026-11-07T08:28:19+00:00 test   cifar/stride2 seed=2027: evaluated accuracy=0.8882
+2026-11-07T08:28:19+00:00 test   cifar/hidden_small seed=2027: evaluated accuracy=0.9012
+2026-11-07T08:28:19+00:00 test   cifar/mse_loss seed=2027: evaluated accuracy=0.8948
+2026-11-07T08:28:20+00:00 test   cifar/no_dropout seed=2027: evaluated accuracy=0.8944
+2026-11-07T08:28:20+00:00 test   orl/baseline seed=2027: evaluated accuracy=0.9750
+2026-11-07T08:28:20+00:00 test   orl/depth_3stage seed=2027: evaluated accuracy=0.9500
+2026-11-07T08:28:20+00:00 test   orl/kernel5 seed=2027: evaluated accuracy=1.0000
+2026-11-07T08:28:20+00:00 test   orl/avgpool seed=2027: evaluated accuracy=0.9750
+2026-11-07T08:28:20+00:00 test   orl/stride2 seed=2027: evaluated accuracy=0.9750
+2026-11-07T08:28:20+00:00 test   orl/hidden_small seed=2027: evaluated accuracy=0.9500
+2026-11-07T08:28:20+00:00 test   orl/mse_loss seed=2027: evaluated accuracy=0.9750
+2026-11-07T08:28:20+00:00 test   orl/no_dropout seed=2027: evaluated accuracy=0.9500
+2026-11-07T08:28:21+00:00 test   mnist/baseline seed=2027: evaluated accuracy=0.9938
+2026-11-07T08:28:22+00:00 test   mnist/depth_3stage seed=2027: evaluated accuracy=0.9956
+2026-11-07T08:28:22+00:00 test   mnist/kernel5 seed=2027: evaluated accuracy=0.9955
+2026-11-07T08:28:23+00:00 test   mnist/avgpool seed=2027: evaluated accuracy=0.9946
+2026-11-07T08:28:24+00:00 test   mnist/stride2 seed=2027: evaluated accuracy=0.9941
+2026-11-07T08:28:24+00:00 test   mnist/hidden_small seed=2027: evaluated accuracy=0.9929
+2026-11-07T08:28:25+00:00 test   mnist/mse_loss seed=2027: evaluated accuracy=0.9921
+2026-11-07T08:28:25+00:00 test   mnist/no_dropout seed=2027: evaluated accuracy=0.9938
+2026-11-07T08:28:26+00:00 test   cifar/baseline seed=2028: evaluated accuracy=0.8964
+2026-11-07T08:28:26+00:00 test   cifar/depth_1conv seed=2028: evaluated accuracy=0.8568
+2026-11-07T08:28:27+00:00 test   cifar/kernel5 seed=2028: evaluated accuracy=0.8967
+2026-11-07T08:28:27+00:00 test   cifar/avgpool seed=2028: evaluated accuracy=0.9040
+2026-11-07T08:28:28+00:00 test   cifar/stride2 seed=2028: evaluated accuracy=0.8881
+2026-11-07T08:28:28+00:00 test   cifar/hidden_small seed=2028: evaluated accuracy=0.8952
+2026-11-07T08:28:29+00:00 test   cifar/mse_loss seed=2028: evaluated accuracy=0.8974
+2026-11-07T08:28:29+00:00 test   cifar/no_dropout seed=2028: evaluated accuracy=0.9026
+2026-11-07T08:28:29+00:00 test   orl/baseline seed=2028: evaluated accuracy=0.9500
+2026-11-07T08:28:29+00:00 test   orl/depth_3stage seed=2028: evaluated accuracy=0.9500
+2026-11-07T08:28:29+00:00 test   orl/kernel5 seed=2028: evaluated accuracy=0.9750
+2026-11-07T08:28:29+00:00 test   orl/avgpool seed=2028: evaluated accuracy=0.9500
+2026-11-07T08:28:29+00:00 test   orl/stride2 seed=2028: evaluated accuracy=1.0000
+2026-11-07T08:28:29+00:00 test   orl/hidden_small seed=2028: evaluated accuracy=0.9000
+2026-11-07T08:28:29+00:00 test   orl/mse_loss seed=2028: evaluated accuracy=1.0000
+2026-11-07T08:28:29+00:00 test   orl/no_dropout seed=2028: evaluated accuracy=0.9500
+2026-11-07T08:28:30+00:00 test   mnist/baseline seed=2028: evaluated accuracy=0.9934
+2026-11-07T08:28:31+00:00 test   mnist/depth_3stage seed=2028: evaluated accuracy=0.9953
+2026-11-07T08:28:31+00:00 test   mnist/kernel5 seed=2028: evaluated accuracy=0.9957
+2026-11-07T08:28:32+00:00 test   mnist/avgpool seed=2028: evaluated accuracy=0.9946
+2026-11-07T08:28:33+00:00 test   mnist/stride2 seed=2028: evaluated accuracy=0.9937
+2026-11-07T08:28:33+00:00 test   mnist/hidden_small seed=2028: evaluated accuracy=0.9921
+2026-11-07T08:28:34+00:00 test   mnist/mse_loss seed=2028: evaluated accuracy=0.9933
+2026-11-07T08:28:35+00:00 test   mnist/no_dropout seed=2028: evaluated accuracy=0.9935
+2026-11-07T08:28:35+00:00 finished: 72 of 72 runs complete, failed: []

@@ -1,0 +1,23 @@
+mnist/depth_3stage: A third conv stage (32, 64, 128)
+Input (channels, height, width): (1, 28, 28)
+Classes: 10
+Trainable parameters: 241,770
+
+Layer           Type          Output shape            Params  Settings
+features.0      Conv2d        32x28x28                   288  1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.1      BatchNorm2d   32x28x28                    64  32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.2      ReLU          32x28x28                     0  inplace=True
+features.3      MaxPool2d     32x14x14                     0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+features.4      Conv2d        64x14x14                18,432  32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.5      BatchNorm2d   64x14x14                   128  64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.6      ReLU          64x14x14                     0  inplace=True
+features.7      MaxPool2d     64x7x7                       0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+features.8      Conv2d        128x7x7                 73,728  64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.9      BatchNorm2d   128x7x7                    256  128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.10     ReLU          128x7x7                      0  inplace=True
+features.11     MaxPool2d     128x3x3                      0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+classifier.0    Flatten       1152                         0  start_dim=1, end_dim=-1
+classifier.1    Linear        128                    147,584  in_features=1152, out_features=128, bias=True
+classifier.2    ReLU          128                          0  inplace=True
+classifier.3    Dropout       128                          0  p=0.25, inplace=False
+classifier.4    Linear        10                       1,290  in_features=128, out_features=10, bias=True

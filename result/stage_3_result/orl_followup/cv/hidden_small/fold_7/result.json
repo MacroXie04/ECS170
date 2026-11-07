@@ -1,0 +1,11 @@
+{
+  "config": "hidden_small",
+  "correct": 13,
+  "cross_entropy": 2.371084213256836,
+  "epochs": 120,
+  "fold": 7,
+  "held_out": 40,
+  "parameters": 386776,
+  "seed": 4007,
+  "train_seconds": 13.292799097034731
+}

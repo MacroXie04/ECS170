@@ -1,0 +1,45 @@
+{
+  "checkpoint_selection_rule": "Within a run, keep the epoch with the highest validation accuracy; break ties by the lowest validation cross-entropy, then by the earliest epoch. The test set is never read during training.",
+  "concurrent_jobs": 3,
+  "config": {
+    "aug_hflip": true,
+    "aug_padding_mode": "constant",
+    "aug_shift": 4,
+    "batch_norm": true,
+    "batch_size": 128,
+    "changed_factor": "kernel_size",
+    "channels": [
+      32,
+      64,
+      128
+    ],
+    "convs_per_stage": 2,
+    "dataset": "cifar",
+    "description": "5x5 kernels; padding 2 keeps the same spatial size",
+    "downsample": "maxpool",
+    "dropout": 0.3,
+    "eval_batch_size": 1024,
+    "hidden_dims": [
+      256
+    ],
+    "kernel_size": 5,
+    "learning_rate": 0.05,
+    "loss": "cross_entropy",
+    "max_epoch": 40,
+    "momentum": 0.9,
+    "name": "kernel5",
+    "nesterov": true,
+    "optimizer": "sgd",
+    "padding": 2,
+    "scheduler": "cosine",
+    "weight_decay": 0.0005,
+    "weight_init": "kaiming_normal_fan_out_relu"
+  },
+  "config_sha256": "85b0eb027d393cffb4fc00376354b131960d97b8b45f24cf828da8dbd7dbca5e",
+  "formal": true,
+  "overrides": [],
+  "parameters": 1324010,
+  "seed": 2026,
+  "split_seed": 170,
+  "tag": null
+}

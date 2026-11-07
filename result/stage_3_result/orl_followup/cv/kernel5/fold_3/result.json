@@ -1,0 +1,11 @@
+{
+  "config": "kernel5",
+  "correct": 40,
+  "cross_entropy": 0.0009557059966027737,
+  "epochs": 120,
+  "fold": 3,
+  "held_out": 40,
+  "parameters": 1427096,
+  "seed": 4003,
+  "train_seconds": 16.219848447974073
+}

@@ -1,0 +1,11 @@
+{
+  "config": "depth_3stage",
+  "correct": 40,
+  "cross_entropy": 0.006688387598842382,
+  "epochs": 120,
+  "fold": 3,
+  "held_out": 40,
+  "parameters": 2557080,
+  "seed": 4003,
+  "train_seconds": 12.425777831158484
+}

@@ -1,0 +1,11 @@
+{
+  "config": "no_dropout",
+  "correct": 40,
+  "cross_entropy": 0.018292425200343132,
+  "epochs": 120,
+  "fold": 3,
+  "held_out": 40,
+  "parameters": 1254808,
+  "seed": 4003,
+  "train_seconds": 12.112780589959584
+}

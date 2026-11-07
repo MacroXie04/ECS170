@@ -1,0 +1,7 @@
+2026-11-07T07:08:26+00:00 start cifar/baseline seed=2026 device=cuda params=814570
+2026-11-07T07:08:27+00:00 method running...
+2026-11-07T07:08:27+00:00 --start training...
+2026-11-07T07:08:30+00:00 epoch 001/3 lr=0.050000 train_loss=1.67124 train_acc=0.3779 val_ce=1.36697 val_acc=0.5016 best_epoch=1 seconds=2.57
+2026-11-07T07:08:32+00:00 epoch 002/3 lr=0.037500 train_loss=1.23348 train_acc=0.5578 val_ce=1.02913 val_acc=0.6368 best_epoch=2 seconds=2.34
+2026-11-07T07:08:34+00:00 epoch 003/3 lr=0.012500 train_loss=0.96169 train_acc=0.6614 val_ce=0.80056 val_acc=0.7086 best_epoch=3 seconds=2.32
+2026-11-07T07:08:34+00:00 finished: selected epoch 3, val_acc=0.7086, val_ce=0.80056

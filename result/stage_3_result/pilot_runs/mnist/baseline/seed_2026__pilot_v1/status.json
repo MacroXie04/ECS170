@@ -1,0 +1,8 @@
+{
+  "epoch": 15,
+  "selected_epoch": 15,
+  "state": "trained",
+  "train_seconds": 154.53360365396657,
+  "val_accuracy": 0.9936666666666667,
+  "val_cross_entropy": 0.02038932964205742
+}

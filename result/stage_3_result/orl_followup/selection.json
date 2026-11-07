@@ -1,0 +1,15 @@
+{
+  "config": "stride2",
+  "row": {
+    "accuracy": 1.0,
+    "config": "stride2",
+    "correct": 360,
+    "fold_accuracy_std": 0.0,
+    "held_out": 360,
+    "mean_cross_entropy": 0.0010917468041750705,
+    "parameters": 1484184,
+    "train_seconds_mean": 10.291595498009379
+  },
+  "rule": "Most correct of the 360 pooled held-out predictions; then lowest mean held-out cross-entropy; then fewest parameters.",
+  "selected_at": "2026-11-07T09:08:26+00:00"
+}
