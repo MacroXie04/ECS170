@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "validation_runs": 7,
+  "same_disjoint_complete_split": true,
+  "saved_metrics_recomputed": true,
+  "best_epoch_matches_history": true,
+  "source_hash_matches": true,
+  "final_checkpoint_reproduces_predictions": true,
+  "test_correct": 9826,
+  "test_total": 10000
+}

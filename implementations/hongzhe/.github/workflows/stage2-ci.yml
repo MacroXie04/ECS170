@@ -1,0 +1,123 @@
+name: Stage 2 training
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stage2-training-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  train:
+    name: Train and evaluate four MLPs
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      report: ${{ steps.report.outputs.report }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13.12'
+          cache: pip
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu 'torch==2.14.1'
+          python -m pip install -r requirements.txt
+      - name: Test result validation
+        run: python -m unittest discover -s tests/ci -v
+      - name: Download and verify the exact course dataset
+        run: python script/ci/prepare_mnist.py --output-dir "$RUNNER_TEMP/stage2-data"
+      - name: Train from scratch and evaluate
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/stage2-results"
+          python -u script/stage_2_script/run_experiments.py \
+            --device cpu \
+            --data-dir "$RUNNER_TEMP/stage2-data" \
+            --output-dir "$RUNNER_TEMP/stage2-results" \
+            | tee "$RUNNER_TEMP/stage2-results/training.log"
+      - name: Validate all four results
+        id: report
+        shell: bash
+        run: |
+          report=$(python script/ci/summarize_results.py "$RUNNER_TEMP/stage2-results")
+          printf 'report=%s\n' "$report" >> "$GITHUB_OUTPUT"
+      - name: Save results and logs
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: stage2-results-pr-${{ github.event.pull_request.number }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/stage2-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  comment:
+    name: Update PR accuracy comment
+    needs: train
+    if: ${{ always() && !cancelled() && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          TRAIN_STATUS: ${{ needs.train.result }}
+          REPORT_JSON: ${{ needs.train.outputs.report }}
+        with:
+          script: |
+            const marker = '<!-- ecs170-stage2-ci -->';
+            const pr = context.payload.pull_request;
+            const {data: current} = await github.rest.pulls.get({
+              ...context.repo, pull_number: pr.number
+            });
+            if (current.state !== 'open' || current.head.sha !== pr.head.sha) {
+              core.info('Skipping a closed PR or an outdated commit.');
+              return;
+            }
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            let body = `${marker}\n## Stage 2 training results\n\nCommit: \`${pr.head.sha}\` · [Run and artifacts](${runUrl})\n\n`;
+            if (process.env.TRAIN_STATUS === 'success') {
+              const report = JSON.parse(process.env.REPORT_JSON);
+              const names = {
+                shallow_adam_ce: 'Shallow Adam + CE',
+                deep_adam_ce: 'Deep Adam + CE',
+                deep_sgd_ce: 'Deep SGD + CE',
+                deep_adam_mse: 'Deep Adam + MSE'
+              };
+              if (report.rows.length !== 4 || new Set(report.rows.map(r => r.name)).size !== 4) {
+                throw new Error('Expected four unique configurations.');
+              }
+              body += 'Trained from scratch: 15 epochs, batch size 256, seed 42, CPU.\n';
+              body += '60,000 training examples; 10,000 test examples. Dataset hashes match the course CSVs.\n\n';
+              body += '| Model | Test accuracy | Macro F1 |\n|---|---:|---:|\n';
+              for (const row of report.rows) {
+                if (!Object.hasOwn(names, row.name) || ![row.accuracy, row.macro_f1].every(x => Number.isFinite(x) && x >= 0 && x <= 1)) {
+                  throw new Error('Invalid model metrics.');
+                }
+                body += `| ${names[row.name]} | ${(100 * row.accuracy).toFixed(2)}% | ${row.macro_f1.toFixed(4)} |\n`;
+              }
+              body += '\nAll four results passed validation against their saved predictions. Fresh checkpoints, metrics, plots, and logs are attached to the run (7-day retention).\n';
+              body += '\nCPU/platform differences can cause small changes from the archived local results.';
+            } else {
+              body += `Training/validation **${process.env.TRAIN_STATUS}**. No accuracy is reported for this commit; see the run logs for details.`;
+            }
+            await core.summary.addRaw(body.replace(`${marker}\n`, '')).write();
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              ...context.repo, issue_number: pr.number, per_page: 100
+            });
+            const previous = comments.find(c => c.user?.login === 'github-actions[bot]' && c.body?.startsWith(marker));
+            if (previous) {
+              await github.rest.issues.updateComment({...context.repo, comment_id: previous.id, body});
+            } else {
+              await github.rest.issues.createComment({...context.repo, issue_number: pr.number, body});
+            }
