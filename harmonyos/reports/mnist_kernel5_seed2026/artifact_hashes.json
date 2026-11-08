@@ -1,0 +1,30 @@
+{
+  "weights_before.bin": {
+    "bytes": 1820072,
+    "sha256": "a4819cb24ce960734fb83a42bb2853b9c74aa43636870c28e08224fce4fa7e5c"
+  },
+  "weights_after.bin": {
+    "bytes": 1820072,
+    "sha256": "56b18c735461635c7336448327897177026b24cac05bd00d7322e5f9b9b0a96b"
+  },
+  "best.ms": {
+    "bytes": 1830928,
+    "sha256": "15824c2f996586329abd1af0f54af177ddc4411963f736bfca950e8b4e526842"
+  },
+  "best_state.bin": {
+    "bytes": 5460992,
+    "sha256": "1accdd846170990eb2c7c736c6c986e52e05a74ae8dd824ae1b2284788324174"
+  },
+  "best_state.json": {
+    "bytes": 2767,
+    "sha256": "7aab9d43fa5e53e63642ac2b78892eff8d9047181a6f121a5d2291dd460a98df"
+  },
+  "test_logits.bin": {
+    "bytes": 400000,
+    "sha256": "548b80d16aa03eafd04c95793f74377eeb8f66e00a0e9a57a4edbe5d75057f2d"
+  },
+  "reloaded_logits.bin": {
+    "bytes": 400000,
+    "sha256": "548b80d16aa03eafd04c95793f74377eeb8f66e00a0e9a57a4edbe5d75057f2d"
+  }
+}

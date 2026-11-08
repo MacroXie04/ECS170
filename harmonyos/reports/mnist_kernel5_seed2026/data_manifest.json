@@ -1,0 +1,72 @@
+{
+  "method": "stratified hold-out from the instructor training set (sklearn train_test_split)",
+  "split_seed": 170,
+  "instructor_train_samples": 60000,
+  "optimization_samples": 54000,
+  "validation_samples": 6000,
+  "instructor_test_samples": 10000,
+  "optimization_class_counts": [
+    5331,
+    6068,
+    5362,
+    5518,
+    5258,
+    4879,
+    5326,
+    5638,
+    5266,
+    5354
+  ],
+  "validation_class_counts": [
+    592,
+    674,
+    596,
+    613,
+    584,
+    542,
+    592,
+    627,
+    585,
+    595
+  ],
+  "optimization_indices_sha256": "1c3b94c0c4a44af03ef31884ce67c1fd7610dba4238337de8d2e6b0e35abc761",
+  "validation_indices_sha256": "ed7cfff465912e9cb02381ff2d071c9431f1cfd22c2a8410198829e0cf506da3",
+  "source_sha256": "c328558117745723fe4e49dd7917f00509d99f7a1ec3f8e0c0036e78b9476472",
+  "mean": [
+    0.13069777642538496
+  ],
+  "std": [
+    0.3081527941133227
+  ],
+  "input_shape": [
+    1,
+    28,
+    28
+  ],
+  "files": {
+    "mnist_train_images.bin": {
+      "bytes": 42336000,
+      "sha256": "55aba4a46362802d0d9b357fa5fc27bc8f1298e6a199e53d0d0fc3724cad08bd"
+    },
+    "mnist_train_labels.bin": {
+      "bytes": 54000,
+      "sha256": "e2aa110a1ebcf1e92331430f19201cd8c2d8e7bb0d50ecba4280bcab3e336c9e"
+    },
+    "mnist_val_images.bin": {
+      "bytes": 4704000,
+      "sha256": "e60d64c400001413e409061183083bfb4f18b1b909f367422d3a51d3cc18ce43"
+    },
+    "mnist_val_labels.bin": {
+      "bytes": 6000,
+      "sha256": "777e2ee9ae50a981362d2d873dab4c684ce2173e30f79b70d07976c88c0c09c6"
+    },
+    "mnist_test_images.bin": {
+      "bytes": 7840000,
+      "sha256": "6d87418db22cc8025d05968bec9bd5c3932904b23485740db143a061a2c9d161"
+    },
+    "mnist_test_labels.bin": {
+      "bytes": 10000,
+      "sha256": "ddeff807876a9661a1110d45c266c86239a3a1b7d37da0c3716a7a683c852ff5"
+    }
+  }
+}

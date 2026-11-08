@@ -1,0 +1,8 @@
+{
+  "including_transfers": false,
+  "monitor_and_collection_seconds": 1537.7691307920002,
+  "device_optimizer_seconds": 1127.409224797014,
+  "device_training_loop_seconds": 1138.798824221001,
+  "device_evaluation_seconds": 366.64236296600103,
+  "device_total_seconds": 1530.7471235929997
+}

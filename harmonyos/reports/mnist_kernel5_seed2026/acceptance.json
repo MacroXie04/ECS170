@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "formal": true,
+  "steps": 6330,
+  "samples_seen": 810000,
+  "finite_weights": 455018,
+  "changed_weights": 447871,
+  "reload_max_error": 0
+}

@@ -1,0 +1,38 @@
+{
+  "id": "mnist_kernel5_seed2026",
+  "seed": 2026,
+  "config": {
+    "dataset": "mnist",
+    "name": "kernel5",
+    "changed_factor": "kernel_size",
+    "description": "5x5 kernels; padding 2 keeps the same spatial size",
+    "channels": [
+      32,
+      64
+    ],
+    "hidden_dims": [
+      128
+    ],
+    "convs_per_stage": 1,
+    "kernel_size": 5,
+    "padding": 2,
+    "downsample": "maxpool",
+    "batch_norm": true,
+    "dropout": 0.25,
+    "loss": "cross_entropy",
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "momentum": 0.0,
+    "nesterov": false,
+    "scheduler": "cosine",
+    "max_epoch": 15,
+    "batch_size": 128,
+    "eval_batch_size": 1024,
+    "aug_shift": 2,
+    "aug_hflip": false,
+    "aug_padding_mode": "constant",
+    "weight_init": "kaiming_normal_fan_out_relu"
+  },
+  "fingerprint": "314ed2783f21c9f9938b3abc126113e7bd87a0a091d19ac31d193551d0546515"
+}
