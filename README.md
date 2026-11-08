@@ -1,62 +1,79 @@
-# ECS170 - Stage 2: MLP Classification
+# ECS170 Course Project
 
-**Final test accuracy: 98.26% (9,826/10,000).** Macro Precision / Recall / F1:
-**0.982615 / 0.982334 / 0.982451**.
+## Stage 3: CNN image classification
 
-## Changes from the course template
+Final results on the instructor's test partitions:
 
-Stage 1 and the base classes are unchanged. Stage 2 adapts the loader to the supplied
-CSV files (label first, 784 features), scales features by 255, and uses logits with
-cross-entropy. Training uses `fit()` to preserve PyTorch's `train()`/`eval()` modes.
-Seven configurations compare network depth, loss, optimizer and regularization.
-A fixed 54,000/6,000 split within the training set selects the configuration and epoch;
-a fresh model then trains on all 60,000 training examples before final testing.
-The instructor's test set is kept separate; no cross-validation or test-based tuning is used.
+| Dataset | Test accuracy | Macro Precision | Macro Recall | Macro F1 |
+| --- | --- | --- | --- | --- |
+| MNIST | 99.08% (9,908/10,000) | 0.990787 | 0.990643 | 0.990690 |
+| ORL | 97.50% (39/40) | 0.962500 | 0.975000 | 0.966667 |
+| CIFAR | 77.74% (7,774/10,000) | 0.791596 | 0.777400 | 0.781089 |
 
-The template saves predictions with **Pickle**. This implementation currently uses
-**NumPy NPZ** for predictions, **JSON** for settings/metrics, **CSV** for training history,
-and **PyTorch PT** for model parameters. These are storage-format changes, not changes
-to the evaluation task.
+Stage 3 follows the course module framework in `local_code/stage_3_code/`.
+The loader converts images to NCHW float32 tensors with pixels divided by 255 and maps ORL
+identities 1-40 to indices 0-39, keeping one of its identical grayscale channels.
+Five independent configurations compare convolution depth, pooling, hidden width
+and loss. Each dataset uses one fixed stratified holdout within its training set.
+Validation selects the configuration and epoch; a fresh model then trains on the
+full training partition before testing. Test results are excluded from selection.
+Only CIFAR training batches use random crops and horizontal flips.
 
-## Where to review the results
+### Review the results
 
-All recorded experiments are under [`result/stage_2_result/`](result/stage_2_result/).
-Each named experiment folder contains its training/validation results; `final/`
-contains the model refitted on the full training set and its test results.
+Open [MNIST](result/stage_3_result/MNIST/), [ORL](result/stage_3_result/ORL/)
+or [CIFAR](result/stage_3_result/CIFAR/) under `result/stage_3_result/`.
 The report is submitted separately.
 
-| File | Contents / how to view |
+| File within each dataset folder | Contents / how to view |
 | --- | --- |
-| [comparison.csv](result/stage_2_result/comparison.csv) | Seven-configuration validation comparison; open in a spreadsheet or text editor. |
-| [final/record.json](result/stage_2_result/final/record.json) | Final configuration, training/test metrics and per-class results; open as text. |
-| [final/history.csv](result/stage_2_result/final/history.csv) | Per-epoch training loss and accuracy; open in a spreadsheet or text editor. |
-| `*/learning_curve.png`, `final/confusion_matrix.png`, `comparison.png` | Open the images directly. |
-| [final/predictions.npz](result/stage_2_result/final/predictions.npz) | Saved true/predicted labels; load with NumPy (example below). |
-| [final/model.pt](result/stage_2_result/final/model.pt) | Load with `torch.load(path, map_location='cpu', weights_only=True)`; contains `state_dict`, `config`, `input_dim`, `classes` and preprocessing. |
+| `comparison.csv`, `comparison.png` | Five-configuration validation comparison; open as a table or image. |
+| `selection.json` | Validation selection and locked final epoch count. |
+| `*/record.json`, `*/history.csv` | Settings, source/data hashes, metrics and epoch history; open as text or a table. |
+| `*/learning_curve.png`, `final/confusion_matrix.png` | Open images directly. |
+| `final/predictions.npz` | NumPy arrays `train_true`, `train_pred`, `test_true`, `test_pred`; labels use class indices. |
+| `final/model.pt` | Checkpoint with `state_dict`, `config`, `input_shape`, original `classes`, `dataset` and preprocessing. |
 
-From the repository root, inspect saved test predictions without retraining:
+Prediction storage uses NPZ rather than the course template's Pickle format.
+Settings and metrics use JSON, histories use CSV, and model weights use PT.
+Load checkpoints with `torch.load(path, map_location='cpu', weights_only=True)`.
+Map class indices back to the instructor labels with `checkpoint['classes']`.
+Existing experiment folders are protected against overwriting.
 
-```python
-import numpy as np
-with np.load('result/stage_2_result/final/predictions.npz') as result:
-    print(result['test_true'][:10], result['test_pred'][:10])
-    print('Accuracy:', (result['test_true'] == result['test_pred']).mean())
-```
+### Run and verify
 
-## Run / verify
-
-Place the supplied `train.csv` and `test.csv` in `data/stage_2_data/`. Run from the
-repository root with Python 3.9 or later:
+Use Python 3.9 or later. Place the supplied files `MNIST`, `ORL`, and `CIFAR`
+in `data/stage_3_data/`. From the repository root:
 
 ```bash
-python -m pip install torch numpy scikit-learn
+python -m pip install torch numpy scikit-learn matplotlib
 python -m unittest discover -s tests -v
-python tests/audit_stage2.py
-python script/stage_2_script/script_mlp.py baseline --output result/new_run
-python script/stage_2_script/script_mlp.py compare --output result/new_run
-python script/stage_2_script/script_mlp.py final --output result/new_run
+python tests/audit_stage3.py
+python script/stage_3_script/script_cnn.py compare --output result/new_stage3
+python script/stage_3_script/script_cnn.py final --output result/new_stage3
+python tests/audit_stage3.py --output result/new_stage3
 ```
 
-The audit only reads the original records, checks their historical source hash,
-and verifies saved metrics and checkpoint predictions. Use a new output directory
-for reproduction; the reported artifacts and their original hashes are preserved.
+`--dataset MNIST`, `ORL` or `CIFAR` runs one dataset; the default is all three.
+The default device is CPU with two threads. The audit reads saved results,
+recalculates metrics, checks shared splits and selection, and reproduces validation
+and final test predictions from checkpoints. Use a new output folder to retrain;
+leave the reported artifacts unchanged. Figures are included as saved images.
+
+## Stage 2: MLP classification
+
+The earlier Stage 2 implementation and its recorded experiments are preserved.
+Final test accuracy: **98.26% (9,826/10,000)**. Macro Precision / Recall / F1:
+**0.982615 / 0.982334 / 0.982451**.
+See [comparison](result/stage_2_result/comparison.csv),
+[final metrics](result/stage_2_result/final/record.json), and the images in
+[result/stage_2_result/](result/stage_2_result/). Its report is submitted separately.
+Stage 1 and the course base classes are unchanged.
+
+For Stage 2, put `train.csv` and `test.csv` in `data/stage_2_data/`:
+
+```bash
+python tests/audit_stage2.py
+python script/stage_2_script/script_mlp.py compare --output result/new_stage2
+python script/stage_2_script/script_mlp.py final --output result/new_stage2
+```

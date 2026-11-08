@@ -1,0 +1,43 @@
+{
+  "rule": "Max validation accuracy, then macro F1, then name; checkpoint by minimum validation loss",
+  "candidates": [
+    "baseline",
+    "depth3",
+    "average_pool",
+    "hidden32",
+    "squared_error"
+  ],
+  "selected": "squared_error",
+  "config": {
+    "channels": [
+      16,
+      32
+    ],
+    "kernel": 3,
+    "pool": "max",
+    "grid": [
+      7,
+      7
+    ],
+    "hidden": 128,
+    "dropout": 0.2,
+    "batch_norm": false,
+    "loss": "squared_error",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "epochs": 12,
+    "patience": 5,
+    "seed": 42,
+    "augment": false
+  },
+  "dataset": "MNIST",
+  "train_source": {
+    "file": "MNIST",
+    "partition": "train",
+    "rows": 60000,
+    "sha256": "c328558117745723fe4e49dd7917f00509d99f7a1ec3f8e0c0036e78b9476472"
+  },
+  "source_sha256": "79dac9e85b9a2069778d0ee1a07241f3631a4cddbf6207fa553e5e67a9caf561",
+  "validation_accuracy": 0.988
+}
