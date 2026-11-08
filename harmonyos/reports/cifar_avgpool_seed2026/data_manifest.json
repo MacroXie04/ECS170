@@ -1,0 +1,76 @@
+{
+  "method": "stratified hold-out from the instructor training set (sklearn train_test_split)",
+  "split_seed": 170,
+  "instructor_train_samples": 50000,
+  "optimization_samples": 45000,
+  "validation_samples": 5000,
+  "instructor_test_samples": 10000,
+  "optimization_class_counts": [
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500
+  ],
+  "validation_class_counts": [
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500
+  ],
+  "optimization_indices_sha256": "1cd9fcb5e1a41adf87b29710ae49f5ac424977f7d11b71c4ac5a0111b9147cf2",
+  "validation_indices_sha256": "41b95e3dd077fb523cc0c801d1ac38d13224be60e58db8ad73f034ff67eccb70",
+  "source_sha256": "04178bcd1198435941ecf94037f09d87f5f9a51ee65bf72b6a497bbfe1c825d4",
+  "mean": [
+    0.4911074728519979,
+    0.4820400246800117,
+    0.4466095795887788
+  ],
+  "std": [
+    0.2468459976090122,
+    0.24341744674648283,
+    0.2616046167575164
+  ],
+  "input_shape": [
+    3,
+    32,
+    32
+  ],
+  "files": {
+    "cifar_train_images.bin": {
+      "bytes": 138240000,
+      "sha256": "6bd5a3690f3f4f135905ff0c6636b3e567a822ce33ff1f4fb6fe42e2a974be78"
+    },
+    "cifar_train_labels.bin": {
+      "bytes": 45000,
+      "sha256": "555988572e6e6ea1277556417ee7d64ce1cb578d8917ecda0047126b0e4f452e"
+    },
+    "cifar_val_images.bin": {
+      "bytes": 15360000,
+      "sha256": "ad9028abb8d45f8cf3c6ce67c01dd995987533a9598cb5deaff5d85f40c4b8a0"
+    },
+    "cifar_val_labels.bin": {
+      "bytes": 5000,
+      "sha256": "1afddf3f5b802dd36fad39e93484c38097768bc669c0ba5c1a399b713c51e6af"
+    },
+    "cifar_test_images.bin": {
+      "bytes": 30720000,
+      "sha256": "f9b1e2130bab680db56eb06d886f7f1ad0f1183907ceff4659d1735c890f5b04"
+    },
+    "cifar_test_labels.bin": {
+      "bytes": 10000,
+      "sha256": "cec8a24a1e92aa2ecaa0bbd3dbfa86bf6cd8759fbd209a832824c8cf0afca9d5"
+    }
+  }
+}

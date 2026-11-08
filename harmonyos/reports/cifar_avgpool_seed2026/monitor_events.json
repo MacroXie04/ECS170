@@ -1,0 +1,8 @@
+{
+  "event": "USB monitoring reattached without restarting device app",
+  "recorded_utc": "2026-11-08T16:49:24.223745+00:00",
+  "device_pid_after_reconnect": 39714,
+  "last_epoch_before_reconnect": 26,
+  "confirmed_next_epoch": 27,
+  "native_timing_continuous": true
+}

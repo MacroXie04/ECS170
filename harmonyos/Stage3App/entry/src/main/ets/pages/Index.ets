@@ -1,3 +1,4 @@
+import { window } from '@kit.ArkUI';
 import { NativeModel, NativeTensor } from './NativeModel';
 import batchprep from 'libbatchprep.so';
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
@@ -27,12 +28,12 @@ struct Index {
  @State detail: string = '等待训练任务';
  @State timer: string = '00:00:00';
  private dir: string = ''; private c: Config = new Config(); private vars: Variables = new Variables();
- private clockStart: number = 0; private timerId: number = -1; private started: boolean = false;
+ private displayedElapsed: number = -1; private clockStart: number = 0; private timerId: number = -1; private started: boolean = false;
  private x: Float32Array = new Float32Array(0); private y: Float32Array = new Float32Array(0);
  private empty: ArrayBuffer = new ArrayBuffer(0); private batch: number = 0; private currentLR: number = 0;
  aboutToAppear(): void { if(!this.started){this.started=true;this.run();} }
  aboutToDisappear(): void { if(this.timerId>=0)clearInterval(this.timerId); }
- updateTimer(): void {const s=Math.floor((batchprep.now()-this.clockStart)/1000);this.timer=Math.floor(s/3600).toString().padStart(2,'0')+':'+Math.floor(s/60%60).toString().padStart(2,'0')+':'+(s%60).toString().padStart(2,'0');}
+ updateTimer(): void {const s=Math.floor((this.displayedElapsed>=0?this.displayedElapsed:batchprep.now()-this.clockStart)/1000);this.timer=Math.floor(s/3600).toString().padStart(2,'0')+':'+Math.floor(s/60%60).toString().padStart(2,'0')+':'+(s%60).toString().padStart(2,'0');}
  log(s: string): void {hilog.info(0x170,'Stage3Train','%{public}s',this.c.id+' '+s);}
  save(n: string,data: ArrayBuffer|string): void {const p=this.dir+'/'+n;const f=fileIo.openSync(p+'.tmp',fileIo.OpenMode.CREATE|fileIo.OpenMode.READ_WRITE|fileIo.OpenMode.TRUNC);fileIo.writeSync(f.fd,data);fileIo.closeSync(f);fileIo.renameSync(p+'.tmp',p);}
  read(n: string): ArrayBuffer {const p=this.dir+'/'+n;const b=new ArrayBuffer(fileIo.statSync(p).size);const f=fileIo.openSync(p,fileIo.OpenMode.READ_ONLY);const count=fileIo.readSync(f.fd,b);fileIo.closeSync(f);if(count!==b.byteLength)throw new Error('Incomplete file '+n);return b;}
@@ -91,7 +92,9 @@ struct Index {
   const split=c.action==='reload_smoke'?'val':'test';const r=await this.evaluate(model,this.read(c.dataset+'_'+split+'_images.bin'),this.read(c.dataset+'_'+split+'_labels.bin'));const expected=new Float32Array(this.read(c.id+'_'+split+'_logits.bin'));
   if(expected.length!==r.logits.length)throw new Error('Reload output length mismatch');let maxError=0;for(let i=0;i<expected.length;i++)maxError=Math.max(maxError,Math.abs(expected[i]-r.logits[i]));
   this.save(c.id+'_reloaded_logits.bin',r.logits.buffer as ArrayBuffer);this.save(c.id+'_reload.json',JSON.stringify({passed:maxError<0.0001,maxError:maxError,scope:split,loss:r.loss,accuracy:r.accuracy}));
-  this.message='Saved model reload '+(maxError<0.0001?'PASS':'FAIL');this.log('RELOAD '+maxError);
+  const saved: Report=JSON.parse(fileIo.readTextSync(this.dir+'/'+c.id+'_result.json')) as Report;this.displayedElapsed=saved.elapsedMs;
+  this.message=c.dataset.toUpperCase()+' · '+(saved.formal?'训练':'预检')+'与重载验证'+(maxError<0.0001?'通过':'失败');
+  this.detail='完成 '+saved.epochs.length+' 轮 · '+(saved.formal?'测试':'验证')+'准确率 '+(r.accuracy*100).toFixed(2)+'%\n训练步骤耗时 '+(saved.optimizerMs/60000).toFixed(2)+' 分钟\n上方计时为任务总耗时（含评估与保存）';this.log('RELOAD '+maxError);
  }
  async train(report: Report): Promise<void> {
   const c=this.c;const train=await this.load('train');let clone=await this.load('eval');const saved=await this.load('eval');saved.trainMode=false;let tail=train;
@@ -159,7 +162,7 @@ struct Index {
    this.clockStart=batchprep.now();this.timerId=setInterval(()=>this.updateTimer(),250);
    if(c.action==='diagnose_bn')await this.diagnoseBN();else if(c.action==='diagnose')await this.diagnoseOptimizer();else if(c.action==='reload'||c.action==='reload_smoke')await this.reload();else await this.train(report);
   }catch(err){report.state='error';report.error=String(err)+' '+(err as Error).stack;this.message='Training error';this.detail=report.error;this.log('ERROR '+report.error);if(this.dir.length>0)this.save(this.c.id+'_result.json',JSON.stringify(report));}
-  finally{if(this.timerId>=0){clearInterval(this.timerId);this.updateTimer();}}
+  finally{if(this.timerId>=0){clearInterval(this.timerId);this.updateTimer();}window.getLastWindow(this.getUIContext().getHostContext() as common.UIAbilityContext).then((mainWindow: window.Window)=>mainWindow.setWindowKeepScreenOn(false)).catch(()=>this.log('Could not release keep-screen-on'));}
  }
  build(){Column({space:24}){Text(this.message).fontSize(28).fontWeight(FontWeight.Bold);Text(this.timer).fontSize(48);Text(this.detail).fontSize(20).lineHeight(30)}.width('100%').height('100%').justifyContent(FlexAlign.Center).padding(36)}
 }

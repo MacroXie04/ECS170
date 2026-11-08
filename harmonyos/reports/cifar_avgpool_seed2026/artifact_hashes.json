@@ -1,0 +1,30 @@
+{
+  "weights_before.bin": {
+    "bytes": 3258280,
+    "sha256": "2031af8578ba0008a199e7dbeeb6ff15ddaeade06f6fad5cd15846e4c9e0c913"
+  },
+  "weights_after.bin": {
+    "bytes": 3258280,
+    "sha256": "6a129f2371bdd445a0cc67cd941328febd1a0411bfdac7fcd1c1bb5c0f3cf58d"
+  },
+  "best.ms": {
+    "bytes": 3285880,
+    "sha256": "ae5e19c484cdc39f4c2b087a391013943cea1761b4fbb9b36e2aa59c67ce6c6a"
+  },
+  "best_state.bin": {
+    "bytes": 9778424,
+    "sha256": "6a8a7f27c04cf87d8962c9601a20bc389e4b8037cd0dbb971c51e054ff390019"
+  },
+  "best_state.json": {
+    "bytes": 6084,
+    "sha256": "df354ce9e3bf8e40ccf2c0cd1b40c2ef18aaf2873a02dfeae81456313e073813"
+  },
+  "test_logits.bin": {
+    "bytes": 400000,
+    "sha256": "2aaa3cc2821417f2bc8ff8605836bfe7f2d36f854f093869b2af4b5f8aec9b52"
+  },
+  "reloaded_logits.bin": {
+    "bytes": 400000,
+    "sha256": "2aaa3cc2821417f2bc8ff8605836bfe7f2d36f854f093869b2af4b5f8aec9b52"
+  }
+}

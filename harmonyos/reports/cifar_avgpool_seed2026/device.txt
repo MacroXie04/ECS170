@@ -1,0 +1,4 @@
+2in1 
+MOR-M1 
+OpenHarmony-7.0.0.109 
+aarch64

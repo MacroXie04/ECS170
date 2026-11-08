@@ -8,6 +8,7 @@ on the full optimization split after each epoch, with augmentation disabled.
 
 | Run | Epochs | Initial → final train CE | Best validation | Test | Total device time | Optimizer time |
 |---|---:|---:|---:|---:|---:|---:|
+| [cifar_avgpool_seed2026](cifar_avgpool_seed2026/curves.png) | 40 | 2.30355 → 0.0546732 | 90.94% | 90.46% | 13364.032 s | 10502.821 s |
 | [mnist_kernel5_seed2026](mnist_kernel5_seed2026/curves.png) | 15 | 2.30839 → 0.00766387 | 99.60% | 99.56% | 1530.747 s | 1127.409 s |
 | [orl_kernel5_seed2026](orl_kernel5_seed2026/curves.png) | 120 | 3.69066 → 7.04073e-05 | 100.00% | 95.00% | 530.976 s | 450.069 s |
 

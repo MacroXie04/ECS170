@@ -79,7 +79,7 @@ loading/evaluation/checkpoint work. Host transfer time is excluded and labelled.
 An interrupted or failed run must never be reported as completed. Binary datasets,
 models, credentials, build outputs and raw logs are intentionally ignored.
 Verified compact experiment reports are published in [reports/README.md](reports/README.md).
-ORL has completed all 120 epochs; subsequent runs are listed there only after verification.
+All three selected runs have completed: ORL 120 epochs, MNIST 15 epochs and CIFAR 40 epochs. Each passed full data coverage, weight-update and independent-process reload checks.
 
 `legacy/` preserves earlier emulator/probe implementations. Their smaller CNNs,
 different protocols and historical metrics are not physical-device PR #6 results.
@@ -112,3 +112,6 @@ python harmonyos/run_device.py --target USB_SERIAL --run RUN_ID \
 This resumes monitoring and collection only. It does not claim to resume a crashed
 training process. Device monotonic timing remains authoritative; host monitoring
 time after reattachment covers only the new monitoring segment.
+
+The final app screen keeps the original device job duration visible after reload,
+and releases its keep-screen-on setting when the job finishes.

@@ -1,0 +1,39 @@
+{
+  "id": "cifar_avgpool_seed2026",
+  "seed": 2026,
+  "config": {
+    "dataset": "cifar",
+    "name": "avgpool",
+    "changed_factor": "pooling",
+    "description": "Average pooling instead of max pooling",
+    "channels": [
+      32,
+      64,
+      128
+    ],
+    "hidden_dims": [
+      256
+    ],
+    "convs_per_stage": 2,
+    "kernel_size": 3,
+    "padding": 1,
+    "downsample": "avgpool",
+    "batch_norm": true,
+    "dropout": 0.3,
+    "loss": "cross_entropy",
+    "optimizer": "sgd",
+    "learning_rate": 0.05,
+    "weight_decay": 0.0005,
+    "momentum": 0.9,
+    "nesterov": true,
+    "scheduler": "cosine",
+    "max_epoch": 40,
+    "batch_size": 128,
+    "eval_batch_size": 1024,
+    "aug_shift": 4,
+    "aug_hflip": true,
+    "aug_padding_mode": "constant",
+    "weight_init": "kaiming_normal_fan_out_relu"
+  },
+  "fingerprint": "031c583d977df92f6f16193ae3aba75db5661a04ce3a0fc87b3509ebdba7443d"
+}

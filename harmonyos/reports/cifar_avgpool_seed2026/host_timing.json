@@ -1,0 +1,9 @@
+{
+  "including_transfers": false,
+  "reattached": true,
+  "monitor_and_collection_seconds": 4658.029753375,
+  "device_optimizer_seconds": 10502.820987488949,
+  "device_training_loop_seconds": 10536.169429374997,
+  "device_evaluation_seconds": 2748.8974726600077,
+  "device_total_seconds": 13364.032337343999
+}
