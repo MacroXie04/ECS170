@@ -1,66 +1,99 @@
-# Stage 3 on HarmonyOS
+# Stage 3 training on a physical HarmonyOS computer
 
-This directory contains the HarmonyOS ArkTS app, native batch preprocessing,
-model-export compatibility probe, and the earlier emulator training implementation.
-All optimizer steps in the app execute on HarmonyOS. Host Python exports graphs,
-prepares data and collects evidence; it must not be used to substitute host training.
+The source protocol is [PR #6](https://github.com/MacroXie04/ECS170/pull/6),
+commit `41cb6f084a7722b2fb46f9c9cffb45132f9eb15d`. The initial requested subset is
+ORL kernel5 / MNIST kernel5 / CIFAR avgpool, seed 2026, with 120 / 15 / 40 epochs.
+`protocol.json` retains the complete 72-run matrix; `selected_runs.json` records
+this initial subset. Successful smoke tests are not completed formal experiments.
 
-## Current status
+## Execution and protocol
 
-- Source configuration: PR #6, commit `41cb6f084a7722b2fb46f9c9cffb45132f9eb15d`.
-- `protocol.json`: 72 requested runs (3 datasets × 8 configurations × 3 seeds).
-- `prepare_protocol.py`: regenerates the protocol directly from the repository registry.
-- Signed app built and installed on a physical HUAWEI MateBook Pro (2in1, aarch64).
-- Full CIFAR baseline export has 814,570 parameters, matching the PR's PyTorch model.
-- Full graph conversion currently fails in MindSpore Lite 2.7.0 with an unsupported
-  `None` tensor type. Formal PR6 training has **not** started and no real-device
-  accuracy or full training duration is claimed.
-- `Stage3App` currently runs compatibility probes only and rejects formal jobs.
-  Its timer uses `CLOCK_MONOTONIC`; optimizer-step time is recorded separately from
-  graph loading and total probe duration. The display refreshes between synchronous steps.
+All forward/backward passes and optimizer updates execute on the connected
+HarmonyOS computer, through its native MindSpore Lite C API. The Mac prepares
+real data, the original PyTorch random initialization, sampling schedules and
+graphs, then transfers files and collects evidence. It does not perform the
+formal training. The app displays a monotonic elapsed timer and per-epoch progress.
 
-## Build
+The original split seed, train-only normalization, full 112×92 ORL resolution,
+network, loss, optimizer, cosine schedule and validation selection are retained.
+Sampling and augmentation choices reproduce the PR's CPU random streams;
+native preprocessing is compared against the original loader's first batch.
+Different frameworks need not generate identical Dropout masks or bitwise results.
+Evaluation CE after each epoch is labelled `trainEvalLoss`; it is not the PR's
+stochastic minibatch training loss. Final test data is evaluated only after
+validation-based model selection. Short final training batches have their own
+graph and exchange optimizer state with the full-batch graph.
 
-Install Huawei DevEco Studio with HarmonyOS SDK API 26. Set `DEVECO_HOME` to its
-`Contents` directory if it is not installed in the default user Applications folder.
+## Compatibility repairs
+
+- BatchNorm is decomposed into supported arithmetic with an explicit rsqrt
+  derivative. Each training graph writes batch mean and unbiased variance;
+  the native bridge applies the original 0.9/0.1 moving-statistics update after
+  each step. This avoids folding the old running statistics into constants.
+- Adam uses the native optimizer operation, with epsilon adjusted for the
+  framework's bias-correction convention. Its power accumulators use one-element
+  tensors so state can be copied between full and partial batches.
+- Converter inputs are explicitly NCHW. The app checks shapes and learning-rate
+  readback. Native library linking includes the C++ runtime statically.
+- Native model handles separate training and evaluation. Evaluation models are
+  rebuilt to avoid stale packed weights. Weight copies use owned tensor storage.
+  Inference export occurs after training; reload is checked in a new app process.
+
+## Reproduction
+
+Use DevEco Studio with HarmonyOS SDK API 26 and a signed development app. The
+bundle identifier is `com.example.mnistprobe`, matching the local signing profile.
+The generated `Stage3App/build-profile.json5` and credentials must remain ignored.
+
+Install `requirements-host.txt` in the host preparation environment, and
+`requirements-export.txt` in a separate Linux environment. Supply the official
+Stage 3 MNIST/ORL/CIFAR pickle directory to the unchanged PR loader:
 
 ```sh
-python3 harmonyos/prepare_protocol.py
+python harmonyos/prepare_protocol.py
+python harmonyos/prepare_data.py /path/to/official/pickles
+python harmonyos/prepare_initial_weights.py --run orl_kernel5_seed2026
+python harmonyos/prepare_schedule.py --run orl_kernel5_seed2026
+python harmonyos/prepare_batch_reference.py --run orl_kernel5_seed2026
+# Linux, with harmonyos/data and harmonyos/models/initial available:
+python harmonyos/export_models.py harmonyos --run orl_kernel5_seed2026
+python harmonyos/convert_models.py harmonyos/models/orl_kernel5_seed2026 \
+  --converter /path/to/mindspore-lite-2.7.0/tools/converter/converter/converter_lite
+# Mac:
 sh harmonyos/build_app.sh
+hdc -t USB_SERIAL install harmonyos/Stage3App/entry/build/default/outputs/default/entry-default-signed.hap
+python harmonyos/run_device.py --target USB_SERIAL --run orl_kernel5_seed2026 --smoke
+python harmonyos/run_device.py --target USB_SERIAL --run orl_kernel5_seed2026
 ```
 
-The build copies `Stage3App/build-profile.template.json5` to a local ignored
-`build-profile.json5` if needed. Open the app in DevEco Studio and configure official
-automatic signing for the connected physical device. The current bundle identifier
-is `com.example.mnistprobe` because it uses the existing local development profile.
-Never commit the generated signing configuration or developer credentials.
+Repeat preparation/export for the other selected runs. The controller rejects
+network/emulator targets and checks that the physical target reports `2in1`.
 
-## Graph compatibility probe
+## Evidence and limits
 
-`export_pr6_probe.py` requires Python 3.11, MindSpore 2.7.0 and NumPy 1.26.4.
-It exports a random-initialized full CIFAR baseline training graph. It does not yet
-copy the exact PyTorch initialization; therefore this graph is only a compatibility
-probe, not a formal experiment. Conversion uses the official Lite 2.7.0 converter:
+Each local `results/<run-id>/` contains the exact job, protocol, data/model/source
+hashes, per-epoch progress, before/after weights, best inference model, saved state,
+independent-process reload outputs and timing. `optimizerMs` measures native
+steps, `trainingMs` the training loops, and `elapsedMs` the device job including
+loading/evaluation/checkpoint work. Host transfer time is excluded and labelled.
+An interrupted or failed run must never be reported as completed. Binary datasets,
+models, credentials, build outputs and raw logs are intentionally ignored.
+Verified compact experiment reports are published in [reports/README.md](reports/README.md).
+ORL has completed all 120 epochs; subsequent runs are listed there only after verification.
 
-```sh
-python export_pr6_probe.py protocol.json models/pr6_cifar_probe
-converter_lite --fmk=MINDIR --trainModel=true \
-  --modelFile=models/pr6_cifar_probe.mindir \
-  --outputFile=models/pr6_cifar_probe --inputDataFormat=NCHW
-```
+`legacy/` preserves earlier emulator/probe implementations. Their smaller CNNs,
+different protocols and historical metrics are not physical-device PR #6 results.
 
-Formal implementation must retain the original train/validation split, train-only
-normalization, full-resolution ORL, BatchNorm, Dropout, optimizer semantics,
-cosine learning-rate schedule, partial final batches and validation-based selection.
-The training app must not silently replace these with the old small CNN protocol.
+## Arithmetic checks
 
-## Earlier emulator implementation
+`tests/make_batchnorm_reference.py` creates a small synthetic PyTorch reference.
+`tests/test_batchnorm.py` and `tests/test_optimizers.py` compare graph arithmetic;
+`tests/export_diagnostics.py` exports the three-step device diagnostics. Run
+`tests/run_device_diagnostics.py --target USB_SERIAL --models /path/to/converted/diagnostics
+--reference /path/to/bn_reference.npz` in the host preparation environment.
+These synthetic checks do not train Stage 3 data on the Mac. Current device
+BN, Adam and Nesterov results are in `validation/native_arithmetic.json`.
 
-`legacy/` archives the earlier, different experiment matrix and orchestration.
-`legacy/Index.ets` is the original full-training app page. Its 3 configurations per
-dataset are **not** the 8 configurations from PR #6. Its scripts retain their original
-workspace layout assumptions; the original README describes that layout. Historical
-emulator metrics must not be presented as physical-device or PR6 results.
-
-Datasets, model binaries, build outputs, credentials and raw device logs are ignored.
-Add verified compact metrics and reproducibility metadata explicitly after real runs.
+`run_selected.py --target USB_SERIAL` runs smoke checks and formal experiments
+serially, rejecting missing sample coverage, nonfinite weights or reload failures.
+Use repeated `--run` arguments to select only remaining runs.

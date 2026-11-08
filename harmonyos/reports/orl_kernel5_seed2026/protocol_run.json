@@ -1,0 +1,40 @@
+{
+  "id": "orl_kernel5_seed2026",
+  "seed": 2026,
+  "config": {
+    "dataset": "orl",
+    "name": "kernel5",
+    "changed_factor": "kernel_size",
+    "description": "5x5 kernels; padding 2 keeps the same spatial size",
+    "channels": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "hidden_dims": [
+      256
+    ],
+    "convs_per_stage": 1,
+    "kernel_size": 5,
+    "padding": 2,
+    "downsample": "maxpool",
+    "batch_norm": true,
+    "dropout": 0.5,
+    "loss": "cross_entropy",
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "momentum": 0.0,
+    "nesterov": false,
+    "scheduler": "cosine",
+    "max_epoch": 120,
+    "batch_size": 32,
+    "eval_batch_size": 1024,
+    "aug_shift": 4,
+    "aug_hflip": true,
+    "aug_padding_mode": "replicate",
+    "weight_init": "kaiming_normal_fan_out_relu"
+  },
+  "fingerprint": "35a1a224c3996d30eb0cc150969f9768f695587fd2633ba030b39a8a8c49f3f5"
+}

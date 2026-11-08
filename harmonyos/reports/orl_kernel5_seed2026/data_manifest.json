@@ -1,0 +1,132 @@
+{
+  "method": "stratified hold-out from the instructor training set (sklearn train_test_split)",
+  "split_seed": 170,
+  "instructor_train_samples": 360,
+  "optimization_samples": 320,
+  "validation_samples": 40,
+  "instructor_test_samples": 40,
+  "optimization_class_counts": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "validation_class_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "optimization_indices_sha256": "96715eb472903b34a63c9a13f7066b7132259f464fe5490da84fd272a2671492",
+  "validation_indices_sha256": "f28e10d4319e11e4b0b58ce7d480db785627aeb86716bf2d82cdd4fc9cd69fd4",
+  "source_sha256": "94a49cfe24429ccb7caba3439924a30cf5dfbe5fbfa003b7d4edb70d17a7a271",
+  "mean": [
+    0.4412062753090366
+  ],
+  "std": [
+    0.19541197565148472
+  ],
+  "input_shape": [
+    1,
+    112,
+    92
+  ],
+  "files": {
+    "orl_train_images.bin": {
+      "bytes": 3297280,
+      "sha256": "60d4563c37676546e0ecdef744a3dd384c16b9a55fb824090460fd2bc3cd88c2"
+    },
+    "orl_train_labels.bin": {
+      "bytes": 320,
+      "sha256": "0e4349e774efb72cc61a353a67673d12a7efd2bb557968af723645da73dea245"
+    },
+    "orl_val_images.bin": {
+      "bytes": 412160,
+      "sha256": "d037f97de60f97438a265be3b527780845257d4106486e0ff8c1f19d41cb198b"
+    },
+    "orl_val_labels.bin": {
+      "bytes": 40,
+      "sha256": "5faa4eec3611556812c2d74b437c8c49add3f910f10063d801441f7d75cd5e3b"
+    },
+    "orl_test_images.bin": {
+      "bytes": 412160,
+      "sha256": "52cf9791b4fa849617e3f7b0f204c577392118ac2244449f66c53b4912a8a8f9"
+    },
+    "orl_test_labels.bin": {
+      "bytes": 40,
+      "sha256": "5faa4eec3611556812c2d74b437c8c49add3f910f10063d801441f7d75cd5e3b"
+    }
+  }
+}

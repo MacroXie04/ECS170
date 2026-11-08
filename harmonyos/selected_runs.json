@@ -1,0 +1,16 @@
+{
+  "selection": "Best configuration per dataset from PR6; one seed each first, as requested",
+  "source_pr": "https://github.com/MacroXie04/ECS170/pull/6",
+  "seed": 2026,
+  "run_order": [
+    "orl_kernel5_seed2026",
+    "mnist_kernel5_seed2026",
+    "cifar_avgpool_seed2026"
+  ],
+  "formal_epoch_counts": {
+    "orl": 120,
+    "mnist": 15,
+    "cifar": 40
+  },
+  "expand_after_initial_three": true
+}

@@ -6,8 +6,8 @@ NATIVE="$DEVECO_HOME/sdk/default/openharmony/native"
 APP="$ROOT/Stage3App"
 mkdir -p "$APP/entry/libs/arm64-v8a"
 "$NATIVE/llvm/bin/clang++" --target=aarch64-linux-ohos --sysroot="$NATIVE/sysroot" \
-  -std=c++17 -O2 -fPIC -shared "$APP/entry/src/main/cpp/batchprep.cpp" \
-  -lace_napi.z -o "$APP/entry/libs/arm64-v8a/libbatchprep.so"
+  -std=c++17 -static-libstdc++ -O2 -fPIC -shared "$APP/entry/src/main/cpp/batchprep.cpp" \
+  -lace_napi.z -lmindspore_lite_ndk -o "$APP/entry/libs/arm64-v8a/libbatchprep.so"
 if [ ! -f "$APP/build-profile.json5" ]; then
   cp "$APP/build-profile.template.json5" "$APP/build-profile.json5"
 fi

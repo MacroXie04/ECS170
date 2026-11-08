@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import numpy as np
 import mindspore as ms
+from decomposed_bn import ExplicitBatchNorm
 from mindspore import nn, Tensor
 from mindspore.ops import functional as F
 from mindspore.nn.optim.sgd import _sgd_opt
@@ -33,7 +34,7 @@ class CNN(nn.Cell):
                 h=(h+2*c['padding']-c['kernel_size'])//stride+1
                 w=(w+2*c['padding']-c['kernel_size'])//stride+1
                 if c['batch_norm']:
-                    layers.append(nn.BatchNorm2d(out,eps=1e-5,momentum=0.9))
+                    layers.append(ExplicitBatchNorm(out))
                 layers.append(nn.ReLU());ch=out
             if c['downsample']!='stride':
                 pool=nn.MaxPool2d if c['downsample']=='maxpool' else nn.AvgPool2d

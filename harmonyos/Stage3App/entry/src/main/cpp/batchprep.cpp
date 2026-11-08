@@ -35,7 +35,30 @@ static napi_value fill(napi_env e,napi_callback_info info){
  }
  napi_value result;napi_create_uint32(e,seed,&result);return result;
 }
+static napi_value scheduled(napi_env e,napi_callback_info info){
+ napi_value a[8];size_t n=8;napi_get_cb_info(e,info,&n,a,nullptr,nullptr);
+ void *ip,*lp,*op,*xp,*yp;size_t il,ll,ol,xl,yl;
+ if(n!=8||!buf(e,a[0],&ip,&il)||!buf(e,a[1],&lp,&ll)||!buf(e,a[2],&op,&ol)||!buf(e,a[3],&xp,&xl)||!buf(e,a[4],&yp,&yl)||ll==0){napi_throw_error(e,nullptr,"Invalid scheduled buffers");return nullptr;}
+ uint32_t start=integer(e,a[5]);bool replicate=false;napi_get_value_bool(e,a[6],&replicate);bool training=false;napi_get_value_bool(e,a[7],&training);
+ const size_t area=h*w;auto *images=static_cast<uint8_t*>(ip);auto *labels=static_cast<uint8_t*>(lp);auto *order=static_cast<int32_t*>(op);auto *x=static_cast<float*>(xp);auto *y=static_cast<float*>(yp);
+ if(xl!=batch*ch*area*4||yl!=batch*classes*4||il!=ll*area*ch||(training&&(ol!=ll*16||start+batch>ll))){napi_throw_error(e,nullptr,"Scheduled shape mismatch");return nullptr;}
+ memset(y,0,yl);
+ for(uint32_t b=0;b<batch;b++){
+  uint32_t pos=start+b;uint32_t idx=training?order[pos*4]:(pos<ll?pos:0);
+  if(idx>=ll||labels[idx]>=classes){napi_throw_error(e,nullptr,"Scheduled index invalid");return nullptr;}
+  int dy=training?order[pos*4+1]:0,dx=training?order[pos*4+2]:0;bool flip=training&&order[pos*4+3];
+  y[b*classes+labels[idx]]=1;
+  for(uint32_t c=0;c<ch;c++)for(uint32_t row=0;row<h;row++)for(uint32_t col=0;col<w;col++){
+   int sy=static_cast<int>(row)+dy,sx=static_cast<int>(flip?w-1-col:col)+dx;
+   if(replicate){sy=sy<0?0:(sy>=static_cast<int>(h)?h-1:sy);sx=sx<0?0:(sx>=static_cast<int>(w)?w-1:sx);}
+   float v=(sy>=0&&sy<static_cast<int>(h)&&sx>=0&&sx<static_cast<int>(w))?images[(idx*area+sy*w+sx)*ch+c]/255.0f:0.0f;
+   x[(b*ch+c)*area+row*w+col]=(v-static_cast<float>(means[c]))/static_cast<float>(stds[c]);
+  }
+ }
+ napi_value result;napi_get_undefined(e,&result);return result;
+}
 static napi_value monotonic(napi_env e,napi_callback_info info){ timespec t{};clock_gettime(CLOCK_MONOTONIC,&t);napi_value result;napi_create_double(e,t.tv_sec*1000.0+t.tv_nsec/1e6,&result);return result;}
-static napi_value registerModule(napi_env e,napi_value exports){napi_property_descriptor props[]={{"now",nullptr,monotonic,nullptr,nullptr,nullptr,napi_default,nullptr},{"configure",nullptr,init,nullptr,nullptr,nullptr,napi_default,nullptr},{"fill",nullptr,fill,nullptr,nullptr,nullptr,napi_default,nullptr}};napi_define_properties(e,exports,3,props);return exports;}
+#include "training_bridge.inc"
+static napi_value registerModule(napi_env e,napi_value exports){napi_property_descriptor props[]={{"nativeCall",nullptr,nativeCall,nullptr,nullptr,nullptr,napi_default,nullptr},{"fillScheduled",nullptr,scheduled,nullptr,nullptr,nullptr,napi_default,nullptr},{"now",nullptr,monotonic,nullptr,nullptr,nullptr,napi_default,nullptr},{"configure",nullptr,init,nullptr,nullptr,nullptr,napi_default,nullptr},{"fill",nullptr,fill,nullptr,nullptr,nullptr,napi_default,nullptr}};napi_define_properties(e,exports,5,props);return exports;}
 static napi_module mod={1,0,nullptr,registerModule,"batchprep",nullptr,{0}};
 extern "C" __attribute__((constructor)) void RegisterBatchPrep(){napi_module_register(&mod);}
