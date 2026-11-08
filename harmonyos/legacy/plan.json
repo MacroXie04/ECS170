@@ -1,0 +1,260 @@
+[
+  {
+    "id": "mnist_baseline",
+    "dataset": "MNIST",
+    "variant": "baseline",
+    "channels": [
+      8,
+      16
+    ],
+    "hidden": 64,
+    "height": 28,
+    "width": 28,
+    "inputChannels": 1,
+    "classes": 10,
+    "batchSize": 50,
+    "epochs": 10,
+    "learningRate": 0.03,
+    "trainCount": 60000,
+    "testCount": 10000,
+    "mean": [
+      0.1306604762738429
+    ],
+    "std": [
+      0.3081078038564627
+    ],
+    "seed": 170,
+    "augmentation": false
+  },
+  {
+    "id": "mnist_wide",
+    "dataset": "MNIST",
+    "variant": "wide",
+    "channels": [
+      16,
+      32
+    ],
+    "hidden": 128,
+    "height": 28,
+    "width": 28,
+    "inputChannels": 1,
+    "classes": 10,
+    "batchSize": 50,
+    "epochs": 10,
+    "learningRate": 0.03,
+    "trainCount": 60000,
+    "testCount": 10000,
+    "mean": [
+      0.1306604762738429
+    ],
+    "std": [
+      0.3081078038564627
+    ],
+    "seed": 170,
+    "augmentation": false
+  },
+  {
+    "id": "mnist_deep",
+    "dataset": "MNIST",
+    "variant": "deep",
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "hidden": 128,
+    "height": 28,
+    "width": 28,
+    "inputChannels": 1,
+    "classes": 10,
+    "batchSize": 50,
+    "epochs": 10,
+    "learningRate": 0.03,
+    "trainCount": 60000,
+    "testCount": 10000,
+    "mean": [
+      0.1306604762738429
+    ],
+    "std": [
+      0.3081078038564627
+    ],
+    "seed": 170,
+    "augmentation": false
+  },
+  {
+    "id": "orl_baseline",
+    "dataset": "ORL",
+    "variant": "baseline",
+    "channels": [
+      8,
+      16
+    ],
+    "hidden": 64,
+    "height": 56,
+    "width": 46,
+    "inputChannels": 1,
+    "classes": 40,
+    "batchSize": 8,
+    "epochs": 60,
+    "learningRate": 0.01,
+    "trainCount": 360,
+    "testCount": 40,
+    "mean": [
+      0.44159095099392415
+    ],
+    "std": [
+      0.1917271150120226
+    ],
+    "seed": 170,
+    "augmentation": false
+  },
+  {
+    "id": "orl_wide",
+    "dataset": "ORL",
+    "variant": "wide",
+    "channels": [
+      16,
+      32
+    ],
+    "hidden": 128,
+    "height": 56,
+    "width": 46,
+    "inputChannels": 1,
+    "classes": 40,
+    "batchSize": 8,
+    "epochs": 60,
+    "learningRate": 0.01,
+    "trainCount": 360,
+    "testCount": 40,
+    "mean": [
+      0.44159095099392415
+    ],
+    "std": [
+      0.1917271150120226
+    ],
+    "seed": 170,
+    "augmentation": false
+  },
+  {
+    "id": "orl_deep",
+    "dataset": "ORL",
+    "variant": "deep",
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "hidden": 128,
+    "height": 56,
+    "width": 46,
+    "inputChannels": 1,
+    "classes": 40,
+    "batchSize": 8,
+    "epochs": 60,
+    "learningRate": 0.01,
+    "trainCount": 360,
+    "testCount": 40,
+    "mean": [
+      0.44159095099392415
+    ],
+    "std": [
+      0.1917271150120226
+    ],
+    "seed": 170,
+    "augmentation": false
+  },
+  {
+    "id": "cifar_baseline",
+    "dataset": "CIFAR",
+    "variant": "baseline",
+    "channels": [
+      8,
+      16
+    ],
+    "hidden": 64,
+    "height": 32,
+    "width": 32,
+    "inputChannels": 3,
+    "classes": 10,
+    "batchSize": 50,
+    "epochs": 20,
+    "learningRate": 0.02,
+    "trainCount": 50000,
+    "testCount": 10000,
+    "mean": [
+      0.49139967861519607,
+      0.48215840839460783,
+      0.44653091444546567
+    ],
+    "std": [
+      0.2470322324632821,
+      0.2434851280000555,
+      0.26158784172796445
+    ],
+    "seed": 170,
+    "augmentation": true
+  },
+  {
+    "id": "cifar_wide",
+    "dataset": "CIFAR",
+    "variant": "wide",
+    "channels": [
+      16,
+      32
+    ],
+    "hidden": 128,
+    "height": 32,
+    "width": 32,
+    "inputChannels": 3,
+    "classes": 10,
+    "batchSize": 50,
+    "epochs": 20,
+    "learningRate": 0.02,
+    "trainCount": 50000,
+    "testCount": 10000,
+    "mean": [
+      0.49139967861519607,
+      0.48215840839460783,
+      0.44653091444546567
+    ],
+    "std": [
+      0.2470322324632821,
+      0.2434851280000555,
+      0.26158784172796445
+    ],
+    "seed": 170,
+    "augmentation": true
+  },
+  {
+    "id": "cifar_deep",
+    "dataset": "CIFAR",
+    "variant": "deep",
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "hidden": 128,
+    "height": 32,
+    "width": 32,
+    "inputChannels": 3,
+    "classes": 10,
+    "batchSize": 50,
+    "epochs": 20,
+    "learningRate": 0.02,
+    "trainCount": 50000,
+    "testCount": 10000,
+    "mean": [
+      0.49139967861519607,
+      0.48215840839460783,
+      0.44653091444546567
+    ],
+    "std": [
+      0.2470322324632821,
+      0.2434851280000555,
+      0.26158784172796445
+    ],
+    "seed": 170,
+    "augmentation": true
+  }
+]

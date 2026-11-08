@@ -1,0 +1,2818 @@
+{
+  "source_pr": "https://github.com/MacroXie04/ECS170/pull/6",
+  "source_commit": "41cb6f084a7722b2fb46f9c9cffb45132f9eb15d",
+  "registry_sha256": "329a24eb3b74003c14389df368fdc95b94cd00a8b6177f4b93e30fc951392bdc",
+  "split_seed": 170,
+  "checkpoint_rule": "Within a run, keep the epoch with the highest validation accuracy; break ties by the lowest validation cross-entropy, then by the earliest epoch. The test set is never read during training.",
+  "best_config_rule": "Within a dataset, pick the configuration with the highest mean selected-checkpoint validation accuracy over seeds; break ties by the lowest mean validation cross-entropy, then by the fewest parameters. The final model is the seed of that configuration ranked first by the checkpoint rule. Test metrics play no part in either choice.",
+  "runs": [
+    {
+      "id": "cifar_baseline_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Three stages of two 3x3 convs (32, 64, 128), max pooling, one 256-unit hidden layer",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8cfeba21c2989e0519ab50f757684adab64a8d43064be99147616a0c4d33a1c8"
+    },
+    {
+      "id": "cifar_baseline_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Three stages of two 3x3 convs (32, 64, 128), max pooling, one 256-unit hidden layer",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8cfeba21c2989e0519ab50f757684adab64a8d43064be99147616a0c4d33a1c8"
+    },
+    {
+      "id": "cifar_baseline_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Three stages of two 3x3 convs (32, 64, 128), max pooling, one 256-unit hidden layer",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8cfeba21c2989e0519ab50f757684adab64a8d43064be99147616a0c4d33a1c8"
+    },
+    {
+      "id": "cifar_depth_1conv_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "depth_1conv",
+        "changed_factor": "depth",
+        "description": "One conv per stage instead of two (3 conv layers, not 6)",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "c6fedbcafe7a3b514835b45757dca72a85c77ae639bef78b437207687221f4fb"
+    },
+    {
+      "id": "cifar_depth_1conv_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "depth_1conv",
+        "changed_factor": "depth",
+        "description": "One conv per stage instead of two (3 conv layers, not 6)",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "c6fedbcafe7a3b514835b45757dca72a85c77ae639bef78b437207687221f4fb"
+    },
+    {
+      "id": "cifar_depth_1conv_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "depth_1conv",
+        "changed_factor": "depth",
+        "description": "One conv per stage instead of two (3 conv layers, not 6)",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "c6fedbcafe7a3b514835b45757dca72a85c77ae639bef78b437207687221f4fb"
+    },
+    {
+      "id": "cifar_kernel5_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "85b0eb027d393cffb4fc00376354b131960d97b8b45f24cf828da8dbd7dbca5e"
+    },
+    {
+      "id": "cifar_kernel5_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "85b0eb027d393cffb4fc00376354b131960d97b8b45f24cf828da8dbd7dbca5e"
+    },
+    {
+      "id": "cifar_kernel5_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "85b0eb027d393cffb4fc00376354b131960d97b8b45f24cf828da8dbd7dbca5e"
+    },
+    {
+      "id": "cifar_avgpool_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "031c583d977df92f6f16193ae3aba75db5661a04ce3a0fc87b3509ebdba7443d"
+    },
+    {
+      "id": "cifar_avgpool_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "031c583d977df92f6f16193ae3aba75db5661a04ce3a0fc87b3509ebdba7443d"
+    },
+    {
+      "id": "cifar_avgpool_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "031c583d977df92f6f16193ae3aba75db5661a04ce3a0fc87b3509ebdba7443d"
+    },
+    {
+      "id": "cifar_stride2_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "6129fbbfbf7807ee3ee70b0571a091c1c43370da76eb5d7102a4775fe797e1ac"
+    },
+    {
+      "id": "cifar_stride2_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "6129fbbfbf7807ee3ee70b0571a091c1c43370da76eb5d7102a4775fe797e1ac"
+    },
+    {
+      "id": "cifar_stride2_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "6129fbbfbf7807ee3ee70b0571a091c1c43370da76eb5d7102a4775fe797e1ac"
+    },
+    {
+      "id": "cifar_hidden_small_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          64
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "ed4d42f7de0ce02ded3a791cf191109911bc6f7eab1095df65c52f10ccb52929"
+    },
+    {
+      "id": "cifar_hidden_small_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          64
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "ed4d42f7de0ce02ded3a791cf191109911bc6f7eab1095df65c52f10ccb52929"
+    },
+    {
+      "id": "cifar_hidden_small_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          64
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "ed4d42f7de0ce02ded3a791cf191109911bc6f7eab1095df65c52f10ccb52929"
+    },
+    {
+      "id": "cifar_mse_loss_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "mse_softmax",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "277077ab3b9a0b72b8f045d6ad32ec73bbca01f1b63a18a56cb0b1bd049a4213"
+    },
+    {
+      "id": "cifar_mse_loss_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "mse_softmax",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "277077ab3b9a0b72b8f045d6ad32ec73bbca01f1b63a18a56cb0b1bd049a4213"
+    },
+    {
+      "id": "cifar_mse_loss_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.3,
+        "loss": "mse_softmax",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "277077ab3b9a0b72b8f045d6ad32ec73bbca01f1b63a18a56cb0b1bd049a4213"
+    },
+    {
+      "id": "cifar_no_dropout_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "cifar",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "6abb77ab32b103dc5a24a1cbd9d2425608572fe94c33251c23c2bb7556d3648a"
+    },
+    {
+      "id": "cifar_no_dropout_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "cifar",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "6abb77ab32b103dc5a24a1cbd9d2425608572fe94c33251c23c2bb7556d3648a"
+    },
+    {
+      "id": "cifar_no_dropout_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "cifar",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 2,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "sgd",
+        "learning_rate": 0.05,
+        "weight_decay": 0.0005,
+        "momentum": 0.9,
+        "nesterov": true,
+        "scheduler": "cosine",
+        "max_epoch": 40,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "6abb77ab32b103dc5a24a1cbd9d2425608572fe94c33251c23c2bb7556d3648a"
+    },
+    {
+      "id": "orl_baseline_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Four 3x3 conv stages (16-128), max pooling, one 256-unit hidden layer",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "3359ecf0a2c8b44cf8938b77d390ad20daec4034cb1964c4ba7557f57375969b"
+    },
+    {
+      "id": "orl_baseline_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Four 3x3 conv stages (16-128), max pooling, one 256-unit hidden layer",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "3359ecf0a2c8b44cf8938b77d390ad20daec4034cb1964c4ba7557f57375969b"
+    },
+    {
+      "id": "orl_baseline_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Four 3x3 conv stages (16-128), max pooling, one 256-unit hidden layer",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "3359ecf0a2c8b44cf8938b77d390ad20daec4034cb1964c4ba7557f57375969b"
+    },
+    {
+      "id": "orl_depth_3stage_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "depth_3stage",
+        "changed_factor": "depth",
+        "description": "Three conv stages (16, 32, 64) instead of four",
+        "channels": [
+          16,
+          32,
+          64
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "cff9d998a8a8925644e75a4f3077b08c4c2529fd7d7a754e05a10435e003bbf5"
+    },
+    {
+      "id": "orl_depth_3stage_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "depth_3stage",
+        "changed_factor": "depth",
+        "description": "Three conv stages (16, 32, 64) instead of four",
+        "channels": [
+          16,
+          32,
+          64
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "cff9d998a8a8925644e75a4f3077b08c4c2529fd7d7a754e05a10435e003bbf5"
+    },
+    {
+      "id": "orl_depth_3stage_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "depth_3stage",
+        "changed_factor": "depth",
+        "description": "Three conv stages (16, 32, 64) instead of four",
+        "channels": [
+          16,
+          32,
+          64
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "cff9d998a8a8925644e75a4f3077b08c4c2529fd7d7a754e05a10435e003bbf5"
+    },
+    {
+      "id": "orl_kernel5_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "35a1a224c3996d30eb0cc150969f9768f695587fd2633ba030b39a8a8c49f3f5"
+    },
+    {
+      "id": "orl_kernel5_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "35a1a224c3996d30eb0cc150969f9768f695587fd2633ba030b39a8a8c49f3f5"
+    },
+    {
+      "id": "orl_kernel5_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "35a1a224c3996d30eb0cc150969f9768f695587fd2633ba030b39a8a8c49f3f5"
+    },
+    {
+      "id": "orl_avgpool_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "f5decd11479b0848f2128f3c760af41bf1f94a97379059ade3e0a0bc752e27b9"
+    },
+    {
+      "id": "orl_avgpool_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "f5decd11479b0848f2128f3c760af41bf1f94a97379059ade3e0a0bc752e27b9"
+    },
+    {
+      "id": "orl_avgpool_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "f5decd11479b0848f2128f3c760af41bf1f94a97379059ade3e0a0bc752e27b9"
+    },
+    {
+      "id": "orl_stride2_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "f23721fae6ff445009767ae1651d9e1ccc6819456314593b41899301b1bf2fc4"
+    },
+    {
+      "id": "orl_stride2_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "f23721fae6ff445009767ae1651d9e1ccc6819456314593b41899301b1bf2fc4"
+    },
+    {
+      "id": "orl_stride2_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "f23721fae6ff445009767ae1651d9e1ccc6819456314593b41899301b1bf2fc4"
+    },
+    {
+      "id": "orl_hidden_small_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          64
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "b00a52ec25f937fe08a5b358e37673f1ad2f1f58ca079f9c15b94b390bc9bcdf"
+    },
+    {
+      "id": "orl_hidden_small_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          64
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "b00a52ec25f937fe08a5b358e37673f1ad2f1f58ca079f9c15b94b390bc9bcdf"
+    },
+    {
+      "id": "orl_hidden_small_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 64 instead of 256",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          64
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "b00a52ec25f937fe08a5b358e37673f1ad2f1f58ca079f9c15b94b390bc9bcdf"
+    },
+    {
+      "id": "orl_mse_loss_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "mse_softmax",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "291afadca9500c1fd495ff0fd7764f83f4c4ed7bc3824b30c59fd3bd92d1869f"
+    },
+    {
+      "id": "orl_mse_loss_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "mse_softmax",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "291afadca9500c1fd495ff0fd7764f83f4c4ed7bc3824b30c59fd3bd92d1869f"
+    },
+    {
+      "id": "orl_mse_loss_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.5,
+        "loss": "mse_softmax",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "291afadca9500c1fd495ff0fd7764f83f4c4ed7bc3824b30c59fd3bd92d1869f"
+    },
+    {
+      "id": "orl_no_dropout_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "orl",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "482b274a1baf2f804344f68f3429c06f644abb847a7258314bb470fb57f95bd3"
+    },
+    {
+      "id": "orl_no_dropout_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "orl",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "482b274a1baf2f804344f68f3429c06f644abb847a7258314bb470fb57f95bd3"
+    },
+    {
+      "id": "orl_no_dropout_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "orl",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          256
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 120,
+        "batch_size": 32,
+        "eval_batch_size": 1024,
+        "aug_shift": 4,
+        "aug_hflip": true,
+        "aug_padding_mode": "replicate",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "482b274a1baf2f804344f68f3429c06f644abb847a7258314bb470fb57f95bd3"
+    },
+    {
+      "id": "mnist_baseline_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Two 3x3 conv stages (32, 64), max pooling, one 128-unit hidden layer",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "5aeb407b0c5baa69faa5aa53b44942ccc1a017b07409f7975767a89a2de69b01"
+    },
+    {
+      "id": "mnist_baseline_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Two 3x3 conv stages (32, 64), max pooling, one 128-unit hidden layer",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "5aeb407b0c5baa69faa5aa53b44942ccc1a017b07409f7975767a89a2de69b01"
+    },
+    {
+      "id": "mnist_baseline_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "baseline",
+        "changed_factor": "none",
+        "description": "Two 3x3 conv stages (32, 64), max pooling, one 128-unit hidden layer",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "5aeb407b0c5baa69faa5aa53b44942ccc1a017b07409f7975767a89a2de69b01"
+    },
+    {
+      "id": "mnist_depth_3stage_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "depth_3stage",
+        "changed_factor": "depth",
+        "description": "A third conv stage (32, 64, 128)",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "b6893a4d1291eef6b2b502ec191f79ae94dc73f67fea0bdf00b29704082de459"
+    },
+    {
+      "id": "mnist_depth_3stage_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "depth_3stage",
+        "changed_factor": "depth",
+        "description": "A third conv stage (32, 64, 128)",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "b6893a4d1291eef6b2b502ec191f79ae94dc73f67fea0bdf00b29704082de459"
+    },
+    {
+      "id": "mnist_depth_3stage_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "depth_3stage",
+        "changed_factor": "depth",
+        "description": "A third conv stage (32, 64, 128)",
+        "channels": [
+          32,
+          64,
+          128
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "b6893a4d1291eef6b2b502ec191f79ae94dc73f67fea0bdf00b29704082de459"
+    },
+    {
+      "id": "mnist_kernel5_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "314ed2783f21c9f9938b3abc126113e7bd87a0a091d19ac31d193551d0546515"
+    },
+    {
+      "id": "mnist_kernel5_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "314ed2783f21c9f9938b3abc126113e7bd87a0a091d19ac31d193551d0546515"
+    },
+    {
+      "id": "mnist_kernel5_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "kernel5",
+        "changed_factor": "kernel_size",
+        "description": "5x5 kernels; padding 2 keeps the same spatial size",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 5,
+        "padding": 2,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "314ed2783f21c9f9938b3abc126113e7bd87a0a091d19ac31d193551d0546515"
+    },
+    {
+      "id": "mnist_avgpool_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8131b19bb6279e43ac4fe063af5cf62cf6f15bfcf1c002af3e6afea5451a373b"
+    },
+    {
+      "id": "mnist_avgpool_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8131b19bb6279e43ac4fe063af5cf62cf6f15bfcf1c002af3e6afea5451a373b"
+    },
+    {
+      "id": "mnist_avgpool_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "avgpool",
+        "changed_factor": "pooling",
+        "description": "Average pooling instead of max pooling",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "avgpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8131b19bb6279e43ac4fe063af5cf62cf6f15bfcf1c002af3e6afea5451a373b"
+    },
+    {
+      "id": "mnist_stride2_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "96f67a0883340aa1e64603c195dca8149abeed197a19e8729b068da774ab2443"
+    },
+    {
+      "id": "mnist_stride2_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "96f67a0883340aa1e64603c195dca8149abeed197a19e8729b068da774ab2443"
+    },
+    {
+      "id": "mnist_stride2_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "stride2",
+        "changed_factor": "stride",
+        "description": "Stride-2 convolution replaces each pooling layer",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "stride",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "96f67a0883340aa1e64603c195dca8149abeed197a19e8729b068da774ab2443"
+    },
+    {
+      "id": "mnist_hidden_small_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 32 instead of 128",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          32
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "e7f29527ee72ef273a9df79e3cc70d833deb12d43f4452cf05203c76976d3b57"
+    },
+    {
+      "id": "mnist_hidden_small_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 32 instead of 128",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          32
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "e7f29527ee72ef273a9df79e3cc70d833deb12d43f4452cf05203c76976d3b57"
+    },
+    {
+      "id": "mnist_hidden_small_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "hidden_small",
+        "changed_factor": "hidden_dim",
+        "description": "Hidden layer width 32 instead of 128",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          32
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "e7f29527ee72ef273a9df79e3cc70d833deb12d43f4452cf05203c76976d3b57"
+    },
+    {
+      "id": "mnist_mse_loss_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "mse_softmax",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "382d0271ebcf03afea1d66ed8eb2abbaf502d613ef0a67dfb3466a84bce586c1"
+    },
+    {
+      "id": "mnist_mse_loss_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "mse_softmax",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "382d0271ebcf03afea1d66ed8eb2abbaf502d613ef0a67dfb3466a84bce586c1"
+    },
+    {
+      "id": "mnist_mse_loss_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "mse_loss",
+        "changed_factor": "loss",
+        "description": "Squared error between softmax output and one-hot target instead of cross-entropy",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.25,
+        "loss": "mse_softmax",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "382d0271ebcf03afea1d66ed8eb2abbaf502d613ef0a67dfb3466a84bce586c1"
+    },
+    {
+      "id": "mnist_no_dropout_seed2026",
+      "seed": 2026,
+      "config": {
+        "dataset": "mnist",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8871063c5332d2d49b2a66cf5287e47002dce9dcc52071a8c482c8f1aceadc6b"
+    },
+    {
+      "id": "mnist_no_dropout_seed2027",
+      "seed": 2027,
+      "config": {
+        "dataset": "mnist",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8871063c5332d2d49b2a66cf5287e47002dce9dcc52071a8c482c8f1aceadc6b"
+    },
+    {
+      "id": "mnist_no_dropout_seed2028",
+      "seed": 2028,
+      "config": {
+        "dataset": "mnist",
+        "name": "no_dropout",
+        "changed_factor": "dropout",
+        "description": "Dropout removed",
+        "channels": [
+          32,
+          64
+        ],
+        "hidden_dims": [
+          128
+        ],
+        "convs_per_stage": 1,
+        "kernel_size": 3,
+        "padding": 1,
+        "downsample": "maxpool",
+        "batch_norm": true,
+        "dropout": 0.0,
+        "loss": "cross_entropy",
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0,
+        "nesterov": false,
+        "scheduler": "cosine",
+        "max_epoch": 15,
+        "batch_size": 128,
+        "eval_batch_size": 1024,
+        "aug_shift": 2,
+        "aug_hflip": false,
+        "aug_padding_mode": "constant",
+        "weight_init": "kaiming_normal_fan_out_relu"
+      },
+      "fingerprint": "8871063c5332d2d49b2a66cf5287e47002dce9dcc52071a8c482c8f1aceadc6b"
+    }
+  ]
+}
