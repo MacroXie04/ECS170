@@ -20,7 +20,7 @@ for name in ('weights_before.bin','weights_after.bin','best.ms','best_state.bin'
 rows=[]
 for path in sorted((ROOT/'reports').glob('*/metrics.json')):
  m=json.loads(path.read_text());name=path.parent.name;seconds=m['elapsedMs']/1000
- rows.append(f"| {name} | {len(m['epochs'])} | {m['initialTrainLoss']:.6g} → {m['epochs'][-1]['trainEvalLoss']:.6g} | {m['bestValAccuracy']:.2%} | {m['testAccuracy']:.2%} | {seconds:.3f} s | {m['optimizerMs']/1000:.3f} s |")
+ rows.append(f"| [{name}]({name}/curves.png) | {len(m['epochs'])} | {m['initialTrainLoss']:.6g} → {m['epochs'][-1]['trainEvalLoss']:.6g} | {m['bestValAccuracy']:.2%} | {m['testAccuracy']:.2%} | {seconds:.3f} s | {m['optimizerMs']/1000:.3f} s |")
 text='''# Verified physical-device results
 
 Source: PR #6, seed 2026. Each row passed full epoch/sample coverage, finite and
