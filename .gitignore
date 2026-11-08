@@ -21,3 +21,8 @@ data/stage_2_data/
 
 # Stage 3 instructor data
 data/stage_3_data/
+# New training runs and temporary isolated runtimes (archived results stay tracked).
+/runs/
+/data/stage_2_data/
+/data/train.csv
+/data/test.csv
