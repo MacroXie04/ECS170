@@ -97,3 +97,18 @@ BN, Adam and Nesterov results are in `validation/native_arithmetic.json`.
 `run_selected.py --target USB_SERIAL` runs smoke checks and formal experiments
 serially, rejecting missing sample coverage, nonfinite weights or reload failures.
 Use repeated `--run` arguments to select only remaining runs.
+
+## Recovering the Mac connection
+
+A USB interruption does not necessarily stop the independent device app. If the
+app is still running, attach to its existing result directory without reinstalling
+the app, resending the job, or restarting training:
+
+```sh
+python harmonyos/run_device.py --target USB_SERIAL --run RUN_ID \
+  --attach harmonyos/results/EXISTING_RUN_DIRECTORY
+```
+
+This resumes monitoring and collection only. It does not claim to resume a crashed
+training process. Device monotonic timing remains authoritative; host monitoring
+time after reattachment covers only the new monitoring segment.
