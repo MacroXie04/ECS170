@@ -1,5 +1,5 @@
 """Reject incomplete coverage, nonfinite weights, or a failed model reload."""
-import argparse,array,json,math
+import argparse,array,json,math,struct
 from pathlib import Path
 
 def validate(path):
@@ -17,6 +17,14 @@ def validate(path):
  for epoch in r['epochs']:
   for name in ('trainEvalLoss','valLoss','learningRate','epochMs'):
    assert math.isfinite(epoch[name]) and epoch[name]>=0,(name,epoch[name])
+ if job['optimizer']=='adam':
+  meta=json.loads((path/'best_state.json').read_text());raw=(path/'best_state.bin').read_bytes()
+  per_epoch=math.ceil(job['trainCount']/job['batchSize']) if r['formal'] else job['smokeSteps']+int(job['trainCount']%job['batchSize']!=0)
+  def f32(x):return struct.unpack('<f',struct.pack('<f',x))[0]
+  for name,beta in (('beta1_power',.9),('beta2_power',.999)):
+   item=next(t for t in meta if t['name']==name);actual=struct.unpack_from('<f',raw,item['offset'])[0];expected=1.;beta=f32(beta)
+   for _ in range(r['bestEpoch']*per_epoch):expected=f32(expected*beta)
+   assert abs(actual-expected)<1e-6,(name,actual,expected)
  before=array.array('f');before.frombytes((path/'weights_before.bin').read_bytes())
  after=array.array('f');after.frombytes((path/'weights_after.bin').read_bytes())
  assert len(before)==len(after)>0 and all(map(math.isfinite,after))
