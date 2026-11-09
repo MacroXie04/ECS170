@@ -17,7 +17,7 @@ def main():
     p.add_argument('--target', required=True)
     p.add_argument('--data', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
-    p.add_argument('--backends', nargs='+', choices=['cpu', 'opencl', 'vulkan'], default=['cpu', 'opencl', 'vulkan'])
+    p.add_argument('--backends', nargs='+', choices=['cpu', 'opencl', 'opencl_buffer', 'vulkan', 'vulkan_batch'], default=['cpu', 'opencl_buffer'])
     p.add_argument('--steps', type=int, default=3)
     p.add_argument('--timeout', type=int, default=240)
     p.add_argument('--wait-unlock', type=int, default=0, help='Seconds to wait for a user to unlock the device')
@@ -113,6 +113,12 @@ def main():
             if result.get('state') == 'completed' and not args.reload_model:
                 for suffix in ('_model.mnn', '_params.mnn', '_expected.bin'):
                     receive(ident + suffix, out / (backend + suffix))
+            if not args.reload_model:
+                for suffix in ('_initial_weights.bin', '_step1_gradients.bin', '_step1_weights.bin'):
+                    try:
+                        receive(ident + suffix, out / (backend + suffix))
+                    except RuntimeError:
+                        pass
             result['probe_case'] = backend
             dest.write_text(json.dumps(result, indent=2))
             results.append(result)

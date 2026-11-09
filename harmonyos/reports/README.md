@@ -13,3 +13,12 @@ on the full optimization split after each epoch, with augmentation disabled.
 | [orl_kernel5_seed2026](orl_kernel5_seed2026/curves.png) | 120 | 3.69066 → 7.04073e-05 | 100.00% | 95.00% | 530.976 s | 450.069 s |
 
 Only completed, verified runs are listed. Raw models/data remain local; artifact hashes identify them.
+
+## Separate GPU capability experiment
+
+[MNN GPU-assisted training results](mnn_gpu_training.json) and the
+[reproduction notes](../mnn/README.md) document a 1,024-image MNIST subset probe.
+OpenCL buffer mode passed gradient, weight-update, loss-decrease and independent
+reload checks with one CPU backward-operator fallback. The tested Vulkan paths
+failed numerical validation. These subset timings are not comparable rows in
+the formal experiment table above.

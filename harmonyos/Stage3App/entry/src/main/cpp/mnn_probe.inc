@@ -1,4 +1,5 @@
 // Optional MNN training probe. Normal Stage 3 runs keep their existing backend.
+#include <dlfcn.h>
 #include <vulkan/vulkan.h>
 
 #include <MNN/expr/Executor.hpp>
@@ -14,6 +15,7 @@
 #include "ADAM.hpp"
 #include "Initializer.hpp"
 #include "NN.hpp"
+#include "OpGrad.hpp"
 #include "RandomGenerator.hpp"
 #include "core/TensorUtils.hpp"
 namespace mnnprobe {
@@ -51,26 +53,43 @@ static std::vector<T> read(const std::string& path) {
     return v;
 }
 static std::string vulkanDevices() {
+    // MNN's static Vulkan wrapper defines same-named function-pointer symbols.
+    // Resolve the public loader explicitly instead of calling those data symbols.
+    void* library = dlopen("libvulkan.so", RTLD_NOW | RTLD_LOCAL);
+    if (!library) return "Vulkan loader unavailable";
+    auto create = reinterpret_cast<PFN_vkCreateInstance>(dlsym(library, "vkCreateInstance"));
+    auto enumerate = reinterpret_cast<PFN_vkEnumeratePhysicalDevices>(dlsym(library, "vkEnumeratePhysicalDevices"));
+    auto properties =
+        reinterpret_cast<PFN_vkGetPhysicalDeviceProperties>(dlsym(library, "vkGetPhysicalDeviceProperties"));
+    auto destroy = reinterpret_cast<PFN_vkDestroyInstance>(dlsym(library, "vkDestroyInstance"));
+    if (!create || !enumerate || !properties || !destroy) {
+        dlclose(library);
+        return "Vulkan loader entry points unavailable";
+    }
     VkApplicationInfo a{VK_STRUCTURE_TYPE_APPLICATION_INFO};
     a.pApplicationName = "Stage3TrainingProbe";
     a.apiVersion = VK_API_VERSION_1_0;
     VkInstanceCreateInfo ci{VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO};
     ci.pApplicationInfo = &a;
     VkInstance instance;
-    auto status = vkCreateInstance(&ci, nullptr, &instance);
-    if (status != VK_SUCCESS) return "vkCreateInstance=" + std::to_string(status);
+    auto status = create(&ci, nullptr, &instance);
+    if (status != VK_SUCCESS) {
+        dlclose(library);
+        return "vkCreateInstance=" + std::to_string(status);
+    }
     uint32_t n = 0;
-    vkEnumeratePhysicalDevices(instance, &n, nullptr);
+    enumerate(instance, &n, nullptr);
     std::vector<VkPhysicalDevice> ds(n);
-    vkEnumeratePhysicalDevices(instance, &n, ds.data());
+    enumerate(instance, &n, ds.data());
     std::string out;
     for (auto d : ds) {
         VkPhysicalDeviceProperties p{};
-        vkGetPhysicalDeviceProperties(d, &p);
+        properties(d, &p);
         out += std::string(p.deviceName) + " vendor=" + std::to_string(p.vendorID) +
                " api=" + std::to_string(p.apiVersion) + "\n";
     }
-    vkDestroyInstance(instance, nullptr);
+    destroy(instance, nullptr);
+    dlclose(library);
     return out;
 }
 class MnistNet final : public Module {
@@ -104,7 +123,7 @@ class MnistNet final : public Module {
 struct State {
     std::string dir, id, backend, status = "starting", error, hardware, reloadedFrom, phase = "init";
     int steps = 0;
-    double start = now(), reloadError = -1;
+    double start = now(), reloadError = -1, firstPassLoss = -1, lastPassLoss = -1;
     size_t changed = 0;
     std::shared_ptr<MnistNet> model;
     std::unique_ptr<MNN::Train::ADAM> optimizer;
@@ -113,6 +132,7 @@ struct State {
     std::vector<float> images, labels, before, losses, stepTimes, gpuTimes;
     std::vector<int> learnedPositions;
     std::map<std::string, size_t> trace;
+    std::map<std::string, size_t> learnedTensorUpdates;
     std::string report() {
         std::ostringstream o;
         o << std::setprecision(10)
@@ -120,9 +140,12 @@ struct State {
           << ",\"requestedBackend\":" << quote(backend) << ",\"state\":" << quote(status)
           << ",\"error\":" << quote(error) << ",\"reloadedFrom\":" << quote(reloadedFrom)
           << ",\"vulkanDevices\":" << quote(hardware) << ",\"steps\":" << steps
-          << ",\"batchSize\":128,\"availableTrainingImages\":1024,\"uniqueTrainingImages\":" << std::min(steps, 8) * 128
-          << ",\"trainingExamplesSeen\":" << steps * 128 << ",\"changedLearnedWeights\":" << changed
-          << ",\"reloadMaxLogitError\":" << reloadError << ",\"elapsedMs\":" << now() - start;
+          << ",\"cpuThreads\":4,\"batchSize\":128,\"availableTrainingImages\":1024,\"uniqueTrainingImages\":"
+          << std::min(steps, 8) * 128 << ",\"trainingExamplesSeen\":" << steps * 128
+          << ",\"changedLearnedWeights\":" << changed << ",\"reloadMaxLogitError\":" << reloadError
+          << ",\"gpuTimestampProfiling\":" << (MNN_PROBE_GPU_PROFILE ? "true" : "false")
+          << ",\"firstPassMeanLoss\":" << firstPassLoss << ",\"lastPassMeanLoss\":" << lastPassLoss
+          << ",\"elapsedMs\":" << now() - start;
         auto arr = [&](const char* key, const std::vector<float>& a) {
             o << ",\"" << key << "\":[";
             for (size_t i = 0; i < a.size(); i++) {
@@ -144,6 +167,13 @@ struct State {
             first = false;
             o << quote(t.first) << ':' << t.second;
         }
+        o << "},\"learnedTensorUpdates\":{";
+        first = true;
+        for (auto& t : learnedTensorUpdates) {
+            if (!first) o << ',';
+            first = false;
+            o << quote(t.first) << ':' << t.second;
+        }
         o << "}}";
         return o.str();
     }
@@ -160,6 +190,36 @@ struct State {
         }
         return out;
     }
+    void saveFloats(const std::string& suffix, const std::vector<float>& values) {
+        std::ofstream f(dir + "/" + id + suffix, std::ios::binary);
+        f.write(reinterpret_cast<const char*>(values.data()), values.size() * sizeof(float));
+        if (!f) throw std::runtime_error("Cannot save numerical check");
+    }
+    void checkGradient(VARP loss) {
+        phase = "first_step_gradient_check";
+        auto params = model->parameters();
+        std::set<VARP> learned;
+        for (auto index : learnedPositions) learned.insert(params[index]);
+        auto gradients = MNN::OpGrad::grad(loss, learned);
+        std::vector<VARP> expressions;
+        for (auto index : learnedPositions) {
+            if (!gradients.count(params[index])) throw std::runtime_error("Missing learned gradient");
+            expressions.push_back(gradients[params[index]]);
+        }
+        Variable::prepareCompute(expressions);
+        std::vector<float> values;
+        for (auto gradient : expressions) {
+            auto info = gradient->getInfo();
+            auto ptr = gradient->readMap<float>();
+            if (!ptr || !info) throw std::runtime_error("Cannot read first-step gradient");
+            for (int i = 0; i < info->size; i++) {
+                if (!std::isfinite(ptr[i])) throw std::runtime_error("Nonfinite first-step gradient");
+                values.push_back(ptr[i]);
+            }
+        }
+        if (values.size() != before.size()) throw std::runtime_error("Gradient size mismatch");
+        saveFloats("_step1_gradients.bin", values);
+    }
     void batch(int index) {
         memcpy(x->writeMap<float>(), images.data() + size_t(index) * 128 * 784, 128 * 784 * sizeof(float));
         memcpy(y->writeMap<float>(), labels.data() + size_t(index) * 128 * 10, 128 * 10 * sizeof(float));
@@ -168,13 +228,16 @@ struct State {
         hardware = vulkanDevices();
         status = "creating_runtime";
         save();
-        MNNForwardType type = backend == "opencl"   ? MNN_FORWARD_OPENCL
-                              : backend == "vulkan" ? MNN_FORWARD_VULKAN
-                                                    : MNN_FORWARD_CPU;
+        MNNForwardType type = backend.rfind("opencl", 0) == 0 ? MNN_FORWARD_OPENCL
+                              : backend.rfind("vulkan", 0) == 0 ? MNN_FORWARD_VULKAN
+                                                              : MNN_FORWARD_CPU;
         BackendConfig config;
         config.precision = BackendConfig::Precision_High;
         executor = Executor::getGlobalExecutor();
-        executor->setGlobalExecutorConfig(type, config, 4);
+        executor->setGlobalExecutorConfig(MNN_FORWARD_CPU, config, 4);
+        int mode = backend == "opencl_buffer" ? MNN_GPU_TUNING_WIDE | MNN_GPU_MEMORY_BUFFER : 4;
+        if (backend == "vulkan_batch") mode |= MNN_GPU_RECORD_BATCH;
+        if (type != MNN_FORWARD_CPU) executor->setGlobalExecutorConfig(type, config, mode);
         auto rt = Executor::getRuntime();
         if (!rt.first.count(type)) throw std::runtime_error("Requested MNN runtime unavailable; CPU fallback rejected");
         executor->setCallBack([](const std::vector<Tensor*>&, const OperatorInfo*) { return true; },
@@ -200,6 +263,7 @@ struct State {
             if (params[i]->expr().first->inputType() == VARP::TRAINABLE) learnedPositions.push_back(i);
         before = weights();
         if (before.empty()) throw std::runtime_error("No learned parameters found");
+        saveFloats("_initial_weights.bin", before);
         optimizer.reset(new MNN::Train::ADAM(model));
         optimizer->setLearningRate(.001f);
         optimizer->setMomentum(.9f);
@@ -224,15 +288,26 @@ struct State {
         if (!value || !std::isfinite(value[0])) throw std::runtime_error("Nonfinite or missing loss");
         losses.push_back(value[0]);
         gpuTimes.push_back(executor->getLastGpuTimeMs());
+        if (steps == 0) checkGradient(loss);
         phase = "backward_optimizer";
         if (!optimizer->step(loss)) throw std::runtime_error("Optimizer failed");
         gpuTimes.push_back(executor->getLastGpuTimeMs());
         steps++;
         stepTimes.push_back(now() - started);
+        if (steps == 1) saveFloats("_step1_weights.bin", weights());
         status = "running";
         save();
     }
     void finish() {
+        if (steps >= 16) {
+            firstPassLoss = 0;
+            lastPassLoss = 0;
+            for (int i = 0; i < 8; i++) {
+                firstPassLoss += losses[i] / 8.0;
+                lastPassLoss += losses[losses.size() - 8 + i] / 8.0;
+            }
+            if (lastPassLoss >= firstPassLoss) throw std::runtime_error("Mean training loss did not decrease");
+        }
         phase = "checkpoint";
         auto after = weights();
         if (after.size() != before.size()) throw std::runtime_error("Weight count changed");
@@ -241,6 +316,17 @@ struct State {
             changed += after[i] != before[i];
         }
         if (changed == 0) throw std::runtime_error("No learned weight updated");
+        size_t offset = 0;
+        auto parameters = model->parameters();
+        for (auto pos : learnedPositions) {
+            auto info = parameters[pos]->getInfo();
+            std::string key = std::to_string(pos) + ":";
+            for (auto dim : info->dim) key += std::to_string(dim) + "x";
+            size_t count = 0;
+            for (int i = 0; i < info->size; i++) count += after[offset + i] != before[offset + i];
+            learnedTensorUpdates[key] = count;
+            offset += info->size;
+        }
         model->setIsTraining(false);
         batch(0);
         auto prediction = model->forward(x);
@@ -261,8 +347,11 @@ struct State {
         if (!actual) throw std::runtime_error("Reload failed");
         reloadError = 0;
         for (int i = 0; i < 1280; i++) {
-            if (!std::isfinite(actual[i])) throw std::runtime_error("Nonfinite reload output");
+            if (!std::isfinite(actual[i]) || !std::isfinite(expected[i]))
+                throw std::runtime_error("Nonfinite reload output or reference");
             reloadError = std::max(reloadError, double(std::abs(expected[i] - actual[i])));
+            if (std::abs(expected[i] - actual[i]) > 1e-4f + 1e-4f * std::abs(expected[i]))
+                throw std::runtime_error("Reload output does not match saved model reference");
         }
         status = "completed";
         save();
@@ -279,8 +368,11 @@ struct State {
         if (!actual) throw std::runtime_error("Independent reload failed");
         reloadError = 0;
         for (int i = 0; i < 1280; i++) {
-            if (!std::isfinite(actual[i])) throw std::runtime_error("Nonfinite reload output");
+            if (!std::isfinite(actual[i]) || !std::isfinite(expected[i]))
+                throw std::runtime_error("Nonfinite reload output or reference");
             reloadError = std::max(reloadError, double(std::abs(expected[i] - actual[i])));
+            if (std::abs(expected[i] - actual[i]) > 1e-4f + 1e-4f * std::abs(expected[i]))
+                throw std::runtime_error("Independent reload output does not match saved model reference");
         }
         status = "completed";
         save();
