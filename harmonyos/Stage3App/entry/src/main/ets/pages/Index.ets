@@ -17,6 +17,7 @@ class BackendProbe {
  built: boolean = false; steps: number = 0; stepMs: number[] = []; changedWeights: number = 0;
  elapsedMs: number = 0; capabilities: string = ''; librariesBefore: string = ''; librariesAfter: string = ''; error: string = '';
 }
+class MnnStatus {state: string='';error: string='';steps: number=0;loss: number[]=[];}
 class Variables { variables: string[] = []; learned: string[] = []; }
 class StateTensor { name: string = ''; shape: number[] = []; offset: number = 0; bytes: number = 0; }
 class Evaluation { loss: number = 0; accuracy: number = 0; logits: Float32Array = new Float32Array(0); }
@@ -174,15 +175,23 @@ struct Index {
   finally{if(loaded!==null)loaded.destroy();}
   result.elapsedMs=batchprep.now()-this.clockStart;this.displayedElapsed=result.elapsedMs;this.save(c.id+'_backend.json',JSON.stringify(result));this.log('BACKEND_RESULT '+JSON.stringify(result));this.message='Backend probe '+result.state;this.detail=c.backend+' · '+result.steps+' steps\n'+result.error+'\n'+result.capabilities;
  }
+ async probeMnn(): Promise<void> {
+  let raw=await batchprep.mnnAsync('mnn_init',this.dir,this.c.backend,this.c.id);
+  let status=JSON.parse(raw) as MnnStatus;this.message='MNN '+this.c.backend+' · Stage 3 MNIST';
+  if(status.state==='error')throw new Error(status.error);
+  if(this.c.action==='mnn_reload'){raw=await batchprep.mnnAsync('mnn_reload',this.c.probeModel);status=JSON.parse(raw) as MnnStatus;if(status.state==='error')throw new Error(status.error);this.message='MNN 独立进程重载完成';this.log('MNN_RELOAD '+raw);return;}
+  for(let step=0;step<this.c.probeSteps;step++){await this.yieldUI();raw=await batchprep.mnnAsync('mnn_step');status=JSON.parse(raw) as MnnStatus;if(status.state==='error')throw new Error(status.error);this.detail=status.steps+' steps · loss '+status.loss[status.loss.length-1].toFixed(4);}
+  await this.yieldUI();raw=await batchprep.mnnAsync('mnn_finish');status=JSON.parse(raw) as MnnStatus;if(status.state==='error')throw new Error(status.error);this.message='MNN '+this.c.backend+' · 验证完成';this.log('MNN_RESULT '+raw);
+ }
  async run(): Promise<void> {
   const report=new Report();
   try {
    this.dir=(this.getUIContext().getHostContext() as common.UIAbilityContext).filesDir;if(!fileIo.accessSync(this.dir+'/job.json'))return;
    this.c=JSON.parse(fileIo.readTextSync(this.dir+'/job.json')) as Config;const c=this.c;report.id=c.id;
-   if(c.action!=='train'&&c.action!=='smoke'&&c.action!=='reload'&&c.action!=='reload_smoke'&&c.action!=='diagnose'&&c.action!=='diagnose_bn'&&c.action!=='probe_backend')throw new Error('Unknown action');
-   this.vars=JSON.parse(fileIo.readTextSync(this.dir+'/'+c.modelId+'_variables.json')) as Variables;
+   if(c.action!=='train'&&c.action!=='smoke'&&c.action!=='reload'&&c.action!=='reload_smoke'&&c.action!=='diagnose'&&c.action!=='diagnose_bn'&&c.action!=='probe_backend'&&c.action!=='mnn_probe'&&c.action!=='mnn_reload')throw new Error('Unknown action');
+   if(c.action!=='mnn_probe'&&c.action!=='mnn_reload')this.vars=JSON.parse(fileIo.readTextSync(this.dir+'/'+c.modelId+'_variables.json')) as Variables;
    this.clockStart=batchprep.now();this.timerId=setInterval(()=>this.updateTimer(),250);
-   if(c.action==='probe_backend')await this.probeBackend();else if(c.action==='diagnose_bn')await this.diagnoseBN();else if(c.action==='diagnose')await this.diagnoseOptimizer();else if(c.action==='reload'||c.action==='reload_smoke')await this.reload();else await this.train(report);
+   if(c.action==='mnn_probe'||c.action==='mnn_reload')await this.probeMnn();else if(c.action==='probe_backend')await this.probeBackend();else if(c.action==='diagnose_bn')await this.diagnoseBN();else if(c.action==='diagnose')await this.diagnoseOptimizer();else if(c.action==='reload'||c.action==='reload_smoke')await this.reload();else await this.train(report);
   }catch(err){report.state='error';report.error=String(err)+' '+(err as Error).stack;this.message='Training error';this.detail=report.error;this.log('ERROR '+report.error);if(this.dir.length>0)this.save(this.c.id+'_result.json',JSON.stringify(report));}
   finally{if(this.timerId>=0){clearInterval(this.timerId);this.updateTimer();}window.getLastWindow(this.getUIContext().getHostContext() as common.UIAbilityContext).then((mainWindow: window.Window)=>mainWindow.setWindowKeepScreenOn(false)).catch(()=>this.log('Could not release keep-screen-on'));}
  }

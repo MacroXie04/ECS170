@@ -12,6 +12,16 @@ static std::vector<OH_AI_TensorHandle> tensors;
 static napi_value number(napi_env e,double n){napi_value v;napi_create_double(e,n,&v);return v;}
 static napi_value textValue(napi_env e,const char *s){napi_value v;napi_create_string_utf8(e,s,NAPI_AUTO_LENGTH,&v);return v;}
 static std::string textArg(napi_env e,napi_value v){size_t n=0;napi_get_value_string_utf8(e,v,nullptr,0,&n);std::string s(n+1,'\0');napi_get_value_string_utf8(e,v,s.data(),n+1,&n);s.resize(n);return s;}
+#ifdef ENABLE_MNN_PROBE
+#include "mnn_probe.inc"
+#endif
+static napi_value mnnAsync(napi_env e,napi_callback_info info){
+#ifdef ENABLE_MNN_PROBE
+ return mnnprobe::asyncCall(e,info);
+#else
+ napi_throw_error(e,nullptr,"MNN probe not compiled; use harmonyos/mnn/build_probe.sh");return nullptr;
+#endif
+}
 static napi_value nativeCall(napi_env e,napi_callback_info info){
  napi_value a[4];size_t n=4;napi_get_cb_info(e,info,&n,a,nullptr,nullptr);std::string op=textArg(e,a[0]);
  auto fail=[&](const std::string&s)->napi_value{napi_throw_error(e,nullptr,s.c_str());return nullptr;};

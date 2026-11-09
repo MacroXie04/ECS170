@@ -6,4 +6,5 @@ export const now: () => number;
 export const fillScheduled: (images: ArrayBuffer, labels: ArrayBuffer, schedule: ArrayBuffer, x: ArrayBuffer, y: ArrayBuffer, start: number, replicate: boolean, training: boolean) => void;
 
 export const nativeCall: (op: string, arg: number | ArrayBuffer, value?: boolean | number | string | ArrayBuffer | number[], infer?: boolean | string) => number | boolean | string | ArrayBuffer | TensorInfo[];
+export const mnnAsync: (op: string, a?: string, b?: string, c?: string) => Promise<string>;
 export interface TensorInfo { handle: number; name: string; shape: number[]; elementNum: number; }

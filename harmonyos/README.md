@@ -84,6 +84,10 @@ All three selected runs have completed: ORL 120 epochs, MNIST 15 epochs and CIFA
 `legacy/` preserves earlier emulator/probe implementations. Their smaller CNNs,
 different protocols and historical metrics are not physical-device PR #6 results.
 
+An optional [MNN training probe](mnn/README.md) adds OpenCL/Vulkan runtime checks
+and a real MNIST subset test. Its current validation status and limitations are
+documented separately; it is not part of the completed formal CPU experiments.
+
 ## Arithmetic checks
 
 `tests/make_batchnorm_reference.py` creates a small synthetic PyTorch reference.
