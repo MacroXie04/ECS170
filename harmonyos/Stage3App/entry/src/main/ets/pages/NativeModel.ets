@@ -7,8 +7,8 @@ export class NativeTensor {
 }
 export class NativeModel {
  handle: number;
- constructor(data: ArrayBuffer,train: boolean){this.handle=bridge.nativeCall('load',data,train) as number;}
- static async load(data: ArrayBuffer,train: boolean): Promise<NativeModel>{return new NativeModel(data,train);}
+ constructor(data: ArrayBuffer,train: boolean,backend: string='cpu'){this.handle=bridge.nativeCall('load',data,train,backend) as number;}
+ static async load(data: ArrayBuffer,train: boolean,backend: string='cpu'): Promise<NativeModel>{return new NativeModel(data,train,backend);}
  tensors(op: string): NativeTensor[]{const info=bridge.nativeCall(op,this.handle) as TensorInfo[];return info.map((t: TensorInfo)=>new NativeTensor(t));}
  destroy(): void {bridge.nativeCall('destroy',this.handle);}
  getInputs(): NativeTensor[]{return this.tensors('inputs');}

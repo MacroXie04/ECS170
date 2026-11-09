@@ -4,6 +4,8 @@
 #include <mindspore/tensor.h>
 #include <vector>
 #include <string>
+#include <fstream>
+#include <set>
 static std::vector<OH_AI_ModelHandle> models;
 static std::vector<std::vector<uint8_t>> modelBuffers;
 static std::vector<OH_AI_TensorHandle> tensors;
@@ -13,14 +15,37 @@ static std::string textArg(napi_env e,napi_value v){size_t n=0;napi_get_value_st
 static napi_value nativeCall(napi_env e,napi_callback_info info){
  napi_value a[4];size_t n=4;napi_get_cb_info(e,info,&n,a,nullptr,nullptr);std::string op=textArg(e,a[0]);
  auto fail=[&](const std::string&s)->napi_value{napi_throw_error(e,nullptr,s.c_str());return nullptr;};
+ if(op=="backendInfo"){
+  size_t count=0;auto descs=OH_AI_GetAllNNRTDeviceDescs(&count);std::string result="NNRT device count="+std::to_string(count);
+  for(size_t i=0;descs&&i<count;i++){auto d=OH_AI_GetElementOfNNRTDeviceDescs(descs,i);auto name=OH_AI_GetNameFromNNRTDeviceDesc(d);result+="\nname="+std::string(name?name:"")+" type="+std::to_string(OH_AI_GetTypeFromNNRTDeviceDesc(d))+" id="+std::to_string(OH_AI_GetDeviceIdFromNNRTDeviceDesc(d));}
+  if(descs)OH_AI_DestroyAllNNRTDeviceDescs(&descs);
+  return textValue(e,result.c_str());
+ }
+ if(op=="backendLibraries"){
+  std::ifstream maps("/proc/self/maps");std::string line,result;std::set<std::string> paths;
+  while(std::getline(maps,line)){auto pos=line.find('/');if(pos==std::string::npos)continue;auto path=line.substr(pos);if(path.find("mindspore")!=std::string::npos||path.find("OpenCL")!=std::string::npos||path.find("vulkan")!=std::string::npos||path.find("nnrt")!=std::string::npos)paths.insert(path);}
+  for(const auto &path:paths)result+=path+"\n";return textValue(e,result.c_str());
+ }
  if(op=="load"){
   void *data;size_t bytes;if(!buf(e,a[1],&data,&bytes))return fail("Model buffer required");bool train=false;napi_get_value_bool(e,a[2],&train);
-  modelBuffers.emplace_back(static_cast<uint8_t*>(data),static_cast<uint8_t*>(data)+bytes);data=modelBuffers.back().data();
-  auto model=OH_AI_ModelCreate();auto context=OH_AI_ContextCreate();OH_AI_ContextSetThreadNum(context,4);auto cpu=OH_AI_DeviceInfoCreate(OH_AI_DEVICETYPE_CPU);OH_AI_DeviceInfoSetEnableFP16(cpu,false);OH_AI_ContextAddDeviceInfo(context,cpu);
+  const std::string backend=n>3?textArg(e,a[3]):"cpu";
+  if(backend!="cpu"&&backend!="gpu"&&backend!="gpu_cpu"&&backend!="nnrt_gpu"&&backend!="nnrt_gpu_cpu"&&backend!="nnrt"&&backend!="nnrt_cpu")return fail("Unknown backend: "+backend);
+  auto context=OH_AI_ContextCreate();OH_AI_ContextSetThreadNum(context,4);
+  if(backend!="cpu"){
+   OH_AI_DeviceInfoHandle accelerator=nullptr;
+   if(backend=="gpu"||backend=="gpu_cpu")accelerator=OH_AI_DeviceInfoCreate(OH_AI_DEVICETYPE_GPU);
+   else if(backend=="nnrt_gpu"||backend=="nnrt_gpu_cpu")accelerator=OH_AI_CreateNNRTDeviceInfoByType(OH_AI_NNRTDEVICE_GPU);
+   else accelerator=OH_AI_DeviceInfoCreate(OH_AI_DEVICETYPE_NNRT);
+   if(!accelerator){OH_AI_ContextDestroy(&context);return fail("Requested backend unavailable: "+backend);}
+   if(backend=="gpu"||backend=="gpu_cpu")OH_AI_DeviceInfoSetEnableFP16(accelerator,false);
+   OH_AI_ContextAddDeviceInfo(context,accelerator);
+  }
+  if(backend=="cpu"||backend=="gpu_cpu"||backend=="nnrt_gpu_cpu"||backend=="nnrt_cpu"){auto cpu=OH_AI_DeviceInfoCreate(OH_AI_DEVICETYPE_CPU);OH_AI_DeviceInfoSetEnableFP16(cpu,false);OH_AI_ContextAddDeviceInfo(context,cpu);}
+  modelBuffers.emplace_back(static_cast<uint8_t*>(data),static_cast<uint8_t*>(data)+bytes);data=modelBuffers.back().data();auto model=OH_AI_ModelCreate();
   OH_AI_Status status;
   // Build transfers configuration ownership to the model; destroying it here double-frees it.
   if(train){auto cfg=OH_AI_TrainCfgCreate();const char *loss[]={"loss"};OH_AI_TrainCfgSetLossName(cfg,loss,1);OH_AI_TrainCfgSetOptimizationLevel(cfg,static_cast<OH_AI_OptimizationLevel>(0));status=OH_AI_TrainModelBuild(model,data,bytes,OH_AI_MODELTYPE_MINDIR,context,cfg);}else status=OH_AI_ModelBuild(model,data,bytes,OH_AI_MODELTYPE_MINDIR,context);
-  if(status!=0){OH_AI_ModelDestroy(&model);return fail("Native model build failed: "+std::to_string(status));}models.push_back(model);return number(e,models.size()-1);
+  if(status!=0){OH_AI_ModelDestroy(&model);modelBuffers.pop_back();return fail("Native model build failed ("+backend+"): "+std::to_string(static_cast<int32_t>(status)));}models.push_back(model);return number(e,models.size()-1);
  }
  uint32_t id=integer(e,a[1]);
  if(op=="data"||op=="setData"){

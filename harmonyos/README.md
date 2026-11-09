@@ -115,3 +115,38 @@ time after reattachment covers only the new monitoring segment.
 
 The final app screen keeps the original device job duration visible after reload,
 and releases its keep-screen-on setting when the job finishes.
+
+## Explicit GPU / NNRT backend probe
+
+On November 8, 2026, the connected MOR-M1 computer was tested with the real
+PR #6 MNIST kernel5 graph and batch 128. CPU training and inference each ran
+three steps. Both GPU-only and GPU+CPU contexts failed before execution with
+`[inner_context.cc:207] IsValid# GPU is not supported.` This is a limitation of
+the installed MindSpore Lite runtime, not evidence that the computer has no GPU.
+
+NNRT enumerated `NPU_ohos.boot.hardware.KirinXE90_v2_0` and `HIAI_F`, both type 3
+(accelerator), and no type-2 GPU. Explicit NNRT GPU selection therefore failed.
+The default NNRT+CPU configuration also failed on this model: training at model
+compilation, and saved-model inference at execution. No accelerator speedup is
+claimed. The CPU control updated 435,642 learned weight values in the final
+three-step probe. These short checks do not replace the formal experiment results.
+
+The normal app still explicitly defaults to CPU. A GPU enum or a loaded graphics
+library does not establish GPU training; backend scheduling, supported operators
+and successful execution must be demonstrated. The
+[HarmonyOS API reference](https://developer.huawei.com/consumer/en/doc/harmonyos-references/js-apis-mindsporelite/)
+also documents CPU as the default context target.
+
+Compact evidence, runtime errors and input/source hashes are in
+[reports/gpu_backend_probe.json](reports/gpu_backend_probe.json). To reproduce
+after building and installing the signed diagnostic app:
+
+```sh
+python harmonyos/tests/probe_backends.py --target USB_SERIAL \
+  --inference-model harmonyos/results/MNIST_COMPLETED_RUN/best.ms
+```
+
+The probe runs each context in a fresh app process, backs up and restores the
+previous job request, and stops the app on completion. Raw logs and binaries
+remain in the ignored local results directory. Context creation alone is not
+treated as proof of GPU or NPU execution.

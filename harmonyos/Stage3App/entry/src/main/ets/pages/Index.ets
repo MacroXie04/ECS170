@@ -10,6 +10,12 @@ class Config {
  inputChannels: number = 1; classes: number = 10; batchSize: number = 128; epochs: number = 15;
  learningRate: number = 0.001; optimizer: string = 'adam'; trainCount: number = 0; valCount: number = 0; testCount: number = 0;
  mean: number[] = []; std: number[] = []; replicate: boolean = false; action: string = 'smoke'; smokeSteps: number = 2;
+ backend: string = 'cpu'; probeTrain: boolean = true; probeModel: string = ''; probeSteps: number = 3;
+}
+class BackendProbe {
+ id: string = ''; requestedBackend: string = ''; training: boolean = false; state: string = 'starting';
+ built: boolean = false; steps: number = 0; stepMs: number[] = []; changedWeights: number = 0;
+ elapsedMs: number = 0; capabilities: string = ''; librariesBefore: string = ''; librariesAfter: string = ''; error: string = '';
 }
 class Variables { variables: string[] = []; learned: string[] = []; }
 class StateTensor { name: string = ''; shape: number[] = []; offset: number = 0; bytes: number = 0; }
@@ -152,15 +158,31 @@ struct Index {
   const ws=model.getWeights();for(let i=0;i<ws.length;i++){if(ws[i].name==='gamma'||ws[i].name==='beta'||ws[i].name==='moving_mean'||ws[i].name==='moving_variance')this.save('bn_'+ws[i].name+'.bin',ws[i].getData());}
   this.save(this.c.id+'_diagnostic.json',JSON.stringify({completed:true}));this.message='BatchNorm diagnostic completed';this.log('BN_DIAG_DONE');
  }
+ async probeBackend(): Promise<void> {
+  const c=this.c;const result=new BackendProbe();result.id=c.id;result.requestedBackend=c.backend;result.training=c.probeTrain;
+  result.capabilities=batchprep.nativeCall('backendInfo',0) as string;result.librariesBefore=batchprep.nativeCall('backendLibraries',0) as string;
+  this.message='Backend probe: '+c.backend;this.detail=result.capabilities;result.state='building';this.save(c.id+'_backend.json',JSON.stringify(result));this.log('BACKEND_BUILD '+c.backend+' training='+c.probeTrain);await this.yieldUI();
+  let loaded: NativeModel|null=null;
+  try {
+   const model=await NativeModel.load(this.read(c.probeModel),c.probeTrain,c.backend);loaded=model;result.built=true;result.state='built';this.save(c.id+'_backend.json',JSON.stringify(result));
+   let before=new Float32Array(0);if(c.probeTrain){model.trainMode=true;this.setLR(model,c.learningRate);before=this.snapshot(model,'probe_before');}
+   const inputs=this.fill(model,this.read(c.dataset+'_train_images.bin'),this.read(c.dataset+'_train_labels.bin'),this.read(c.modelId+'_epoch_1.bin'),0,true,c.batchSize);
+   for(let step=0;step<c.probeSteps;step++){const start=batchprep.now();if(c.probeTrain)model.runStep(inputs);else await model.predict(inputs);result.stepMs.push(batchprep.now()-start);result.steps++;await this.yieldUI();}
+   if(c.probeTrain){const after=this.snapshot(model,'probe_after');for(let i=0;i<after.length;i++){if(!Number.isFinite(after[i]))throw new Error('Nonfinite updated weight');if(after[i]!==before[i])result.changedWeights++;}}
+   result.state='completed';result.librariesAfter=batchprep.nativeCall('backendLibraries',0) as string;
+  }catch(err){result.state='error';result.error=String(err);result.librariesAfter=batchprep.nativeCall('backendLibraries',0) as string;}
+  finally{if(loaded!==null)loaded.destroy();}
+  result.elapsedMs=batchprep.now()-this.clockStart;this.displayedElapsed=result.elapsedMs;this.save(c.id+'_backend.json',JSON.stringify(result));this.log('BACKEND_RESULT '+JSON.stringify(result));this.message='Backend probe '+result.state;this.detail=c.backend+' · '+result.steps+' steps\n'+result.error+'\n'+result.capabilities;
+ }
  async run(): Promise<void> {
   const report=new Report();
   try {
    this.dir=(this.getUIContext().getHostContext() as common.UIAbilityContext).filesDir;if(!fileIo.accessSync(this.dir+'/job.json'))return;
    this.c=JSON.parse(fileIo.readTextSync(this.dir+'/job.json')) as Config;const c=this.c;report.id=c.id;
-   if(c.action!=='train'&&c.action!=='smoke'&&c.action!=='reload'&&c.action!=='reload_smoke'&&c.action!=='diagnose'&&c.action!=='diagnose_bn')throw new Error('Unknown action');
+   if(c.action!=='train'&&c.action!=='smoke'&&c.action!=='reload'&&c.action!=='reload_smoke'&&c.action!=='diagnose'&&c.action!=='diagnose_bn'&&c.action!=='probe_backend')throw new Error('Unknown action');
    this.vars=JSON.parse(fileIo.readTextSync(this.dir+'/'+c.modelId+'_variables.json')) as Variables;
    this.clockStart=batchprep.now();this.timerId=setInterval(()=>this.updateTimer(),250);
-   if(c.action==='diagnose_bn')await this.diagnoseBN();else if(c.action==='diagnose')await this.diagnoseOptimizer();else if(c.action==='reload'||c.action==='reload_smoke')await this.reload();else await this.train(report);
+   if(c.action==='probe_backend')await this.probeBackend();else if(c.action==='diagnose_bn')await this.diagnoseBN();else if(c.action==='diagnose')await this.diagnoseOptimizer();else if(c.action==='reload'||c.action==='reload_smoke')await this.reload();else await this.train(report);
   }catch(err){report.state='error';report.error=String(err)+' '+(err as Error).stack;this.message='Training error';this.detail=report.error;this.log('ERROR '+report.error);if(this.dir.length>0)this.save(this.c.id+'_result.json',JSON.stringify(report));}
   finally{if(this.timerId>=0){clearInterval(this.timerId);this.updateTimer();}window.getLastWindow(this.getUIContext().getHostContext() as common.UIAbilityContext).then((mainWindow: window.Window)=>mainWindow.setWindowKeepScreenOn(false)).catch(()=>this.log('Could not release keep-screen-on'));}
  }

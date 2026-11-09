@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-08",
+  "device": "2in1 \nMOR-M1 \nOpenHarmony-7.0.0.109",
+  "model": "PR6 MNIST kernel5, seed 2026, batch 128, FP32",
+  "scope": "Three-step backend capability probes; not full training or performance benchmarks. Successful requested contexts alone do not prove accelerator placement.",
+  "nnrt_devices": [
+    "name=NPU_ohos.boot.hardware.KirinXE90_v2_0 type=3",
+    "name=HIAI_F type=3"
+  ],
+  "cases": [
+    {
+      "probe_case": "train_cpu",
+      "requestedBackend": "cpu",
+      "training": true,
+      "state": "completed",
+      "built": true,
+      "steps": 3,
+      "changedWeights": 435642,
+      "elapsedMs": 692.1059379950166,
+      "stepMs": [
+        198.1681249961257,
+        184.96203099936247,
+        172.9173440039158
+      ],
+      "error": "",
+      "runtime_errors": []
+    },
+    {
+      "probe_case": "train_gpu",
+      "requestedBackend": "gpu",
+      "training": true,
+      "state": "error",
+      "built": false,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 61.490625001490116,
+      "stepMs": [],
+      "error": "Error: Native model build failed (gpu): -2",
+      "runtime_errors": [
+        "[inner_context.cc:207] IsValid# GPU is not supported."
+      ]
+    },
+    {
+      "probe_case": "train_gpu_cpu",
+      "requestedBackend": "gpu_cpu",
+      "training": true,
+      "state": "error",
+      "built": false,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 61.25296900421381,
+      "stepMs": [],
+      "error": "Error: Native model build failed (gpu_cpu): -2",
+      "runtime_errors": [
+        "[inner_context.cc:207] IsValid# GPU is not supported."
+      ]
+    },
+    {
+      "probe_case": "train_nnrt_gpu",
+      "requestedBackend": "nnrt_gpu",
+      "training": true,
+      "state": "error",
+      "built": false,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 52.73421899974346,
+      "stepMs": [],
+      "error": "Error: Requested backend unavailable: nnrt_gpu",
+      "runtime_errors": []
+    },
+    {
+      "probe_case": "train_nnrt_cpu",
+      "requestedBackend": "nnrt_cpu",
+      "training": true,
+      "state": "error",
+      "built": false,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 90.91796799749136,
+      "stepMs": [],
+      "error": "Error: Native model build failed (nnrt_cpu): -1",
+      "runtime_errors": [
+        "[nnrt_delegate.cc:772] InitNNCompilation# Build NNCompilation failed, ret: 1"
+      ]
+    },
+    {
+      "probe_case": "infer_cpu",
+      "requestedBackend": "cpu",
+      "training": false,
+      "state": "completed",
+      "built": true,
+      "steps": 3,
+      "changedWeights": 0,
+      "elapsedMs": 241.89218799769878,
+      "stepMs": [
+        37.119688004255295,
+        34.1504689976573,
+        31.868749998509884
+      ],
+      "error": "",
+      "runtime_errors": []
+    },
+    {
+      "probe_case": "infer_gpu",
+      "requestedBackend": "gpu",
+      "training": false,
+      "state": "error",
+      "built": false,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 57.25906199961901,
+      "stepMs": [],
+      "error": "Error: Native model build failed (gpu): -2",
+      "runtime_errors": [
+        "[inner_context.cc:207] IsValid# GPU is not supported."
+      ]
+    },
+    {
+      "probe_case": "infer_gpu_cpu",
+      "requestedBackend": "gpu_cpu",
+      "training": false,
+      "state": "error",
+      "built": false,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 58.692969001829624,
+      "stepMs": [],
+      "error": "Error: Native model build failed (gpu_cpu): -2",
+      "runtime_errors": [
+        "[inner_context.cc:207] IsValid# GPU is not supported."
+      ]
+    },
+    {
+      "probe_case": "infer_nnrt_gpu",
+      "requestedBackend": "nnrt_gpu",
+      "training": false,
+      "state": "error",
+      "built": false,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 51.57390600442886,
+      "stepMs": [],
+      "error": "Error: Requested backend unavailable: nnrt_gpu",
+      "runtime_errors": []
+    },
+    {
+      "probe_case": "infer_nnrt_cpu",
+      "requestedBackend": "nnrt_cpu",
+      "training": false,
+      "state": "error",
+      "built": true,
+      "steps": 0,
+      "changedWeights": 0,
+      "elapsedMs": 352.68281299620867,
+      "stepMs": [],
+      "error": "Error: Predict failed: 4294967295",
+      "runtime_errors": [
+        "[nnrt_model_kernel.cc:113] Execute# OH_NNExecutor_RunSync Run failed, OH_NN_ReturnCode = 1"
+      ]
+    }
+  ],
+  "source_hashes": {
+    "tests/probe_backends.py": "bf51e667d8617b5b3fe05af0cc44e14b67cd5870d1fcac79067a5a7e90480257",
+    "Stage3App/entry/src/main/cpp/training_bridge.inc": "9fda842fbc32f180685cfb9dc0626e8cf7347cb5c3d4615d341e363b1618c26b",
+    "Stage3App/entry/src/main/ets/pages/NativeModel.ets": "34e04ec159d105b8177101f4048c8ffc40c7f560138a1f6be0c264afa1a1c377",
+    "Stage3App/entry/src/main/ets/pages/Index.ets": "7d6d25f997fdd645393aa9e30a2c59794b7f643b68c2683bbcc03b14ed9a1cee"
+  },
+  "input_hashes": {
+    "backend_probe_train.ms": "360fe973fc1a8a90b45cfadee56f706ad44c5d195781f25e5c26cf88b28a98ef",
+    "backend_probe_infer.ms": "15824c2f996586329abd1af0f54af177ddc4411963f736bfca950e8b4e526842",
+    "mnist_kernel5_seed2026_variables.json": "8bec5084b40a956cd18dd2d821f9f5230f8125c270f95518fff5e203e885bfcb",
+    "mnist_kernel5_seed2026_epoch_1.bin": "ffca2cde66c4485d6f3264e2469bb04043e37f7f104a80ff1037771ffc72ad85",
+    "mnist_train_images.bin": "55aba4a46362802d0d9b357fa5fc27bc8f1298e6a199e53d0d0fc3724cad08bd",
+    "mnist_train_labels.bin": "e2aa110a1ebcf1e92331430f19201cd8c2d8e7bb0d50ecba4280bcab3e336c9e"
+  }
+}
