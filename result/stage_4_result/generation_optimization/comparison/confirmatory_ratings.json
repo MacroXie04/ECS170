@@ -1,0 +1,127 @@
+{
+  "reviewer": "independent assistant qualitative review, not a human study",
+  "ratings": [
+    {
+      "id": "H001",
+      "score": 0,
+      "reason": "The bar setup is followed by a long punctuation loop and never develops into a completed joke."
+    },
+    {
+      "id": "H002",
+      "score": 0,
+      "reason": "The question is syntactically broken, and the answer ends with the incomplete phrase a little."
+    },
+    {
+      "id": "H003",
+      "score": 1,
+      "reason": "The question template is readable, but outstanding does not meaningfully answer what zero said to the unspecified other."
+    },
+    {
+      "id": "H004",
+      "score": 2,
+      "reason": "The belt remark coherently refers to the narrow middle that makes eight resemble a belted zero."
+    },
+    {
+      "id": "H005",
+      "score": 1,
+      "reason": "The question and answer are readable, but buccaneer has no supported connection to a cow with another cow."
+    },
+    {
+      "id": "H006",
+      "score": 0,
+      "reason": "The question lacks a complete grammatical relation between side, cow, and wombat; a stick does not repair it."
+    },
+    {
+      "id": "H007",
+      "score": 2,
+      "reason": "Despite awkward wording, the unexpected desert tree supports an illusion explanation and recognizable optical/obstacle wordplay."
+    },
+    {
+      "id": "H008",
+      "score": 0,
+      "reason": "The question is an unfinished noun phrase rather than a complete interrogative, and the answer supplies no interpretable relation."
+    },
+    {
+      "id": "H009",
+      "score": 1,
+      "reason": "The familiar question is complete, but being outstanding provides no coherent reason for crossing the road."
+    },
+    {
+      "id": "H010",
+      "score": 1,
+      "reason": "The taste-funny line is recognizable wordplay, but the time-flies setup does not establish a coherent eater or reason for tasting clowns."
+    },
+    {
+      "id": "H011",
+      "score": 2,
+      "reason": "The playground supplies a natural slide, making the other-slide substitution responsive to the crossing question."
+    },
+    {
+      "id": "H012",
+      "score": 0,
+      "reason": "What does a cow with a lightbulb lacks its main verb, and a stick does not complete the thought."
+    },
+    {
+      "id": "H013",
+      "score": 1,
+      "reason": "Both clauses are readable, but the third person is never introduced by the singular-guy setup."
+    },
+    {
+      "id": "H014",
+      "score": 2,
+      "reason": "Ground beef coherently combines a legless cow being on the ground with the food term."
+    },
+    {
+      "id": "H015",
+      "score": 2,
+      "reason": "Loafers directly answers the footwear question and connects to a baker making loaves."
+    },
+    {
+      "id": "H016",
+      "score": 2,
+      "reason": "Ten tickles answers how to cause laughter while making a recognizable tentacles pun associated with a squid."
+    },
+    {
+      "id": "H017",
+      "score": 0,
+      "reason": "The unnatural reading-a-bar premise collapses into an extended punctuation loop without development."
+    },
+    {
+      "id": "H018",
+      "score": 0,
+      "reason": "Wondering a bar is syntactically broken and is followed by a long punctuation loop."
+    },
+    {
+      "id": "H019",
+      "score": 2,
+      "reason": "Although side of radiation is awkward, gramma ray coherently combines gamma radiation with a grandmother baking cookies."
+    },
+    {
+      "id": "H020",
+      "score": 1,
+      "reason": "This is an interpretable complete premise about reading a book, but the ellipsis leaves it without a responsive payoff."
+    },
+    {
+      "id": "H021",
+      "score": 2,
+      "reason": "Sleevies responds to the location question through coherent arms/armies wordplay."
+    },
+    {
+      "id": "H022",
+      "score": 2,
+      "reason": "Vel-crows combines birds with Velcro, directly explaining why they stick together."
+    },
+    {
+      "id": "H023",
+      "score": 1,
+      "reason": "The question asks for a location, while the answer gives an unrelated because-clause about being outstanding."
+    },
+    {
+      "id": "H024",
+      "score": 1,
+      "reason": "The naming template is understandable despite how, but buccaneer has no coherent link to a cow with a lightbulb."
+    }
+  ],
+  "input_sha256": "fcc7a55d5c6221b383adab76afa507b573b9a970487aef929369328d8d722d59",
+  "mapping_sha256": "b292fc9394ef5404bcd3714b3a2355dbb8b4554f9ac33c756c1f381d2e3d566a"
+}

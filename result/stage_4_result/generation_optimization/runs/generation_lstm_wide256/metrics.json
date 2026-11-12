@@ -1,0 +1,20 @@
+{
+  "task": "generation",
+  "cell": "lstm",
+  "tag": "wide256",
+  "best_epoch": 31,
+  "epochs_completed": 51,
+  "validation_loss": 5.272569361361026,
+  "train_seconds": 6.783114311110694,
+  "parameters": 2538985,
+  "test": {
+    "n_examples": 161,
+    "n_tokens": 2961,
+    "loss": 5.494946627631376,
+    "perplexity": 243.4585318553976,
+    "token_accuracy": 0.2701789935832489
+  },
+  "smoke": false,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+}

@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "candidate": "compact_gru_late_beam",
+  "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+  "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+  "epoch": 27,
+  "decoding": {
+    "strategy": "beam",
+    "max_new_tokens": 48,
+    "min_new_tokens": 4,
+    "beam_width": 5,
+    "length_penalty": 0.7,
+    "no_repeat_ngram_size": 3,
+    "repetition_penalty": 1.1,
+    "seed": 1704
+  },
+  "source_sha256": {
+    "local_code/stage_4_code/Generation_Decoder.py": "8aff028a2c487cb7e2f3648d7e750e23a0205cc2e8a679a9a6d8fc2b2b46d69e",
+    "local_code/stage_4_code/Generation_Optimization.py": "1ce51b0d3690783a79b1568335805f33742f5d850542e9991a55ee835f715def",
+    "script/stage_4_script/predict_generation.py": "f5ccf10322fb92a524ef0a933a6f21b068360a4e5e3bb0e85391d446cbbde641"
+  },
+  "selection_rule": "Among beam candidates: most score-2 coherent outputs, then highest mean score, fewer near training copies, then lower validation NLL.",
+  "selection_basis": "Assistant qualitative scores on 12 fixed validation-prefix prompts; not human or held-out semantic evaluation",
+  "validation_assessment": {
+    "candidate": "compact_gru_late_beam",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+    "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+    "epoch": 27,
+    "validation_loss": 5.582583987366003,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 6,
+    "near_training_copies": 8,
+    "coherence_score_counts": {
+      "0": 1,
+      "1": 2,
+      "2": 9
+    },
+    "mean_coherence": 1.6666666666666667,
+    "coherent_count": 9,
+    "familiar_coherent": 7,
+    "unseen_coherent": 2,
+    "independent_review": {
+      "score_counts": {
+        "0": 0,
+        "1": 3,
+        "2": 9
+      },
+      "mean_coherence": 1.75,
+      "coherent_count": 9
+    }
+  },
+  "limitations": [
+    "Familiar-prefix reconstruction dominates; training jokes can be reproduced verbatim.",
+    "Later checkpoint has higher held-out next-token loss than validation-loss-selected weights.",
+    "No retrieval, hand-written continuation or pretrained language model is used."
+  ]
+}

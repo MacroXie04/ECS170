@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "candidate": "compact_gru_best_beam",
+  "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/best.pt",
+  "checkpoint_sha256": "9d1c6236b5a571e93c4f44afa7a1a7ae9acac95e85edbe400e7baa4d4395c44f",
+  "epoch": 7,
+  "decoding": {
+    "strategy": "beam",
+    "max_new_tokens": 48,
+    "min_new_tokens": 4,
+    "beam_width": 5,
+    "length_penalty": 0.7,
+    "no_repeat_ngram_size": 3,
+    "repetition_penalty": 1.1,
+    "seed": 1704
+  },
+  "source_sha256": {
+    "local_code/stage_4_code/Generation_Decoder.py": "8aff028a2c487cb7e2f3648d7e750e23a0205cc2e8a679a9a6d8fc2b2b46d69e",
+    "local_code/stage_4_code/Generation_Optimization.py": "1ce51b0d3690783a79b1568335805f33742f5d850542e9991a55ee835f715def",
+    "script/stage_4_script/predict_generation.py": "f5ccf10322fb92a524ef0a933a6f21b068360a4e5e3bb0e85391d446cbbde641"
+  },
+  "selection_rule": "Lowest validation next-token loss among the six newly trained model configurations.",
+  "selection_basis": "Assistant qualitative scores on 12 fixed validation-prefix prompts; not human or held-out semantic evaluation",
+  "validation_assessment": {
+    "candidate": "compact_gru_best_beam",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/best.pt",
+    "checkpoint_sha256": "9d1c6236b5a571e93c4f44afa7a1a7ae9acac95e85edbe400e7baa4d4395c44f",
+    "epoch": 7,
+    "validation_loss": 4.988721077000383,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 1,
+    "near_training_copies": 2,
+    "coherence_score_counts": {
+      "0": 8,
+      "1": 2,
+      "2": 2
+    },
+    "mean_coherence": 0.5,
+    "coherent_count": 2,
+    "familiar_coherent": 2,
+    "unseen_coherent": 0
+  },
+  "limitations": [
+    "Lower next-token loss does not ensure a coherent free-running punchline.",
+    "Small corpus and unseen-prefix generalization remain limiting."
+  ]
+}

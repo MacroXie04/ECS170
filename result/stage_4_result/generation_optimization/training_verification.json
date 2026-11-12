@@ -1,0 +1,236 @@
+{
+  "verified_at_utc": "2026-11-12T11:45:28.648888+00:00",
+  "verifier_sha256": "584fa8c173e2d2d22aa234da950d427db2004eab1bf3e162a92bb805858ace0d",
+  "metric_helper_sha256": "1fa089c88ac069a42b2b55aa65352b7870ccb46c66926d8fd176403d15b27909",
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "torch": "2.14.1+cu130",
+  "platform": "Linux-7.0.0-1017-aws-x86_64-with-glibc2.43",
+  "checkpoint_device": "cpu",
+  "gpu_inference_or_training": false,
+  "scope": "Six training experiments only; full raw-data/CSV audit and strict CPU checkpoint loading; no qualitative profile selection",
+  "expected_grids": {
+    "compact256": {
+      "embedding_dim": 256,
+      "hidden_dim": 256,
+      "num_layers": 1,
+      "dropout": 0.1,
+      "batch_size": 32,
+      "max_epochs": 180,
+      "patience": 20
+    },
+    "wide256": {
+      "embedding_dim": 128,
+      "hidden_dim": 256,
+      "num_layers": 2,
+      "dropout": 0.15,
+      "batch_size": 64,
+      "max_epochs": 160,
+      "patience": 20
+    }
+  },
+  "runs": {
+    "generation_rnn_compact256": {
+      "passed": true,
+      "config_hash": "fc2a4b615a47bec9166bd9b66574bf4e7d2302e2456b63c6a1790f5cc2666d56",
+      "best_epoch": 7,
+      "last_epoch": 27,
+      "parameter_count": 2286697,
+      "strict_checkpoint_loads": [
+        "best.pt",
+        "last.pt"
+      ],
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.237557032107501,
+        "perplexity": 188.20974994530656,
+        "token_accuracy": 0.26511313745356296
+      },
+      "artifact_sha256": {
+        "config.json": "5b1c9c614b9ef8e5a5466dad048d5431e53429786a0c059d644b4f0fe34edf37",
+        "environment.json": "478bb8c9089c126b6015e149e47fc682c411bf9aa15f733510a3f441c810d7f0",
+        "history.json": "859f4e368eab65d909391a297d09a59f46ebdba5c2a435b0c976548313db8f5c",
+        "metrics.json": "4a145b2ce841919cf830cec70bdb65aa04a37a0d84d27ed3617b3c24ac2e6a76",
+        "test_predictions.csv": "d4618ef9412d0ef28506a8473780a9febb6cddad0849371c7ca27483cfca368c",
+        "checkpoints/best.pt": "85eb176a83e2c2ad6f35b2a5c4ea1dc35fc5c5147a700bf5cfdb8ee3aea38363",
+        "checkpoints/last.pt": "e7bc1051d428e29253ad252bc461bebdf478bf63adca0b64d1918279bf5ead40"
+      }
+    },
+    "generation_lstm_compact256": {
+      "passed": true,
+      "config_hash": "48447580eb67b09cfaff753998d467b3bb451c9dd775f1b551e5b78cd2d4ea17",
+      "best_epoch": 12,
+      "last_epoch": 32,
+      "parameter_count": 2681449,
+      "strict_checkpoint_loads": [
+        "best.pt",
+        "last.pt"
+      ],
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.210978464192935,
+        "perplexity": 183.27329684860257,
+        "token_accuracy": 0.2857142857142857
+      },
+      "artifact_sha256": {
+        "config.json": "3509d7f6709756df99c7f053b6267a1ef8a17d3dfa9193850a84482efb1bd739",
+        "environment.json": "478bb8c9089c126b6015e149e47fc682c411bf9aa15f733510a3f441c810d7f0",
+        "history.json": "ce2daf2107264c95afb3fb8d37a02d75b6736ff80151710011f3a5dfd153a64e",
+        "metrics.json": "4ca4891e9b3b0078c19ce6b753ae16470070793ae6f025a041c382ffab35c2e5",
+        "test_predictions.csv": "2dc2641752e443ac822b0d782e097e670144c0148654bc64e9971bba58ed30d7",
+        "checkpoints/best.pt": "b4593c22d82ae7d28e9d128dcd6d0c01a37d05841d1bd5673fa79529eb3e457a",
+        "checkpoints/last.pt": "b513fa42d09ecf3a834d8264f9cc595c195e2eec9725f3819bf7152ee67b40fb"
+      }
+    },
+    "generation_gru_compact256": {
+      "passed": true,
+      "config_hash": "af5a86254e5557046263a24dd06e6c7c14dd142eb5e66621945eb8c3d00a1c30",
+      "best_epoch": 7,
+      "last_epoch": 27,
+      "parameter_count": 2549865,
+      "strict_checkpoint_loads": [
+        "best.pt",
+        "last.pt"
+      ],
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.169383311505174,
+        "perplexity": 175.80638627146433,
+        "token_accuracy": 0.28199932455251603
+      },
+      "artifact_sha256": {
+        "config.json": "3fb302a986accbe40f29d5d54bbcfa0b2b33d6a35ceb9d83c12e905388ecd277",
+        "environment.json": "478bb8c9089c126b6015e149e47fc682c411bf9aa15f733510a3f441c810d7f0",
+        "history.json": "510e6becfe4309cea2bf08b8df771e4c9191bd8a099b8273a6bdba9d98a405d9",
+        "metrics.json": "295f37cd695c7711722e5fd86d23e84ebd143c0d768779d28bde12660192a799",
+        "test_predictions.csv": "5721cb614ed35965ca48b3c3a5d8ea9c09fb3707cd249fba2336631cc233a73a",
+        "checkpoints/best.pt": "9d1c6236b5a571e93c4f44afa7a1a7ae9acac95e85edbe400e7baa4d4395c44f",
+        "checkpoints/last.pt": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+      }
+    },
+    "generation_rnn_wide256": {
+      "passed": true,
+      "config_hash": "b30c948b2848895279e480c148eda936cf323db1ac0f10dee01b58e68d765567",
+      "best_epoch": 14,
+      "last_epoch": 34,
+      "parameter_count": 1847785,
+      "strict_checkpoint_loads": [
+        "best.pt",
+        "last.pt"
+      ],
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.372345947245012,
+        "perplexity": 215.3675163650063,
+        "token_accuracy": 0.2657885849375211
+      },
+      "artifact_sha256": {
+        "config.json": "03acb9b038c3b8dcc817c861afa8104ae92010c176241101c4ccef080c779098",
+        "environment.json": "724210b0084b7053a54864f729db9ab07733823c5edf02040ce829b242a9b06d",
+        "history.json": "e093cabd0578c7093312ae79211f883d7eef7ada3e4539d27fb49c87b73ffdf9",
+        "metrics.json": "66db9e432815197acd579220d9994fe10ff5259742c5bef6ce9d97b620806f97",
+        "test_predictions.csv": "396481d0494cecc1df0aea9bf066e46a1189f6a2367509279d6926bf945129a2",
+        "checkpoints/best.pt": "effd2989761174301d6fb596788a51765eae6a6cfedc57faa6fba8caf572c140",
+        "checkpoints/last.pt": "23695de8bdd26c0f8358c0705f41ce46f98289727ad99edf1a55202cac7265f1"
+      }
+    },
+    "generation_lstm_wide256": {
+      "passed": true,
+      "config_hash": "cd55155bd349e213e19d05e383861864e31b861361501d97163dc62edae396d8",
+      "best_epoch": 31,
+      "last_epoch": 51,
+      "parameter_count": 2538985,
+      "strict_checkpoint_loads": [
+        "best.pt",
+        "last.pt"
+      ],
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.494946627631376,
+        "perplexity": 243.4585318553976,
+        "token_accuracy": 0.2701789935832489
+      },
+      "artifact_sha256": {
+        "config.json": "ba3b28ec508535684481fdb78ecb0d1360cb5d5b24106246960e7cbe8b1b3bbb",
+        "environment.json": "724210b0084b7053a54864f729db9ab07733823c5edf02040ce829b242a9b06d",
+        "history.json": "9ebd222310038158774518f4a3be9ebd21a365a2e9580c2bc9cce32c924e14e2",
+        "metrics.json": "269482e83e4b0c1addc479cb7e7183aef40800bedf91f56e7b47ce7ddb3dded1",
+        "test_predictions.csv": "d5a759e4b2b5f30623abec8a6ccacbef4778acdbbebc3be66f00daec6607c478",
+        "checkpoints/best.pt": "e27e0e56b877f33c9398cb019e742cd0a079dd74f7213be1d3508f8a69d8b729",
+        "checkpoints/last.pt": "8549c2eafd135e22a3834c479854c6fe873cfcb8ecdb075ea0697820ae55b78a"
+      }
+    },
+    "generation_gru_wide256": {
+      "passed": true,
+      "config_hash": "b78c951d12b40dd266726e4c6fb164cf6627679c2717579cdc67f4efb0ec8fa8",
+      "best_epoch": 24,
+      "last_epoch": 44,
+      "parameter_count": 2308585,
+      "strict_checkpoint_loads": [
+        "best.pt",
+        "last.pt"
+      ],
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.303149440730596,
+        "perplexity": 200.96875349594384,
+        "token_accuracy": 0.28098615332657884
+      },
+      "artifact_sha256": {
+        "config.json": "ef05bdd5c9d4d5de60584905d7e3147b1fb97601010d4ac87761e0a63a974978",
+        "environment.json": "724210b0084b7053a54864f729db9ab07733823c5edf02040ce829b242a9b06d",
+        "history.json": "fef5b6b5cebe81ea9e9f098a8b252e63846c34786ecfb2b25a3588574387d2d4",
+        "metrics.json": "05bdbea09303f4136b892c421ea5c2db44baea53c0ff1416fe73684f16cce0a3",
+        "test_predictions.csv": "fec98155cfa03b631fe9130230b8bcbdaa592dfed55d75a30a6f0cd22e2ddcc3",
+        "checkpoints/best.pt": "657e82b476984a226cc954995f05295e08a2125db8add4832a0794e604e3eb00",
+        "checkpoints/last.pt": "c45f6ecfbc98c98ca7b8d6c890881e3974843ca782a0d77c5292236171570044"
+      }
+    }
+  },
+  "failures": [],
+  "baseline_commit": "f82bdcdf3d3a0f7a27fdb24fe008e41078ff6f01",
+  "frozen_source_sha256": {
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+    "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+    "script/stage_4_script/run_stage4.py": "c3018d0f948008366f1402e32a7125fd32ff9f1d89608cbd02ecd5ff25ddae46",
+    "script/stage_4_script/prepare_stage4_data.py": "90c482a175ff0377752b9f0187971f6dce6dfc968c02c05898f118ab3ec6ce1b"
+  },
+  "dataset": {
+    "source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+    "counts": {
+      "train": 1297,
+      "validation": 164,
+      "test": 161
+    },
+    "source_count": 1622,
+    "normalized_group_count": 1609,
+    "duplicate_normalized_rows": 13,
+    "dropped_rows": 0,
+    "split_id_sha256": {
+      "train": "668af7671745f9449f4c64860bdbc9ce7c0ea5c40ccba6e4e1753849b5b2cd79",
+      "validation": "7219e01aebed35a474139128d09a102660e5aa1057ff6404097f07ea0e5db86c",
+      "test": "1a5f1560e24b8531c9eba26d1ac330ef9d212d603d49fb08100e066ee91a361a"
+    },
+    "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+    "vocabulary_fit_split": "train",
+    "id_overlap_counts": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "normalized_text_overlap_counts": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    }
+  },
+  "verified_run_count": 6,
+  "verified_test_rows": 966,
+  "passed": true
+}

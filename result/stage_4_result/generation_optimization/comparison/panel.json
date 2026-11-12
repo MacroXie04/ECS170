@@ -1,0 +1,91 @@
+{
+  "prompts": [
+    {
+      "id": "joke/940",
+      "prompt": "what do you",
+      "train_prefix_count": 153,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1183",
+      "prompt": "why did the",
+      "train_prefix_count": 73,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/648",
+      "prompt": "what did the",
+      "train_prefix_count": 64,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/867",
+      "prompt": "how do you",
+      "train_prefix_count": 25,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/786",
+      "prompt": "what kind of",
+      "train_prefix_count": 17,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/550",
+      "prompt": "what does a",
+      "train_prefix_count": 11,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1169",
+      "prompt": "where did the",
+      "train_prefix_count": 6,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1537",
+      "prompt": "i'm reading a",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/858",
+      "prompt": "what side of",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/89",
+      "prompt": "time flies like",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1279",
+      "prompt": "a guy walks",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1262",
+      "prompt": "i was wondering",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    }
+  ],
+  "sha256": "97cf87c7515dc306a1cd310a25acd1540ff332c108fb2363c9387353895d74a8",
+  "seed": 1704,
+  "selection": "Frozen from validation texts before optimized generations were inspected"
+}

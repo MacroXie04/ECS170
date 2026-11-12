@@ -1,0 +1,44 @@
+[
+  {
+    "prefix": "what do you",
+    "source_split": "train",
+    "reference_id": "joke/1423",
+    "reference": "What do you call a plastic sheep? Lambinated!",
+    "greedy": "what do you call a cow with a legs? a buccaneer.",
+    "sampled": "what do you call a dog with no legs? a - - - - hand!",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1704
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "why did the",
+    "source_split": "train",
+    "reference_id": "joke/1113",
+    "reference": "Why did the banker leave his job? he lost interest",
+    "greedy": "why did the chicken cross the road? because he was a little dressing.",
+    "sampled": "why did the difference favorite the road? he can had the little slide.",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1705
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "what did the",
+    "source_split": "train",
+    "reference_id": "joke/1305",
+    "reference": "What did the hot dogs name their child? Frank",
+    "greedy": "what did the chicken say to the other? because he was a little - - - - - - - - - - - - - - - - - - - - -)",
+    "sampled": "what did the fish say to the other? because they didn't make to be them.",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1706
+    },
+    "max_new_tokens": 40
+  }
+]

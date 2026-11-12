@@ -110,3 +110,7 @@ The report builder requires ReportLab and pypdf, plus the analysis dependencies 
 ```
 
 The builder recomputes metrics from saved test evidence, rejects smoke runs and mismatched scores, and verifies a five-page PDF. Output: `output/pdf/Stage_4_Report_Draft.pdf` (ignored, local only). Team review and the submission source-code link remain pending; no Canvas submission has been made by these scripts.
+
+## Generation follow-up
+
+The coherent-generation profile, six additional model runs, all 12 before/after prompts, blinded assistant ratings, training-copy checks, and the prediction-loss tradeoff are documented in [Generation optimization](GENERATION_OPTIMIZATION.md). Use `predict_generation.py` for the selected profile; `predict_stage4.py` preserves the original baseline interface.

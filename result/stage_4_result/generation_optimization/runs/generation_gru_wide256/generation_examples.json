@@ -1,0 +1,44 @@
+[
+  {
+    "prefix": "what do you",
+    "source_split": "train",
+    "reference_id": "joke/1423",
+    "reference": "What do you call a plastic sheep? Lambinated!",
+    "greedy": "what do you call a cow with no legs? a stick",
+    "sampled": "what do you call a sheep with a nose? a - - - - - - - - - - -",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1704
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "why did the",
+    "source_split": "train",
+    "reference_id": "joke/1113",
+    "reference": "Why did the banker leave his job? he lost interest",
+    "greedy": "why did the chicken cross the road? because he was a little - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -",
+    "sampled": "why did the dog get the road? to know to get to the other slide",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1705
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "what did the",
+    "source_split": "train",
+    "reference_id": "joke/1305",
+    "reference": "What did the hot dogs name their child? Frank",
+    "greedy": "what did the german say to the other? you get a little boogie.",
+    "sampled": "what did the owner say to the other? you can find a little boogie - (!",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1706
+    },
+    "max_new_tokens": 40
+  }
+]

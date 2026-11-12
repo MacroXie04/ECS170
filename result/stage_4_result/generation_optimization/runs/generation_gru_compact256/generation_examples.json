@@ -1,0 +1,44 @@
+[
+  {
+    "prefix": "what do you",
+    "source_split": "train",
+    "reference_id": "joke/1423",
+    "reference": "What do you call a plastic sheep? Lambinated!",
+    "greedy": "what do you call a cow with no legs? a stick",
+    "sampled": "what do you call a boomerang with a boomerang that with a vest? a firequacker.",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1704
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "why did the",
+    "source_split": "train",
+    "reference_id": "joke/1113",
+    "reference": "Why did the banker leave his job? he lost interest",
+    "greedy": "why did the chicken cross the road? because it was a little.",
+    "sampled": "why did the strawberry cross the road? he replied have been the best to the chicken? because he had a bar.",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1705
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "what did the",
+    "source_split": "train",
+    "reference_id": "joke/1305",
+    "reference": "What did the hot dogs name their child? Frank",
+    "greedy": "what did the 0 say to the other? he was a little.",
+    "sampled": "what did the fish say to the other? he could.",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1706
+    },
+    "max_new_tokens": 40
+  }
+]

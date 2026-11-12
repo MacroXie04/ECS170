@@ -38,3 +38,7 @@ env/
 /result/stage_4_result/*.pid
 /result/stage_4_result/*.exit
 /output/pdf/Stage_4_Report_Draft.pdf
+
+# Stage 4 generation follow-up process logs stay local.
+/result/stage_4_result/generation_optimization/*.log
+/result/stage_4_result/generation_optimization/*.exit

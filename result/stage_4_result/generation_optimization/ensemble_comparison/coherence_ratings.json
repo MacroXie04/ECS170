@@ -1,0 +1,187 @@
+{
+  "reviewer": "independent assistant qualitative review, not a human study",
+  "input_sha256": "b8aaf98d05b9bfc62b9248056a86ec5fca0f3d8359ec9eebda300494a3c8e292",
+  "ratings": [
+    {
+      "id": "E001",
+      "score": 2,
+      "reason": "Although side of radiation is awkward, gramma ray coherently combines gamma radiation with a grandmother baking cookies."
+    },
+    {
+      "id": "E002",
+      "score": 2,
+      "reason": "Loafers directly answers the footwear question and connects to a baker making loaves."
+    },
+    {
+      "id": "E003",
+      "score": 0,
+      "reason": "Wondering in the other day is a broken construction without an interpretable completed situation."
+    },
+    {
+      "id": "E004",
+      "score": 2,
+      "reason": "Ten tickles answers how to cause laughter while making a recognizable tentacles pun associated with a squid."
+    },
+    {
+      "id": "E005",
+      "score": 1,
+      "reason": "The question and answer have recognizable sentence forms, but scares their seeing is semantically incoherent and does not explain liking skydiving."
+    },
+    {
+      "id": "E006",
+      "score": 1,
+      "reason": "This is an interpretable complete premise about reading a book, but it provides no responsive payoff."
+    },
+    {
+      "id": "E007",
+      "score": 2,
+      "reason": "The playground supplies a natural slide, making the other-slide substitution responsive to the crossing question."
+    },
+    {
+      "id": "E008",
+      "score": 2,
+      "reason": "Ground beef coherently combines a legless cow being on the ground with the food term."
+    },
+    {
+      "id": "E009",
+      "score": 2,
+      "reason": "The belt remark coherently refers to the narrow middle that makes eight resemble a belted zero."
+    },
+    {
+      "id": "E010",
+      "score": 1,
+      "reason": "Ground beef fits the legless-cow fragment, but the full question incorrectly asks for a side of radiation and never connects that element."
+    },
+    {
+      "id": "E011",
+      "score": 2,
+      "reason": "The belt remark coherently refers to the narrow middle that makes eight resemble a belted zero."
+    },
+    {
+      "id": "E012",
+      "score": 2,
+      "reason": "The playground supplies a natural slide, making the other-slide substitution responsive to the crossing question."
+    },
+    {
+      "id": "E013",
+      "score": 1,
+      "reason": "This is an interpretable complete premise about reading a book, but it provides no responsive payoff."
+    },
+    {
+      "id": "E014",
+      "score": 2,
+      "reason": "Vel-crows combines birds with Velcro, directly explaining why they stick together."
+    },
+    {
+      "id": "E015",
+      "score": 1,
+      "reason": "Wondering in the middle of a road is a readable situation, but the sentence supplies no joke development or payoff."
+    },
+    {
+      "id": "E016",
+      "score": 2,
+      "reason": "Loafers directly answers the footwear question and connects to a baker making loaves."
+    },
+    {
+      "id": "E017",
+      "score": 2,
+      "reason": "Sleevies responds to the location question through coherent arms/armies wordplay."
+    },
+    {
+      "id": "E018",
+      "score": 1,
+      "reason": "A guy entering a bar is a complete readable premise, but the trailing ellipsis leaves it without a payoff."
+    },
+    {
+      "id": "E019",
+      "score": 1,
+      "reason": "Ground beef fits a legless cow, but it is not a kind of bee and the question never establishes a connection to bees."
+    },
+    {
+      "id": "E020",
+      "score": 2,
+      "reason": "Vel-crows combines birds with Velcro, directly explaining why they stick together."
+    },
+    {
+      "id": "E021",
+      "score": 1,
+      "reason": "The clause has a readable sentence structure, but going to the other day is semantically disconnected and has no responsive wordplay."
+    },
+    {
+      "id": "E022",
+      "score": 1,
+      "reason": "This is an interpretable complete premise about reading a book, but it provides no responsive payoff."
+    },
+    {
+      "id": "E023",
+      "score": 2,
+      "reason": "Despite the awkward how-do-you-call wording, the naming question is clear and ground beef coherently connects a legless cow to the ground and food term."
+    },
+    {
+      "id": "E024",
+      "score": 2,
+      "reason": "Loafers directly answers the footwear question and connects to a baker making loaves."
+    },
+    {
+      "id": "E025",
+      "score": 2,
+      "reason": "The playground supplies a natural slide, making the other-slide substitution responsive to the crossing question."
+    },
+    {
+      "id": "E026",
+      "score": 1,
+      "reason": "A guy entering a bar is a complete readable premise, but the trailing ellipsis leaves it without a payoff."
+    },
+    {
+      "id": "E027",
+      "score": 1,
+      "reason": "Both clauses are readable, but the third person is never introduced by the singular-guy setup."
+    },
+    {
+      "id": "E028",
+      "score": 2,
+      "reason": "Ground beef coherently combines a legless cow being on the ground with the food term."
+    },
+    {
+      "id": "E029",
+      "score": 1,
+      "reason": "The taste-funny line is recognizable wordplay, but the time-flies setup does not establish a coherent eater or reason for tasting clowns."
+    },
+    {
+      "id": "E030",
+      "score": 2,
+      "reason": "Ten tickles answers how to cause laughter while making a recognizable tentacles pun associated with a squid."
+    },
+    {
+      "id": "E031",
+      "score": 2,
+      "reason": "Sleevies responds to the location question through coherent arms/armies wordplay."
+    },
+    {
+      "id": "E032",
+      "score": 2,
+      "reason": "The belt remark coherently refers to the narrow middle that makes eight resemble a belted zero."
+    },
+    {
+      "id": "E033",
+      "score": 1,
+      "reason": "Wondering in the middle of a road is a readable situation, but the sentence supplies no joke development or payoff."
+    },
+    {
+      "id": "E034",
+      "score": 2,
+      "reason": "Although side of radiation is awkward, gramma ray coherently combines gamma radiation with a grandmother baking cookies."
+    },
+    {
+      "id": "E035",
+      "score": 2,
+      "reason": "Ground beef coherently combines a legless cow being on the ground with the food term."
+    },
+    {
+      "id": "E036",
+      "score": 2,
+      "reason": "Although where is awkward in this question, the answer supplies the other slide as a destination and preserves coherent playground/slide wordplay."
+    }
+  ],
+  "mapping_sha256": "ef1c838a4445026f34b57e06c4a9c559070920ccead65ff30510f6996e017df3"
+}
