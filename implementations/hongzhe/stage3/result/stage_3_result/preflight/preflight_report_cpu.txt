@@ -1,0 +1,54 @@
+PASS  cifar: instructor checksum: 04178bcd11984359
+PASS  cifar: sample counts: train=50000 test=10000
+PASS  cifar: tensor shape: (50000, 3, 32, 32) uint8
+PASS  cifar: zero-based labels: train 0..9 test 0..9
+PASS  cifar: no image in both train and test: 0 shared
+PASS  cifar: validation split: optimization=45000 validation=5000
+PASS  cifar: every class keeps training images: smallest class has 4500 images
+PASS  cifar/baseline: forward, loss, backward: logits=(4, 10) loss=2.3731 params=814,570
+PASS  cifar/depth_1conv: forward, loss, backward: logits=(4, 10) loss=2.4085 params=620,586
+PASS  cifar/kernel5: forward, loss, backward: logits=(4, 10) loss=2.3321 params=1,324,010
+PASS  cifar/avgpool: forward, loss, backward: logits=(4, 10) loss=2.2880 params=814,570
+PASS  cifar/stride2: forward, loss, backward: logits=(4, 10) loss=2.3144 params=814,570
+PASS  cifar/hidden_small: forward, loss, backward: logits=(4, 10) loss=2.0782 params=419,242
+PASS  cifar/mse_loss: forward, loss, backward: logits=(4, 10) loss=0.9147 params=814,570
+PASS  cifar/no_dropout: forward, loss, backward: logits=(4, 10) loss=2.3751 params=814,570
+PASS  cifar: loss falls on 64 samples: cross-entropy 2.300 -> 0.0002, accuracy 1.000
+PASS  cifar: reloaded model evaluates repeatably: accuracy 0.1500
+PASS  cifar: resume matches an uninterrupted run: largest parameter difference 0.00e+00
+PASS  orl: instructor checksum: 94a49cfe24429ccb
+PASS  orl: sample counts: train=360 test=40
+PASS  orl: tensor shape: (360, 1, 112, 92) uint8
+PASS  orl: zero-based labels: train 0..39 test 0..39
+PASS  orl: no image in both train and test: 0 shared
+PASS  orl: validation split: optimization=320 validation=40
+PASS  orl: every class keeps training images: smallest class has 8 images
+PASS  orl/baseline: forward, loss, backward: logits=(4, 40) loss=3.4389 params=1,254,808
+PASS  orl/depth_3stage: forward, loss, backward: logits=(4, 40) loss=3.9608 params=2,557,080
+PASS  orl/kernel5: forward, loss, backward: logits=(4, 40) loss=3.7559 params=1,427,096
+PASS  orl/avgpool: forward, loss, backward: logits=(4, 40) loss=3.5105 params=1,254,808
+PASS  orl/stride2: forward, loss, backward: logits=(4, 40) loss=3.8064 params=1,484,184
+PASS  orl/hidden_small: forward, loss, backward: logits=(4, 40) loss=3.8105 params=386,776
+PASS  orl/mse_loss: forward, loss, backward: logits=(4, 40) loss=0.9645 params=1,254,808
+PASS  orl/no_dropout: forward, loss, backward: logits=(4, 40) loss=3.5259 params=1,254,808
+PASS  orl: loss falls on 80 samples: cross-entropy 3.688 -> 0.0018, accuracy 1.000
+PASS  orl: reloaded model evaluates repeatably: accuracy 0.0750
+PASS  orl: resume matches an uninterrupted run: largest parameter difference 0.00e+00
+PASS  mnist: instructor checksum: c328558117745723
+PASS  mnist: sample counts: train=60000 test=10000
+PASS  mnist: tensor shape: (60000, 1, 28, 28) uint8
+PASS  mnist: zero-based labels: train 0..9 test 0..9
+PASS  mnist: no image in both train and test: 0 shared
+PASS  mnist: validation split: optimization=54000 validation=6000
+PASS  mnist: every class keeps training images: smallest class has 4879 images
+PASS  mnist/baseline: forward, loss, backward: logits=(4, 10) loss=2.4144 params=421,738
+PASS  mnist/depth_3stage: forward, loss, backward: logits=(4, 10) loss=2.1303 params=241,770
+PASS  mnist/kernel5: forward, loss, backward: logits=(4, 10) loss=2.3365 params=455,018
+PASS  mnist/avgpool: forward, loss, backward: logits=(4, 10) loss=2.2874 params=421,738
+PASS  mnist/stride2: forward, loss, backward: logits=(4, 10) loss=2.3434 params=421,738
+PASS  mnist/hidden_small: forward, loss, backward: logits=(4, 10) loss=2.1694 params=119,626
+PASS  mnist/mse_loss: forward, loss, backward: logits=(4, 10) loss=0.9261 params=421,738
+PASS  mnist/no_dropout: forward, loss, backward: logits=(4, 10) loss=2.4398 params=421,738
+PASS  mnist: loss falls on 64 samples: cross-entropy 2.293 -> 0.0016, accuracy 1.000
+PASS  mnist: reloaded model evaluates repeatably: accuracy 0.5250
+PASS  mnist: resume matches an uninterrupted run: largest parameter difference 0.00e+00

@@ -1,0 +1,11 @@
+{
+  "config": "mse_loss",
+  "correct": 40,
+  "cross_entropy": 0.007444518618285656,
+  "epochs": 120,
+  "fold": 5,
+  "held_out": 40,
+  "parameters": 1254808,
+  "seed": 4005,
+  "train_seconds": 13.724706008884823
+}

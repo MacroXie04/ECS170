@@ -1,0 +1,28 @@
+{
+  "sessions": [
+    {
+      "cpu_count": 16,
+      "cpu_model": "Intel(R) Xeon(R) 6975P-C",
+      "cuda_available": true,
+      "cuda_runtime": "13.0",
+      "cudnn": 92400,
+      "device": "cuda",
+      "device_name": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+      "git_commit": "ca55abbf0ed725af97d67dc8d057087a49e8f5b8",
+      "git_worktree_dirty": true,
+      "mps_available": false,
+      "packages": {
+        "matplotlib": "3.11.2",
+        "numpy": "2.5.3",
+        "scikit-learn": "1.9.1",
+        "torch": "2.14.1+cu130"
+      },
+      "platform": "Linux-7.0.0-1004-aws-x86_64-with-glibc2.43",
+      "python": "3.12.16",
+      "reproducibility_note": "Seeds, data order, and augmentation are fixed and restored on resume. On CPU, a rerun matches only with the same PyTorch build, hardware, and thread count, because floating-point reduction order depends on them. CUDA runs use deterministic algorithms with TF32 disabled, but can still differ across GPU models, drivers, and library versions. MPS offers weaker determinism guarantees. Results from different devices are not expected to match exactly.",
+      "stage3_source_sha256": "0721b1883115055643f03cd8d833b6e6d4b4a95d029410d66da4187d4c1b4a5a",
+      "started_at": "2026-11-07T07:08:39+00:00",
+      "torch_threads": 4
+    }
+  ]
+}

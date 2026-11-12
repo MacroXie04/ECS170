@@ -1,9 +1,83 @@
-# ECS 170 — Stage 2 team integration
+# ECS 170 — Stage 2 and Stage 3 team implementations
 
-`Dev` brings the four members' implementations together while preserving their
-original source files and saved experiments. Each implementation retains its own
-architecture, training settings, and evaluation protocol. This integration does
-not replace them with a single algorithm or change `main`.
+## Stage 3
+
+The four Stage 3 submissions are integrated as separate runnable projects. Their
+original commits remain in Git history, and their source files and committed
+results are preserved byte-for-byte. Each project keeps its own CNNs, training
+protocol, and evaluation code; the shared root is not assigned to one member.
+
+| Member | Stage 3 project | Source PR | Source commit |
+|---|---|---|---|
+| Hongzhe Xie | [implementations/hongzhe/stage3](implementations/hongzhe/stage3) | [#6](https://github.com/MacroXie04/ECS170/pull/6) | `41cb6f0` |
+| Xiaoyu Feng | [implementations/xiaoyu/stage3](implementations/xiaoyu/stage3) | [#7](https://github.com/MacroXie04/ECS170/pull/7) | `011ea2c` |
+| Zizheng Wang | [implementations/zizheng/stage3](implementations/zizheng/stage3) | [#8](https://github.com/MacroXie04/ECS170/pull/8) | `5d23e34` |
+| Aileen Zheng | [implementations/aileen/stage3](implementations/aileen/stage3) | [#9](https://github.com/MacroXie04/ECS170/pull/9) | `4e49b4e` |
+
+Each directory contains its source branch tree except the inherited
+`implementations/` archives, which already exist at the repository root.
+Supporting base classes and Stage 2 modules are included because some Stage 3
+implementations import them. Nested workflow files are historical copies and
+are not active workflows. Inherited Stage 2 integration commands in these
+snapshots should be run from the repository root instead.
+
+`provenance_stage3.json` records all 1,458 imported files and source commits.
+The earlier Stage 2 manifest and its 350 files remain intact. Verify both with:
+
+```bash
+python script/integration/verify_sources.py --check-history
+python script/integration/verify_sources.py --manifest provenance_stage3.json --check-history
+```
+
+### Reproduce Stage 3
+
+Install the root `requirements.txt` using Python 3.13. Keep archived source
+snapshots unchanged by copying the selected project into the ignored `runs/`
+directory before training. For example, from the repository root:
+
+```bash
+mkdir -p runs/stage3
+cp -R implementations/xiaoyu/stage3 runs/stage3/xiaoyu
+cd runs/stage3/xiaoyu
+# Place the instructor's MNIST, ORL and CIFAR files in data/stage_3_data/.
+python script/stage_3_script/script_experiments.py
+```
+
+Use a new destination for each copy. The commands below are relative to that
+member's copied project root; see each original README for full settings.
+
+| Member | Commands |
+|---|---|
+| Hongzhe | `python script/stage_3_script/run_stage3.py run-all --result-root result/fresh_stage3` |
+| Xiaoyu | `python script/stage_3_script/script_experiments.py` |
+| Zizheng | `python script/stage_3_script/script_cnn.py compare --output result/fresh_stage3`, then `python script/stage_3_script/script_cnn.py final --output result/fresh_stage3` |
+| Aileen | `python script/stage_3_script/script_cnn.py MNIST` (repeat with `ORL` and `CIFAR`); `python script/stage_3_script/script_ablation.py` for the configuration study |
+
+Hongzhe's archived status files mark completed runs, while checkpoints are
+excluded from Git. A fresh `--result-root` is necessary to train anew;
+checkpoint verification must use that same newly trained result directory.
+Zizheng's fresh output directory similarly keeps archived validation/final
+records separate. Aileen's original ablation script reuses the per-dataset
+prediction filename across configurations; retain separate runtime copies if
+individual configuration prediction files are needed.
+
+The original experimental protocols remain unchanged. Hongzhe and Zizheng use
+validation-based selection; Xiaoyu and Aileen compare configurations using test
+results, so those comparisons are descriptive. This merge does not rerun full
+training or create new official benchmark scores.
+
+### Stage 3 checks
+
+The Stage 3 integration workflow verifies both source manifests and ancestry,
+runs the original Hongzhe and Zizheng unit tests, and smoke-tests Xiaoyu and
+Aileen on synthetic inputs for MNIST, ORL and CIFAR. Data-dependent tests may
+skip when the instructor datasets are absent. Synthetic checks validate that
+training/evaluation runs and are not accuracy benchmarks.
+
+## Stage 2
+
+The Stage 2 integration preserves the four original implementations and saved
+experiments. Each retains its own architecture, settings, and evaluation protocol.
 
 | Member | Directory | Source branch | Source commit |
 |---|---|---|---|
