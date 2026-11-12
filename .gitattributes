@@ -1,0 +1,4 @@
+
+# CSV evidence uses the standard CRLF line terminator.
+result/stage_4_result/runs/*/test_predictions.csv whitespace=cr-at-eol
+result/stage_4_result/** linguist-generated=true

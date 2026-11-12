@@ -233,3 +233,9 @@ differ slightly with the execution platform.
 Only the workflows under the root `.github/workflows/` are active. Copies inside
 member snapshots are preserved historical files. Direct pushes to `Dev` run the
 integration checks without starting the full-dataset training workflow.
+
+## Stage 4: recurrent text models
+
+Stage 4 implements IMDb sentiment classification and short-joke generation with RNN, LSTM, and GRU models. The six full GPU runs, validation-selected checkpoints, prediction evidence, and a five-page working report are complete on the GPU server.
+
+See [the Stage 4 guide](script/stage_4_script/README.md) for data preparation, training/resume, inference, tests, result verification, and report generation. Instructor datasets, checkpoints, and the private report PDF remain local and are excluded from Git.

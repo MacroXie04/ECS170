@@ -1,0 +1,68 @@
+[
+  {
+    "run": "classification_rnn_baseline",
+    "rows": 25000,
+    "metrics_recomputed": [
+      "accuracy",
+      "macro_precision",
+      "macro_recall",
+      "macro_f1",
+      "loss"
+    ],
+    "passed": true
+  },
+  {
+    "run": "classification_lstm_baseline",
+    "rows": 25000,
+    "metrics_recomputed": [
+      "accuracy",
+      "macro_precision",
+      "macro_recall",
+      "macro_f1",
+      "loss"
+    ],
+    "passed": true
+  },
+  {
+    "run": "classification_gru_baseline",
+    "rows": 25000,
+    "metrics_recomputed": [
+      "accuracy",
+      "macro_precision",
+      "macro_recall",
+      "macro_f1",
+      "loss"
+    ],
+    "passed": true
+  },
+  {
+    "run": "generation_rnn_baseline",
+    "rows": 161,
+    "metrics_recomputed": [
+      "loss",
+      "perplexity",
+      "token_accuracy"
+    ],
+    "passed": true
+  },
+  {
+    "run": "generation_lstm_baseline",
+    "rows": 161,
+    "metrics_recomputed": [
+      "loss",
+      "perplexity",
+      "token_accuracy"
+    ],
+    "passed": true
+  },
+  {
+    "run": "generation_gru_baseline",
+    "rows": 161,
+    "metrics_recomputed": [
+      "loss",
+      "perplexity",
+      "token_accuracy"
+    ],
+    "passed": true
+  }
+]

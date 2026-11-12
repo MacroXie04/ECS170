@@ -1,0 +1,155 @@
+[
+  {
+    "task": "classification",
+    "cell": "rnn",
+    "tag": "baseline",
+    "best_epoch": 9,
+    "epochs_completed": 12,
+    "validation_loss": 0.2863993305206299,
+    "train_seconds": 9.940359920961782,
+    "parameters": 2593282,
+    "test": {
+      "n_examples": 25000,
+      "loss": 0.34992895368493265,
+      "accuracy": 0.85824,
+      "macro_precision": 0.8583392204034017,
+      "macro_recall": 0.85824,
+      "macro_f1": 0.8582301863532518,
+      "confusion_matrix": [
+        [
+          10832,
+          1668
+        ],
+        [
+          1876,
+          10624
+        ]
+      ]
+    },
+    "smoke": false,
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+  },
+  {
+    "task": "classification",
+    "cell": "lstm",
+    "tag": "baseline",
+    "best_epoch": 6,
+    "epochs_completed": 10,
+    "validation_loss": 0.3054592742919922,
+    "train_seconds": 11.795988474157639,
+    "parameters": 2692354,
+    "test": {
+      "n_examples": 25000,
+      "loss": 0.339843654567467,
+      "accuracy": 0.86768,
+      "macro_precision": 0.8676890457388277,
+      "macro_recall": 0.86768,
+      "macro_f1": 0.8676791861740667,
+      "confusion_matrix": [
+        [
+          10815,
+          1685
+        ],
+        [
+          1623,
+          10877
+        ]
+      ]
+    },
+    "smoke": false,
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+  },
+  {
+    "task": "classification",
+    "cell": "gru",
+    "tag": "baseline",
+    "best_epoch": 7,
+    "epochs_completed": 11,
+    "validation_loss": 0.2930200290679932,
+    "train_seconds": 11.258532765961718,
+    "parameters": 2659330,
+    "test": {
+      "n_examples": 25000,
+      "loss": 0.331714863651789,
+      "accuracy": 0.87184,
+      "macro_precision": 0.8718777851629904,
+      "macro_recall": 0.87184,
+      "macro_f1": 0.8718367444482478,
+      "confusion_matrix": [
+        [
+          10835,
+          1665
+        ],
+        [
+          1539,
+          10961
+        ]
+      ]
+    },
+    "smoke": false,
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+  },
+  {
+    "task": "generation",
+    "cell": "rnn",
+    "tag": "baseline",
+    "best_epoch": 44,
+    "epochs_completed": 56,
+    "validation_loss": 5.20635505898258,
+    "train_seconds": 3.2374555310234427,
+    "parameters": 1112681,
+    "test": {
+      "n_examples": 161,
+      "n_tokens": 2961,
+      "loss": 5.3956653333443,
+      "perplexity": 220.44877023200098,
+      "token_accuracy": 0.25835866261398177
+    },
+    "smoke": false,
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+  },
+  {
+    "task": "generation",
+    "cell": "lstm",
+    "tag": "baseline",
+    "best_epoch": 62,
+    "epochs_completed": 74,
+    "validation_loss": 5.178022259044793,
+    "train_seconds": 4.519688091240823,
+    "parameters": 1211753,
+    "test": {
+      "n_examples": 161,
+      "n_tokens": 2961,
+      "loss": 5.363837468547621,
+      "perplexity": 213.54284005763674,
+      "token_accuracy": 0.270516717325228
+    },
+    "smoke": false,
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+  },
+  {
+    "task": "generation",
+    "cell": "gru",
+    "tag": "baseline",
+    "best_epoch": 46,
+    "epochs_completed": 58,
+    "validation_loss": 5.139519973918453,
+    "train_seconds": 3.4298205669620074,
+    "parameters": 1178729,
+    "test": {
+      "n_examples": 161,
+      "n_tokens": 2961,
+      "loss": 5.332992147247922,
+      "perplexity": 207.05659200886163,
+      "token_accuracy": 0.2826747720364742
+    },
+    "smoke": false,
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+  }
+]

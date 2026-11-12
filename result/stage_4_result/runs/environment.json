@@ -1,0 +1,16 @@
+{
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "torch": "2.14.1+cu130",
+  "numpy": "2.5.3",
+  "platform": "Linux-7.0.0-1017-aws-x86_64-with-glibc2.43",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "command": [
+    "script/stage_4_script/run_stage4.py",
+    "--device",
+    "cuda"
+  ],
+  "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+  "git_head": "41cb6f084a7722b2fb46f9c9cffb45132f9eb15d",
+  "note": "Seeded data/order/dropout; bitwise reproducibility across devices is not guaranteed."
+}

@@ -28,3 +28,13 @@ env/
 /result/stage_3_result/**/checkpoints/
 /result/stage_3_result/**/process_output.log
 /result/stage_3_result/**/.*.*
+
+# Stage 4: keep instructor data and model binaries on the GPU server.
+/data/stage_4_data/
+/data/stage_4_data.zip
+/result/stage_4_result/**/checkpoints/
+/result/stage_4_result/smoke/
+/result/stage_4_result/*.log
+/result/stage_4_result/*.pid
+/result/stage_4_result/*.exit
+/output/pdf/Stage_4_Report_Draft.pdf

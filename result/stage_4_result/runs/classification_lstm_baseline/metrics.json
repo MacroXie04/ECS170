@@ -1,0 +1,31 @@
+{
+  "task": "classification",
+  "cell": "lstm",
+  "tag": "baseline",
+  "best_epoch": 6,
+  "epochs_completed": 10,
+  "validation_loss": 0.3054592742919922,
+  "train_seconds": 11.795988474157639,
+  "parameters": 2692354,
+  "test": {
+    "n_examples": 25000,
+    "loss": 0.339843654567467,
+    "accuracy": 0.86768,
+    "macro_precision": 0.8676890457388277,
+    "macro_recall": 0.86768,
+    "macro_f1": 0.8676791861740667,
+    "confusion_matrix": [
+      [
+        10815,
+        1685
+      ],
+      [
+        1623,
+        10877
+      ]
+    ]
+  },
+  "smoke": false,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition"
+}

@@ -1,0 +1,346 @@
+{
+  "verified_at_utc": "2026-11-12T11:15:04.084882+00:00",
+  "verifier_sha256": "1fa089c88ac069a42b2b55aa65352b7870ccb46c66926d8fd176403d15b27909",
+  "torch": "2.14.1+cu130",
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "platform": "Linux-7.0.0-1017-aws-x86_64-with-glibc2.43",
+  "inference_device": "cpu",
+  "threads": 4,
+  "cuda_classifier_confirmation": true,
+  "runs": {
+    "classification_rnn_baseline": {
+      "passed": true,
+      "best_epoch": 9,
+      "config_hash": "e7c6e0e091000c8b5e841b39b5a10187d33266eae40ac2c01e2daae543a7389c",
+      "source_sha256": {
+        "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+        "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+        "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+        "script/stage_4_script/run_stage4.py": "c3018d0f948008366f1402e32a7125fd32ff9f1d89608cbd02ecd5ff25ddae46",
+        "script/stage_4_script/prepare_stage4_data.py": "90c482a175ff0377752b9f0187971f6dce6dfc968c02c05898f118ab3ec6ce1b"
+      },
+      "dataset_source_sha256": "e666bafb46edb63bc650842f0a7126c7b6a2b59cad626ea84c19165e1a0743da",
+      "test_id_sha256": "8009cfbb74d8fd6882a1099ca8c98bd5c9c945eb883f63d6c9ddcf1899f90ee4",
+      "recomputed_test_metrics": {
+        "n_examples": 25000,
+        "loss": 0.34992895368493265,
+        "accuracy": 0.85824,
+        "macro_precision": 0.8583392204034017,
+        "macro_recall": 0.85824,
+        "macro_f1": 0.8582301863532518,
+        "confusion_matrix": [
+          [
+            10832,
+            1668
+          ],
+          [
+            1876,
+            10624
+          ]
+        ]
+      },
+      "checkpoint_replay": {
+        "examples": 8,
+        "predictions_match": true,
+        "max_absolute_probability_error": 8.788704872131348e-05,
+        "probability_absolute_tolerance": 0.0005,
+        "probability_relative_tolerance": 0.001,
+        "note": "CPU versus TF32-enabled cuDNN float32 comparison; CUDA confirmation uses tighter tolerance.",
+        "cuda_confirmation": {
+          "examples": 8,
+          "predictions_match": true,
+          "max_absolute_probability_error": 2.9802322387695312e-08,
+          "probability_absolute_tolerance": 2e-06,
+          "probability_relative_tolerance": 1e-05,
+          "cudnn_allow_tf32": true
+        }
+      },
+      "normalized_text_overlap_counts": {
+        "train_validation": 0,
+        "train_test": 113,
+        "validation_test": 10
+      },
+      "artifact_sha256": {
+        "config.json": "856d2839451ac1fa49efed193d5f74717ce261c8ba6e841fa56bdb09f54528ab",
+        "metrics.json": "87204b402d7b37bbd4041b9a01420a05d20310cb878aae971effad19bb4f7582",
+        "history.json": "e03b370f2ebb4dc57f25548e4994ff5f3a1ee19e181b7c043e4703f85ab3dfb2",
+        "test_predictions.csv": "9bb28a658f188cc5abd1d7785a70f6a322e3b97d9ad91ea2561851b63a78b8d7",
+        "checkpoints/best.pt": "02f415f675569a31f25ecb717d8d79c3ad5097ee4433533e621134c5edbc5c3e"
+      }
+    },
+    "classification_lstm_baseline": {
+      "passed": true,
+      "best_epoch": 6,
+      "config_hash": "9ef092f3436910cfd200e08da68c913cbc33b737264547ad450c909cc83e3e24",
+      "source_sha256": {
+        "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+        "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+        "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+        "script/stage_4_script/run_stage4.py": "c3018d0f948008366f1402e32a7125fd32ff9f1d89608cbd02ecd5ff25ddae46",
+        "script/stage_4_script/prepare_stage4_data.py": "90c482a175ff0377752b9f0187971f6dce6dfc968c02c05898f118ab3ec6ce1b"
+      },
+      "dataset_source_sha256": "e666bafb46edb63bc650842f0a7126c7b6a2b59cad626ea84c19165e1a0743da",
+      "test_id_sha256": "8009cfbb74d8fd6882a1099ca8c98bd5c9c945eb883f63d6c9ddcf1899f90ee4",
+      "recomputed_test_metrics": {
+        "n_examples": 25000,
+        "loss": 0.339843654567467,
+        "accuracy": 0.86768,
+        "macro_precision": 0.8676890457388277,
+        "macro_recall": 0.86768,
+        "macro_f1": 0.8676791861740667,
+        "confusion_matrix": [
+          [
+            10815,
+            1685
+          ],
+          [
+            1623,
+            10877
+          ]
+        ]
+      },
+      "checkpoint_replay": {
+        "examples": 8,
+        "predictions_match": true,
+        "max_absolute_probability_error": 0.00022351741790771484,
+        "probability_absolute_tolerance": 0.0005,
+        "probability_relative_tolerance": 0.001,
+        "note": "CPU versus TF32-enabled cuDNN float32 comparison; CUDA confirmation uses tighter tolerance.",
+        "cuda_confirmation": {
+          "examples": 8,
+          "predictions_match": true,
+          "max_absolute_probability_error": 1.4901161193847656e-08,
+          "probability_absolute_tolerance": 2e-06,
+          "probability_relative_tolerance": 1e-05,
+          "cudnn_allow_tf32": true
+        }
+      },
+      "normalized_text_overlap_counts": {
+        "train_validation": 0,
+        "train_test": 113,
+        "validation_test": 10
+      },
+      "artifact_sha256": {
+        "config.json": "3b9ae73dec7886b0ea710f07b255cbbfe8755e08527857faae8bbbcf5da5e9f4",
+        "metrics.json": "6e4b0d05f06bb26f2c5c0b4e0e4e722f72e62538fab457d2b4e6b1aa5ffc8b9e",
+        "history.json": "2b868f13b312e405860e23166fd38512135c2a0eb9183f44a5c14cf65225f2bb",
+        "test_predictions.csv": "8bc68eb4b5769d2316d00a5926e2885f649edb65a826338f705b18d1982f1688",
+        "checkpoints/best.pt": "3345d6676c81e323843ba02c2e581a8e71ffd2b539f190dde84092e6b218fbca"
+      }
+    },
+    "classification_gru_baseline": {
+      "passed": true,
+      "best_epoch": 7,
+      "config_hash": "47fd066ca9802f74b59779860ca855c3053d8e8ce4623a82edf60bf4481391b7",
+      "source_sha256": {
+        "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+        "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+        "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+        "script/stage_4_script/run_stage4.py": "c3018d0f948008366f1402e32a7125fd32ff9f1d89608cbd02ecd5ff25ddae46",
+        "script/stage_4_script/prepare_stage4_data.py": "90c482a175ff0377752b9f0187971f6dce6dfc968c02c05898f118ab3ec6ce1b"
+      },
+      "dataset_source_sha256": "e666bafb46edb63bc650842f0a7126c7b6a2b59cad626ea84c19165e1a0743da",
+      "test_id_sha256": "8009cfbb74d8fd6882a1099ca8c98bd5c9c945eb883f63d6c9ddcf1899f90ee4",
+      "recomputed_test_metrics": {
+        "n_examples": 25000,
+        "loss": 0.331714863651789,
+        "accuracy": 0.87184,
+        "macro_precision": 0.8718777851629904,
+        "macro_recall": 0.87184,
+        "macro_f1": 0.8718367444482478,
+        "confusion_matrix": [
+          [
+            10835,
+            1665
+          ],
+          [
+            1539,
+            10961
+          ]
+        ]
+      },
+      "checkpoint_replay": {
+        "examples": 8,
+        "predictions_match": true,
+        "max_absolute_probability_error": 0.00012874603271484375,
+        "probability_absolute_tolerance": 0.0005,
+        "probability_relative_tolerance": 0.001,
+        "note": "CPU versus TF32-enabled cuDNN float32 comparison; CUDA confirmation uses tighter tolerance.",
+        "cuda_confirmation": {
+          "examples": 8,
+          "predictions_match": true,
+          "max_absolute_probability_error": 2.9802322387695312e-08,
+          "probability_absolute_tolerance": 2e-06,
+          "probability_relative_tolerance": 1e-05,
+          "cudnn_allow_tf32": true
+        }
+      },
+      "normalized_text_overlap_counts": {
+        "train_validation": 0,
+        "train_test": 113,
+        "validation_test": 10
+      },
+      "artifact_sha256": {
+        "config.json": "6227a15b14f9990dd36554904c94671c75f549f612dfbd725c4b20465b05143d",
+        "metrics.json": "2170e3312630127eb4a83f7174852850ec27f84ee6ffdbb87d64f0da2eb556bd",
+        "history.json": "cb21136dbc2bd96b2e510ffa42656b9c9af7d16c081383635aa29641c37c8cc6",
+        "test_predictions.csv": "ae31ac858992399b5961860d3fd766078adb5b62f314fbbace0bcab0d8344bd4",
+        "checkpoints/best.pt": "dd031895481236a90f6d3659ca3c45b0e43afe0a6619f8b0110ef7cf59480fb2"
+      }
+    },
+    "generation_rnn_baseline": {
+      "passed": true,
+      "best_epoch": 44,
+      "config_hash": "068d1a3f4139452142e363563b5311cf47d4bb839f5b70b5587db824e7e3b3c8",
+      "source_sha256": {
+        "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+        "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+        "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+        "script/stage_4_script/run_stage4.py": "c3018d0f948008366f1402e32a7125fd32ff9f1d89608cbd02ecd5ff25ddae46",
+        "script/stage_4_script/prepare_stage4_data.py": "90c482a175ff0377752b9f0187971f6dce6dfc968c02c05898f118ab3ec6ce1b"
+      },
+      "dataset_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+      "test_id_sha256": "1a5f1560e24b8531c9eba26d1ac330ef9d212d603d49fb08100e066ee91a361a",
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.3956653333443,
+        "perplexity": 220.44877023200098,
+        "token_accuracy": 0.25835866261398177
+      },
+      "checkpoint_replay": [
+        {
+          "prefix": "what do you",
+          "reference_id": "joke/1423",
+          "greedy_checkpoint_match": true
+        },
+        {
+          "prefix": "why did the",
+          "reference_id": "joke/1113",
+          "greedy_checkpoint_match": true
+        },
+        {
+          "prefix": "what did the",
+          "reference_id": "joke/1305",
+          "greedy_checkpoint_match": true
+        }
+      ],
+      "normalized_text_overlap_counts": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+      },
+      "artifact_sha256": {
+        "config.json": "76ed5235bf98f857ac1eac0862a301fc9536770e446c7632b59ec2a8383750c4",
+        "metrics.json": "c32abea8c0dddf902fc8b9d9e10d20259f61cc02fcd76d173bbec06ee26aeb5c",
+        "history.json": "21682289fa02fd68188b35e3a2adb277b905a7cb9b7ac54d6e543675dd025c1e",
+        "test_predictions.csv": "47d6135407eb8b2674b0bb4379bd2d4b7d662f1b611c7ae2e2d45c18e31d7819",
+        "checkpoints/best.pt": "e498f671d8675849ca8bc52e96ae3ed6377f16a85d1be1855602ad910a15f033"
+      }
+    },
+    "generation_lstm_baseline": {
+      "passed": true,
+      "best_epoch": 62,
+      "config_hash": "08fef33e94fa6bb0825697f9b7648169b8af1a60bd2401e03ece66e6b5f9b7e9",
+      "source_sha256": {
+        "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+        "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+        "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+        "script/stage_4_script/run_stage4.py": "c3018d0f948008366f1402e32a7125fd32ff9f1d89608cbd02ecd5ff25ddae46",
+        "script/stage_4_script/prepare_stage4_data.py": "90c482a175ff0377752b9f0187971f6dce6dfc968c02c05898f118ab3ec6ce1b"
+      },
+      "dataset_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+      "test_id_sha256": "1a5f1560e24b8531c9eba26d1ac330ef9d212d603d49fb08100e066ee91a361a",
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.363837468547621,
+        "perplexity": 213.54284005763674,
+        "token_accuracy": 0.270516717325228
+      },
+      "checkpoint_replay": [
+        {
+          "prefix": "what do you",
+          "reference_id": "joke/1423",
+          "greedy_checkpoint_match": true
+        },
+        {
+          "prefix": "why did the",
+          "reference_id": "joke/1113",
+          "greedy_checkpoint_match": true
+        },
+        {
+          "prefix": "what did the",
+          "reference_id": "joke/1305",
+          "greedy_checkpoint_match": true
+        }
+      ],
+      "normalized_text_overlap_counts": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+      },
+      "artifact_sha256": {
+        "config.json": "b175a6b854b7afb6497be23fb6d46639a954f32e8472891b5b3511d1551b72a0",
+        "metrics.json": "eea510b489d7584852afe2bcea6a84b62d8a5a4135beb095f59084fa514f8a40",
+        "history.json": "d9aebdb3d160fb9991059777d291498154cf6e78c57e45bb929693d5b99b1878",
+        "test_predictions.csv": "eeaf5a89325288f80b3c72f2f93860bb0c08e1823557324d41d1c55a4f42d311",
+        "checkpoints/best.pt": "d8664e4499afea90d0aabdc18d03d9491e5baaea06996f1e205775ef1c503296"
+      }
+    },
+    "generation_gru_baseline": {
+      "passed": true,
+      "best_epoch": 46,
+      "config_hash": "a6989c23cf97c6a81c5c8652622d37c646f531d888818e55af32003e5478a2a9",
+      "source_sha256": {
+        "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+        "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+        "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+        "script/stage_4_script/run_stage4.py": "c3018d0f948008366f1402e32a7125fd32ff9f1d89608cbd02ecd5ff25ddae46",
+        "script/stage_4_script/prepare_stage4_data.py": "90c482a175ff0377752b9f0187971f6dce6dfc968c02c05898f118ab3ec6ce1b"
+      },
+      "dataset_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+      "test_id_sha256": "1a5f1560e24b8531c9eba26d1ac330ef9d212d603d49fb08100e066ee91a361a",
+      "recomputed_test_metrics": {
+        "n_examples": 161,
+        "n_tokens": 2961,
+        "loss": 5.332992147247922,
+        "perplexity": 207.05659200886163,
+        "token_accuracy": 0.2826747720364742
+      },
+      "checkpoint_replay": [
+        {
+          "prefix": "what do you",
+          "reference_id": "joke/1423",
+          "greedy_checkpoint_match": true
+        },
+        {
+          "prefix": "why did the",
+          "reference_id": "joke/1113",
+          "greedy_checkpoint_match": true
+        },
+        {
+          "prefix": "what did the",
+          "reference_id": "joke/1305",
+          "greedy_checkpoint_match": true
+        }
+      ],
+      "normalized_text_overlap_counts": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+      },
+      "artifact_sha256": {
+        "config.json": "87b1fd722a78bcc6a0e27c7c39972306e6ec223abf991691b48ef279b2f16909",
+        "metrics.json": "0ca26b27b111cbc9dc43ebb3ddc02ad41734d80d1b1a0f9d20603903efdd358d",
+        "history.json": "58870b3116e1f1e8a083925e35bc6f51219456b9bc7718f7cfd8a36782a9c29e",
+        "test_predictions.csv": "5b92ddd95eeb54ab160348fb78d24fbbe82acca5e7d4ef531f7a58d4c2400a87",
+        "checkpoints/best.pt": "ba39a7bd132a5a6b83ae02e74884ef29c4720f09c0badad2440fa771a6caced5"
+      }
+    }
+  },
+  "failures": [],
+  "scope": "Full test-CSV metric/ID audit; source/data/checkpoint binding; small classifier replay; all greedy examples",
+  "passed": true,
+  "verified_run_count": 6
+}
