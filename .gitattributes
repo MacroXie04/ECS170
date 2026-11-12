@@ -1,0 +1,2 @@
+# Preserve imported Stage 3 files byte-for-byte, including original CSV newlines.
+implementations/*/stage3/** -text
