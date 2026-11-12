@@ -1,0 +1,44 @@
+{
+  "checkpoint_selection_rule": "Within a run, keep the epoch with the highest validation accuracy; break ties by the lowest validation cross-entropy, then by the earliest epoch. The test set is never read during training.",
+  "concurrent_jobs": 3,
+  "config": {
+    "aug_hflip": false,
+    "aug_padding_mode": "constant",
+    "aug_shift": 2,
+    "batch_norm": true,
+    "batch_size": 128,
+    "changed_factor": "dropout",
+    "channels": [
+      32,
+      64
+    ],
+    "convs_per_stage": 1,
+    "dataset": "mnist",
+    "description": "Dropout removed",
+    "downsample": "maxpool",
+    "dropout": 0.0,
+    "eval_batch_size": 1024,
+    "hidden_dims": [
+      128
+    ],
+    "kernel_size": 3,
+    "learning_rate": 0.001,
+    "loss": "cross_entropy",
+    "max_epoch": 15,
+    "momentum": 0.0,
+    "name": "no_dropout",
+    "nesterov": false,
+    "optimizer": "adam",
+    "padding": 1,
+    "scheduler": "cosine",
+    "weight_decay": 0.0,
+    "weight_init": "kaiming_normal_fan_out_relu"
+  },
+  "config_sha256": "8871063c5332d2d49b2a66cf5287e47002dce9dcc52071a8c482c8f1aceadc6b",
+  "formal": true,
+  "overrides": [],
+  "parameters": 421738,
+  "seed": 2027,
+  "split_seed": 170,
+  "tag": null
+}

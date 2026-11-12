@@ -1,0 +1,47 @@
+{
+  "instructor_test_samples": 10000,
+  "instructor_train_samples": 50000,
+  "method": "stratified hold-out from the instructor training set (sklearn train_test_split)",
+  "normalization": {
+    "computed_on": "optimization subset only",
+    "mean": [
+      0.4911074728519979,
+      0.4820400246800117,
+      0.4466095795887788
+    ],
+    "std": [
+      0.2468459976090122,
+      0.24341744674648283,
+      0.2616046167575164
+    ]
+  },
+  "optimization_class_counts": [
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500,
+    4500
+  ],
+  "optimization_indices_sha256": "1cd9fcb5e1a41adf87b29710ae49f5ac424977f7d11b71c4ac5a0111b9147cf2",
+  "optimization_samples": 45000,
+  "split_seed": 170,
+  "validation_class_counts": [
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500
+  ],
+  "validation_indices_sha256": "41b95e3dd077fb523cc0c801d1ac38d13224be60e58db8ad73f034ff67eccb70",
+  "validation_samples": 5000
+}

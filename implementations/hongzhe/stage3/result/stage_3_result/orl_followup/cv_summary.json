@@ -1,0 +1,82 @@
+[
+  {
+    "accuracy": 0.9972222222222222,
+    "config": "baseline",
+    "correct": 359,
+    "fold_accuracy_std": 0.00833333333333334,
+    "held_out": 360,
+    "mean_cross_entropy": 0.0053482542765171575,
+    "parameters": 1254808,
+    "train_seconds_mean": 13.360156598610855
+  },
+  {
+    "accuracy": 1.0,
+    "config": "depth_3stage",
+    "correct": 360,
+    "fold_accuracy_std": 0.0,
+    "held_out": 360,
+    "mean_cross_entropy": 0.003343211292910079,
+    "parameters": 2557080,
+    "train_seconds_mean": 12.814594605593205
+  },
+  {
+    "accuracy": 0.9972222222222222,
+    "config": "kernel5",
+    "correct": 359,
+    "fold_accuracy_std": 0.00833333333333334,
+    "held_out": 360,
+    "mean_cross_entropy": 0.005640125721887064,
+    "parameters": 1427096,
+    "train_seconds_mean": 16.284452892000747
+  },
+  {
+    "accuracy": 0.9972222222222222,
+    "config": "avgpool",
+    "correct": 359,
+    "fold_accuracy_std": 0.00833333333333334,
+    "held_out": 360,
+    "mean_cross_entropy": 0.013995965795604408,
+    "parameters": 1254808,
+    "train_seconds_mean": 13.112544836693107
+  },
+  {
+    "accuracy": 1.0,
+    "config": "stride2",
+    "correct": 360,
+    "fold_accuracy_std": 0.0,
+    "held_out": 360,
+    "mean_cross_entropy": 0.0010917468041750705,
+    "parameters": 1484184,
+    "train_seconds_mean": 10.291595498009379
+  },
+  {
+    "accuracy": 0.8333333333333334,
+    "config": "hidden_small",
+    "correct": 300,
+    "fold_accuracy_std": 0.22008521077073764,
+    "held_out": 360,
+    "mean_cross_entropy": 1.0286883347564273,
+    "parameters": 386776,
+    "train_seconds_mean": 13.353074123344008
+  },
+  {
+    "accuracy": 0.9944444444444445,
+    "config": "mse_loss",
+    "correct": 358,
+    "fold_accuracy_std": 0.01102396379610247,
+    "held_out": 360,
+    "mean_cross_entropy": 0.03287022776849982,
+    "parameters": 1254808,
+    "train_seconds_mean": 13.658166404100484
+  },
+  {
+    "accuracy": 0.9972222222222222,
+    "config": "no_dropout",
+    "correct": 359,
+    "fold_accuracy_std": 0.00833333333333334,
+    "held_out": 360,
+    "mean_cross_entropy": 0.010854884180136852,
+    "parameters": 1254808,
+    "train_seconds_mean": 12.780808918905677
+  }
+]

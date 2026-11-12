@@ -1,0 +1,26 @@
+orl/no_dropout: Dropout removed
+Input (channels, height, width): (1, 112, 92)
+Classes: 40
+Trainable parameters: 1,254,808
+
+Layer           Type          Output shape            Params  Settings
+features.0      Conv2d        16x112x92                  144  1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.1      BatchNorm2d   16x112x92                   32  16, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.2      ReLU          16x112x92                    0  inplace=True
+features.3      MaxPool2d     16x56x46                     0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+features.4      Conv2d        32x56x46                 4,608  16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.5      BatchNorm2d   32x56x46                    64  32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.6      ReLU          32x56x46                     0  inplace=True
+features.7      MaxPool2d     32x28x23                     0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+features.8      Conv2d        64x28x23                18,432  32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.9      BatchNorm2d   64x28x23                   128  64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.10     ReLU          64x28x23                     0  inplace=True
+features.11     MaxPool2d     64x14x11                     0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+features.12     Conv2d        128x14x11               73,728  64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+features.13     BatchNorm2d   128x14x11                  256  128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True
+features.14     ReLU          128x14x11                    0  inplace=True
+features.15     MaxPool2d     128x7x5                      0  kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False
+classifier.0    Flatten       4480                         0  start_dim=1, end_dim=-1
+classifier.1    Linear        256                  1,147,136  in_features=4480, out_features=256, bias=True
+classifier.2    ReLU          256                          0  inplace=True
+classifier.3    Linear        40                      10,280  in_features=256, out_features=40, bias=True

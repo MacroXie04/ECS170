@@ -1,0 +1,10 @@
+{
+  "epoch": 15,
+  "evaluated_at": "2026-11-07T08:28:31+00:00",
+  "selected_epoch": 15,
+  "state": "evaluated",
+  "test_accuracy": 0.9957,
+  "train_seconds": 34.07517943001585,
+  "val_accuracy": 0.9946666666666667,
+  "val_cross_entropy": 0.017130350694060326
+}

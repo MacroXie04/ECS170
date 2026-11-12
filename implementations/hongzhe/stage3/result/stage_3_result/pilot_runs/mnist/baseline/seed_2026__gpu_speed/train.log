@@ -1,0 +1,7 @@
+2026-11-07T07:08:39+00:00 start mnist/baseline seed=2026 device=cuda params=421738
+2026-11-07T07:08:41+00:00 method running...
+2026-11-07T07:08:41+00:00 --start training...
+2026-11-07T07:08:42+00:00 epoch 001/3 lr=0.001000 train_loss=0.29348 train_acc=0.9086 val_ce=0.06740 val_acc=0.9785 best_epoch=1 seconds=1.30
+2026-11-07T07:08:43+00:00 epoch 002/3 lr=0.000750 train_loss=0.10368 train_acc=0.9694 val_ce=0.04313 val_acc=0.9865 best_epoch=2 seconds=1.13
+2026-11-07T07:08:44+00:00 epoch 003/3 lr=0.000250 train_loss=0.07090 train_acc=0.9787 val_ce=0.03119 val_acc=0.9895 best_epoch=3 seconds=1.13
+2026-11-07T07:08:44+00:00 finished: selected epoch 3, val_acc=0.9895, val_ce=0.03119

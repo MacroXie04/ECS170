@@ -1,0 +1,38 @@
+{
+  "cifar": {
+    "config": "avgpool",
+    "final_run_dir": "/home/ubuntu/PycharmProjects/ECS170/result/stage_3_result/runs/cifar/avgpool/seed_2026",
+    "final_seed": 2026,
+    "final_test_accuracy": 0.9054,
+    "panel_complete": true,
+    "reference_accuracy": 0.7,
+    "selection_rule": "Within a dataset, pick the configuration with the highest mean selected-checkpoint validation accuracy over seeds; break ties by the lowest mean validation cross-entropy, then by the fewest parameters. The final model is the seed of that configuration ranked first by the checkpoint rule. Test metrics play no part in either choice.",
+    "test_accuracy_mean": 0.9057,
+    "val_accuracy_mean": 0.9128666666666666,
+    "val_cross_entropy_mean": 0.29947250088055927
+  },
+  "mnist": {
+    "config": "kernel5",
+    "final_run_dir": "/home/ubuntu/PycharmProjects/ECS170/result/stage_3_result/runs/mnist/kernel5/seed_2027",
+    "final_seed": 2027,
+    "final_test_accuracy": 0.9955,
+    "panel_complete": true,
+    "reference_accuracy": 0.95,
+    "selection_rule": "Within a dataset, pick the configuration with the highest mean selected-checkpoint validation accuracy over seeds; break ties by the lowest mean validation cross-entropy, then by the fewest parameters. The final model is the seed of that configuration ranked first by the checkpoint rule. Test metrics play no part in either choice.",
+    "test_accuracy_mean": 0.9956333333333335,
+    "val_accuracy_mean": 0.9958333333333332,
+    "val_cross_entropy_mean": 0.01579961646348238
+  },
+  "orl": {
+    "config": "kernel5",
+    "final_run_dir": "/home/ubuntu/PycharmProjects/ECS170/result/stage_3_result/runs/orl/kernel5/seed_2026",
+    "final_seed": 2026,
+    "final_test_accuracy": 0.95,
+    "panel_complete": true,
+    "reference_accuracy": 0.95,
+    "selection_rule": "Within a dataset, pick the configuration with the highest mean selected-checkpoint validation accuracy over seeds; break ties by the lowest mean validation cross-entropy, then by the fewest parameters. The final model is the seed of that configuration ranked first by the checkpoint rule. Test metrics play no part in either choice.",
+    "test_accuracy_mean": 0.975,
+    "val_accuracy_mean": 1.0,
+    "val_cross_entropy_mean": 0.0005050731803445766
+  }
+}

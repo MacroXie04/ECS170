@@ -1,0 +1,11 @@
+{
+  "config": "stride2",
+  "correct": 40,
+  "cross_entropy": 0.00038944967673160136,
+  "epochs": 120,
+  "fold": 6,
+  "held_out": 40,
+  "parameters": 1484184,
+  "seed": 4006,
+  "train_seconds": 9.259722568982397
+}

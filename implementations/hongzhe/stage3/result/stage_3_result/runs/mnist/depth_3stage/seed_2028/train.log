@@ -1,0 +1,19 @@
+2026-11-07T08:26:32+00:00 start mnist/depth_3stage seed=2028 device=cuda params=241770
+2026-11-07T08:26:33+00:00 method running...
+2026-11-07T08:26:33+00:00 --start training...
+2026-11-07T08:26:35+00:00 epoch 001/15 lr=0.001000 train_loss=0.23247 train_acc=0.9297 val_ce=0.05251 val_acc=0.9835 best_epoch=1 seconds=1.70
+2026-11-07T08:26:36+00:00 epoch 002/15 lr=0.000989 train_loss=0.07067 train_acc=0.9786 val_ce=0.03283 val_acc=0.9910 best_epoch=2 seconds=1.39
+2026-11-07T08:26:38+00:00 epoch 003/15 lr=0.000957 train_loss=0.05240 train_acc=0.9841 val_ce=0.03480 val_acc=0.9892 best_epoch=2 seconds=1.27
+2026-11-07T08:26:39+00:00 epoch 004/15 lr=0.000905 train_loss=0.04484 train_acc=0.9870 val_ce=0.02967 val_acc=0.9897 best_epoch=2 seconds=1.27
+2026-11-07T08:26:41+00:00 epoch 005/15 lr=0.000835 train_loss=0.03968 train_acc=0.9878 val_ce=0.02818 val_acc=0.9908 best_epoch=2 seconds=1.72
+2026-11-07T08:26:43+00:00 epoch 006/15 lr=0.000750 train_loss=0.03232 train_acc=0.9897 val_ce=0.02286 val_acc=0.9925 best_epoch=6 seconds=2.42
+2026-11-07T08:26:46+00:00 epoch 007/15 lr=0.000655 train_loss=0.02894 train_acc=0.9910 val_ce=0.02405 val_acc=0.9920 best_epoch=6 seconds=2.46
+2026-11-07T08:26:48+00:00 epoch 008/15 lr=0.000552 train_loss=0.02661 train_acc=0.9921 val_ce=0.02656 val_acc=0.9915 best_epoch=6 seconds=2.45
+2026-11-07T08:26:50+00:00 epoch 009/15 lr=0.000448 train_loss=0.02290 train_acc=0.9930 val_ce=0.02069 val_acc=0.9940 best_epoch=9 seconds=2.43
+2026-11-07T08:26:53+00:00 epoch 010/15 lr=0.000345 train_loss=0.01955 train_acc=0.9937 val_ce=0.02290 val_acc=0.9930 best_epoch=9 seconds=2.43
+2026-11-07T08:26:55+00:00 epoch 011/15 lr=0.000250 train_loss=0.01718 train_acc=0.9945 val_ce=0.01928 val_acc=0.9952 best_epoch=11 seconds=2.43
+2026-11-07T08:26:58+00:00 epoch 012/15 lr=0.000165 train_loss=0.01551 train_acc=0.9950 val_ce=0.01957 val_acc=0.9945 best_epoch=11 seconds=2.47
+2026-11-07T08:27:00+00:00 epoch 013/15 lr=0.000095 train_loss=0.01381 train_acc=0.9956 val_ce=0.01920 val_acc=0.9945 best_epoch=11 seconds=2.46
+2026-11-07T08:27:03+00:00 epoch 014/15 lr=0.000043 train_loss=0.01168 train_acc=0.9964 val_ce=0.01836 val_acc=0.9947 best_epoch=11 seconds=2.43
+2026-11-07T08:27:05+00:00 epoch 015/15 lr=0.000011 train_loss=0.01248 train_acc=0.9959 val_ce=0.01847 val_acc=0.9943 best_epoch=11 seconds=2.46
+2026-11-07T08:27:05+00:00 finished: selected epoch 11, val_acc=0.9952, val_ce=0.01928

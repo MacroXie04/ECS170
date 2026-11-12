@@ -1,0 +1,11 @@
+{
+  "config": "baseline",
+  "correct": 40,
+  "cross_entropy": 0.00026101345429196954,
+  "epochs": 120,
+  "fold": 8,
+  "held_out": 40,
+  "parameters": 1254808,
+  "seed": 4008,
+  "train_seconds": 13.91071793998708
+}

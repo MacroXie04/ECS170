@@ -1,0 +1,11 @@
+{
+  "config": "avgpool",
+  "correct": 40,
+  "cross_entropy": 0.00034863880136981606,
+  "epochs": 120,
+  "fold": 0,
+  "held_out": 40,
+  "parameters": 1254808,
+  "seed": 4000,
+  "train_seconds": 12.331647144150338
+}
