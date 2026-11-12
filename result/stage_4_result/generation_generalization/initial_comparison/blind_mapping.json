@@ -1,0 +1,322 @@
+[
+  {
+    "id": "N001",
+    "candidate": "previous_late_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "N002",
+    "candidate": "mix25_screened",
+    "prompt_index": 8
+  },
+  {
+    "id": "N003",
+    "candidate": "mix25_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "N004",
+    "candidate": "previous_late_screened",
+    "prompt_index": 4
+  },
+  {
+    "id": "N005",
+    "candidate": "previous_late_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "N006",
+    "candidate": "mix25_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "N007",
+    "candidate": "previous_late_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "N008",
+    "candidate": "previous_late_beam",
+    "prompt_index": 12
+  },
+  {
+    "id": "N009",
+    "candidate": "previous_late_screened",
+    "prompt_index": 10
+  },
+  {
+    "id": "N010",
+    "candidate": "mix25_beam",
+    "prompt_index": 12
+  },
+  {
+    "id": "N011",
+    "candidate": "previous_late_screened",
+    "prompt_index": 9
+  },
+  {
+    "id": "N012",
+    "candidate": "previous_late_screened",
+    "prompt_index": 1
+  },
+  {
+    "id": "N013",
+    "candidate": "previous_late_screened",
+    "prompt_index": 13
+  },
+  {
+    "id": "N014",
+    "candidate": "mix25_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "N015",
+    "candidate": "mix25_screened",
+    "prompt_index": 10
+  },
+  {
+    "id": "N016",
+    "candidate": "mix25_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "N017",
+    "candidate": "previous_late_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "N018",
+    "candidate": "mix25_screened",
+    "prompt_index": 13
+  },
+  {
+    "id": "N019",
+    "candidate": "mix25_screened",
+    "prompt_index": 15
+  },
+  {
+    "id": "N020",
+    "candidate": "previous_late_beam",
+    "prompt_index": 13
+  },
+  {
+    "id": "N021",
+    "candidate": "mix25_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "N022",
+    "candidate": "previous_late_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "N023",
+    "candidate": "mix25_beam",
+    "prompt_index": 14
+  },
+  {
+    "id": "N024",
+    "candidate": "previous_late_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "N025",
+    "candidate": "mix25_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "N026",
+    "candidate": "mix25_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "N027",
+    "candidate": "previous_late_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "N028",
+    "candidate": "previous_late_beam",
+    "prompt_index": 15
+  },
+  {
+    "id": "N029",
+    "candidate": "mix25_screened",
+    "prompt_index": 4
+  },
+  {
+    "id": "N030",
+    "candidate": "mix25_beam",
+    "prompt_index": 15
+  },
+  {
+    "id": "N031",
+    "candidate": "previous_late_beam",
+    "prompt_index": 14
+  },
+  {
+    "id": "N032",
+    "candidate": "mix25_screened",
+    "prompt_index": 5
+  },
+  {
+    "id": "N033",
+    "candidate": "previous_late_screened",
+    "prompt_index": 7
+  },
+  {
+    "id": "N034",
+    "candidate": "previous_late_screened",
+    "prompt_index": 6
+  },
+  {
+    "id": "N035",
+    "candidate": "mix25_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "N036",
+    "candidate": "mix25_screened",
+    "prompt_index": 0
+  },
+  {
+    "id": "N037",
+    "candidate": "mix25_screened",
+    "prompt_index": 6
+  },
+  {
+    "id": "N038",
+    "candidate": "previous_late_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "N039",
+    "candidate": "previous_late_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "N040",
+    "candidate": "mix25_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "N041",
+    "candidate": "previous_late_screened",
+    "prompt_index": 8
+  },
+  {
+    "id": "N042",
+    "candidate": "previous_late_screened",
+    "prompt_index": 3
+  },
+  {
+    "id": "N043",
+    "candidate": "mix25_screened",
+    "prompt_index": 1
+  },
+  {
+    "id": "N044",
+    "candidate": "mix25_screened",
+    "prompt_index": 9
+  },
+  {
+    "id": "N045",
+    "candidate": "mix25_screened",
+    "prompt_index": 7
+  },
+  {
+    "id": "N046",
+    "candidate": "mix25_screened",
+    "prompt_index": 11
+  },
+  {
+    "id": "N047",
+    "candidate": "mix25_screened",
+    "prompt_index": 12
+  },
+  {
+    "id": "N048",
+    "candidate": "mix25_screened",
+    "prompt_index": 3
+  },
+  {
+    "id": "N049",
+    "candidate": "mix25_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "N050",
+    "candidate": "mix25_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "N051",
+    "candidate": "mix25_screened",
+    "prompt_index": 2
+  },
+  {
+    "id": "N052",
+    "candidate": "previous_late_screened",
+    "prompt_index": 0
+  },
+  {
+    "id": "N053",
+    "candidate": "previous_late_screened",
+    "prompt_index": 12
+  },
+  {
+    "id": "N054",
+    "candidate": "previous_late_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "N055",
+    "candidate": "previous_late_screened",
+    "prompt_index": 2
+  },
+  {
+    "id": "N056",
+    "candidate": "mix25_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "N057",
+    "candidate": "previous_late_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "N058",
+    "candidate": "mix25_screened",
+    "prompt_index": 14
+  },
+  {
+    "id": "N059",
+    "candidate": "previous_late_screened",
+    "prompt_index": 15
+  },
+  {
+    "id": "N060",
+    "candidate": "previous_late_screened",
+    "prompt_index": 5
+  },
+  {
+    "id": "N061",
+    "candidate": "previous_late_screened",
+    "prompt_index": 14
+  },
+  {
+    "id": "N062",
+    "candidate": "mix25_beam",
+    "prompt_index": 13
+  },
+  {
+    "id": "N063",
+    "candidate": "previous_late_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "N064",
+    "candidate": "previous_late_screened",
+    "prompt_index": 11
+  }
+]

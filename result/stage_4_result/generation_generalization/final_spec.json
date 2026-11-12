@@ -1,0 +1,54 @@
+{
+  "models": [
+    {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    }
+  ],
+  "sampling": {
+    "num_samples": 16,
+    "seed": 1704,
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "top_k": 40,
+    "max_new_tokens": 48
+  },
+  "screening": {
+    "max_similarity": 0.8,
+    "min_content_words": 5
+  },
+  "selection_rule": "No test-based selection: preserve decision.json and all locked profiles.",
+  "decision_sha256": "bb31d7d11a8ab29b551cff49b84dc6bf7f81cbc7ee11d5a7c4de4fc122fc27dd",
+  "profile_sha256": {
+    "recommendation.json": "9deebd80b9c399453325a9aebd4410bae5b7cc9d526c3cb1490fcc7273b12440",
+    "recommendation_predictive.json": "3e10904043d0a6edc2e8c1b753d016aadb8774971d7001e60f1563fa758ce088",
+    "recommendation_strict.json": "7c6384a7aebbe301845ab5c9371c4190a4367fbd251c9df5f08761200492668e"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "models": [
+    {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.25
+    },
+    {
+      "name": "tied_mix50",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.5
+    }
+  ],
+  "sampling": {
+    "num_samples": 16,
+    "seed": 1704,
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "top_k": 40,
+    "max_new_tokens": 48
+  },
+  "screening": {
+    "max_similarity": 0.8,
+    "min_content_words": 5
+  },
+  "selection_rule": "Select by count of score2 coherent outputs that also pass the fixed novelty criteria; all16 prompts stay in denominator, including no-output. Tie-break by total coherence score2 count then lower validation NLL. Promote only if joint count improves over previous_late_beam and total score2 count declines by at most2/16; otherwise preserve previous default and expose novelty mode as experimental. Include two predeclared tied-weight regularized GRU models (128/.35/AdamW.01;256/.35/AdamW.01/smoothing.05) in the same comparison before locking. Do not tune after test-prefix evaluation.",
+  "coherence_rubric": {
+    "0": "incomplete, ungrammatical, repetitive, or no output",
+    "1": "readable but disconnected, contradictory, generic or missing a responsive punchline",
+    "2": "complete understandable continuation with semantically responsive setup/punchline or internally coherent wordplay"
+  },
+  "novelty_note": "Lexical screening only, not semantic originality or proof of generalization",
+  "extension_reason": "Before root inspected any new generated outputs/ratings, tied256 achieved lower plain validation NLL4.824824 than previous early model4.988721. Add two fixed probability mixtures to test whether this improved predictive model can preserve late-model structure. No new sampling/selection thresholds or test inspection."
+}

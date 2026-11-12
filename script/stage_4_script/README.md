@@ -114,3 +114,7 @@ The builder recomputes metrics from saved test evidence, rejects smoke runs and 
 ## Generation follow-up
 
 The coherent-generation profile, six additional model runs, all 12 before/after prompts, blinded assistant ratings, training-copy checks, and the prediction-loss tradeoff are documented in [Generation optimization](GENERATION_OPTIMIZATION.md). Use `predict_generation.py` for the selected profile; `predict_stage4.py` preserves the original baseline interface.
+
+## Generalization and training-copy follow-up
+
+[Generalization experiments](GENERATION_GENERALIZATION.md) document two regularized GRUs, fixed checkpoint mixtures, continuation-level copy checks, and new validation/test prefix panels. The best predictive mixture improves test perplexity to 128.045, but none of the new profiles preserves coherence while passing the strict novelty criterion; the existing default remains unchanged. `predict_novel_generation.py` exposes the retained default plus explicitly experimental predictive and strict-screen profiles. See the guide for commands, both blinded assistant reviews, and the verified tradeoffs.

@@ -42,3 +42,8 @@ env/
 # Stage 4 generation follow-up process logs stay local.
 /result/stage_4_result/generation_optimization/*.log
 /result/stage_4_result/generation_optimization/*.exit
+
+# Stage 4 generalization experiment logs stay local.
+/result/stage_4_result/generation_generalization/**/*.log
+/result/stage_4_result/generation_generalization/*.log
+/result/stage_4_result/generation_generalization/**/*.exit

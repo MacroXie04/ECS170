@@ -1,0 +1,6895 @@
+[
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 0,
+    "prompt": "i don't have",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i don't have a lot of jokes about the unemployed... but none of them work.",
+      "continuation": "a lot of jokes about the unemployed... but none of them work.",
+      "ids": [
+        2,
+        15,
+        59,
+        41,
+        6,
+        276,
+        20,
+        108,
+        49,
+        7,
+        4022,
+        4,
+        4,
+        4,
+        51,
+        3184,
+        20,
+        116,
+        197,
+        4,
+        3
+      ],
+      "prompt": "i don't have",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 17,
+      "new_word_count": 12,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -10.23446948768738,
+      "average_log_probability": -0.6020276169227871,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9655172413793104,
+          "nearest_match_ids": [
+            "joke/480"
+          ],
+          "max_shared_token_count": 13,
+          "shared_fraction": 0.8666666666666667,
+          "shared_match_ids": [
+            "joke/480"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9565217391304348,
+          "nearest_match_ids": [
+            "joke/480"
+          ],
+          "max_shared_token_count": 12,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/480"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/480"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/480"
+          ]
+        }
+      }
+    },
+    "text": "i don't have a lot of jokes about the unemployed... but none of them work.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N018"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 1,
+    "prompt": "where do you",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "where do you drown a hipster? the mainstream.",
+      "continuation": "drown a hipster? the mainstream.",
+      "ids": [
+        2,
+        92,
+        13,
+        9,
+        1176,
+        6,
+        1267,
+        5,
+        7,
+        3010,
+        4,
+        3
+      ],
+      "prompt": "where do you",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1705,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1705,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1707,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1707,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 8,
+      "new_word_count": 5,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -3.6229547455521653,
+      "average_log_probability": -0.45286934319402067,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1321"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1321"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1321"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1321"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1321"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1321"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1321"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1321"
+          ]
+        }
+      }
+    },
+    "text": "where do you drown a hipster? the mainstream.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N037"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 2,
+    "prompt": "why don't you",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why don't you want to hang out with a dude from chicago? because ' illinois you!",
+      "continuation": "want to hang out with a dude from chicago? because ' illinois you!",
+      "ids": [
+        2,
+        17,
+        59,
+        9,
+        124,
+        10,
+        2673,
+        55,
+        28,
+        6,
+        1181,
+        53,
+        2060,
+        5,
+        31,
+        73,
+        2764,
+        9,
+        11,
+        3
+      ],
+      "prompt": "why don't you",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 16,
+      "new_word_count": 12,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -6.599962766911831,
+      "average_log_probability": -0.4124976729319894,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/537"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/537"
+          ],
+          "max_shared_token_count": 15,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/537"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/537"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/537"
+          ],
+          "max_shared_token_count": 12,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/537"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/537"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/537"
+          ]
+        }
+      }
+    },
+    "text": "why don't you want to hang out with a dude from chicago? because ' illinois you!",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N022"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 3,
+    "prompt": "where did napoleon",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "where did napoleon bonaparte keep his armies? in his sleevies.",
+      "continuation": "bonaparte keep his armies? in his sleevies.",
+      "ids": [
+        2,
+        92,
+        16,
+        3154,
+        1905,
+        192,
+        30,
+        567,
+        5,
+        18,
+        30,
+        694,
+        4,
+        3
+      ],
+      "prompt": "where did napoleon",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1705,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1705,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1706,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1706,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1707,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1707,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1708,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1708,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1710,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1710,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1712,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1712,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1713,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1713,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1714,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1714,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1715,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1715,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1716,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1716,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1717,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1717,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1719,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1719,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 10,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -1.2125638159947802,
+      "average_log_probability": -0.12125638159947802,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1488"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1488"
+          ],
+          "max_shared_token_count": 10,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1488"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1488"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1488"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1488"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1488"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1488"
+          ]
+        }
+      }
+    },
+    "text": "where did napoleon bonaparte keep his armies? in his sleevies.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N015"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 4,
+    "prompt": "what is a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "what is a martian's favourite chocolate? a mars bar",
+      "continuation": "martian's favourite chocolate? a mars bar",
+      "ids": [
+        2,
+        8,
+        27,
+        6,
+        3036,
+        1213,
+        401,
+        5,
+        6,
+        3033,
+        101,
+        3
+      ],
+      "prompt": "what is a",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1706,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1706,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1710,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1710,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1711,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1711,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1712,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1712,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1715,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1715,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1719,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1719,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 8,
+      "new_word_count": 6,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -2.7975075818640716,
+      "average_log_probability": -0.34968844773300894,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/103"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/103"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/103"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/103"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/103"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/103"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/103"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/103"
+          ]
+        }
+      }
+    },
+    "text": "what is a martian's favourite chocolate? a mars bar",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N002"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 5,
+    "prompt": "why does a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why does a milking stool have only three legs? because the cow has the udder!",
+      "continuation": "milking stool have only three legs? because the cow has the udder!",
+      "ids": [
+        2,
+        17,
+        43,
+        6,
+        3074,
+        3809,
+        41,
+        115,
+        208,
+        126,
+        5,
+        31,
+        7,
+        97,
+        111,
+        7,
+        4012,
+        11,
+        3
+      ],
+      "prompt": "why does a",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1708,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1708,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 12,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -8.256120292391772,
+      "average_log_probability": -0.5504080194927848,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/504"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/504"
+          ],
+          "max_shared_token_count": 15,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/504"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/504"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/504"
+          ],
+          "max_shared_token_count": 12,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/504"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/504"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/504"
+          ]
+        }
+      }
+    },
+    "text": "why does a milking stool have only three legs? because the cow has the udder!",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N040"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 6,
+    "prompt": "a skeleton walks",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "a skeleton walks into a bar... the third one ducks.",
+      "continuation": "into a bar... the third one ducks.",
+      "ids": [
+        2,
+        6,
+        281,
+        140,
+        68,
+        6,
+        101,
+        4,
+        4,
+        4,
+        7,
+        1565,
+        40,
+        491,
+        4,
+        3
+      ],
+      "prompt": "a skeleton walks",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -5.246533090845607,
+      "average_log_probability": -0.43721109090380056,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7,
+          "nearest_match_ids": [
+            "joke/1295"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7,
+          "shared_match_ids": [
+            "joke/546",
+            "joke/1295"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1295"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1295"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1295"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1295"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1295"
+          ]
+        }
+      }
+    },
+    "text": "a skeleton walks into a bar... the third one ducks.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N046"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 7,
+    "prompt": "what happens when",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "what happens when your cousin eats all the pumpkin pie on thanksgiving? plump kin!",
+      "continuation": "your cousin eats all the pumpkin pie on thanksgiving? plump kin!",
+      "ids": [
+        2,
+        8,
+        243,
+        35,
+        83,
+        2170,
+        1187,
+        74,
+        7,
+        903,
+        368,
+        36,
+        1561,
+        5,
+        3352,
+        2884,
+        11,
+        3
+      ],
+      "prompt": "what happens when",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -5.893800121527536,
+      "average_log_probability": -0.4209857229662526,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1118"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1118"
+          ],
+          "max_shared_token_count": 14,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1118"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1118"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1118"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1118"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1118"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1118"
+          ]
+        }
+      }
+    },
+    "text": "what happens when your cousin eats all the pumpkin pie on thanksgiving? plump kin!",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N032"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 8,
+    "prompt": "why there should",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why there should always so good at driving locomotives? because they were trained.",
+      "continuation": "always so good at driving locomotives? because they were trained.",
+      "ids": [
+        2,
+        17,
+        71,
+        194,
+        93,
+        58,
+        136,
+        47,
+        490,
+        2980,
+        5,
+        31,
+        44,
+        133,
+        3959,
+        4,
+        3
+      ],
+      "prompt": "why there should",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 10,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -7.925574856727671,
+      "average_log_probability": -0.6096596043636671,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7692307692307693,
+          "nearest_match_ids": [
+            "joke/210"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.6923076923076923,
+          "shared_match_ids": [
+            "joke/210"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9,
+          "nearest_match_ids": [
+            "joke/210"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.9,
+          "shared_match_ids": [
+            "joke/210"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why there should always so good at driving locomotives? because they were trained.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N031"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 9,
+    "prompt": "i'm in the",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i'm in the world quite frankly!",
+      "continuation": "world quite frankly!",
+      "ids": [
+        2,
+        67,
+        18,
+        7,
+        260,
+        3441,
+        2528,
+        11,
+        3
+      ],
+      "prompt": "i'm in the",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 5,
+      "new_word_count": 3,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -5.346281789687415,
+      "average_log_probability": -1.069256357937483,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5,
+          "nearest_match_ids": [
+            "joke/1104"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.8333333333333334,
+          "shared_match_ids": [
+            "joke/1104"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.3333333333333333,
+          "nearest_match_ids": [
+            "joke/1104"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1104"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1104"
+          ],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "i'm in the world quite frankly!",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N006"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 10,
+    "prompt": "if you're american",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "if you're american, what do you call a cow with no legs? ground beef.",
+      "continuation": ", what do you call a cow with no legs? ground beef.",
+      "ids": [
+        2,
+        75,
+        231,
+        466,
+        12,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "prompt": "if you're american",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.244019062586963,
+      "average_log_probability": -0.6162679375057976,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.88,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 0.7857142857142857,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8421052631578947,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        }
+      }
+    },
+    "text": "if you're american, what do you call a cow with no legs? ground beef.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N011"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 11,
+    "prompt": "whats the problem",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "whats the problem with mexican and smells like red paint? blue paint",
+      "continuation": "with mexican and smells like red paint? blue paint",
+      "ids": [
+        2,
+        257,
+        7,
+        369,
+        28,
+        646,
+        21,
+        446,
+        61,
+        206,
+        366,
+        5,
+        290,
+        366,
+        3
+      ],
+      "prompt": "whats the problem",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 11,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -6.698211031754551,
+      "average_log_probability": -0.60892827561405,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7619047619047619,
+          "nearest_match_ids": [
+            "joke/739",
+            "joke/1041"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5833333333333334,
+          "shared_match_ids": [
+            "joke/739",
+            "joke/1041"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/739",
+            "joke/1041"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7777777777777778,
+          "shared_match_ids": [
+            "joke/739",
+            "joke/1041"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "whats the problem with mexican and smells like red paint? blue paint",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N047"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 12,
+    "prompt": "why does mr",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why does mr hate punchbug? because he bruises like - a peach!",
+      "continuation": "hate punchbug? because he bruises like - a peach!",
+      "ids": [
+        2,
+        17,
+        43,
+        1365,
+        415,
+        3431,
+        5,
+        31,
+        25,
+        1951,
+        61,
+        22,
+        6,
+        1407,
+        11,
+        3
+      ],
+      "prompt": "why does mr",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1713,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1713,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1717,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1717,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -8.58690164657529,
+      "average_log_probability": -0.7155751372146075,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9090909090909091,
+          "nearest_match_ids": [
+            "joke/122"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.7272727272727273,
+          "shared_match_ids": [
+            "joke/122"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/122"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/122"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/122"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/122"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/122"
+          ]
+        }
+      }
+    },
+    "text": "why does mr hate punchbug? because he bruises like - a peach!",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N007"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 13,
+    "prompt": "nickelback walks into",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "nickelback walks into a bar... the third one ducks.",
+      "continuation": "a bar... the third one ducks.",
+      "ids": [
+        2,
+        3175,
+        140,
+        68,
+        6,
+        101,
+        4,
+        4,
+        4,
+        7,
+        1565,
+        40,
+        491,
+        4,
+        3
+      ],
+      "prompt": "nickelback walks into",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1705,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1705,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1717,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1717,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 11,
+      "new_word_count": 6,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -4.384612780210871,
+      "average_log_probability": -0.3986011618373519,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7368421052631579,
+          "nearest_match_ids": [
+            "joke/1295"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7777777777777778,
+          "shared_match_ids": [
+            "joke/1295"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9230769230769231,
+          "nearest_match_ids": [
+            "joke/1295"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1295"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1295"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1295"
+          ]
+        }
+      }
+    },
+    "text": "nickelback walks into a bar... the third one ducks.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N003"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 14,
+    "prompt": "seven days without",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "seven days without wife and a mop...",
+      "continuation": "wife and a mop...",
+      "ids": [
+        2,
+        1488,
+        1140,
+        553,
+        551,
+        21,
+        6,
+        649,
+        4,
+        4,
+        4,
+        3
+      ],
+      "prompt": "seven days without",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 8,
+      "new_word_count": 4,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.493244229418659,
+      "average_log_probability": -1.1866555286773324,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.3076923076923077,
+          "nearest_match_ids": [
+            "joke/279",
+            "joke/807",
+            "joke/708",
+            "joke/1411"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 0.42857142857142855,
+          "shared_match_ids": [
+            "joke/546",
+            "joke/1201",
+            "joke/582"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.42857142857142855,
+          "nearest_match_ids": [
+            "joke/1201"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 0.75,
+          "shared_match_ids": [
+            "joke/546",
+            "joke/1201",
+            "joke/582"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "seven days without wife and a mop...",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N039"
+  },
+  {
+    "candidate": "previous_late_beam",
+    "prompt_index": 15,
+    "prompt": "why is it",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why is it impossible to be 12 inches long? because they're made of them.",
+      "continuation": "impossible to be 12 inches long? because they're made of them.",
+      "ids": [
+        2,
+        17,
+        27,
+        19,
+        1287,
+        10,
+        64,
+        1644,
+        2775,
+        245,
+        5,
+        31,
+        139,
+        131,
+        20,
+        116,
+        4,
+        3
+      ],
+      "prompt": "why is it",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.672992054822288,
+      "average_log_probability": -0.6909280039158777,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.4375,
+          "nearest_match_ids": [
+            "joke/1037"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.42857142857142855,
+          "shared_match_ids": [
+            "joke/1037"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.46153846153846156,
+          "nearest_match_ids": [
+            "joke/1037"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.5454545454545454,
+          "shared_match_ids": [
+            "joke/1037"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why is it impossible to be 12 inches long? because they're made of them.",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "modes": [
+        "beam"
+      ]
+    },
+    "blind_id": "N026"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 0,
+    "prompt": "i don't have",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i don't have a dirty joke? \"",
+      "continuation": "a dirty joke? \"",
+      "ids": [
+        2,
+        15,
+        59,
+        41,
+        6,
+        216,
+        50,
+        5,
+        14,
+        3
+      ],
+      "prompt": "i don't have",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 6,
+      "new_word_count": 3,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -11.16630090594737,
+      "average_log_probability": -1.8610501509912283,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.4,
+          "nearest_match_ids": [
+            "joke/1039"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.6666666666666666,
+          "shared_match_ids": [
+            "joke/830"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.42857142857142855,
+          "nearest_match_ids": [
+            "joke/1315"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/64",
+            "joke/545",
+            "joke/1498",
+            "joke/1315",
+            "joke/581",
+            "joke/1241"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/64",
+            "joke/545",
+            "joke/1498",
+            "joke/1315",
+            "joke/581",
+            "joke/1241"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1241"
+          ]
+        }
+      }
+    },
+    "text": "i don't have a dirty joke? \"",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N041"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 0,
+    "prompt": "i don't have",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 15,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        15,
+        9,
+        6,
+        12,
+        2,
+        10,
+        4,
+        13,
+        14,
+        5,
+        11,
+        1,
+        8,
+        7,
+        16
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 15,
+      "text": "i don't have a potatographic memory... but it was a little crabby!",
+      "continuation": "a potatographic memory... but it was a little crabby!",
+      "ids": [
+        2,
+        15,
+        59,
+        41,
+        6,
+        3384,
+        642,
+        4,
+        4,
+        4,
+        51,
+        19,
+        23,
+        6,
+        100,
+        2176,
+        11,
+        3
+      ],
+      "prompt": "i don't have",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1719,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1719,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -23.107520806482825,
+      "average_log_probability": -1.650537200463059,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.4444444444444444,
+          "nearest_match_ids": [
+            "joke/809"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.3333333333333333,
+          "shared_match_ids": [
+            "joke/447",
+            "joke/830",
+            "joke/484"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5714285714285714,
+          "nearest_match_ids": [
+            "joke/809"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.4444444444444444,
+          "shared_match_ids": [
+            "joke/484"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "i don't have a potatographic memory... but it was a little crabby!",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N013"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 1,
+    "prompt": "where do you",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "where do you call a cow with no legs? ground beef.",
+      "continuation": "call a cow with no legs? ground beef.",
+      "ids": [
+        2,
+        92,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "prompt": "where do you",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1714,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1714,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 11,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.377878395339073,
+      "average_log_probability": -0.8525343995762793,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9090909090909091,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 10,
+          "shared_fraction": 0.9090909090909091,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        }
+      }
+    },
+    "text": "where do you call a cow with no legs? ground beef.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N030"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 1,
+    "prompt": "where do you",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 13,
+      "candidate_count": 16,
+      "eligible_candidate_ids": [
+        5,
+        6,
+        1,
+        9,
+        2,
+        7,
+        14,
+        10,
+        8,
+        11,
+        4,
+        15,
+        13
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_training_continuation",
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "continuation_similarity"
+          ]
+        },
+        {
+          "candidate_id": 12,
+          "reasons": [
+            "continuation_similarity"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 5,
+      "text": "where do you call a deer with no legs? a cow.",
+      "continuation": "call a deer with no legs? a cow.",
+      "ids": [
+        2,
+        92,
+        13,
+        9,
+        26,
+        6,
+        237,
+        28,
+        57,
+        126,
+        5,
+        6,
+        97,
+        4,
+        3
+      ],
+      "prompt": "where do you",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 11,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -13.820762069632929,
+      "average_log_probability": -1.2564329154211753,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7272727272727273,
+          "nearest_match_ids": [
+            "joke/182",
+            "joke/303"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.6363636363636364,
+          "shared_match_ids": [
+            "joke/754",
+            "joke/463"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.75,
+          "nearest_match_ids": [
+            "joke/182",
+            "joke/303"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.625,
+          "shared_match_ids": [
+            "joke/754",
+            "joke/463"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "where do you call a deer with no legs? a cow.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N027"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 2,
+    "prompt": "why don't you",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why don't you hear a pterodactyl in the bathroom? because it was two - tired.",
+      "continuation": "hear a pterodactyl in the bathroom? because it was two - tired.",
+      "ids": [
+        2,
+        17,
+        59,
+        9,
+        62,
+        6,
+        675,
+        18,
+        7,
+        389,
+        5,
+        31,
+        19,
+        23,
+        54,
+        22,
+        328,
+        4,
+        3
+      ],
+      "prompt": "why don't you",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -17.415199738342118,
+      "average_log_probability": -1.1610133158894744,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6428571428571429,
+          "nearest_match_ids": [
+            "joke/1404"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.5714285714285714,
+          "shared_match_ids": [
+            "joke/1404"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6363636363636364,
+          "nearest_match_ids": [
+            "joke/1404"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.6363636363636364,
+          "shared_match_ids": [
+            "joke/1404"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why don't you hear a pterodactyl in the bathroom? because it was two - tired.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N024"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 2,
+    "prompt": "why don't you",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 17,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        0,
+        2,
+        9,
+        11,
+        6,
+        3,
+        10,
+        15,
+        1,
+        8,
+        5,
+        4,
+        12,
+        7,
+        14,
+        16,
+        13
+      ],
+      "rejections": [],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why don't you hear a pterodactyl in the bathroom? because it was two - tired.",
+      "continuation": "hear a pterodactyl in the bathroom? because it was two - tired.",
+      "ids": [
+        2,
+        17,
+        59,
+        9,
+        62,
+        6,
+        675,
+        18,
+        7,
+        389,
+        5,
+        31,
+        19,
+        23,
+        54,
+        22,
+        328,
+        4,
+        3
+      ],
+      "prompt": "why don't you",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -17.415199738342118,
+      "average_log_probability": -1.1610133158894744,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6428571428571429,
+          "nearest_match_ids": [
+            "joke/1404"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.5714285714285714,
+          "shared_match_ids": [
+            "joke/1404"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6363636363636364,
+          "nearest_match_ids": [
+            "joke/1404"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.6363636363636364,
+          "shared_match_ids": [
+            "joke/1404"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why don't you hear a pterodactyl in the bathroom? because it was two - tired.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N005"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 3,
+    "prompt": "where did napoleon",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "where did napoleon bonaparte keep his armies? in his sleevies.",
+      "continuation": "bonaparte keep his armies? in his sleevies.",
+      "ids": [
+        2,
+        92,
+        16,
+        3154,
+        1905,
+        192,
+        30,
+        567,
+        5,
+        18,
+        30,
+        694,
+        4,
+        3
+      ],
+      "prompt": "where did napoleon",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        },
+        {
+          "strategy": "sample",
+          "seed": 1714,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1714,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 10,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -8.261638469411052,
+      "average_log_probability": -0.8261638469411052,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1488"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1488"
+          ],
+          "max_shared_token_count": 10,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1488"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1488"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1488"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1488"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1488"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1488"
+          ]
+        }
+      }
+    },
+    "text": "where did napoleon bonaparte keep his armies? in his sleevies.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N008"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 3,
+    "prompt": "where did napoleon",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 13,
+      "candidate_count": 16,
+      "eligible_candidate_ids": [
+        14,
+        11,
+        7,
+        13,
+        3,
+        10,
+        9,
+        15,
+        6,
+        5,
+        2,
+        1,
+        4
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "exact_training_copy",
+            "copied_training_continuation",
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "reasons": [
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 12,
+          "reasons": [
+            "exact_training_copy",
+            "copied_training_continuation",
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 14,
+      "text": "where did napoleon bonaparte say to the other? nice belt.",
+      "continuation": "bonaparte say to the other? nice belt.",
+      "ids": [
+        2,
+        92,
+        16,
+        3154,
+        1905,
+        34,
+        10,
+        7,
+        69,
+        5,
+        363,
+        339,
+        4,
+        3
+      ],
+      "prompt": "where did napoleon",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1719,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1719,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 10,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -11.70748653869545,
+      "average_log_probability": -1.170748653869545,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6,
+          "nearest_match_ids": [
+            "joke/1377",
+            "joke/355",
+            "joke/134",
+            "joke/1048"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.4,
+          "shared_match_ids": [
+            "joke/401",
+            "joke/65",
+            "joke/1589",
+            "joke/62",
+            "joke/1313",
+            "joke/793",
+            "joke/1488",
+            "joke/647",
+            "joke/1040",
+            "joke/1233",
+            "joke/289",
+            "joke/1605",
+            "joke/424",
+            "joke/1451",
+            "joke/8",
+            "joke/844"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7142857142857143,
+          "nearest_match_ids": [
+            "joke/1377",
+            "joke/355",
+            "joke/134",
+            "joke/1048"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.5714285714285714,
+          "shared_match_ids": [
+            "joke/401",
+            "joke/65",
+            "joke/1589",
+            "joke/62",
+            "joke/1313",
+            "joke/793",
+            "joke/647",
+            "joke/1040",
+            "joke/1233",
+            "joke/289",
+            "joke/1605",
+            "joke/424",
+            "joke/1451",
+            "joke/8",
+            "joke/844"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "where did napoleon bonaparte say to the other? nice belt.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N017"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 4,
+    "prompt": "what is a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "what is a traveler's favorite font? times.",
+      "continuation": "traveler's favorite font? times.",
+      "ids": [
+        2,
+        8,
+        27,
+        6,
+        3966,
+        94,
+        2505,
+        5,
+        458,
+        4,
+        3
+      ],
+      "prompt": "what is a",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 7,
+      "new_word_count": 4,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -7.858041491280985,
+      "average_log_probability": -1.1225773558972836,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.875,
+          "nearest_match_ids": [
+            "joke/934"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/934"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/934"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/934"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/934"
+          ],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "what is a traveler's favorite font? times.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N016"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 4,
+    "prompt": "what is a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 11,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        13,
+        9,
+        15,
+        8,
+        1,
+        11,
+        2,
+        10,
+        4,
+        12,
+        14
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "continuation_similarity"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "too_few_new_words"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "exact_training_copy",
+            "copied_training_continuation",
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 16,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 13,
+      "text": "what is a vampire's favorite fruit? a stick",
+      "continuation": "vampire's favorite fruit? a stick",
+      "ids": [
+        2,
+        8,
+        27,
+        6,
+        4043,
+        94,
+        503,
+        5,
+        6,
+        452,
+        3
+      ],
+      "prompt": "what is a",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1717,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1717,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 7,
+      "new_word_count": 5,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -8.609128450336435,
+      "average_log_probability": -1.229875492905205,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6363636363636364,
+          "nearest_match_ids": [
+            "joke/1122"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.875,
+          "shared_match_ids": [
+            "joke/1122"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5,
+          "nearest_match_ids": [
+            "joke/1122",
+            "joke/279",
+            "joke/807",
+            "joke/708",
+            "joke/1411"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.8,
+          "shared_match_ids": [
+            "joke/1122"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "what is a vampire's favorite fruit? a stick",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N038"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 5,
+    "prompt": "why does a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why does a bicycle have a kickstand? because it was two - tired.",
+      "continuation": "bicycle have a kickstand? because it was two - tired.",
+      "ids": [
+        2,
+        17,
+        43,
+        6,
+        474,
+        41,
+        6,
+        2880,
+        5,
+        31,
+        19,
+        23,
+        54,
+        22,
+        328,
+        4,
+        3
+      ],
+      "prompt": "why does a",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -15.292474864573569,
+      "average_log_probability": -1.176344220351813,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8695652173913043,
+          "nearest_match_ids": [
+            "joke/1254"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.6666666666666666,
+          "shared_match_ids": [
+            "joke/1254"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8235294117647058,
+          "nearest_match_ids": [
+            "joke/1254"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.5555555555555556,
+          "shared_match_ids": [
+            "joke/78",
+            "joke/1254",
+            "joke/128"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why does a bicycle have a kickstand? because it was two - tired.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N025"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 5,
+    "prompt": "why does a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 16,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        3,
+        15,
+        8,
+        10,
+        12,
+        2,
+        9,
+        7,
+        5,
+        14,
+        16,
+        13,
+        1,
+        4,
+        6,
+        11
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "continuation_similarity"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 3,
+      "text": "why does a milking afraid of people? because he was outstanding in his field.",
+      "continuation": "milking afraid of people? because he was outstanding in his field.",
+      "ids": [
+        2,
+        17,
+        43,
+        6,
+        3074,
+        562,
+        20,
+        91,
+        5,
+        31,
+        25,
+        23,
+        657,
+        18,
+        30,
+        271,
+        4,
+        3
+      ],
+      "prompt": "why does a",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1707,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1707,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -22.82748633626504,
+      "average_log_probability": -1.6305347383046456,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6153846153846154,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.6363636363636364,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why does a milking afraid of people? because he was outstanding in his field.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N021"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 6,
+    "prompt": "a skeleton walks",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "a skeleton walks into a bar...",
+      "continuation": "into a bar...",
+      "ids": [
+        2,
+        6,
+        281,
+        140,
+        68,
+        6,
+        101,
+        4,
+        4,
+        4,
+        3
+      ],
+      "prompt": "a skeleton walks",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 7,
+      "new_word_count": 3,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -7.003341289951412,
+      "average_log_probability": -1.000477327135916,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6666666666666666,
+          "nearest_match_ids": [
+            "joke/304"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/546",
+            "joke/1201"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.75,
+          "nearest_match_ids": [
+            "joke/573"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/313",
+            "joke/573",
+            "joke/36",
+            "joke/1268",
+            "joke/546",
+            "joke/1223",
+            "joke/304",
+            "joke/1419",
+            "joke/593",
+            "joke/1266",
+            "joke/1201",
+            "joke/284",
+            "joke/657",
+            "joke/1359",
+            "joke/1482",
+            "joke/944",
+            "joke/1295"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/313",
+            "joke/573",
+            "joke/36",
+            "joke/1268",
+            "joke/546",
+            "joke/1223",
+            "joke/304",
+            "joke/1419",
+            "joke/593",
+            "joke/1266",
+            "joke/1201",
+            "joke/284",
+            "joke/657",
+            "joke/1359",
+            "joke/1482",
+            "joke/944",
+            "joke/1295"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/313"
+          ]
+        }
+      }
+    },
+    "text": "a skeleton walks into a bar...",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N012"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 6,
+    "prompt": "a skeleton walks",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 16,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        16,
+        7,
+        1,
+        2,
+        8,
+        6,
+        13,
+        15,
+        3,
+        14,
+        9,
+        12,
+        10,
+        11,
+        4,
+        5
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 16,
+      "text": "a skeleton walks into a bar... i'm 27.",
+      "continuation": "into a bar... i'm 27.",
+      "ids": [
+        2,
+        6,
+        281,
+        140,
+        68,
+        6,
+        101,
+        4,
+        4,
+        4,
+        67,
+        1663,
+        4,
+        3
+      ],
+      "prompt": "a skeleton walks",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1720,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1720,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 10,
+      "new_word_count": 5,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -10.278637630972366,
+      "average_log_probability": -1.0278637630972365,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5882352941176471,
+          "nearest_match_ids": [
+            "joke/304"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.75,
+          "shared_match_ids": [
+            "joke/546",
+            "joke/1201"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6,
+          "nearest_match_ids": [
+            "joke/573"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 0.6,
+          "shared_match_ids": [
+            "joke/313",
+            "joke/573",
+            "joke/36",
+            "joke/1268",
+            "joke/546",
+            "joke/1223",
+            "joke/304",
+            "joke/1419",
+            "joke/593",
+            "joke/1266",
+            "joke/1201",
+            "joke/284",
+            "joke/657",
+            "joke/1359",
+            "joke/1482",
+            "joke/944",
+            "joke/1295"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "a skeleton walks into a bar... i'm 27.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N045"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 7,
+    "prompt": "what happens when",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "what happens when you call a cow with no legs? ground beef.",
+      "continuation": "you call a cow with no legs? ground beef.",
+      "ids": [
+        2,
+        8,
+        243,
+        35,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "prompt": "what happens when",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -10.81961251904275,
+      "average_log_probability": -0.9016343765868958,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8695652173913043,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.75,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9411764705882353,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        }
+      }
+    },
+    "text": "what happens when you call a cow with no legs? ground beef.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N004"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 7,
+    "prompt": "what happens when",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 15,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        13,
+        14,
+        10,
+        3,
+        1,
+        6,
+        9,
+        4,
+        5,
+        7,
+        11,
+        8,
+        15,
+        16,
+        12
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_training_continuation",
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 13,
+      "text": "what happens when you call a boomerang that doesn't come? a buccaneer!",
+      "continuation": "you call a boomerang that doesn't come? a buccaneer!",
+      "ids": [
+        2,
+        8,
+        243,
+        35,
+        9,
+        26,
+        6,
+        575,
+        45,
+        296,
+        295,
+        5,
+        6,
+        477,
+        11,
+        3
+      ],
+      "prompt": "what happens when",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1717,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1717,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -19.802359464213712,
+      "average_log_probability": -1.6501966220178093,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.75,
+          "nearest_match_ids": [
+            "joke/1278"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5833333333333334,
+          "shared_match_ids": [
+            "joke/1278",
+            "joke/635"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7777777777777778,
+          "nearest_match_ids": [
+            "joke/1278"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7777777777777778,
+          "shared_match_ids": [
+            "joke/1278",
+            "joke/635"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "what happens when you call a boomerang that doesn't come? a buccaneer!",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N043"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 8,
+    "prompt": "why there should",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why there should you hear a pterodactyl in the bathroom.",
+      "continuation": "you hear a pterodactyl in the bathroom.",
+      "ids": [
+        2,
+        17,
+        71,
+        194,
+        9,
+        62,
+        6,
+        675,
+        18,
+        7,
+        389,
+        4,
+        3
+      ],
+      "prompt": "why there should",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 9,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -15.6595675697709,
+      "average_log_probability": -1.7399519521967666,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6666666666666666,
+          "nearest_match_ids": [
+            "joke/1404"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7,
+          "shared_match_ids": [
+            "joke/1404"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6666666666666666,
+          "nearest_match_ids": [
+            "joke/1404"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1404"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1404"
+          ],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why there should you hear a pterodactyl in the bathroom.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N036"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 8,
+    "prompt": "why there should",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 16,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        5,
+        9,
+        12,
+        1,
+        10,
+        2,
+        3,
+        15,
+        13,
+        11,
+        4,
+        6,
+        16,
+        14,
+        7,
+        8
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 5,
+      "text": "why there should you avoid people in the world? because they have trans - sisters.",
+      "continuation": "you avoid people in the world? because they have trans - sisters.",
+      "ids": [
+        2,
+        17,
+        71,
+        194,
+        9,
+        1022,
+        91,
+        18,
+        7,
+        260,
+        5,
+        31,
+        44,
+        41,
+        3960,
+        22,
+        3698,
+        4,
+        3
+      ],
+      "prompt": "why there should",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -25.178256027979366,
+      "average_log_probability": -1.678550401865291,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5,
+          "nearest_match_ids": [
+            "joke/653"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.35714285714285715,
+          "shared_match_ids": [
+            "joke/738"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5,
+          "nearest_match_ids": [
+            "joke/738"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.45454545454545453,
+          "shared_match_ids": [
+            "joke/738"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why there should you avoid people in the world? because they have trans - sisters.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N020"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 9,
+    "prompt": "i'm in the",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i'm in the world...",
+      "continuation": "world...",
+      "ids": [
+        2,
+        67,
+        18,
+        7,
+        260,
+        4,
+        4,
+        4,
+        3
+      ],
+      "prompt": "i'm in the",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 5,
+      "new_word_count": 1,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.017960837549818,
+      "average_log_probability": -1.8035921675099638,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.36363636363636365,
+          "nearest_match_ids": [
+            "joke/697",
+            "joke/673",
+            "joke/1104"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 0.75,
+          "shared_match_ids": [
+            "joke/1175",
+            "joke/861",
+            "joke/518",
+            "joke/1104",
+            "joke/1444"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.2,
+          "nearest_match_ids": [
+            "joke/808"
+          ],
+          "max_shared_token_count": 1,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/808",
+            "joke/1175",
+            "joke/861",
+            "joke/1599",
+            "joke/518",
+            "joke/552",
+            "joke/673",
+            "joke/1104",
+            "joke/1444",
+            "joke/495"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/808",
+            "joke/1175",
+            "joke/861",
+            "joke/1599",
+            "joke/518",
+            "joke/552",
+            "joke/673",
+            "joke/1104",
+            "joke/1444",
+            "joke/495"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1599",
+            "joke/518"
+          ]
+        }
+      }
+    },
+    "text": "i'm in the world...",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N034"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 9,
+    "prompt": "i'm in the",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 13,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        5,
+        12,
+        9,
+        15,
+        7,
+        4,
+        3,
+        10,
+        8,
+        11,
+        2,
+        13,
+        16
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_few_new_words"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "too_few_new_words"
+          ]
+        },
+        {
+          "candidate_id": 14,
+          "reasons": [
+            "too_few_new_words"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 5,
+      "text": "i'm in the world... but i think it was a greyed!",
+      "continuation": "world... but i think it was a greyed!",
+      "ids": [
+        2,
+        67,
+        18,
+        7,
+        260,
+        4,
+        4,
+        4,
+        51,
+        15,
+        120,
+        19,
+        23,
+        6,
+        2639,
+        11,
+        3
+      ],
+      "prompt": "i'm in the",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -25.854305976538754,
+      "average_log_probability": -1.988792767426058,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.41379310344827586,
+          "nearest_match_ids": [
+            "joke/1104"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.36363636363636365,
+          "shared_match_ids": [
+            "joke/590"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.43478260869565216,
+          "nearest_match_ids": [
+            "joke/45"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/590"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "i'm in the world... but i think it was a greyed!",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N014"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 10,
+    "prompt": "if you're american",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "if you're american, what do you call a cow with no legs? ground beef.",
+      "continuation": ", what do you call a cow with no legs? ground beef.",
+      "ids": [
+        2,
+        75,
+        231,
+        466,
+        12,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "prompt": "if you're american",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -12.91679007458786,
+      "average_log_probability": -0.8611193383058573,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.88,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 0.7857142857142857,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8421052631578947,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        }
+      }
+    },
+    "text": "if you're american, what do you call a cow with no legs? ground beef.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N033"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 10,
+    "prompt": "if you're american",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 16,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        10,
+        13,
+        14,
+        4,
+        3,
+        9,
+        1,
+        16,
+        5,
+        8,
+        15,
+        2,
+        12,
+        7,
+        6,
+        11
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_training_continuation",
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 10,
+      "text": "if you're american, a mama walks into a bar... he was a light bulb.",
+      "continuation": ", a mama walks into a bar... he was a light bulb.",
+      "ids": [
+        2,
+        75,
+        231,
+        466,
+        12,
+        6,
+        1343,
+        140,
+        68,
+        6,
+        101,
+        4,
+        4,
+        4,
+        25,
+        23,
+        6,
+        274,
+        753,
+        4,
+        3
+      ],
+      "prompt": "if you're american",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1714,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1714,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 17,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -30.045652310477205,
+      "average_log_probability": -1.767391312381012,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5217391304347826,
+          "nearest_match_ids": [
+            "joke/304"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.35714285714285715,
+          "shared_match_ids": [
+            "joke/304",
+            "joke/1359",
+            "joke/944"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.47058823529411764,
+          "nearest_match_ids": [
+            "joke/304"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.45454545454545453,
+          "shared_match_ids": [
+            "joke/304",
+            "joke/1359",
+            "joke/944"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "if you're american, a mama walks into a bar... he was a light bulb.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N001"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 11,
+    "prompt": "whats the problem",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "whats the problem thing to put into a pie.",
+      "continuation": "thing to put into a pie.",
+      "ids": [
+        2,
+        257,
+        7,
+        369,
+        284,
+        10,
+        179,
+        68,
+        6,
+        368,
+        4,
+        3
+      ],
+      "prompt": "whats the problem",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 8,
+      "new_word_count": 6,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -14.607512262324015,
+      "average_log_probability": -1.8259390327905018,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/92",
+            "joke/1496"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.6666666666666666,
+          "shared_match_ids": [
+            "joke/92",
+            "joke/1496"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8571428571428571,
+          "nearest_match_ids": [
+            "joke/92",
+            "joke/1496"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/92",
+            "joke/1496"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/92",
+            "joke/1496"
+          ],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "whats the problem thing to put into a pie.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N010"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 11,
+    "prompt": "whats the problem",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 15,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        5,
+        15,
+        4,
+        3,
+        14,
+        1,
+        2,
+        10,
+        6,
+        7,
+        13,
+        9,
+        16,
+        8,
+        11
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_training_continuation",
+            "continuation_similarity",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 12,
+          "reasons": [
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 5,
+      "text": "whats the problem with an invisible and smells like carrots? bunny.",
+      "continuation": "with an invisible and smells like carrots? bunny.",
+      "ids": [
+        2,
+        257,
+        7,
+        369,
+        28,
+        37,
+        630,
+        21,
+        446,
+        61,
+        399,
+        5,
+        581,
+        4,
+        3
+      ],
+      "prompt": "whats the problem",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 11,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -22.376420026302757,
+      "average_log_probability": -2.0342200023911596,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7368421052631579,
+          "nearest_match_ids": [
+            "joke/250"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.5454545454545454,
+          "shared_match_ids": [
+            "joke/250"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6153846153846154,
+          "nearest_match_ids": [
+            "joke/250"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.75,
+          "shared_match_ids": [
+            "joke/250"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "whats the problem with an invisible and smells like carrots? bunny.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N009"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 12,
+    "prompt": "why does mr",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why does mr hate punchbug? because he was outstanding in his field.",
+      "continuation": "hate punchbug? because he was outstanding in his field.",
+      "ids": [
+        2,
+        17,
+        43,
+        1365,
+        415,
+        3431,
+        5,
+        31,
+        25,
+        23,
+        657,
+        18,
+        30,
+        271,
+        4,
+        3
+      ],
+      "prompt": "why does mr",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -15.104567092342124,
+      "average_log_probability": -1.2587139243618437,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6666666666666666,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5833333333333334,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7777777777777778,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7777777777777778,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why does mr hate punchbug? because he was outstanding in his field.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N023"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 12,
+    "prompt": "why does mr",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 17,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        0,
+        2,
+        13,
+        5,
+        15,
+        14,
+        10,
+        1,
+        9,
+        8,
+        6,
+        3,
+        11,
+        12,
+        4,
+        7,
+        16
+      ],
+      "rejections": [],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why does mr hate punchbug? because he was outstanding in his field.",
+      "continuation": "hate punchbug? because he was outstanding in his field.",
+      "ids": [
+        2,
+        17,
+        43,
+        1365,
+        415,
+        3431,
+        5,
+        31,
+        25,
+        23,
+        657,
+        18,
+        30,
+        271,
+        4,
+        3
+      ],
+      "prompt": "why does mr",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -15.104567092342124,
+      "average_log_probability": -1.2587139243618437,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6666666666666666,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5833333333333334,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7777777777777778,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7777777777777778,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why does mr hate punchbug? because he was outstanding in his field.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N035"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 13,
+    "prompt": "nickelback walks into",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "nickelback walks into a bar...",
+      "continuation": "a bar...",
+      "ids": [
+        2,
+        3175,
+        140,
+        68,
+        6,
+        101,
+        4,
+        4,
+        4,
+        3
+      ],
+      "prompt": "nickelback walks into",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 6,
+      "new_word_count": 2,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -6.72977048340015,
+      "average_log_probability": -1.121628413900025,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5714285714285714,
+          "nearest_match_ids": [
+            "joke/304"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.8,
+          "shared_match_ids": [
+            "joke/313",
+            "joke/1268",
+            "joke/546",
+            "joke/1223",
+            "joke/304",
+            "joke/1419",
+            "joke/1266",
+            "joke/1201",
+            "joke/1359",
+            "joke/944"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5714285714285714,
+          "nearest_match_ids": [
+            "joke/573"
+          ],
+          "max_shared_token_count": 2,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/313",
+            "joke/573",
+            "joke/36",
+            "joke/1268",
+            "joke/546",
+            "joke/1223",
+            "joke/304",
+            "joke/1419",
+            "joke/593",
+            "joke/1266",
+            "joke/1201",
+            "joke/284",
+            "joke/657",
+            "joke/1359",
+            "joke/1482",
+            "joke/944",
+            "joke/1295"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/313",
+            "joke/573",
+            "joke/36",
+            "joke/1268",
+            "joke/546",
+            "joke/1223",
+            "joke/304",
+            "joke/1419",
+            "joke/593",
+            "joke/1266",
+            "joke/1201",
+            "joke/284",
+            "joke/657",
+            "joke/1359",
+            "joke/1482",
+            "joke/944",
+            "joke/1295"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/313"
+          ]
+        }
+      }
+    },
+    "text": "nickelback walks into a bar...",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N042"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 13,
+    "prompt": "nickelback walks into",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 16,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        11,
+        2,
+        6,
+        9,
+        14,
+        3,
+        13,
+        8,
+        4,
+        7,
+        12,
+        5,
+        16,
+        10,
+        1,
+        15
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 11,
+      "text": "nickelback walks into a bar... it's a lotr themed essay.",
+      "continuation": "a bar... it's a lotr themed essay.",
+      "ids": [
+        2,
+        3175,
+        140,
+        68,
+        6,
+        101,
+        4,
+        4,
+        4,
+        60,
+        6,
+        2988,
+        3904,
+        1201,
+        4,
+        3
+      ],
+      "prompt": "nickelback walks into",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1715,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1715,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -14.113023546615779,
+      "average_log_probability": -1.1760852955513148,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.43478260869565216,
+          "nearest_match_ids": [
+            "joke/1201"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/1274"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.4166666666666667,
+          "nearest_match_ids": [
+            "joke/1274"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.7142857142857143,
+          "shared_match_ids": [
+            "joke/1274"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "nickelback walks into a bar... it's a lotr themed essay.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N029"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 14,
+    "prompt": "seven days without",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "seven days without makeup...",
+      "continuation": "makeup...",
+      "ids": [
+        2,
+        1488,
+        1140,
+        553,
+        846,
+        4,
+        4,
+        4,
+        3
+      ],
+      "prompt": "seven days without",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 5,
+      "new_word_count": 1,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.645181202308354,
+      "average_log_probability": -1.9290362404616708,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.16,
+          "nearest_match_ids": [
+            "joke/88"
+          ],
+          "max_shared_token_count": 2,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/88"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.125,
+          "nearest_match_ids": [
+            "joke/619"
+          ],
+          "max_shared_token_count": 1,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/619",
+            "joke/88"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/619",
+            "joke/88"
+          ],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "seven days without makeup...",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N019"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 14,
+    "prompt": "seven days without",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 15,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        5,
+        10,
+        9,
+        2,
+        15,
+        8,
+        14,
+        1,
+        11,
+        12,
+        6,
+        16,
+        7,
+        4,
+        13
+      ],
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_few_new_words",
+            "copied_training_continuation",
+            "shared_training_span"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "too_few_new_words"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 5,
+      "text": "seven days without a bar... but it was too saucy.",
+      "continuation": "a bar... but it was too saucy.",
+      "ids": [
+        2,
+        1488,
+        1140,
+        553,
+        6,
+        101,
+        4,
+        4,
+        4,
+        51,
+        19,
+        23,
+        95,
+        3580,
+        4,
+        3
+      ],
+      "prompt": "seven days without",
+      "sources": [
+        {
+          "strategy": "sample",
+          "seed": 1709,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1709,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -18.78984677334006,
+      "average_log_probability": -1.565820564445005,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5217391304347826,
+          "nearest_match_ids": [
+            "joke/158"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/158"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7058823529411765,
+          "nearest_match_ids": [
+            "joke/158"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.7142857142857143,
+          "shared_match_ids": [
+            "joke/158"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "seven days without a bar... but it was too saucy.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N048"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 15,
+    "prompt": "why is it",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why is it take to change a lightbulb? because it saw the salad dressing.",
+      "continuation": "take to change a lightbulb? because it saw the salad dressing.",
+      "ids": [
+        2,
+        17,
+        27,
+        19,
+        99,
+        10,
+        188,
+        6,
+        360,
+        5,
+        31,
+        19,
+        193,
+        7,
+        440,
+        348,
+        4,
+        3
+      ],
+      "prompt": "why is it",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -15.777638392919798,
+      "average_log_probability": -1.1269741709228427,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5833333333333334,
+          "nearest_match_ids": [
+            "joke/913"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.42857142857142855,
+          "shared_match_ids": [
+            "joke/1206",
+            "joke/1621",
+            "joke/1098",
+            "joke/217",
+            "joke/9",
+            "joke/913",
+            "joke/285",
+            "joke/1094",
+            "joke/1073",
+            "joke/467"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6666666666666666,
+          "nearest_match_ids": [
+            "joke/913"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.5454545454545454,
+          "shared_match_ids": [
+            "joke/1621",
+            "joke/217",
+            "joke/913",
+            "joke/1094"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why is it take to change a lightbulb? because it saw the salad dressing.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N044"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 15,
+    "prompt": "why is it",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "eligible_count": 17,
+      "candidate_count": 17,
+      "eligible_candidate_ids": [
+        0,
+        5,
+        13,
+        3,
+        2,
+        12,
+        9,
+        16,
+        15,
+        1,
+        8,
+        6,
+        10,
+        14,
+        4,
+        7,
+        11
+      ],
+      "rejections": [],
+      "constraints": {
+        "max_similarity": 0.8,
+        "min_content_words": 5
+      }
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why is it take to change a lightbulb? because it saw the salad dressing.",
+      "continuation": "take to change a lightbulb? because it saw the salad dressing.",
+      "ids": [
+        2,
+        17,
+        27,
+        19,
+        99,
+        10,
+        188,
+        6,
+        360,
+        5,
+        31,
+        19,
+        193,
+        7,
+        440,
+        348,
+        4,
+        3
+      ],
+      "prompt": "why is it",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -15.777638392919798,
+      "average_log_probability": -1.1269741709228427,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5833333333333334,
+          "nearest_match_ids": [
+            "joke/913"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.42857142857142855,
+          "shared_match_ids": [
+            "joke/1206",
+            "joke/1621",
+            "joke/1098",
+            "joke/217",
+            "joke/9",
+            "joke/913",
+            "joke/285",
+            "joke/1094",
+            "joke/1073",
+            "joke/467"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6666666666666666,
+          "nearest_match_ids": [
+            "joke/913"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.5454545454545454,
+          "shared_match_ids": [
+            "joke/1621",
+            "joke/217",
+            "joke/913",
+            "joke/1094"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why is it take to change a lightbulb? because it saw the salad dressing.",
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.25,
+      "modes": [
+        "beam",
+        "screened"
+      ]
+    },
+    "blind_id": "N028"
+  }
+]

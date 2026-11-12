@@ -1,0 +1,32 @@
+[
+  {
+    "model": "tied128_dropout35",
+    "components": [
+      {
+        "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied128_dropout35/checkpoints/best.pt",
+        "checkpoint_sha256": "de4d8aebeb8bd8ee81e704687602145cda7f00e4bb5ca44bda2d44cc34430836",
+        "epoch": 34
+      }
+    ],
+    "loss": {
+      "loss": 5.065001076761103,
+      "accuracy": 0.2732006125574273,
+      "count": 3265
+    }
+  },
+  {
+    "model": "tied256_dropout35_smooth05",
+    "components": [
+      {
+        "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+        "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+        "epoch": 22
+      }
+    ],
+    "loss": {
+      "loss": 4.824824278570062,
+      "accuracy": 0.29433384379785604,
+      "count": 3265
+    }
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "N001",
+    "prompt": "if you're american",
+    "text": "if you're american, a mama walks into a bar... he was a light bulb.",
+    "no_output": false
+  },
+  {
+    "id": "N002",
+    "prompt": "what is a",
+    "text": "what is a martian's favourite chocolate? a mars bar",
+    "no_output": false
+  },
+  {
+    "id": "N003",
+    "prompt": "nickelback walks into",
+    "text": "nickelback walks into a bar... the third one ducks.",
+    "no_output": false
+  },
+  {
+    "id": "N004",
+    "prompt": "what happens when",
+    "text": "what happens when you call a cow with no legs? ground beef.",
+    "no_output": false
+  },
+  {
+    "id": "N005",
+    "prompt": "why don't you",
+    "text": "why don't you hear a pterodactyl in the bathroom? because it was two - tired.",
+    "no_output": false
+  },
+  {
+    "id": "N006",
+    "prompt": "i'm in the",
+    "text": "i'm in the world quite frankly!",
+    "no_output": false
+  },
+  {
+    "id": "N007",
+    "prompt": "why does mr",
+    "text": "why does mr hate punchbug? because he bruises like - a peach!",
+    "no_output": false
+  },
+  {
+    "id": "N008",
+    "prompt": "where did napoleon",
+    "text": "where did napoleon bonaparte keep his armies? in his sleevies.",
+    "no_output": false
+  },
+  {
+    "id": "N009",
+    "prompt": "whats the problem",
+    "text": "whats the problem with an invisible and smells like carrots? bunny.",
+    "no_output": false
+  },
+  {
+    "id": "N010",
+    "prompt": "whats the problem",
+    "text": "whats the problem thing to put into a pie.",
+    "no_output": false
+  },
+  {
+    "id": "N011",
+    "prompt": "if you're american",
+    "text": "if you're american, what do you call a cow with no legs? ground beef.",
+    "no_output": false
+  },
+  {
+    "id": "N012",
+    "prompt": "a skeleton walks",
+    "text": "a skeleton walks into a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N013",
+    "prompt": "i don't have",
+    "text": "i don't have a potatographic memory... but it was a little crabby!",
+    "no_output": false
+  },
+  {
+    "id": "N014",
+    "prompt": "i'm in the",
+    "text": "i'm in the world... but i think it was a greyed!",
+    "no_output": false
+  },
+  {
+    "id": "N015",
+    "prompt": "where did napoleon",
+    "text": "where did napoleon bonaparte keep his armies? in his sleevies.",
+    "no_output": false
+  },
+  {
+    "id": "N016",
+    "prompt": "what is a",
+    "text": "what is a traveler's favorite font? times.",
+    "no_output": false
+  },
+  {
+    "id": "N017",
+    "prompt": "where did napoleon",
+    "text": "where did napoleon bonaparte say to the other? nice belt.",
+    "no_output": false
+  },
+  {
+    "id": "N018",
+    "prompt": "i don't have",
+    "text": "i don't have a lot of jokes about the unemployed... but none of them work.",
+    "no_output": false
+  },
+  {
+    "id": "N019",
+    "prompt": "seven days without",
+    "text": "seven days without makeup...",
+    "no_output": false
+  },
+  {
+    "id": "N020",
+    "prompt": "why there should",
+    "text": "why there should you avoid people in the world? because they have trans - sisters.",
+    "no_output": false
+  },
+  {
+    "id": "N021",
+    "prompt": "why does a",
+    "text": "why does a milking afraid of people? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N022",
+    "prompt": "why don't you",
+    "text": "why don't you want to hang out with a dude from chicago? because ' illinois you!",
+    "no_output": false
+  },
+  {
+    "id": "N023",
+    "prompt": "why does mr",
+    "text": "why does mr hate punchbug? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N024",
+    "prompt": "why don't you",
+    "text": "why don't you hear a pterodactyl in the bathroom? because it was two - tired.",
+    "no_output": false
+  },
+  {
+    "id": "N025",
+    "prompt": "why does a",
+    "text": "why does a bicycle have a kickstand? because it was two - tired.",
+    "no_output": false
+  },
+  {
+    "id": "N026",
+    "prompt": "why is it",
+    "text": "why is it impossible to be 12 inches long? because they're made of them.",
+    "no_output": false
+  },
+  {
+    "id": "N027",
+    "prompt": "where do you",
+    "text": "where do you call a deer with no legs? a cow.",
+    "no_output": false
+  },
+  {
+    "id": "N028",
+    "prompt": "why is it",
+    "text": "why is it take to change a lightbulb? because it saw the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "N029",
+    "prompt": "nickelback walks into",
+    "text": "nickelback walks into a bar... it's a lotr themed essay.",
+    "no_output": false
+  },
+  {
+    "id": "N030",
+    "prompt": "where do you",
+    "text": "where do you call a cow with no legs? ground beef.",
+    "no_output": false
+  },
+  {
+    "id": "N031",
+    "prompt": "why there should",
+    "text": "why there should always so good at driving locomotives? because they were trained.",
+    "no_output": false
+  },
+  {
+    "id": "N032",
+    "prompt": "what happens when",
+    "text": "what happens when your cousin eats all the pumpkin pie on thanksgiving? plump kin!",
+    "no_output": false
+  },
+  {
+    "id": "N033",
+    "prompt": "if you're american",
+    "text": "if you're american, what do you call a cow with no legs? ground beef.",
+    "no_output": false
+  },
+  {
+    "id": "N034",
+    "prompt": "i'm in the",
+    "text": "i'm in the world...",
+    "no_output": false
+  },
+  {
+    "id": "N035",
+    "prompt": "why does mr",
+    "text": "why does mr hate punchbug? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N036",
+    "prompt": "why there should",
+    "text": "why there should you hear a pterodactyl in the bathroom.",
+    "no_output": false
+  },
+  {
+    "id": "N037",
+    "prompt": "where do you",
+    "text": "where do you drown a hipster? the mainstream.",
+    "no_output": false
+  },
+  {
+    "id": "N038",
+    "prompt": "what is a",
+    "text": "what is a vampire's favorite fruit? a stick",
+    "no_output": false
+  },
+  {
+    "id": "N039",
+    "prompt": "seven days without",
+    "text": "seven days without wife and a mop...",
+    "no_output": false
+  },
+  {
+    "id": "N040",
+    "prompt": "why does a",
+    "text": "why does a milking stool have only three legs? because the cow has the udder!",
+    "no_output": false
+  },
+  {
+    "id": "N041",
+    "prompt": "i don't have",
+    "text": "i don't have a dirty joke? \"",
+    "no_output": false
+  },
+  {
+    "id": "N042",
+    "prompt": "nickelback walks into",
+    "text": "nickelback walks into a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N043",
+    "prompt": "what happens when",
+    "text": "what happens when you call a boomerang that doesn't come? a buccaneer!",
+    "no_output": false
+  },
+  {
+    "id": "N044",
+    "prompt": "why is it",
+    "text": "why is it take to change a lightbulb? because it saw the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "N045",
+    "prompt": "a skeleton walks",
+    "text": "a skeleton walks into a bar... i'm 27.",
+    "no_output": false
+  },
+  {
+    "id": "N046",
+    "prompt": "a skeleton walks",
+    "text": "a skeleton walks into a bar... the third one ducks.",
+    "no_output": false
+  },
+  {
+    "id": "N047",
+    "prompt": "whats the problem",
+    "text": "whats the problem with mexican and smells like red paint? blue paint",
+    "no_output": false
+  },
+  {
+    "id": "N048",
+    "prompt": "seven days without",
+    "text": "seven days without a bar... but it was too saucy.",
+    "no_output": false
+  }
+]

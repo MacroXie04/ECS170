@@ -1,0 +1,37 @@
+[
+  {
+    "model": "previous_late",
+    "components": [
+      {
+        "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+        "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+        "epoch": 27
+      }
+    ],
+    "loss": {
+      "loss": 5.78562029033688,
+      "accuracy": 0.2951705504896994,
+      "count": 2961
+    }
+  },
+  {
+    "model": "tied_mix25",
+    "components": [
+      {
+        "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+        "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+        "epoch": 22
+      },
+      {
+        "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+        "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+        "epoch": 27
+      }
+    ],
+    "loss": {
+      "loss": 4.852380424687605,
+      "accuracy": 0.31171901384667344,
+      "count": 2961
+    }
+  }
+]

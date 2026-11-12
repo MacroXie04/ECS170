@@ -1,0 +1,322 @@
+[
+  {
+    "id": "N001",
+    "score": 2,
+    "reason": "The negative-number setup connects directly to stopping at zero/nothing."
+  },
+  {
+    "id": "N002",
+    "score": 1,
+    "reason": "The horse and bar setup supplies no connection to the saucy ending."
+  },
+  {
+    "id": "N003",
+    "score": 1,
+    "reason": "The mathematical answer gives sine alone, leaving the tangent relationship incomplete."
+  },
+  {
+    "id": "N004",
+    "score": 1,
+    "reason": "The plant-related coinage does not explain walking or establish understandable wordplay about motion."
+  },
+  {
+    "id": "N005",
+    "score": 2,
+    "reason": "The answer supplies the sine-over-cosine identity for tangent and responds to the tan setup."
+  },
+  {
+    "id": "N006",
+    "score": 1,
+    "reason": "The sentence is readable but gives no context or responsive development for coming up with no legs."
+  },
+  {
+    "id": "N007",
+    "score": 2,
+    "reason": "The time-flies phrase is reversed into a frog eating flies, linking the speaker and punchline."
+  },
+  {
+    "id": "N008",
+    "score": 1,
+    "reason": "The artists become an unexplained singular woman, so the lamb and vegan ending do not form a coherent narrative."
+  },
+  {
+    "id": "N009",
+    "score": 0,
+    "reason": "The first sentence ends at while and the following pronoun has no established referent."
+  },
+  {
+    "id": "N010",
+    "score": 0,
+    "reason": "Only an unfinished setup is provided."
+  },
+  {
+    "id": "N011",
+    "score": 1,
+    "reason": "Watching the bartender’s step has no established connection to the bear entering."
+  },
+  {
+    "id": "N012",
+    "score": 1,
+    "reason": "A failed date is a generic reason to be upset, with no developed connection to the lobster setup."
+  },
+  {
+    "id": "N013",
+    "score": 0,
+    "reason": "The question is malformed and ends in unrelated URL fragments."
+  },
+  {
+    "id": "N014",
+    "score": 1,
+    "reason": "Being outstanding in a field neither explains the lobster’s distress nor supplies matching wordplay."
+  },
+  {
+    "id": "N015",
+    "score": 0,
+    "reason": "The opening is grammatically broken and the appended cow answer is mismatched."
+  },
+  {
+    "id": "N016",
+    "score": 0,
+    "reason": "Only the bear-entering-a-bar setup is provided."
+  },
+  {
+    "id": "N017",
+    "score": 1,
+    "reason": "The third participant is never introduced, so the ducking ending does not follow the single bear."
+  },
+  {
+    "id": "N018",
+    "score": 1,
+    "reason": "The monastery setup has no understandable connection to the fish-without-i answer."
+  },
+  {
+    "id": "N019",
+    "score": 0,
+    "reason": "The question lacks a grammatical predicate and the answer changes to an unsupported singular subject."
+  },
+  {
+    "id": "N020",
+    "score": 0,
+    "reason": "The question uses what where a grammatical reason question is needed, and the answer adds an unsupported scene."
+  },
+  {
+    "id": "N021",
+    "score": 0,
+    "reason": "The question is left without an answer or development."
+  },
+  {
+    "id": "N022",
+    "score": 2,
+    "reason": "The tyrant’s removal and the peach/impeached wordplay respond directly to the setup."
+  },
+  {
+    "id": "N023",
+    "score": 0,
+    "reason": "The sick subject is grammatically incomplete and the brand answer supplies no coherent joke."
+  },
+  {
+    "id": "N024",
+    "score": 1,
+    "reason": "The sentence expresses an expectation and disappointment, but no identified subreddit or punchline supports the soap connection."
+  },
+  {
+    "id": "N025",
+    "score": 1,
+    "reason": "An intention to reach another slide does not explain why the chicken could not cross."
+  },
+  {
+    "id": "N026",
+    "score": 0,
+    "reason": "Only an unfinished introductory setup is provided."
+  },
+  {
+    "id": "N027",
+    "score": 2,
+    "reason": "The tomato’s blush connects to seeing dressing in the salad/clothing double meaning."
+  },
+  {
+    "id": "N028",
+    "score": 2,
+    "reason": "The personified melons avoid jungle poker because cheetahs sounds like cheaters; the answer responds to the stated activity and setting."
+  },
+  {
+    "id": "N029",
+    "score": 0,
+    "reason": "The question lacks the verb required after plant and does not form a complete setup."
+  },
+  {
+    "id": "N030",
+    "score": 0,
+    "reason": "The question receives no answer or punchline."
+  },
+  {
+    "id": "N031",
+    "score": 0,
+    "reason": "The sick subject is grammatically incomplete and the park answer does not repair it."
+  },
+  {
+    "id": "N032",
+    "score": 0,
+    "reason": "The butched-after phrase does not form an understandable grammatical setup."
+  },
+  {
+    "id": "N033",
+    "score": 1,
+    "reason": "The sudden singular subject and soda pun do not connect to two flies on a toilet seat."
+  },
+  {
+    "id": "N034",
+    "score": 1,
+    "reason": "The saucy ending does not connect to the woman owning a taser."
+  },
+  {
+    "id": "N035",
+    "score": 0,
+    "reason": "The sentence has a broken hit-a-bar construction and stops without development."
+  },
+  {
+    "id": "N036",
+    "score": 1,
+    "reason": "The outstanding-field phrase provides no developed connection to the accounts-manager setup."
+  },
+  {
+    "id": "N037",
+    "score": 0,
+    "reason": "The woman-to-make-a-bar construction is ungrammatical and the subject changes without explanation."
+  },
+  {
+    "id": "N038",
+    "score": 0,
+    "reason": "The taser sentence is left as a setup without a completed event or punchline."
+  },
+  {
+    "id": "N039",
+    "score": 0,
+    "reason": "The hit-a-kid construction is grammatically broken and the appended water clause does not form a coherent event."
+  },
+  {
+    "id": "N040",
+    "score": 0,
+    "reason": "Only the horse-entering-a-bar setup is provided."
+  },
+  {
+    "id": "N041",
+    "score": 1,
+    "reason": "The soda/depression phrase is not connected to anything established about the horse."
+  },
+  {
+    "id": "N042",
+    "score": 1,
+    "reason": "Being outstanding in a field does not explain the pirate’s alphabet difficulty."
+  },
+  {
+    "id": "N043",
+    "score": 1,
+    "reason": "Being outstanding in a field neither explains the lobster’s distress nor supplies matching wordplay."
+  },
+  {
+    "id": "N044",
+    "score": 1,
+    "reason": "The bear’s crabby mood is an unrelated generic ending with no developed connection."
+  },
+  {
+    "id": "N045",
+    "score": 0,
+    "reason": "The flies-and-mop sentence stops at an unfinished setup."
+  },
+  {
+    "id": "N046",
+    "score": 0,
+    "reason": "The hit-a-job construction is ungrammatical and unfinished."
+  },
+  {
+    "id": "N047",
+    "score": 0,
+    "reason": "The answer stops at a little without completing its description."
+  },
+  {
+    "id": "N048",
+    "score": 1,
+    "reason": "The bad-yolks phrase has no established connection to the alligator’s sexual difficulty."
+  },
+  {
+    "id": "N049",
+    "score": 0,
+    "reason": "The answer is missing after the opening quotation mark."
+  },
+  {
+    "id": "N050",
+    "score": 1,
+    "reason": "The outstanding-field phrase provides no developed connection to the accounts-manager setup."
+  },
+  {
+    "id": "N051",
+    "score": 1,
+    "reason": "The frog-related wordplay is recognizable, but he has no established referent and the reply does not complete a self-contained exchange."
+  },
+  {
+    "id": "N052",
+    "score": 1,
+    "reason": "Two monocles become an unexplained singular subject, and the no-body answer does not explain their party situation."
+  },
+  {
+    "id": "N053",
+    "score": 1,
+    "reason": "The bartender and olive/Oliver phrase have no established connection to the artists’ spill."
+  },
+  {
+    "id": "N054",
+    "score": 0,
+    "reason": "Only a flies-on-a-seat setup is provided."
+  },
+  {
+    "id": "N055",
+    "score": 1,
+    "reason": "The generic insult could be spoken by anyone and does not develop a responsive snowman punchline."
+  },
+  {
+    "id": "N056",
+    "score": 0,
+    "reason": "Only a flies-on-a-seat setup is provided, without a completed joke or event."
+  },
+  {
+    "id": "N057",
+    "score": 1,
+    "reason": "A third participant is never introduced, so ducking does not follow the single horse setup."
+  },
+  {
+    "id": "N058",
+    "score": 0,
+    "reason": "The question lacks the verb needed to connect the sick subject and pickles."
+  },
+  {
+    "id": "N059",
+    "score": 0,
+    "reason": "The answer stops at he was always and remains incomplete."
+  },
+  {
+    "id": "N060",
+    "score": 1,
+    "reason": "Waving does not explain what happened to the team in the stated game or establish responsive wordplay."
+  },
+  {
+    "id": "N061",
+    "score": 0,
+    "reason": "The where-do-sick-live-in question is malformed and its answer does not name a place."
+  },
+  {
+    "id": "N062",
+    "score": 2,
+    "reason": "The ducks serve as personified speakers, while the legless cow and ground-beef answer form internally responsive wordplay."
+  },
+  {
+    "id": "N063",
+    "score": 2,
+    "reason": "The sexual-difficulty setup connects directly to the reptile/erectile-dysfunction wordplay."
+  },
+  {
+    "id": "N064",
+    "score": 0,
+    "reason": "The hit-a-kid construction is grammatically broken and the appended water clause does not form a coherent event."
+  }
+]

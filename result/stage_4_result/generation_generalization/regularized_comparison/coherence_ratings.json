@@ -1,0 +1,322 @@
+[
+  {
+    "id": "N001",
+    "score": 0,
+    "reason": "Only an introductory question is provided, without its promised development."
+  },
+  {
+    "id": "N002",
+    "score": 0,
+    "reason": "The quoted speech is missing after he said."
+  },
+  {
+    "id": "N003",
+    "score": 0,
+    "reason": "The how-does question has an ungrammatical to-make predicate."
+  },
+  {
+    "id": "N004",
+    "score": 0,
+    "reason": "Two incompatible question constructions are combined without a grammatical setup."
+  },
+  {
+    "id": "N005",
+    "score": 0,
+    "reason": "The say construction is malformed and no answer follows."
+  },
+  {
+    "id": "N006",
+    "score": 0,
+    "reason": "The other day is incorrectly used as the destination of came up to."
+  },
+  {
+    "id": "N007",
+    "score": 0,
+    "reason": "One people has incorrect number agreement and the question receives no answer."
+  },
+  {
+    "id": "N008",
+    "score": 0,
+    "reason": "Only an unfinished setup is provided."
+  },
+  {
+    "id": "N009",
+    "score": 0,
+    "reason": "He asked have it was does not form a grammatical continuation."
+  },
+  {
+    "id": "N010",
+    "score": 0,
+    "reason": "Only an unfinished setup is provided."
+  },
+  {
+    "id": "N011",
+    "score": 0,
+    "reason": "The opening lacks a verb and the later question ends without its answer."
+  },
+  {
+    "id": "N012",
+    "score": 0,
+    "reason": "Why was the pirate cross is an ungrammatical question construction."
+  },
+  {
+    "id": "N013",
+    "score": 1,
+    "reason": "Calling a legless cow a stick has no understandable connection to its condition."
+  },
+  {
+    "id": "N014",
+    "score": 0,
+    "reason": "Why was the chicken cross is an ungrammatical question construction."
+  },
+  {
+    "id": "N015",
+    "score": 0,
+    "reason": "The came-up-to-be-a-hotel construction and abrupt appended question do not form an intelligible setup."
+  },
+  {
+    "id": "N016",
+    "score": 0,
+    "reason": "Only the bear-entering-a-bar setup is provided."
+  },
+  {
+    "id": "N017",
+    "score": 0,
+    "reason": "The bear-entering-a-bar sentence lacks its verb."
+  },
+  {
+    "id": "N018",
+    "score": 1,
+    "reason": "The generic reply does not develop any responsive connection to the ducks."
+  },
+  {
+    "id": "N019",
+    "score": 0,
+    "reason": "Melons people does not form a grammatical subject and predicate."
+  },
+  {
+    "id": "N020",
+    "score": 0,
+    "reason": "The question is left without an answer."
+  },
+  {
+    "id": "N021",
+    "score": 0,
+    "reason": "The answer is missing after the opening quotation mark."
+  },
+  {
+    "id": "N022",
+    "score": 0,
+    "reason": "Several incompatible question clauses are combined without a grammatical question or answer."
+  },
+  {
+    "id": "N023",
+    "score": 0,
+    "reason": "The sick subject is grammatically incomplete and the reply is missing."
+  },
+  {
+    "id": "N024",
+    "score": 0,
+    "reason": "Only a bar-entry setup is provided, with no developed event or punchline."
+  },
+  {
+    "id": "N025",
+    "score": 1,
+    "reason": "The outstanding-field phrase does not explain an inability to cross the road or establish responsive wordplay."
+  },
+  {
+    "id": "N026",
+    "score": 0,
+    "reason": "Only an unfinished man-entering-a-bar setup is provided."
+  },
+  {
+    "id": "N027",
+    "score": 0,
+    "reason": "The question is ungrammatical and has no answer."
+  },
+  {
+    "id": "N028",
+    "score": 0,
+    "reason": "The question lacks a grammatical predicate and the answer stops at a little."
+  },
+  {
+    "id": "N029",
+    "score": 0,
+    "reason": "The how-does question has an ungrammatical to-make predicate."
+  },
+  {
+    "id": "N030",
+    "score": 0,
+    "reason": "Melons people does not form a grammatical subject and predicate."
+  },
+  {
+    "id": "N031",
+    "score": 0,
+    "reason": "The sick subject is grammatically incomplete and the question has no answer."
+  },
+  {
+    "id": "N032",
+    "score": 1,
+    "reason": "The octopus and armies setup has no established connection to the buccaneer answer."
+  },
+  {
+    "id": "N033",
+    "score": 0,
+    "reason": "Going to the other day does not form an intelligible destination or completed setup."
+  },
+  {
+    "id": "N034",
+    "score": 0,
+    "reason": "The woman-joke and becoming-a-bar clauses do not form an intelligible grammatical narrative."
+  },
+  {
+    "id": "N035",
+    "score": 0,
+    "reason": "The sentence has a broken hit-a-bar construction and stops without development."
+  },
+  {
+    "id": "N036",
+    "score": 1,
+    "reason": "Being a road is not coherently connected to a scarecrow’s outstanding-field description."
+  },
+  {
+    "id": "N037",
+    "score": 1,
+    "reason": "The girl changes to an unexplained male subject and the head phrase has no developed connection."
+  },
+  {
+    "id": "N038",
+    "score": 0,
+    "reason": "Only an unfinished introductory setup is provided."
+  },
+  {
+    "id": "N039",
+    "score": 0,
+    "reason": "The sentence has a broken hit-a-bar construction and stops without development."
+  },
+  {
+    "id": "N040",
+    "score": 0,
+    "reason": "Only the horse-entering-a-bar setup is provided."
+  },
+  {
+    "id": "N041",
+    "score": 1,
+    "reason": "The unexplained first-person world statement does not follow the horse’s entrance."
+  },
+  {
+    "id": "N042",
+    "score": 1,
+    "reason": "The outstanding-field phrase does not explain an inability to cross the road or establish responsive wordplay."
+  },
+  {
+    "id": "N043",
+    "score": 0,
+    "reason": "Why was the chicken cross is an ungrammatical question construction."
+  },
+  {
+    "id": "N044",
+    "score": 0,
+    "reason": "Really bad out of them is not an intelligible grammatical continuation."
+  },
+  {
+    "id": "N045",
+    "score": 0,
+    "reason": "The two introduced subjects are missing and the remaining fragments do not complete the setup."
+  },
+  {
+    "id": "N046",
+    "score": 0,
+    "reason": "The hit-a-dirty-joke construction and incomplete know clause are ungrammatical."
+  },
+  {
+    "id": "N047",
+    "score": 1,
+    "reason": "Calling the artists’ dirty joke a fight supplies no established connection or responsive wordplay."
+  },
+  {
+    "id": "N048",
+    "score": 1,
+    "reason": "The outstanding-field phrase does not explain an inability to cross the road or establish responsive wordplay."
+  },
+  {
+    "id": "N049",
+    "score": 0,
+    "reason": "The answer is missing after the opening quotation mark."
+  },
+  {
+    "id": "N050",
+    "score": 1,
+    "reason": "Being a road is not coherently connected to a scarecrow’s outstanding-field description."
+  },
+  {
+    "id": "N051",
+    "score": 1,
+    "reason": "The generic you reply does not develop a responsive fly-related exchange."
+  },
+  {
+    "id": "N052",
+    "score": 0,
+    "reason": "About the chicken cross a road does not form a grammatical setup."
+  },
+  {
+    "id": "N053",
+    "score": 1,
+    "reason": "The world statement has no established connection to the artists’ dirty joke."
+  },
+  {
+    "id": "N054",
+    "score": 0,
+    "reason": "Going to the other day does not form an intelligible destination or completed setup."
+  },
+  {
+    "id": "N055",
+    "score": 0,
+    "reason": "The fish speaks to a day rather than an established participant and the answer is missing."
+  },
+  {
+    "id": "N056",
+    "score": 0,
+    "reason": "The promised two types are never identified, leaving only a setup."
+  },
+  {
+    "id": "N057",
+    "score": 0,
+    "reason": "Only the horse-entering-a-bar setup is provided."
+  },
+  {
+    "id": "N058",
+    "score": 0,
+    "reason": "The sick subject and wear-to-live predicate do not form a grammatical question."
+  },
+  {
+    "id": "N059",
+    "score": 0,
+    "reason": "The question lacks a grammatical predicate and the answer stops at a little."
+  },
+  {
+    "id": "N060",
+    "score": 0,
+    "reason": "The happened-to and say-to question constructions are combined ungrammatically."
+  },
+  {
+    "id": "N061",
+    "score": 0,
+    "reason": "The sick subject is grammatically incomplete and the answer stops at the other."
+  },
+  {
+    "id": "N062",
+    "score": 2,
+    "reason": "The ducks serve as personified speakers, while the legless cow and ground-beef answer form internally responsive wordplay."
+  },
+  {
+    "id": "N063",
+    "score": 1,
+    "reason": "The outstanding-field phrase does not explain an inability to cross the road or establish responsive wordplay."
+  },
+  {
+    "id": "N064",
+    "score": 0,
+    "reason": "The hit-the-street construction and wanted-to-the-other clause are grammatically broken."
+  }
+]

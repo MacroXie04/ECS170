@@ -1,0 +1,41 @@
+{
+  "models": [
+    {
+      "name": "tied128_dropout35",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied128_dropout35/checkpoints/best.pt"
+        }
+      ]
+    },
+    {
+      "name": "tied256_dropout35_smooth05",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        }
+      ]
+    }
+  ],
+  "sampling": {
+    "num_samples": 16,
+    "seed": 1704,
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "top_k": 40,
+    "max_new_tokens": 48
+  },
+  "screening": {
+    "max_similarity": 0.8,
+    "min_content_words": 5
+  },
+  "selection_rule": "Select by count of score2 coherent outputs that also pass the fixed novelty criteria; all16 prompts stay in denominator, including no-output. Tie-break by total coherence score2 count then lower validation NLL. Promote only if joint count improves over previous_late_beam and total score2 count declines by at most2/16; otherwise preserve previous default and expose novelty mode as experimental. Include two predeclared tied-weight regularized GRU models (128/.35/AdamW.01;256/.35/AdamW.01/smoothing.05) in the same comparison before locking. Do not tune after test-prefix evaluation.",
+  "coherence_rubric": {
+    "0": "incomplete, ungrammatical, repetitive, or no output",
+    "1": "readable but disconnected, contradictory, generic or missing a responsive punchline",
+    "2": "complete understandable continuation with semantically responsive setup/punchline or internally coherent wordplay"
+  },
+  "novelty_note": "Lexical screening only, not semantic originality or proof of generalization"
+}
