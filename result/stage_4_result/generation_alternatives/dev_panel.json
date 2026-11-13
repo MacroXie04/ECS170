@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "seed": 1704,
+  "prompts": [
+    {
+      "id": "joke/1373",
+      "prompt": "what is the",
+      "train_prefix_count": 11,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/893",
+      "prompt": "what's the difference",
+      "train_prefix_count": 11,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/632",
+      "prompt": "how much does",
+      "train_prefix_count": 5,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/1222",
+      "prompt": "have you heard",
+      "train_prefix_count": 4,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/517",
+      "prompt": "what's the best",
+      "train_prefix_count": 4,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/261",
+      "prompt": "i went to",
+      "train_prefix_count": 3,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/1393",
+      "prompt": "how does the",
+      "train_prefix_count": 2,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/794",
+      "prompt": "why do fish",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/1063",
+      "prompt": "i can make",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1217",
+      "prompt": "two fish are",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1340",
+      "prompt": "why are bears",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1358",
+      "prompt": "is your refrigerator",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1531",
+      "prompt": "a mathematician was",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1562",
+      "prompt": "my friend says",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/446",
+      "prompt": "where do dogs",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/890",
+      "prompt": "i just bought",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    }
+  ],
+  "sha256": "4d6bec7efca7c27524db40d4041aef44103fc5ba8cf07b9254f45d550889cd83",
+  "frozen_at_utc": "2026-11-12T12:30:06.444013+00:00",
+  "source_commit": "8e2babdc27cd42f923854579b485ecd9a8fce9c2",
+  "selection": "Frozen before generation_alternatives output inspection. Manual prefix-only selection among fresh validation prefixes, eight training-seen and eight unseen; neutral grammatical openings with question/narrative forms and familiar-prefix frequencies1..11. All tokens supported by frozen vocabulary. No validation reference completions were inspected for selection.",
+  "selection_type": "manually stratified development panel, not a random population estimate",
+  "prior_panel_files_sha256": {
+    "result/stage_4_result/generation_optimization/comparison/panel.json": "41bab500c413df4e57ad3df90a1058742ffdd0b65af3bda27fb16f86e6befb3a",
+    "result/stage_4_result/generation_generalization/dev_panel.json": "9255a95c16092ade17fb644e2b387734a214f5b3f5446e509a11210ac2c4fd8a",
+    "result/stage_4_result/generation_generalization/test_panel.json": "aa357bb81709281bbdbdcaa8898b4ee193bcfd219fc7ea466f14098cbac5af18"
+  },
+  "test_policy": "Prior frozen test-prefix manifest used only to exclude previously exposed prefixes. Newly eligible test texts/prefixes were not inspected. Loader-created test records were immediately discarded; reserve any new test panel until model/profile selection is frozen.",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "dataset_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+  "train_rows_sha256": "90f320d8b053f64d866620d9b04198826df8f7e306354729debeddf7ec636f78",
+  "validation_rows_sha256": "844805123683ba4ee93e960e3094549765303f86a9a400f942e76c96b88fa354",
+  "source_sha256": {
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "script/stage_4_script/compare_generation.py": "036444376c4aabefe53055d97438a35e6e18e67d5a8030cf6ba4d7c166e28b5c"
+  },
+  "coverage": {
+    "eligible_seen": 18,
+    "eligible_unseen": 43,
+    "selected_seen": 8,
+    "selected_unseen": 8,
+    "seen_prefix_frequency_min": 1,
+    "seen_prefix_frequency_max": 11
+  },
+  "evaluation_notes": [
+    "Blindly score coherence separately from training-copy diagnostics; all16 prompts stay in denominator.",
+    "Keep direct whole-joke copies and continuation copies/near-copies separate. A lower exact-copy count alone did not improve previous experiments.",
+    "Previously used panels are regression/development evidence, never relabelled as fresh test evidence."
+  ]
+}

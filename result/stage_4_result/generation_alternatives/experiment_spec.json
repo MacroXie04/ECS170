@@ -1,0 +1,96 @@
+{
+  "models": [
+    {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true
+    },
+    {
+      "name": "semantic_best",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        }
+      ]
+    },
+    {
+      "name": "semantic_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/last.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "0ece7bf22a52c164ae22615d86098bc69d051f2809a42d98466bd6966d25bd27"
+        }
+      ]
+    },
+    {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5
+    }
+  ],
+  "search": {
+    "beam_width": 12,
+    "max_new_tokens": 48,
+    "copy_penalties": [
+      0.0,
+      0.75,
+      1.5
+    ],
+    "min_match_words": 5,
+    "num_return_sequences": 8,
+    "seed": 1704,
+    "top_k": 40,
+    "min_relative_probability": 0.01
+  },
+  "source_sha256": {
+    "local_code/stage_4_code/Alternative_Generation.py": "245211273775066e6a1ef0d4bd858a58c1f2172df9c0222ce99323b9371ec195",
+    "local_code/stage_4_code/Copy_Aware_Decoder.py": "935891b96d207a289987bb44107762cd3a270910472aedf8d84ac29138106e2c",
+    "local_code/stage_4_code/Novel_Generation.py": "7c418ac2b7a4145f14adb74db2fee19986bf1ee5a2a71966177bb528ba8687c7",
+    "local_code/stage_4_code/Generation_Decoder.py": "8aff028a2c487cb7e2f3648d7e750e23a0205cc2e8a679a9a6d8fc2b2b46d69e",
+    "local_code/stage_4_code/Generation_Optimization.py": "1ce51b0d3690783a79b1568335805f33742f5d850542e9991a55ee835f715def",
+    "local_code/stage_4_code/Generation_Ensemble.py": "b0a2327bf4dac95bba767c8a8509172f61eb65b29c02a8414a2c1e2afcc1159f",
+    "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+    "local_code/stage_4_code/Regularized_Generation.py": "d9800c98c1c845013c38ffc63824c8d8c05bd9e7fd7d5b027f259fdf015ad6c1",
+    "local_code/stage_4_code/Semantic_Generation.py": "77454d1735c7d83dfa97adf5dc1c93026232f4b594740da1fb3871642c749cd2",
+    "local_code/stage_4_code/Semantic_Input_Generation.py": "e02a50ec5ed1d1e1905f912f8f3d9479d9eeb6d19968dd9d44a992732dff4e0c",
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+    "script/stage_4_script/compare_alternatives.py": "07a90c347fba45c6610952292a6273d6e245c63cdb7cf75ca194b531f7d34597",
+    "script/stage_4_script/compare_generation.py": "036444376c4aabefe53055d97438a35e6e18e67d5a8030cf6ba4d7c166e28b5c",
+    "script/stage_4_script/predict_novel_generation.py": "9d8bbb35ec52bbb65e362c606b78107a34c26e40ff9d042e12286d8f8d11050c"
+  },
+  "critic": {
+    "enabled": false,
+    "validation_auc": 0.6094183991246529,
+    "required_auc": 0.65,
+    "reason": "Failed predeclared synthetic-pair validation gate; not used for selection"
+  },
+  "semantic_choice": "Lowest plain validation NLL among four independently trained GloVe variants, selected before any generated texts; best and last checkpoints plus fixed .5late mixture evaluated",
+  "selection_rule": "Rank by strict novel-and-coherent count (unchanged .80 continuation screen), then direct-copy-free coherent count, then total coherence, fewer direct copies, lower validation NLL. Promote only if direct-copy-free coherent count improves versus previous_late__old_beam5, total coherence declines by at most2/16, combined direct-copy count declines, and strict novel-coherent count does not decline. Direct-copy-free excludes exact full/whole-continuation/span copies; it is NOT semantic originality. All16prompts including no-output remain denominator. Otherwise keep original default; no changes after final prefix test.",
+  "scope": "Own recurrent generators; optional disclosed public GloVe word vectors; no pretrained text-generation model, hand-written continuations or retrieval replacement",
+  "coherence_rubric": {
+    "0": "incomplete/ungrammatical/repetitive/no output",
+    "1": "readable but disconnected, generic, contradictory or no responsive punchline",
+    "2": "complete meaningful setup/punchline or internally coherent wordplay"
+  }
+}

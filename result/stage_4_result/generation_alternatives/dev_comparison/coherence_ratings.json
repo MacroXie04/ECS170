@@ -1,0 +1,652 @@
+[
+  {
+    "id": "A001",
+    "score": 2,
+    "reason": "Salt versus pepper directly explains the fish's water choice through the sneezing punchline."
+  },
+  {
+    "id": "A002",
+    "score": 0,
+    "reason": "The price question lacks a main verb and the salad-dressing answer is unrelated."
+  },
+  {
+    "id": "A003",
+    "score": 1,
+    "reason": "The vacuum purchase and riveting description do not form a responsive punchline."
+  },
+  {
+    "id": "A004",
+    "score": 2,
+    "reason": "The pirate earring price connects to the buck-an-ear/buccaneer wordplay."
+  },
+  {
+    "id": "A005",
+    "score": 1,
+    "reason": "The embedded bar question has no answer or developed punchline."
+  },
+  {
+    "id": "A006",
+    "score": 1,
+    "reason": "Trans-sisters has no explained relation to fish living in salt water."
+  },
+  {
+    "id": "A007",
+    "score": 1,
+    "reason": "The unnamed other does not answer the embedded joke-and-bar question."
+  },
+  {
+    "id": "A008",
+    "score": 1,
+    "reason": "The addiction advice and blew-it ending lack a connecting subject or premise."
+  },
+  {
+    "id": "A009",
+    "score": 1,
+    "reason": "The fish-in-a-tank setup is followed by posting metadata instead of a punchline."
+  },
+  {
+    "id": "A010",
+    "score": 1,
+    "reason": "The performance remark does not answer where dogs live."
+  },
+  {
+    "id": "A011",
+    "score": 2,
+    "reason": "Ordering a martini motivates the bartender's olive-or-twist/Oliver Twist wordplay; the unusual character still permits a coherent bar scene."
+  },
+  {
+    "id": "A012",
+    "score": 0,
+    "reason": "The opening mixes incompatible question grammar and the ending is malformed."
+  },
+  {
+    "id": "A013",
+    "score": 1,
+    "reason": "Riveting is a generic reaction with no responsive seafood or dancing wordplay."
+  },
+  {
+    "id": "A014",
+    "score": 1,
+    "reason": "Please help leaves the difference question unanswered."
+  },
+  {
+    "id": "A015",
+    "score": 1,
+    "reason": "The statement about changing a bar supplies no meaningful joke ending."
+  },
+  {
+    "id": "A016",
+    "score": 0,
+    "reason": "The question uses are with say and is grammatically broken."
+  },
+  {
+    "id": "A017",
+    "score": 1,
+    "reason": "The mathematician/bar identity and admission of ignorance do not connect meaningfully."
+  },
+  {
+    "id": "A018",
+    "score": 1,
+    "reason": "Other slide is unsupported by a road setup, and the answer does not explain how."
+  },
+  {
+    "id": "A019",
+    "score": 1,
+    "reason": "Reaching the other side states a purpose rather than answering how the chicken crosses."
+  },
+  {
+    "id": "A020",
+    "score": 2,
+    "reason": "Unemployed people and jokes that do not work support the same clear double meaning."
+  },
+  {
+    "id": "A021",
+    "score": 1,
+    "reason": "Tuna fish does not explain the stated prince/guitar difference."
+  },
+  {
+    "id": "A022",
+    "score": 1,
+    "reason": "Ground beef supplies a name rather than answering the location question."
+  },
+  {
+    "id": "A023",
+    "score": 1,
+    "reason": "The bar-making statement and unnamed other are disconnected."
+  },
+  {
+    "id": "A024",
+    "score": 1,
+    "reason": "Impeachment has no explained connection to agnosticism, dyslexia, or insomnia."
+  },
+  {
+    "id": "A025",
+    "score": 1,
+    "reason": "Too many cheetahs does not explain the mummy's plan against Superman."
+  },
+  {
+    "id": "A026",
+    "score": 1,
+    "reason": "Electrical resistance units do not explain capitalizing on an opportunity."
+  },
+  {
+    "id": "A027",
+    "score": 0,
+    "reason": "The sentence stops at an undeveloped addiction fragment."
+  },
+  {
+    "id": "A028",
+    "score": 0,
+    "reason": "The question is missing what the fish say, and its answer does not repair it."
+  },
+  {
+    "id": "A029",
+    "score": 2,
+    "reason": "Despite missing question punctuation, putting teeth into a pie is a clear eating-related reversal."
+  },
+  {
+    "id": "A030",
+    "score": 1,
+    "reason": "The unexplained mathematician/bar identity supplies no developed joke."
+  },
+  {
+    "id": "A031",
+    "score": 1,
+    "reason": "Crabbiness does not answer what should be put in a pie."
+  },
+  {
+    "id": "A032",
+    "score": 1,
+    "reason": "The soda-pressed pun has no soda premise and the sausage/mathematician framing is unexplained."
+  },
+  {
+    "id": "A033",
+    "score": 0,
+    "reason": "The question is malformed and the final adjective phrase is unfinished."
+  },
+  {
+    "id": "A034",
+    "score": 1,
+    "reason": "The outstanding remark neither explains the crossing method nor establishes connected wordplay."
+  },
+  {
+    "id": "A035",
+    "score": 0,
+    "reason": "The bartender's quoted speech is left unfinished."
+  },
+  {
+    "id": "A036",
+    "score": 2,
+    "reason": "Seafood and dancing jointly support the mussel/muscle injury pun."
+  },
+  {
+    "id": "A037",
+    "score": 0,
+    "reason": "The question omits what is said and the field answer is unrelated."
+  },
+  {
+    "id": "A038",
+    "score": 0,
+    "reason": "The opening construction is broken and the quoted speech is unfinished."
+  },
+  {
+    "id": "A039",
+    "score": 0,
+    "reason": "A broken refrigerator fragment is spliced into an unrelated chicken-and-belt question."
+  },
+  {
+    "id": "A040",
+    "score": 1,
+    "reason": "A stick does not explain the Botox/borax distinction."
+  },
+  {
+    "id": "A041",
+    "score": 2,
+    "reason": "The pirate's ear-piercing price is answered by the buck-an-ear/buccaneer pun."
+  },
+  {
+    "id": "A042",
+    "score": 2,
+    "reason": "Unlawful versus ill-eagle supplies an intelligible law/sick-bird distinction."
+  },
+  {
+    "id": "A043",
+    "score": 1,
+    "reason": "The mussel pun has no seafood context in the vacuum purchase."
+  },
+  {
+    "id": "A044",
+    "score": 1,
+    "reason": "The addiction advice does not motivate an obstacle-illusion ending."
+  },
+  {
+    "id": "A045",
+    "score": 0,
+    "reason": "The best/say question construction and the unnamed-other ending are broken."
+  },
+  {
+    "id": "A046",
+    "score": 0,
+    "reason": "The question has malformed grammar and the Martian setup does not support the salad-dressing response."
+  },
+  {
+    "id": "A047",
+    "score": 1,
+    "reason": "Buying a bar is a complete plain statement with no responsive punchline."
+  },
+  {
+    "id": "A048",
+    "score": 2,
+    "reason": "The teeth answer coherently reframes putting something into a pie as eating it."
+  },
+  {
+    "id": "A049",
+    "score": 1,
+    "reason": "The fish-on-a-bar statement has no developed joke or responsive ending."
+  },
+  {
+    "id": "A050",
+    "score": 1,
+    "reason": "The cow/bar setup and unnamed other do not connect."
+  },
+  {
+    "id": "A051",
+    "score": 0,
+    "reason": "The refrigerator question is an unfinished fragment."
+  },
+  {
+    "id": "A052",
+    "score": 0,
+    "reason": "The bartender's speech is introduced as a question but ends in an improperly closed fragment."
+  },
+  {
+    "id": "A053",
+    "score": 1,
+    "reason": "The question about recommending a lightbulb change has no answer or punchline."
+  },
+  {
+    "id": "A054",
+    "score": 0,
+    "reason": "The refrigerator opening uses incompatible auxiliary and verb forms."
+  },
+  {
+    "id": "A055",
+    "score": 1,
+    "reason": "The conflict statement is readable but has no developed humorous reversal."
+  },
+  {
+    "id": "A056",
+    "score": 0,
+    "reason": "The question combines are, wear, and say in an ungrammatical construction."
+  },
+  {
+    "id": "A057",
+    "score": 1,
+    "reason": "Soda-pressed has no soda or pressure premise in the fish-tank setup."
+  },
+  {
+    "id": "A058",
+    "score": 1,
+    "reason": "Calling the fish jerks gives a generic insult rather than an established salt-water explanation."
+  },
+  {
+    "id": "A059",
+    "score": 0,
+    "reason": "The question construction and a-other phrase are grammatically broken."
+  },
+  {
+    "id": "A060",
+    "score": 0,
+    "reason": "Is your refrigerator walks is an invalid auxiliary construction."
+  },
+  {
+    "id": "A061",
+    "score": 1,
+    "reason": "Lack-cluster performance does not explain living in salt water."
+  },
+  {
+    "id": "A062",
+    "score": 2,
+    "reason": "The sun is a star, so Starburst is a directly responsive candy pun."
+  },
+  {
+    "id": "A063",
+    "score": 1,
+    "reason": "Making a bar is a plain statement without a punchline."
+  },
+  {
+    "id": "A064",
+    "score": 0,
+    "reason": "The fish setup ends in broken posting markup rather than a completed joke."
+  },
+  {
+    "id": "A065",
+    "score": 1,
+    "reason": "The refrigerator/world question has no responsive continuation."
+  },
+  {
+    "id": "A066",
+    "score": 0,
+    "reason": "The yarn-race question ends in fragmented markup and a broken URL."
+  },
+  {
+    "id": "A067",
+    "score": 2,
+    "reason": "Ten tickles answers the amount needed to make a squid laugh and evokes tentacles."
+  },
+  {
+    "id": "A068",
+    "score": 1,
+    "reason": "The vague addiction statement and ignorance ending do not establish a joke."
+  },
+  {
+    "id": "A069",
+    "score": 0,
+    "reason": "What is the tomato blushing uses malformed question grammar, despite a recognizable borrowed ending."
+  },
+  {
+    "id": "A070",
+    "score": 2,
+    "reason": "The law versus ill-eagle interpretation coherently explains the stated distinction."
+  },
+  {
+    "id": "A071",
+    "score": 1,
+    "reason": "The fish/bar statement does not develop a setup and responsive punchline."
+  },
+  {
+    "id": "A072",
+    "score": 0,
+    "reason": "The bartender's quoted speech is left open and unfinished."
+  },
+  {
+    "id": "A073",
+    "score": 1,
+    "reason": "Salad dressing does not explain the Botox/borax distinction."
+  },
+  {
+    "id": "A074",
+    "score": 1,
+    "reason": "The cow-and-bar question has no answer or developed joke."
+  },
+  {
+    "id": "A075",
+    "score": 0,
+    "reason": "Why are bears wear uses invalid question grammar and the answer is unrelated."
+  },
+  {
+    "id": "A076",
+    "score": 1,
+    "reason": "Donkey tongs has no explained relation to a mummy destroying Superman."
+  },
+  {
+    "id": "A077",
+    "score": 0,
+    "reason": "The question lacks what the fish say and the ending has no clear referent."
+  },
+  {
+    "id": "A078",
+    "score": 0,
+    "reason": "The between construction is missing its second comparison term."
+  },
+  {
+    "id": "A079",
+    "score": 1,
+    "reason": "Salad dressing does not answer the Botox/borax comparison."
+  },
+  {
+    "id": "A080",
+    "score": 2,
+    "reason": "Ohm is an electrical unit and evokes the sacred syllable om, connecting both parts of the question."
+  },
+  {
+    "id": "A081",
+    "score": 0,
+    "reason": "The purchase clause is malformed and the interviewer's quoted speech is unfinished."
+  },
+  {
+    "id": "A082",
+    "score": 1,
+    "reason": "Ramifications is not connected to the seafood disco premise."
+  },
+  {
+    "id": "A083",
+    "score": 1,
+    "reason": "The embedded cow-and-bar question has no responsive answer."
+  },
+  {
+    "id": "A084",
+    "score": 1,
+    "reason": "Buying a sparrow joke is a plain claim without a developed punchline."
+  },
+  {
+    "id": "A085",
+    "score": 1,
+    "reason": "The counting categories do not answer the refrigerator question."
+  },
+  {
+    "id": "A086",
+    "score": 0,
+    "reason": "The location question is missing what the dogs say and ends in a vague fragment."
+  },
+  {
+    "id": "A087",
+    "score": 1,
+    "reason": "The seafood-disco visit is only a setup, without a punchline."
+  },
+  {
+    "id": "A088",
+    "score": 0,
+    "reason": "The price question omits the cow's action or cost predicate."
+  },
+  {
+    "id": "A089",
+    "score": 0,
+    "reason": "The question ends in an incomplete take-to-the-other construction."
+  },
+  {
+    "id": "A090",
+    "score": 1,
+    "reason": "The unnamed other has no clear relationship to the bar purchase."
+  },
+  {
+    "id": "A091",
+    "score": 1,
+    "reason": "The unnamed other does not connect to changing a bar."
+  },
+  {
+    "id": "A092",
+    "score": 1,
+    "reason": "The theft statement is readable but contains no developed mathematical joke or reversal."
+  },
+  {
+    "id": "A093",
+    "score": 0,
+    "reason": "The question combines best, borscht, and say in malformed grammar."
+  },
+  {
+    "id": "A094",
+    "score": 1,
+    "reason": "No body to go with has no relevant premise in the agnostic/dyslexia/insomnia setup."
+  },
+  {
+    "id": "A095",
+    "score": 1,
+    "reason": "A pool table is not established as a part of a tree or a cost-related answer."
+  },
+  {
+    "id": "A096",
+    "score": 0,
+    "reason": "Two incompatible clauses are joined without a valid grammatical structure."
+  },
+  {
+    "id": "A097",
+    "score": 1,
+    "reason": "The location question about calling a fish has no answer or punchline."
+  },
+  {
+    "id": "A098",
+    "score": 0,
+    "reason": "The ending breaks off into an unfinished and incoherent tossed-and-hose fragment."
+  },
+  {
+    "id": "A099",
+    "score": 1,
+    "reason": "The field remark does not explain the kidnapping-on-the-road setup."
+  },
+  {
+    "id": "A100",
+    "score": 0,
+    "reason": "The question is missing what the chicken says and its ending has no clear referent."
+  },
+  {
+    "id": "A101",
+    "score": 1,
+    "reason": "Salad dressing does not explain how the mummy will defeat Superman."
+  },
+  {
+    "id": "A102",
+    "score": 1,
+    "reason": "The ability to make a sparrow joke is asserted without actually developing the joke."
+  },
+  {
+    "id": "A103",
+    "score": 2,
+    "reason": "Little lighter evokes both a weight comparison with a hippo and a Zippo lighter, despite the awkward pronoun."
+  },
+  {
+    "id": "A104",
+    "score": 1,
+    "reason": "The outstanding-out remark does not connect to the kidnapping setup."
+  },
+  {
+    "id": "A105",
+    "score": 1,
+    "reason": "The cow-counting question has no supplied method or punchline."
+  },
+  {
+    "id": "A106",
+    "score": 0,
+    "reason": "The bears question combines incompatible are, wear, and say forms."
+  },
+  {
+    "id": "A107",
+    "score": 1,
+    "reason": "Luring him in it leaves the trap unspecified and supplies no responsive wordplay."
+  },
+  {
+    "id": "A108",
+    "score": 2,
+    "reason": "Jose/hose A and hose B connects the Spanish names to firefighters' equipment."
+  },
+  {
+    "id": "A109",
+    "score": 1,
+    "reason": "The fish-in-a-tank statement is only a setup without a punchline."
+  },
+  {
+    "id": "A110",
+    "score": 1,
+    "reason": "Repeating unlawful does not explain the stated distinction."
+  },
+  {
+    "id": "A111",
+    "score": 0,
+    "reason": "Going to go to the other day is a broken destination/time construction."
+  },
+  {
+    "id": "A112",
+    "score": 0,
+    "reason": "The between comparison is unfinished and lacks its second term."
+  },
+  {
+    "id": "A113",
+    "score": 0,
+    "reason": "What is the chicken say is an invalid question construction."
+  },
+  {
+    "id": "A114",
+    "score": 1,
+    "reason": "A generic jam does not establish a meaningful mummy/Superman punchline."
+  },
+  {
+    "id": "A115",
+    "score": 0,
+    "reason": "The refrigerator opening uses incompatible auxiliary and verb forms."
+  },
+  {
+    "id": "A116",
+    "score": 1,
+    "reason": "The rip-off purchase is a plain complaint without a developed joke or reversal."
+  },
+  {
+    "id": "A117",
+    "score": 1,
+    "reason": "The unexplained claim that a friend was a bar lacks a coherent joke development."
+  },
+  {
+    "id": "A118",
+    "score": 1,
+    "reason": "A bar does not explain the Botox/borax distinction."
+  },
+  {
+    "id": "A119",
+    "score": 1,
+    "reason": "The incomplete-data category is disconnected from the refrigerator question."
+  },
+  {
+    "id": "A120",
+    "score": 1,
+    "reason": "The meteor answer does not address the location question or the legless cow."
+  },
+  {
+    "id": "A121",
+    "score": 1,
+    "reason": "The lightbulb question is left without an answer or punchline."
+  },
+  {
+    "id": "A122",
+    "score": 1,
+    "reason": "Naming only Jose does not complete the two-firemen premise or its wordplay."
+  },
+  {
+    "id": "A123",
+    "score": 0,
+    "reason": "The question is missing what the chicken says."
+  },
+  {
+    "id": "A124",
+    "score": 1,
+    "reason": "Saucy has no explained connection to making a boomerang."
+  },
+  {
+    "id": "A125",
+    "score": 1,
+    "reason": "Porcel lane has no established connection to where dogs live."
+  },
+  {
+    "id": "A126",
+    "score": 1,
+    "reason": "Boogers does not answer where dogs obtain pickles."
+  },
+  {
+    "id": "A127",
+    "score": 2,
+    "reason": "Cheesy humor connects to the laughter/lactose-intolerant wordplay."
+  },
+  {
+    "id": "A128",
+    "score": 0,
+    "reason": "The question combines incompatible does/do forms and malformed noun phrases."
+  },
+  {
+    "id": "A129",
+    "score": 0,
+    "reason": "Why are bears say is an invalid question construction."
+  },
+  {
+    "id": "A130",
+    "score": 0,
+    "reason": "The best-thing-to-the-dentist question is grammatically incomplete and the answer is unrelated."
+  }
+]

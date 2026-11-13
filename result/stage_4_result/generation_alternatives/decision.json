@@ -1,0 +1,28 @@
+{
+  "locked_at_utc": "2026-11-13T01:12:29.910632+00:00",
+  "promoted": false,
+  "selected": "previous_late__old_beam5",
+  "experimental": "semantic_late_mix50__direct_union",
+  "best_overall": "semantic_late_mix50__direct_union",
+  "eligible_candidates": [],
+  "selection_rule": "Rank by strict novel-and-coherent count (unchanged .80 continuation screen), then direct-copy-free coherent count, then total coherence, fewer direct copies, lower validation NLL. Promote only if direct-copy-free coherent count improves versus previous_late__old_beam5, total coherence declines by at most2/16, combined direct-copy count declines, and strict novel-coherent count does not decline. Direct-copy-free excludes exact full/whole-continuation/span copies; it is NOT semantic originality. All16prompts including no-output remain denominator. Otherwise keep original default; no changes after final prefix test.",
+  "selection_implementation": "Apply predeclared promotion constraints, then rank eligible candidates; if none qualify, retain previous default.",
+  "spec_sha256": "0e0b748e4616db54cc184042ff1334bf996d9ab743eca0675e351528b174816c",
+  "panel_sha256": "89ca7154c4eb864ec2242e4ae70198a7efe6337bfca03f9b076946c0cffbb4fc",
+  "review_bindings": {
+    "outputs.json": "1e3d056bbe4506122f0e59048a4e8227ae52fa0391facd7048cad1c368b9aea0",
+    "candidate_pools.json": "e1f4eb9b761977caec105c9a755c956c345ff96cccd9a86df79c8cb7102e3f98",
+    "blind_review.json": "1a21af1f5a3ad40e83a6bb5a406156fc7cb1ee637edb88f1596c474aebc931a9",
+    "blind_mapping.json": "18ef70a9d2eae8aea881a7161905267feabcaaa301e6a40460203eaf176784cd",
+    "coherence_ratings.json": "cfcdc743c6ce5e6e4bc71a4a5c1ffb582e23468e6c95bafa5fee9e3c3ead6cc3",
+    "metrics.json": "f96080bcf80bd92387c8e231da6f48734b985aca672d322b85acd5fa53341e7c",
+    "provenance.json": "48ea21a19fa81214e2f1bbb469b470a4aed32cd4bf5c87e91cc748c1f4cdb945"
+  },
+  "profile_sha256": {
+    "recommendation.json": "958146a789c063ba7682561517bc93cd735ff23bdf6fbddc14c01068aca6a0ad",
+    "recommendation_experimental.json": "9cc9fe00aac0548abde7577cc00d6ddb6956c25f42789889fe69339c0f3f1bd6"
+  },
+  "finalizer_sha256": "91c6e96a36b7edc489a5e370a6fa404f73cf2f0014a055b7a3840394142e7184",
+  "test_evaluated_at_selection": false,
+  "caveat": "Direct-copy-free is weaker than the unchanged strict .80 novelty diagnostic; neither proves semantic originality."
+}

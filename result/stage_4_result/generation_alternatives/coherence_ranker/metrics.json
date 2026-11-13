@@ -1,0 +1,13 @@
+{
+  "epoch": 14,
+  "validation_loss": 0.6781616806983948,
+  "validation_auc": 0.6094183991246529,
+  "epochs_completed": 24,
+  "pair_counts": {
+    "train": 2559,
+    "validation": 327
+  },
+  "enabled": false,
+  "checkpoint_sha256": "eff109a5c464d0f9d62b2668c2af7e8d238e554513a9bfc92c5ce3136322b466",
+  "limitation": "Synthetic shuffled negatives measure topic compatibility; they do not establish generated-joke coherence. No test data used."
+}

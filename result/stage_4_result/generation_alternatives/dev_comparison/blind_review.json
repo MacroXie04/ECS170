@@ -1,0 +1,782 @@
+[
+  {
+    "id": "A001",
+    "prompt": "why do fish",
+    "text": "why do fish live in salt water? because pepper would make them sneeze!",
+    "no_output": false
+  },
+  {
+    "id": "A002",
+    "prompt": "how much does",
+    "text": "how much does a cow with no legs? because it saw the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "A003",
+    "prompt": "i just bought",
+    "text": "i just bought a vacuum cleaner six months ago... it was riveting.",
+    "no_output": false
+  },
+  {
+    "id": "A004",
+    "prompt": "how much does",
+    "text": "how much does a pirate earing cost? a buccaneer",
+    "no_output": false
+  },
+  {
+    "id": "A005",
+    "prompt": "my friend says",
+    "text": "my friend says what do you call a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A006",
+    "prompt": "why do fish",
+    "text": "why do fish live in salt water? because they have trans - sisters.",
+    "no_output": false
+  },
+  {
+    "id": "A007",
+    "prompt": "my friend says",
+    "text": "my friend says what do you call a joke with a bar... he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A008",
+    "prompt": "my friend says",
+    "text": "my friend says to be addicted... but i blew it!",
+    "no_output": false
+  },
+  {
+    "id": "A009",
+    "prompt": "two fish are",
+    "text": "two fish are in a tank. [x - post from r / jokes] (http: / / www. youtube. com / watch? v = cykdxsahlkg)",
+    "no_output": false
+  },
+  {
+    "id": "A010",
+    "prompt": "where do dogs",
+    "text": "where do dogs go to live in? their performance is lack - cluster.",
+    "no_output": false
+  },
+  {
+    "id": "A011",
+    "prompt": "a mathematician was",
+    "text": "a mathematician was a jealous zombie... and orders a martini. the bartender asks \" olive ' er twist? \"",
+    "no_output": false
+  },
+  {
+    "id": "A012",
+    "prompt": "what is the",
+    "text": "what is the chicken say to the road? because he was outstanding out.",
+    "no_output": false
+  },
+  {
+    "id": "A013",
+    "prompt": "i went to",
+    "text": "i went to a seafood disco last week... it was riveting.",
+    "no_output": false
+  },
+  {
+    "id": "A014",
+    "prompt": "what's the difference",
+    "text": "what's the difference between a thai man and a thai woman? pls help.",
+    "no_output": false
+  },
+  {
+    "id": "A015",
+    "prompt": "i went to",
+    "text": "i went to change a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A016",
+    "prompt": "why are bears",
+    "text": "why are bears say to change a lightbulb?",
+    "no_output": false
+  },
+  {
+    "id": "A017",
+    "prompt": "a mathematician was",
+    "text": "a mathematician was a bar... i said, i don't know.",
+    "no_output": false
+  },
+  {
+    "id": "A018",
+    "prompt": "how does the",
+    "text": "how does the chicken cross the road? to get to the other slide",
+    "no_output": false
+  },
+  {
+    "id": "A019",
+    "prompt": "how does the",
+    "text": "how does the chicken cross the road? to get to the other side.",
+    "no_output": false
+  },
+  {
+    "id": "A020",
+    "prompt": "i can make",
+    "text": "i can make a joke about the unemployed... but none of them work.",
+    "no_output": false
+  },
+  {
+    "id": "A021",
+    "prompt": "what's the difference",
+    "text": "what's the difference between a firstborn prince and a guitar? you can tuna fish!",
+    "no_output": false
+  },
+  {
+    "id": "A022",
+    "prompt": "where do dogs",
+    "text": "where do dogs call a cow with no legs? ground beef.",
+    "no_output": false
+  },
+  {
+    "id": "A023",
+    "prompt": "i can make",
+    "text": "i can make a bar... he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A024",
+    "prompt": "have you heard",
+    "text": "have you heard the one about the agnostic with dyslexia and insomnia? he got impeached!",
+    "no_output": false
+  },
+  {
+    "id": "A025",
+    "prompt": "how does the",
+    "text": "how does the mummy plan to destroy superman? too many cheetahs",
+    "no_output": false
+  },
+  {
+    "id": "A026",
+    "prompt": "what's the best",
+    "text": "what's the best way to capitalize on an opportunity? in oooooohms.",
+    "no_output": false
+  },
+  {
+    "id": "A027",
+    "prompt": "i went to",
+    "text": "i went to be addicted...",
+    "no_output": false
+  },
+  {
+    "id": "A028",
+    "prompt": "why do fish",
+    "text": "why do fish say to the other? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "A029",
+    "prompt": "what's the best",
+    "text": "what's the best thing to put into a pie your teeth.",
+    "no_output": false
+  },
+  {
+    "id": "A030",
+    "prompt": "a mathematician was",
+    "text": "a mathematician was a bar..",
+    "no_output": false
+  },
+  {
+    "id": "A031",
+    "prompt": "what's the best",
+    "text": "what's the best thing to put into a pie? because it was a little crabby!",
+    "no_output": false
+  },
+  {
+    "id": "A032",
+    "prompt": "a mathematician was",
+    "text": "a mathematician was a depressed sausage... he was soda - pressed.",
+    "no_output": false
+  },
+  {
+    "id": "A033",
+    "prompt": "why do fish",
+    "text": "why do fish say to the other? because it was a little",
+    "no_output": false
+  },
+  {
+    "id": "A034",
+    "prompt": "how does the",
+    "text": "how does the chicken cross the road? because he was outstanding out.",
+    "no_output": false
+  },
+  {
+    "id": "A035",
+    "prompt": "two fish are",
+    "text": "two fish are walking on a bar... the bartender says, \"",
+    "no_output": false
+  },
+  {
+    "id": "A036",
+    "prompt": "i went to",
+    "text": "i went to a seafood disco last week... and pulled a mussel.",
+    "no_output": false
+  },
+  {
+    "id": "A037",
+    "prompt": "why do fish",
+    "text": "why do fish say to the other ocean? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "A038",
+    "prompt": "two fish are",
+    "text": "two fish are into a bar... i said \"",
+    "no_output": false
+  },
+  {
+    "id": "A039",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator] why did the chicken say to the 8? nice belt.",
+    "no_output": false
+  },
+  {
+    "id": "A040",
+    "prompt": "what's the difference",
+    "text": "what's the difference between botox and borax? a stick",
+    "no_output": false
+  },
+  {
+    "id": "A041",
+    "prompt": "how much does",
+    "text": "how much does it cost a pirate to get his ear pierced? a buccaneer!",
+    "no_output": false
+  },
+  {
+    "id": "A042",
+    "prompt": "what's the difference",
+    "text": "what's the difference between unlawful and illegal? unlawful is against the law and the other is a sick bird.",
+    "no_output": false
+  },
+  {
+    "id": "A043",
+    "prompt": "i just bought",
+    "text": "i just bought a vacuum cleaner six months ago... and pulled a mussel.",
+    "no_output": false
+  },
+  {
+    "id": "A044",
+    "prompt": "my friend says",
+    "text": "my friend says to be addicted... but i guess it must have been an obstacle illusion.",
+    "no_output": false
+  },
+  {
+    "id": "A045",
+    "prompt": "what's the best",
+    "text": "what's the best say to the road? because he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A046",
+    "prompt": "what is the",
+    "text": "what is the martian's blushing? because it saw the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "A047",
+    "prompt": "i just bought",
+    "text": "i just bought a bar..",
+    "no_output": false
+  },
+  {
+    "id": "A048",
+    "prompt": "what's the best",
+    "text": "what's the best thing to put into a pie? your teeth!",
+    "no_output": false
+  },
+  {
+    "id": "A049",
+    "prompt": "two fish are",
+    "text": "two fish are on a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A050",
+    "prompt": "have you heard",
+    "text": "have you heard a cow with a bar... he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A051",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator competition...",
+    "no_output": false
+  },
+  {
+    "id": "A052",
+    "prompt": "my friend says",
+    "text": "my friend says he was leaving a bar... the bartender asks, i don't know. \"",
+    "no_output": false
+  },
+  {
+    "id": "A053",
+    "prompt": "why do fish",
+    "text": "why do fish say to change a lightbulb?",
+    "no_output": false
+  },
+  {
+    "id": "A054",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator walks into a bar... he was a tad polish.",
+    "no_output": false
+  },
+  {
+    "id": "A055",
+    "prompt": "i can make",
+    "text": "i can make a lot of conflict in the world.",
+    "no_output": false
+  },
+  {
+    "id": "A056",
+    "prompt": "why are bears",
+    "text": "why are bears wear say to the other? because it was the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "A057",
+    "prompt": "two fish are",
+    "text": "two fish are in a tank... he was soda - pressed.",
+    "no_output": false
+  },
+  {
+    "id": "A058",
+    "prompt": "why do fish",
+    "text": "why do fish live in salt water? because they're jerks.",
+    "no_output": false
+  },
+  {
+    "id": "A059",
+    "prompt": "what's the best",
+    "text": "what's the best say to the road? because he was a other.",
+    "no_output": false
+  },
+  {
+    "id": "A060",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator walks into a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A061",
+    "prompt": "why do fish",
+    "text": "why do fish live in salt water? because their performance is lack - cluster.",
+    "no_output": false
+  },
+  {
+    "id": "A062",
+    "prompt": "what is the",
+    "text": "what is the sun's favorite candy? starburst!",
+    "no_output": false
+  },
+  {
+    "id": "A063",
+    "prompt": "i can make",
+    "text": "i can make a bar..",
+    "no_output": false
+  },
+  {
+    "id": "A064",
+    "prompt": "two fish are",
+    "text": "two fish are in a tank. [x - post from r / jokes)",
+    "no_output": false
+  },
+  {
+    "id": "A065",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator in the world.",
+    "no_output": false
+  },
+  {
+    "id": "A066",
+    "prompt": "have you heard",
+    "text": "have you heard about the great yarn race? * * jane: / / www. youtube.",
+    "no_output": false
+  },
+  {
+    "id": "A067",
+    "prompt": "how much does",
+    "text": "how much does it take to make a squid laugh? ten tickles.",
+    "no_output": false
+  },
+  {
+    "id": "A068",
+    "prompt": "i went to",
+    "text": "i went to be addicted... but i don't know",
+    "no_output": false
+  },
+  {
+    "id": "A069",
+    "prompt": "what is the",
+    "text": "what is the tomato blushing? because it saw the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "A070",
+    "prompt": "what's the difference",
+    "text": "what's the difference between unlawful and illegal? one is against the law and the other is a sick bird.",
+    "no_output": false
+  },
+  {
+    "id": "A071",
+    "prompt": "two fish are",
+    "text": "two fish are into a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A072",
+    "prompt": "a mathematician was",
+    "text": "a mathematician was caught stealing on a bar... the bartender says, \"",
+    "no_output": false
+  },
+  {
+    "id": "A073",
+    "prompt": "what's the difference",
+    "text": "what's the difference between botox and borax? because it saw the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "A074",
+    "prompt": "have you heard",
+    "text": "have you heard a cow with a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A075",
+    "prompt": "why are bears",
+    "text": "why are bears wear boots? because they have boooogers.",
+    "no_output": false
+  },
+  {
+    "id": "A076",
+    "prompt": "how does the",
+    "text": "how does the mummy plan to destroy superman? he uses his donkey tongs.",
+    "no_output": false
+  },
+  {
+    "id": "A077",
+    "prompt": "why do fish",
+    "text": "why do fish say to the other? because he was outstanding in it.",
+    "no_output": false
+  },
+  {
+    "id": "A078",
+    "prompt": "what's the difference",
+    "text": "what's the difference between a bar... he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A079",
+    "prompt": "what is the",
+    "text": "what is the difference between botox and borax? because it saw the salad dressing.",
+    "no_output": false
+  },
+  {
+    "id": "A080",
+    "prompt": "what is the",
+    "text": "what is the most religious unit in electrical engineering? ohm.",
+    "no_output": false
+  },
+  {
+    "id": "A081",
+    "prompt": "i just bought",
+    "text": "i just bought a lot of conflict in the unemployed... the interviewer said, \"",
+    "no_output": false
+  },
+  {
+    "id": "A082",
+    "prompt": "i went to",
+    "text": "i went to a seafood disco last week... but it entailed too many ramifications!",
+    "no_output": false
+  },
+  {
+    "id": "A083",
+    "prompt": "my friend says",
+    "text": "my friend says what do you call a cow with a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A084",
+    "prompt": "i just bought",
+    "text": "i just bought a sparrow joke.",
+    "no_output": false
+  },
+  {
+    "id": "A085",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator in the world. those who can count and those who can't.",
+    "no_output": false
+  },
+  {
+    "id": "A086",
+    "prompt": "where do dogs",
+    "text": "where do dogs say to the other? because it was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A087",
+    "prompt": "i went to",
+    "text": "i went to a seafood disco last week.",
+    "no_output": false
+  },
+  {
+    "id": "A088",
+    "prompt": "how much does",
+    "text": "how much does a cow with no legs? ground beef.",
+    "no_output": false
+  },
+  {
+    "id": "A089",
+    "prompt": "how much does",
+    "text": "how much does it take to the other? because he was outstanding out.",
+    "no_output": false
+  },
+  {
+    "id": "A090",
+    "prompt": "i just bought",
+    "text": "i just bought a bar... i said it was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A091",
+    "prompt": "i went to",
+    "text": "i went to change a bar... he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A092",
+    "prompt": "a mathematician was",
+    "text": "a mathematician was caught stealing on a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A093",
+    "prompt": "what's the best",
+    "text": "what's the best borscht say to the 8? nice belt.",
+    "no_output": false
+  },
+  {
+    "id": "A094",
+    "prompt": "have you heard",
+    "text": "have you heard the one about the agnostic with dyslexia and insomnia? he had no body to go with.",
+    "no_output": false
+  },
+  {
+    "id": "A095",
+    "prompt": "what is the",
+    "text": "what is the cheapest part of a tree? a pool table.",
+    "no_output": false
+  },
+  {
+    "id": "A096",
+    "prompt": "i can make",
+    "text": "i can make a lot of conflict in the wild west could have been avoided completely... it was cancelled due to unforeseen events.",
+    "no_output": false
+  },
+  {
+    "id": "A097",
+    "prompt": "where do dogs",
+    "text": "where do dogs call a fish?",
+    "no_output": false
+  },
+  {
+    "id": "A098",
+    "prompt": "have you heard",
+    "text": "have you heard the one about the agnostic with dyslexia and insomnia? he tossed and hose b",
+    "no_output": false
+  },
+  {
+    "id": "A099",
+    "prompt": "have you heard",
+    "text": "have you heard about the kidnapping in the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "A100",
+    "prompt": "how does the",
+    "text": "how does the chicken say to the road? because he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A101",
+    "prompt": "how does the",
+    "text": "how does the mummy plan to destroy superman? because it saw the salad dressing!",
+    "no_output": false
+  },
+  {
+    "id": "A102",
+    "prompt": "i can make",
+    "text": "i can make a sparrow joke.",
+    "no_output": false
+  },
+  {
+    "id": "A103",
+    "prompt": "what's the difference",
+    "text": "what's the difference between a hippo and a zippo? he was a little lighter.",
+    "no_output": false
+  },
+  {
+    "id": "A104",
+    "prompt": "have you heard",
+    "text": "have you heard about the kidnapping in the road? he was outstanding out.",
+    "no_output": false
+  },
+  {
+    "id": "A105",
+    "prompt": "how does the",
+    "text": "how does the farmer count up his cows?.",
+    "no_output": false
+  },
+  {
+    "id": "A106",
+    "prompt": "why are bears",
+    "text": "why are bears wear say to the other? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "A107",
+    "prompt": "how does the",
+    "text": "how does the mummy plan to destroy superman? he's gonna lure him in it.",
+    "no_output": false
+  },
+  {
+    "id": "A108",
+    "prompt": "have you heard",
+    "text": "have you heard about the 2 spanish firemen? jose and hose b",
+    "no_output": false
+  },
+  {
+    "id": "A109",
+    "prompt": "two fish are",
+    "text": "two fish are in a tank.",
+    "no_output": false
+  },
+  {
+    "id": "A110",
+    "prompt": "what's the difference",
+    "text": "what's the difference between unlawful and illegal? unlawful.",
+    "no_output": false
+  },
+  {
+    "id": "A111",
+    "prompt": "my friend says",
+    "text": "my friend says he was going to go to the other day... it was cancelled due to unforeseen events.",
+    "no_output": false
+  },
+  {
+    "id": "A112",
+    "prompt": "what's the difference",
+    "text": "what's the difference between a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A113",
+    "prompt": "what is the",
+    "text": "what is the chicken say to the road? because he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A114",
+    "prompt": "how does the",
+    "text": "how does the mummy plan to destroy superman? he's gonna lure him in a jam.",
+    "no_output": false
+  },
+  {
+    "id": "A115",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator walks into a bar... he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A116",
+    "prompt": "i just bought",
+    "text": "i just bought a rip off.",
+    "no_output": false
+  },
+  {
+    "id": "A117",
+    "prompt": "my friend says",
+    "text": "my friend says he was a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A118",
+    "prompt": "what's the difference",
+    "text": "what's the difference between botox and borax? a bar.",
+    "no_output": false
+  },
+  {
+    "id": "A119",
+    "prompt": "is your refrigerator",
+    "text": "is your refrigerator in the world. those who can extrapolate from incomplete data",
+    "no_output": false
+  },
+  {
+    "id": "A120",
+    "prompt": "where do dogs",
+    "text": "where do dogs call a cow with no legs? because it was a little meteor.",
+    "no_output": false
+  },
+  {
+    "id": "A121",
+    "prompt": "how much does",
+    "text": "how much does it take to change a lightbulb?",
+    "no_output": false
+  },
+  {
+    "id": "A122",
+    "prompt": "have you heard",
+    "text": "have you heard about the 2 spanish firemen? jose.",
+    "no_output": false
+  },
+  {
+    "id": "A123",
+    "prompt": "how does the",
+    "text": "how does the chicken say to the road?",
+    "no_output": false
+  },
+  {
+    "id": "A124",
+    "prompt": "i can make",
+    "text": "i can make a boomerang... but it was too saucy.",
+    "no_output": false
+  },
+  {
+    "id": "A125",
+    "prompt": "where do dogs",
+    "text": "where do dogs live? porcel lane.",
+    "no_output": false
+  },
+  {
+    "id": "A126",
+    "prompt": "where do dogs",
+    "text": "where do dogs get their pickles from? because they have boooogers.",
+    "no_output": false
+  },
+  {
+    "id": "A127",
+    "prompt": "my friend says",
+    "text": "my friend says to be cheesy but everyone is laughtose intolerant.",
+    "no_output": false
+  },
+  {
+    "id": "A128",
+    "prompt": "how much does",
+    "text": "how much does do you call a cow with a legs? because it was a other.",
+    "no_output": false
+  },
+  {
+    "id": "A129",
+    "prompt": "why are bears",
+    "text": "why are bears say to the other? because he was the other.",
+    "no_output": false
+  },
+  {
+    "id": "A130",
+    "prompt": "what's the best",
+    "text": "what's the best thing to the dentist? because he was outstanding in his field.",
+    "no_output": false
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "glove100_finetune",
+  "parameters": 724845,
+  "best_epoch": 12,
+  "epochs_completed": 27,
+  "validation": {
+    "loss": 5.582459412088438,
+    "accuracy": 0.21531393568147014,
+    "count": 3265
+  },
+  "last_validation": 6.123965561590735,
+  "train_seconds": 3.9408752788440324,
+  "checkpoint_sha256": "f0ec81c80a818818b6cdea4abdfa3836cb3841351abbddc9aa55487380c34d49",
+  "config_hash": "8244c84ea8291ee39f4573b9acc766e012759b4af8a3ac1fcb308308f6fb5857",
+  "test_evaluated": false,
+  "external_word_embeddings": true,
+  "matched_types": 3882,
+  "matched_type_fraction": 0.9249463902787706
+}

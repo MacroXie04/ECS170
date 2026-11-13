@@ -47,3 +47,9 @@ env/
 /result/stage_4_result/generation_generalization/**/*.log
 /result/stage_4_result/generation_generalization/*.log
 /result/stage_4_result/generation_generalization/**/*.exit
+
+# Alternative generation: keep training-text pairs, model caches and process logs private.
+/result/stage_4_result/generation_alternatives/coherence_ranker/pairs.json
+/result/stage_4_result/generation_alternatives/**/*.log
+/result/stage_4_result/generation_alternatives/*.log
+/result/stage_4_result/generation_alternatives/**/*.exit
