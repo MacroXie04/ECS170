@@ -1,0 +1,288 @@
+{
+  "decision_sha256": "556ccf7f6b953db7bad7a6a6cae81f107de71ec17254f7f76e410ba875dbf965",
+  "profile_sha256": {
+    "recommendation.json": "958146a789c063ba7682561517bc93cd735ff23bdf6fbddc14c01068aca6a0ad",
+    "recommendation_experimental.json": "9cc9fe00aac0548abde7577cc00d6ddb6956c25f42789889fe69339c0f3f1bd6"
+  },
+  "source_sha256": {
+    "script/stage_4_script/summarize_alternatives_test.py": "df5ac55f330e1cf5da7d7cb8fa326333d8115292c02f7f4be09c3661357fe5e1",
+    "script/stage_4_script/finalize_alternatives.py": "91c6e96a36b7edc489a5e370a6fa404f73cf2f0014a055b7a3840394142e7184"
+  },
+  "panels": {
+    "final_test": {
+      "summaries": [
+        {
+          "candidate": "previous_late__old_beam5",
+          "model_spec": {
+            "name": "previous_late",
+            "components": [
+              {
+                "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+                "loader": "original",
+                "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+              }
+            ],
+            "include_old_beam": true,
+            "modes": [
+              "old_beam5"
+            ]
+          },
+          "mode": "old_beam5",
+          "count": 16,
+          "output_count": 16,
+          "coherent_count": 8,
+          "direct_copy_free_coherent_count": 0,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 5,
+          "copied_continuations": 13,
+          "direct_copy_count": 13,
+          "high_similarity_count": 13,
+          "seen_coherent": 6,
+          "unseen_coherent": 2,
+          "score_counts": {
+            "0": 2,
+            "1": 6,
+            "2": 8
+          },
+          "loss": 5.78562029033688,
+          "target_count": 2961,
+          "perplexity": 325.58393405786626,
+          "split": "test",
+          "confirmatory": {
+            "coherent_count": 8,
+            "direct_copy_free_coherent_count": 0,
+            "strict_novel_coherent_count": 0,
+            "score_counts": {
+              "0": 3,
+              "1": 5,
+              "2": 8
+            },
+            "seen_coherent": 6,
+            "unseen_coherent": 2
+          },
+          "reviewer_score_disagreements": 1
+        },
+        {
+          "candidate": "semantic_late_mix50__direct_union",
+          "model_spec": {
+            "name": "semantic_late_mix50",
+            "components": [
+              {
+                "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+                "loader": "semantic_input",
+                "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+              },
+              {
+                "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+                "loader": "original",
+                "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+              }
+            ],
+            "late_weight": 0.5,
+            "modes": [
+              "direct_union"
+            ]
+          },
+          "mode": "direct_union",
+          "count": 16,
+          "output_count": 16,
+          "coherent_count": 2,
+          "direct_copy_free_coherent_count": 2,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 0,
+          "copied_continuations": 0,
+          "direct_copy_count": 0,
+          "high_similarity_count": 7,
+          "seen_coherent": 2,
+          "unseen_coherent": 0,
+          "score_counts": {
+            "0": 3,
+            "1": 11,
+            "2": 2
+          },
+          "loss": 5.250533629896994,
+          "target_count": 2961,
+          "perplexity": 190.66798745457297,
+          "split": "test",
+          "confirmatory": {
+            "coherent_count": 2,
+            "direct_copy_free_coherent_count": 2,
+            "strict_novel_coherent_count": 0,
+            "score_counts": {
+              "0": 4,
+              "1": 10,
+              "2": 2
+            },
+            "seen_coherent": 2,
+            "unseen_coherent": 0
+          },
+          "reviewer_score_disagreements": 1
+        }
+      ],
+      "primary_bindings": {
+        "outputs.json": "fc1634ed34a6de0e75a2b9f7774d351ca11f430cc040ca7b1da45bf7cabd5d18",
+        "candidate_pools.json": "67e64d415a14ef7d1d3252c3ed7334c6dc879d8676afcd5a283b98688299a37f",
+        "blind_review.json": "6418cb3cc8f297d7c999034e276dedaa6996a5f1cb403beace6f8812730f2003",
+        "blind_mapping.json": "6448809aab20cda932f84d64b692afc8027dbcbf1d13e52ebd56bfc9c2aa96d5",
+        "coherence_ratings.json": "87d84d5654b9d4909a4f15852ca028845a109196f79d0596c0a386761cb4af85",
+        "metrics.json": "b6e1c7dfdace6d5699e50a482ffa8859150c1ed6ad018e483502c288d12f4c00",
+        "provenance.json": "c738264101672cc2ad0964cb990021f001e09d2a8d836f4449b7b5c0561d7147"
+      },
+      "confirmatory_bindings": {
+        "outputs.json": "fc1634ed34a6de0e75a2b9f7774d351ca11f430cc040ca7b1da45bf7cabd5d18",
+        "candidate_pools.json": "67e64d415a14ef7d1d3252c3ed7334c6dc879d8676afcd5a283b98688299a37f",
+        "blind_review.json": "6418cb3cc8f297d7c999034e276dedaa6996a5f1cb403beace6f8812730f2003",
+        "blind_mapping.json": "6448809aab20cda932f84d64b692afc8027dbcbf1d13e52ebd56bfc9c2aa96d5",
+        "confirmatory_ratings.json": "d5ed4d3d4ab6b69514192538b2f91a8fb0a9c46f116e1195eeb9be32500293be",
+        "metrics.json": "b6e1c7dfdace6d5699e50a482ffa8859150c1ed6ad018e483502c288d12f4c00",
+        "provenance.json": "c738264101672cc2ad0964cb990021f001e09d2a8d836f4449b7b5c0561d7147"
+      },
+      "panel_sha256": "794d9fc6a0438df5196769fd4cb798729d994f309df01d1cffa0de30f5a87908",
+      "coverage": {
+        "seen": 8,
+        "unseen": 8
+      }
+    },
+    "regression": {
+      "summaries": [
+        {
+          "candidate": "previous_late__old_beam5",
+          "model_spec": {
+            "name": "previous_late",
+            "components": [
+              {
+                "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+                "loader": "original",
+                "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+              }
+            ],
+            "include_old_beam": true,
+            "modes": [
+              "old_beam5"
+            ]
+          },
+          "mode": "old_beam5",
+          "count": 12,
+          "output_count": 12,
+          "coherent_count": 8,
+          "direct_copy_free_coherent_count": 0,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 7,
+          "copied_continuations": 11,
+          "direct_copy_count": 11,
+          "high_similarity_count": 11,
+          "seen_coherent": 7,
+          "unseen_coherent": 1,
+          "score_counts": {
+            "0": 0,
+            "1": 4,
+            "2": 8
+          },
+          "loss": 5.582583987366003,
+          "target_count": 3265,
+          "perplexity": 265.7574331697065,
+          "split": "validation",
+          "confirmatory": {
+            "coherent_count": 9,
+            "direct_copy_free_coherent_count": 1,
+            "strict_novel_coherent_count": 1,
+            "score_counts": {
+              "0": 0,
+              "1": 3,
+              "2": 9
+            },
+            "seen_coherent": 7,
+            "unseen_coherent": 2
+          },
+          "reviewer_score_disagreements": 1
+        },
+        {
+          "candidate": "semantic_late_mix50__direct_union",
+          "model_spec": {
+            "name": "semantic_late_mix50",
+            "components": [
+              {
+                "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+                "loader": "semantic_input",
+                "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+              },
+              {
+                "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+                "loader": "original",
+                "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+              }
+            ],
+            "late_weight": 0.5,
+            "modes": [
+              "direct_union"
+            ]
+          },
+          "mode": "direct_union",
+          "count": 12,
+          "output_count": 12,
+          "coherent_count": 1,
+          "direct_copy_free_coherent_count": 1,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 0,
+          "copied_continuations": 0,
+          "direct_copy_count": 0,
+          "high_similarity_count": 4,
+          "seen_coherent": 1,
+          "unseen_coherent": 0,
+          "score_counts": {
+            "0": 3,
+            "1": 8,
+            "2": 1
+          },
+          "loss": 5.062975569486984,
+          "target_count": 3265,
+          "perplexity": 158.06013620196566,
+          "split": "validation",
+          "confirmatory": {
+            "coherent_count": 0,
+            "direct_copy_free_coherent_count": 0,
+            "strict_novel_coherent_count": 0,
+            "score_counts": {
+              "0": 4,
+              "1": 8,
+              "2": 0
+            },
+            "seen_coherent": 0,
+            "unseen_coherent": 0
+          },
+          "reviewer_score_disagreements": 2
+        }
+      ],
+      "primary_bindings": {
+        "outputs.json": "f385bec5c5fc87c1eee37f5e39b66f9098097081afdd849f067631052c181140",
+        "candidate_pools.json": "fb800bf11c348dc2a7e0f0682ceb8dd28b7db7f286b0b0e3b6b75d462740e790",
+        "blind_review.json": "02e5750f4dc18d84636dffcd51c827ad26ab585f5bd030173f7da683fc3c7d9a",
+        "blind_mapping.json": "a7aecf1854cc960942e3e192e9501a07b2b41379aa9170f13ef989968da5c83a",
+        "coherence_ratings.json": "e64104d0eb13dfc1fcb4d4902e0c0d2cbb7e397666a0bbd1e0b781479432188b",
+        "metrics.json": "98efc6c3b2aa1c8ccd569c59f671895d5552494fe4931c06554fdac7ee235de5",
+        "provenance.json": "227d791dad46bc44b5f58b06162c1609ae081bb13c11e5079330c064ab7d7f8e"
+      },
+      "confirmatory_bindings": {
+        "outputs.json": "f385bec5c5fc87c1eee37f5e39b66f9098097081afdd849f067631052c181140",
+        "candidate_pools.json": "fb800bf11c348dc2a7e0f0682ceb8dd28b7db7f286b0b0e3b6b75d462740e790",
+        "blind_review.json": "02e5750f4dc18d84636dffcd51c827ad26ab585f5bd030173f7da683fc3c7d9a",
+        "blind_mapping.json": "a7aecf1854cc960942e3e192e9501a07b2b41379aa9170f13ef989968da5c83a",
+        "confirmatory_ratings.json": "73ed3b92479a8e2eb1536f75dc52988079001452385833b779e7c0d17c33979c",
+        "metrics.json": "98efc6c3b2aa1c8ccd569c59f671895d5552494fe4931c06554fdac7ee235de5",
+        "provenance.json": "227d791dad46bc44b5f58b06162c1609ae081bb13c11e5079330c064ab7d7f8e"
+      },
+      "panel_sha256": "e1bd7c2f79a46cd348cd51b780c11813c9b9ae6cfd8da3f5df79ab48405f1de3",
+      "coverage": {
+        "seen": 8,
+        "unseen": 4
+      }
+    }
+  },
+  "profile_selection_changed": false,
+  "caveats": [
+    "Two blinded assistant reviews, not human ratings or proof of original humor.",
+    "Novelty checks measure overlap with this training partition, not the wider internet.",
+    "Regression reuses the original12 prompts; only the16testprefixes are newly evaluated in this round.",
+    "GloVe supplies external word-level knowledge; the recurrent generators are our own models."
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "A001",
+    "score": 0,
+    "reason": "Wondering to a meeting is an invalid movement construction and the ending is unrelated."
+  },
+  {
+    "id": "A002",
+    "score": 2,
+    "reason": "Vel-crows connects birds sticking together with Velcro."
+  },
+  {
+    "id": "A003",
+    "score": 2,
+    "reason": "Ten tickles coherently answers making a squid laugh while evoking tentacles."
+  },
+  {
+    "id": "A004",
+    "score": 0,
+    "reason": "The question combines side dish and lightbulb language without a grammatical or meaningful setup."
+  },
+  {
+    "id": "A005",
+    "score": 1,
+    "reason": "Reading an anti-gravity book is only a setup; no punchline is supplied."
+  },
+  {
+    "id": "A006",
+    "score": 2,
+    "reason": "A legless cow is on the ground, supporting the ground-beef pun."
+  },
+  {
+    "id": "A007",
+    "score": 1,
+    "reason": "The gym question and field remark are disconnected and switch to an unexplained he."
+  },
+  {
+    "id": "A008",
+    "score": 1,
+    "reason": "A bride is not motivated by the chicken/playground setup."
+  },
+  {
+    "id": "A009",
+    "score": 2,
+    "reason": "The playground context directly supports replacing other side with other slide."
+  },
+  {
+    "id": "A010",
+    "score": 1,
+    "reason": "Crabbiness does not explain how to find Will Smith in snow."
+  },
+  {
+    "id": "A011",
+    "score": 1,
+    "reason": "The field remark does not answer the mistletoe/dentist location question."
+  },
+  {
+    "id": "A012",
+    "score": 0,
+    "reason": "Need to the fitness center lacks the action required by the question."
+  },
+  {
+    "id": "A013",
+    "score": 2,
+    "reason": "Loafers links a baker's bread to footwear."
+  },
+  {
+    "id": "A014",
+    "score": 2,
+    "reason": "The visual waist of 8 compared with 0 supports the nice-belt remark."
+  },
+  {
+    "id": "A015",
+    "score": 1,
+    "reason": "Boogers does not identify jackets worn by audiophiles."
+  },
+  {
+    "id": "A016",
+    "score": 1,
+    "reason": "Toad-aly cool has no frog-related premise in the anti-gravity book setup."
+  },
+  {
+    "id": "A017",
+    "score": 1,
+    "reason": "The unexplained Polish description supplies no responsive bar punchline."
+  },
+  {
+    "id": "A018",
+    "score": 1,
+    "reason": "Lean beef does not follow from having no legs."
+  },
+  {
+    "id": "A019",
+    "score": 2,
+    "reason": "Aw shucks is an intelligible bashful response to a compliment, making the personified fish's reply responsive."
+  },
+  {
+    "id": "A020",
+    "score": 1,
+    "reason": "The third person is introduced without preceding people, leaving the ducking punchline unsupported."
+  },
+  {
+    "id": "A021",
+    "score": 1,
+    "reason": "Time flies is not established as a creature eating clowns, so the taste-funny ending is disconnected."
+  },
+  {
+    "id": "A022",
+    "score": 2,
+    "reason": "Armies/arms and sleevies/sleeves form a directly connected military/clothing pun."
+  },
+  {
+    "id": "A023",
+    "score": 2,
+    "reason": "Gamma/gramma connects radiation to a grandmother baking cookies, despite the awkward side-of wording."
+  },
+  {
+    "id": "A024",
+    "score": 1,
+    "reason": "The unexpected tree suggests an optical illusion, but obstacle illusion is not developed by an obstruction in the setup."
+  }
+]

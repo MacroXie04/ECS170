@@ -1,0 +1,132 @@
+{
+  "prompts": [
+    {
+      "id": "joke/302",
+      "prompt": "you know what",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/227",
+      "prompt": "why didn't the",
+      "train_prefix_count": 7,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/333",
+      "prompt": "why does snoop",
+      "train_prefix_count": 2,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/734",
+      "prompt": "what cars do",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/531",
+      "prompt": "x - post from",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/1186",
+      "prompt": "wanna hear a",
+      "train_prefix_count": 4,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/1478",
+      "prompt": "did you know",
+      "train_prefix_count": 3,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/162",
+      "prompt": "what type of",
+      "train_prefix_count": 3,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/600",
+      "prompt": "i knew i",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/681",
+      "prompt": "i hate people",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/732",
+      "prompt": "do you have",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/506",
+      "prompt": "first original joke",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/380",
+      "prompt": "i wanna make",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/462",
+      "prompt": "my relationship is",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/610",
+      "prompt": "i'm going to",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/488",
+      "prompt": "what is invisible",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    }
+  ],
+  "sha256": "c534801caf2f1fa4c8c2e23e584d6d6787c68cceba64630df005ddd1a4604463",
+  "locked_at_utc": "2026-11-13T01:14:53.075128+00:00",
+  "decision_sha256": "556ccf7f6b953db7bad7a6a6cae81f107de71ec17254f7f76e410ba875dbf965",
+  "train_rows_sha256": "90f320d8b053f64d866620d9b04198826df8f7e306354729debeddf7ec636f78",
+  "test_rows_sha256": "72278ab08c8ff7713f7d6046752af7db2acf0c0bb2a59e41ad34a7b6318f00be",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "source_sha256": {
+    "script/stage_4_script/evaluate_alternatives_test.py": "730316a6223c2fcbb60f22fc129aa71f81cd1ebfb5bfad3153fe2f246bde7733",
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9"
+  },
+  "selection": "Seed170455; target8seen+8unseen unique in-vocabulary prefixes, excluding all4previous panels; fill anyshortfallfrom remainingeligible prefixes.",
+  "coverage": {
+    "seen": 8,
+    "unseen": 8
+  },
+  "limitation": "No tuning follows these outputs. Test corpus loss has been used previously; fresh prefix panel is not a wholly new dataset."
+}

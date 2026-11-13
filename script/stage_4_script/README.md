@@ -118,3 +118,7 @@ The coherent-generation profile, six additional model runs, all 12 before/after 
 ## Generalization and training-copy follow-up
 
 [Generalization experiments](GENERATION_GENERALIZATION.md) document two regularized GRUs, fixed checkpoint mixtures, continuation-level copy checks, and new validation/test prefix panels. The best predictive mixture improves test perplexity to 128.045, but none of the new profiles preserves coherence while passing the strict novelty criterion; the existing default remains unchanged. `predict_novel_generation.py` exposes the retained default plus explicitly experimental predictive and strict-screen profiles. See the guide for commands, both blinded assistant reviews, and the verified tradeoffs.
+
+## Alternative generation methods
+
+[Alternative generation experiments](GENERATION_ALTERNATIVES.md) complete the copy-aware search and disclosed GloVe-GRU follow-up, with frozen final tests, original-panel regression, two independent assistant reviews, and 117 passing tests. Direct training-text reuse decreases, but coherence still drops; the original default is retained. `predict_alternative_generation.py` provides the retained default and an explicit experimental profile. No push or Pull Request was made.

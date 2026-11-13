@@ -1,0 +1,75 @@
+{
+  "status": "verified",
+  "created_at_utc": "2026-11-13T01:14:08.500310+00:00",
+  "audit_script_sha256": "447aa8f9b220a2085754e0999d112d7c88de39f751297efc0fe45bbd6f97efac",
+  "archived_decision_sha256": "12a7a178999a4f10669a37e68d99cb07e4daa2f8479db813aa63481b452b797a",
+  "archived_finalizer_sha256": "8badd7240266b7c6257db7846682287ee39408755a240d1d76db1ef6165dcb12",
+  "current_decision_sha256": "556ccf7f6b953db7bad7a6a6cae81f107de71ec17254f7f76e410ba875dbf965",
+  "current_finalizer_sha256": "91c6e96a36b7edc489a5e370a6fa404f73cf2f0014a055b7a3840394142e7184",
+  "auditor_source_sha256": "abbba92f930222978ec098bad8040cb779783031a4ea51f90e81fca5decb69d8",
+  "allowed_decision_changes": [
+    "locked_at_utc",
+    "finalizer_sha256"
+  ],
+  "ranking_and_qualifies_ast_unchanged": true,
+  "complete_candidate_families": 17,
+  "mapped_outputs": 272,
+  "review": {
+    "unique_texts": 130,
+    "mapped_outputs": 272,
+    "reviews": {
+      "coherence_ratings.json": {
+        "sha256": "cfcdc743c6ce5e6e4bc71a4a5c1ffb582e23468e6c95bafa5fee9e3c3ead6cc3",
+        "unique_ratings": 130,
+        "mapped_outputs": 272
+      }
+    }
+  },
+  "promoted": false,
+  "selected": "previous_late__old_beam5",
+  "experimental": "semantic_late_mix50__direct_union",
+  "profiles": {
+    "recommendation.json": {
+      "sha256": "958146a789c063ba7682561517bc93cd735ff23bdf6fbddc14c01068aca6a0ad",
+      "candidate": "previous_late__old_beam5",
+      "status": "previous_default_retained",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ]
+    },
+    "recommendation_experimental.json": {
+      "sha256": "9cc9fe00aac0548abde7577cc00d6ddb6956c25f42789889fe69339c0f3f1bd6",
+      "candidate": "semantic_late_mix50__direct_union",
+      "status": "experimental_best_alternative",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7",
+          "epoch": 21
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ]
+    }
+  },
+  "baseline_counts": {
+    "coherent_count": 7,
+    "direct_copy_free_coherent_count": 1,
+    "strict_novel_coherent_count": 0,
+    "direct_copy_count": 7
+  },
+  "experimental_counts": {
+    "coherent_count": 4,
+    "direct_copy_free_coherent_count": 4,
+    "strict_novel_coherent_count": 3,
+    "direct_copy_count": 0
+  },
+  "note": "No semantic ratings or model generations changed; this audit checks bindings and independently recomputes the recorded decision."
+}

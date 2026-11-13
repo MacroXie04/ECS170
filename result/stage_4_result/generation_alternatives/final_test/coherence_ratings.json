@@ -1,0 +1,152 @@
+[
+  {
+    "id": "A001",
+    "score": 1,
+    "reason": "Lean beef does not follow from the cow having no legs; the expected physical connection is missing."
+  },
+  {
+    "id": "A002",
+    "score": 1,
+    "reason": "The output is only cross-post metadata, without a joke or responsive continuation."
+  },
+  {
+    "id": "A003",
+    "score": 0,
+    "reason": "Going to go to the other day is a broken destination/time construction."
+  },
+  {
+    "id": "A004",
+    "score": 2,
+    "reason": "The discourse-style opening is awkward, but the complete legless-cow question and ground-beef answer form intelligible wordplay."
+  },
+  {
+    "id": "A005",
+    "score": 2,
+    "reason": "Profanity connects vulgar to bulgur wheat, giving a responsive grain pun."
+  },
+  {
+    "id": "A006",
+    "score": 2,
+    "reason": "The extended Audi pronunciation evokes a wolf's howl and directly answers the car question."
+  },
+  {
+    "id": "A007",
+    "score": 1,
+    "reason": "The dirty-horse idea is recognizable, but fell of the mud breaks the action needed for the punchline."
+  },
+  {
+    "id": "A008",
+    "score": 1,
+    "reason": "The awkward embedded question ends in lean beef, which is not explained by having no legs."
+  },
+  {
+    "id": "A009",
+    "score": 0,
+    "reason": "What cars do you call a cow mixes incompatible question structures."
+  },
+  {
+    "id": "A010",
+    "score": 2,
+    "reason": "The umbrella/drizzle connection and Snoop-style phrasing support the punchline despite minor spelling errors."
+  },
+  {
+    "id": "A011",
+    "score": 1,
+    "reason": "Salad dressing does not explain why a bicycle did not cross the road."
+  },
+  {
+    "id": "A012",
+    "score": 0,
+    "reason": "What is invisible favorite drink lacks a valid possessive or question construction."
+  },
+  {
+    "id": "A013",
+    "score": 1,
+    "reason": "The subject shifts from an abstract relationship to an unexplained man, breaking the self-deprecation premise."
+  },
+  {
+    "id": "A014",
+    "score": 2,
+    "reason": "The metadata introduction is followed by a complete, intelligible legless-cow/ground-beef joke."
+  },
+  {
+    "id": "A015",
+    "score": 1,
+    "reason": "Lean beef is not a responsive consequence of the cow having no legs."
+  },
+  {
+    "id": "A016",
+    "score": 1,
+    "reason": "The relationship-as-bar claim does not establish the bartender's wholesaler punchline."
+  },
+  {
+    "id": "A017",
+    "score": 2,
+    "reason": "Dirty is coherently reframed as a white horse becoming muddy."
+  },
+  {
+    "id": "A018",
+    "score": 1,
+    "reason": "Being outstanding in a field does not explain Snoop using a bus."
+  },
+  {
+    "id": "A019",
+    "score": 0,
+    "reason": "I hate people to be addicted is a broken construction and the ending has no referent."
+  },
+  {
+    "id": "A020",
+    "score": 1,
+    "reason": "Boogers does not identify the invisible carrot-smelling object asked about."
+  },
+  {
+    "id": "A021",
+    "score": 1,
+    "reason": "The incomplete-data category is disconnected from the claim about making conflict."
+  },
+  {
+    "id": "A022",
+    "score": 2,
+    "reason": "The pizza joke is abandoned as too cheesy, connecting food and corny humor."
+  },
+  {
+    "id": "A023",
+    "score": 1,
+    "reason": "The tame-way answer does not answer the yes/no question or establish a valid rabbit pun."
+  },
+  {
+    "id": "A024",
+    "score": 2,
+    "reason": "Cantaloupe evokes cannot elope, linking the melon to Romeo and Juliet's forbidden relationship."
+  },
+  {
+    "id": "A025",
+    "score": 0,
+    "reason": "The people and girlfriend clauses are joined without a valid grammatical connection."
+  },
+  {
+    "id": "A026",
+    "score": 2,
+    "reason": "Everyone forgetting middle-child day directly supports the overlooked-middle-child premise."
+  },
+  {
+    "id": "A027",
+    "score": 1,
+    "reason": "The addiction statement supplies no referent or ranking for definitely up there."
+  },
+  {
+    "id": "A028",
+    "score": 2,
+    "reason": "The complete legless-cow setup and ground-beef answer form coherent physical wordplay."
+  },
+  {
+    "id": "A029",
+    "score": 1,
+    "reason": "The no-eyes problem does not connect to everyone forgetting something."
+  },
+  {
+    "id": "A030",
+    "score": 1,
+    "reason": "A pulled-mussel ending is unrelated to a television program about religious orders."
+  }
+]

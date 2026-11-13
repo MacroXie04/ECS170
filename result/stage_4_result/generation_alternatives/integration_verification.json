@@ -1,0 +1,622 @@
+{
+  "status": "passed",
+  "prompt": "what did the",
+  "prompt_scope": "Original development prefix; no new test prefix inspected",
+  "decision_sha256": "556ccf7f6b953db7bad7a6a6cae81f107de71ec17254f7f76e410ba875dbf965",
+  "profile_sha256": {
+    "recommendation.json": "958146a789c063ba7682561517bc93cd735ff23bdf6fbddc14c01068aca6a0ad",
+    "recommendation_experimental.json": "9cc9fe00aac0548abde7577cc00d6ddb6956c25f42789889fe69339c0f3f1bd6"
+  },
+  "verifier_sha256": "16dcb0994517c8aee6ba28d5053713a153fa8ec837a544988528b0d4ea1d12ff",
+  "runs": [
+    {
+      "profile": "recommendation.json",
+      "candidate": "previous_late__old_beam5",
+      "mode": "old_beam5",
+      "device": "cpu",
+      "repeat": 0,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        382,
+        34,
+        10,
+        7,
+        263,
+        5,
+        363,
+        339,
+        4,
+        3
+      ],
+      "text_sha256": "54040e4322e22fefecddb6daba0f5df2e41796a540802a357123ce1540ef5864",
+      "selection": {
+        "status": "selected"
+      },
+      "seconds": 0.311775334999993,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": false,
+      "cross_backend_ids_equal": true
+    },
+    {
+      "profile": "recommendation.json",
+      "candidate": "previous_late__old_beam5",
+      "mode": "old_beam5",
+      "device": "cpu",
+      "repeat": 1,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        382,
+        34,
+        10,
+        7,
+        263,
+        5,
+        363,
+        339,
+        4,
+        3
+      ],
+      "text_sha256": "54040e4322e22fefecddb6daba0f5df2e41796a540802a357123ce1540ef5864",
+      "selection": {
+        "status": "selected"
+      },
+      "seconds": 0.22506682799985356,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": false,
+      "cross_backend_ids_equal": true
+    },
+    {
+      "profile": "recommendation.json",
+      "candidate": "previous_late__old_beam5",
+      "mode": "old_beam5",
+      "device": "cuda",
+      "repeat": 0,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        382,
+        34,
+        10,
+        7,
+        263,
+        5,
+        363,
+        339,
+        4,
+        3
+      ],
+      "text_sha256": "54040e4322e22fefecddb6daba0f5df2e41796a540802a357123ce1540ef5864",
+      "selection": {
+        "status": "selected"
+      },
+      "seconds": 0.4958782119999796,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": false,
+      "cross_backend_ids_equal": true
+    },
+    {
+      "profile": "recommendation.json",
+      "candidate": "previous_late__old_beam5",
+      "mode": "old_beam5",
+      "device": "cuda",
+      "repeat": 1,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        382,
+        34,
+        10,
+        7,
+        263,
+        5,
+        363,
+        339,
+        4,
+        3
+      ],
+      "text_sha256": "54040e4322e22fefecddb6daba0f5df2e41796a540802a357123ce1540ef5864",
+      "selection": {
+        "status": "selected"
+      },
+      "seconds": 0.2754789210000581,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": false,
+      "cross_backend_ids_equal": true
+    },
+    {
+      "profile": "recommendation_experimental.json",
+      "candidate": "semantic_late_mix50__direct_union",
+      "mode": "direct_union",
+      "device": "cpu",
+      "repeat": 0,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        89,
+        34,
+        35,
+        19,
+        23,
+        2128,
+        5,
+        1818,
+        12,
+        3677,
+        11,
+        3
+      ],
+      "text_sha256": "69224c2461d5d24d98fea8f784f33b56b8b3fc57ca3268356382f5ebeba0161c",
+      "selection": {
+        "status": "selected",
+        "selection_score": -1.1516629832192529,
+        "eligible_count": 8,
+        "rejections": [
+          {
+            "candidate_id": 0,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 1,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 2,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 4,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 5,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 6,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 7,
+            "reasons": [
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 11,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          }
+        ],
+        "method": "mean_original_likelihood_minus_soft_similarity_cost"
+      },
+      "seconds": 2.77413924099983,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7",
+          "epoch": 21
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": true,
+      "cross_backend_ids_equal": true
+    },
+    {
+      "profile": "recommendation_experimental.json",
+      "candidate": "semantic_late_mix50__direct_union",
+      "mode": "direct_union",
+      "device": "cpu",
+      "repeat": 1,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        89,
+        34,
+        35,
+        19,
+        23,
+        2128,
+        5,
+        1818,
+        12,
+        3677,
+        11,
+        3
+      ],
+      "text_sha256": "69224c2461d5d24d98fea8f784f33b56b8b3fc57ca3268356382f5ebeba0161c",
+      "selection": {
+        "status": "selected",
+        "selection_score": -1.1516629832192529,
+        "eligible_count": 8,
+        "rejections": [
+          {
+            "candidate_id": 0,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 1,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 2,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 4,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 5,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 6,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 7,
+            "reasons": [
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 11,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          }
+        ],
+        "method": "mean_original_likelihood_minus_soft_similarity_cost"
+      },
+      "seconds": 2.7641927669999404,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7",
+          "epoch": 21
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": true,
+      "cross_backend_ids_equal": true
+    },
+    {
+      "profile": "recommendation_experimental.json",
+      "candidate": "semantic_late_mix50__direct_union",
+      "mode": "direct_union",
+      "device": "cuda",
+      "repeat": 0,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        89,
+        34,
+        35,
+        19,
+        23,
+        2128,
+        5,
+        1818,
+        12,
+        3677,
+        11,
+        3
+      ],
+      "text_sha256": "69224c2461d5d24d98fea8f784f33b56b8b3fc57ca3268356382f5ebeba0161c",
+      "selection": {
+        "status": "selected",
+        "selection_score": -1.151672058542791,
+        "eligible_count": 8,
+        "rejections": [
+          {
+            "candidate_id": 0,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 1,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 2,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 4,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 5,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 6,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 7,
+            "reasons": [
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 11,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          }
+        ],
+        "method": "mean_original_likelihood_minus_soft_similarity_cost"
+      },
+      "seconds": 3.8221067930001027,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7",
+          "epoch": 21
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": true,
+      "cross_backend_ids_equal": true
+    },
+    {
+      "profile": "recommendation_experimental.json",
+      "candidate": "semantic_late_mix50__direct_union",
+      "mode": "direct_union",
+      "device": "cuda",
+      "repeat": 1,
+      "status": "selected",
+      "ids": [
+        2,
+        8,
+        16,
+        7,
+        89,
+        34,
+        35,
+        19,
+        23,
+        2128,
+        5,
+        1818,
+        12,
+        3677,
+        11,
+        3
+      ],
+      "text_sha256": "69224c2461d5d24d98fea8f784f33b56b8b3fc57ca3268356382f5ebeba0161c",
+      "selection": {
+        "status": "selected",
+        "selection_score": -1.151672058542791,
+        "eligible_count": 8,
+        "rejections": [
+          {
+            "candidate_id": 0,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 1,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 2,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 4,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 5,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 6,
+            "reasons": [
+              "copied_continuation",
+              "question_without_answer"
+            ]
+          },
+          {
+            "candidate_id": 7,
+            "reasons": [
+              "copied_continuation"
+            ]
+          },
+          {
+            "candidate_id": 11,
+            "reasons": [
+              "exact_full_copy",
+              "copied_continuation"
+            ]
+          }
+        ],
+        "method": "mean_original_likelihood_minus_soft_similarity_cost"
+      },
+      "seconds": 3.0785263349998786,
+      "checkpoint_provenance": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7",
+          "epoch": 21
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "cpu_rng_unchanged": true,
+      "cuda_rng_unchanged": true,
+      "source_binding_count": 13,
+      "external_word_vectors": true,
+      "cross_backend_ids_equal": true
+    }
+  ],
+  "run_count": 8,
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "notes": [
+    "Same-backend determinism is required; cross-backend ID equality is reported, not assumed.",
+    "Checks assess integrity and execution, not semantic joke quality."
+  ],
+  "test_suite": {
+    "count": 117,
+    "status": "passed",
+    "log": "/tmp/stage4_alternatives_full_tests.log",
+    "log_sha256": "b321d72fe3f3c90526fc34a55b594a3358fb5f61e5b1447794ed6e07e25d583b"
+  }
+}
