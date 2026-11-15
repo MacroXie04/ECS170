@@ -15,7 +15,7 @@ import numpy as np
 import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
-from torch.nn.utils.rnn import pack_padded_sequence
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from local_code.base_class.method import method
 from local_code.stage_4_code.Evaluate_Metrics import Evaluate_Metrics
 
@@ -38,6 +38,7 @@ class Method_RNN(method, nn.Module):
     num_layers = 1
     rnn_type = 'rnn'               # rnn | lstm | gru
     bidirectional = False
+    pooling = 'last'               # last: final hidden state | mean: average of the hidden states over the real (non-padding) words
     dropout = 0.3                  # before the output layer (and between layers if num_layers > 1)
     embedding_dropout = 0.0        # randomly zero whole embedding values of the input words (regularises the 1M embedding weights)
     glove_path = None              # optional: initialise the embedding from a GloVe file (sets embedding_dim)
@@ -80,7 +81,12 @@ class Method_RNN(method, nn.Module):
     def forward(self, x):
         lengths = (x != 0).sum(dim=1).clamp(min=1)                       # real words per review
         packed = pack_padded_sequence(self.emb_drop(self.embedding(x)), lengths.cpu(), batch_first=True, enforce_sorted=False)
-        _, h = self.rnn(packed)
+        out, h = self.rnn(packed)
+        if self.pooling == 'mean':
+            out, _ = pad_packed_sequence(out, batch_first=True)           # (batch, longest review, h * directions)
+            mask = (torch.arange(out.size(1), device=out.device)[None, :] < lengths.to(out.device)[:, None]).unsqueeze(2)
+            feature = (out * mask).sum(dim=1) / lengths.to(out.device).unsqueeze(1).to(out.dtype)
+            return self.classifier(self.drop(feature))
         if self.rnn_type == 'lstm':
             h = h[0]                                                      # (h_n, c_n) -> h_n
         last = torch.cat([h[-2], h[-1]], dim=1) if self.bidirectional else h[-1]
