@@ -29,7 +29,11 @@ class Dataset_Loader(dataset):
     def _read_split(self, split):
         docs, labels = [], []
         for label, sub in ((0, 'neg'), (1, 'pos')):
-            files = sorted(glob.glob(os.path.join(self.dataset_source_folder_path, split, sub, '*.txt')))
+            folder = os.path.join(self.dataset_source_folder_path, split, sub)
+            files = sorted(f for f in glob.glob(os.path.join(folder, '*')) if os.path.isfile(f) and not os.path.basename(f).startswith('.'))
+            if not files:
+                raise FileNotFoundError('no review files found in ' + os.path.abspath(folder) +
+                                        ' (expected <folder>/%s/%s/<id>_<rating>.txt)' % (split, sub))
             for fp in files:
                 with open(fp, encoding='utf-8', errors='ignore') as f:
                     docs.append(clean_review(f.read(), self.remove_stopwords))
@@ -44,7 +48,10 @@ class Dataset_Loader(dataset):
             if os.path.exists(cache):
                 print('  using cleaned tokens cached in', cache)
                 with open(cache, 'rb') as f:
-                    return pickle.load(f)
+                    cached = pickle.load(f)
+                if len(cached['train'][0]) > 0 and len(cached['test'][0]) > 0:
+                    return cached
+                print('  ignoring an empty cache file')
         out = {'train': self._read_split('train'), 'test': self._read_split('test')}
         if cache:
             with open(cache, 'wb') as f:

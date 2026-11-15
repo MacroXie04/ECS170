@@ -38,7 +38,8 @@ class Method_RNN(method, nn.Module):
     num_layers = 1
     rnn_type = 'rnn'               # rnn | lstm | gru
     bidirectional = False
-    dropout = 0.3
+    dropout = 0.3                  # before the output layer (and between layers if num_layers > 1)
+    embedding_dropout = 0.0        # randomly zero whole embedding values of the input words (regularises the 1M embedding weights)
     glove_path = None              # optional: initialise the embedding from a GloVe file (sets embedding_dim)
     freeze_embedding = False
     optimizer_name = 'adam'        # adam | adamw | sgd | rmsprop
@@ -73,11 +74,12 @@ class Method_RNN(method, nn.Module):
         self.rnn = cell(self.embedding_dim, self.hidden_size, num_layers=self.num_layers, batch_first=True,
                         bidirectional=self.bidirectional, dropout=self.dropout if self.num_layers > 1 else 0.0)
         self.drop = nn.Dropout(self.dropout)
+        self.emb_drop = nn.Dropout(self.embedding_dropout)
         self.classifier = nn.Linear(self.hidden_size * (2 if self.bidirectional else 1), self.num_classes)
 
     def forward(self, x):
         lengths = (x != 0).sum(dim=1).clamp(min=1)                       # real words per review
-        packed = pack_padded_sequence(self.embedding(x), lengths.cpu(), batch_first=True, enforce_sorted=False)
+        packed = pack_padded_sequence(self.emb_drop(self.embedding(x)), lengths.cpu(), batch_first=True, enforce_sorted=False)
         _, h = self.rnn(packed)
         if self.rnn_type == 'lstm':
             h = h[0]                                                      # (h_n, c_n) -> h_n
