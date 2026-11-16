@@ -1,0 +1,52 @@
+{
+  "seed": 170,
+  "split_seed": 999,
+  "smoke": false,
+  "settings": {
+    "task": "classify",
+    "cell": "RNN",
+    "vocab_size": 20003,
+    "embedding_size": 64,
+    "hidden_size": 64,
+    "dropout": 0.2
+  },
+  "learning_rate": 0.002,
+  "batch_size": 128,
+  "max_epochs": 10,
+  "patience": 2,
+  "threads": 2,
+  "torch_version": "2.8.0",
+  "split_sizes": {
+    "train": 22500,
+    "val": 2500,
+    "test": 25000
+  },
+  "best_epoch": 4,
+  "validation": {
+    "epoch": 4,
+    "train_loss": 0.2664215703619851,
+    "train_accuracy": 0.8909333333333334,
+    "val_loss": 0.331803213596344,
+    "val_accuracy": 0.8588
+  },
+  "test": {
+    "loss": 0.3630533756065369,
+    "accuracy": 0.84028,
+    "count": 25000,
+    "macro": {
+      "precision": 0.8406591159873276,
+      "recall": 0.84028,
+      "f1": 0.8402355499512728
+    },
+    "confusion_matrix": [
+      [
+        10712,
+        1788
+      ],
+      [
+        2205,
+        10295
+      ]
+    ]
+  }
+}

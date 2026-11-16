@@ -1,0 +1,29 @@
+[
+  {
+    "prompt": "what did the",
+    "generated": "what did the fish say to the other? nice belt.",
+    "ended_with_eos": true,
+    "training_jokes_with_prefix": 66,
+    "closest_training_joke": "what did the fish say when it hit the concrete wall? dam",
+    "shared_prefix_tokens": 5,
+    "exact_training_match": false
+  },
+  {
+    "prompt": "why did the",
+    "generated": "why did the chicken cross the road? because he was a little shellfish.",
+    "ended_with_eos": true,
+    "training_jokes_with_prefix": 77,
+    "closest_training_joke": "why did the chicken cross the road? to get away from gordon ramsey",
+    "shared_prefix_tokens": 8,
+    "exact_training_match": false
+  },
+  {
+    "prompt": "how do you",
+    "generated": "how do you get a pirate? you don't know you don't know why.",
+    "ended_with_eos": true,
+    "training_jokes_with_prefix": 26,
+    "closest_training_joke": "how do you get down from an elephant? you don't, you get down from a duck",
+    "shared_prefix_tokens": 4,
+    "exact_training_match": false
+  }
+]

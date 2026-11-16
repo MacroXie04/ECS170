@@ -1,0 +1,38 @@
+{
+  "seed": 170,
+  "split_seed": 999,
+  "smoke": false,
+  "settings": {
+    "task": "generate",
+    "cell": "RNN",
+    "vocab_size": 1616,
+    "embedding_size": 64,
+    "hidden_size": 96,
+    "dropout": 0.2
+  },
+  "learning_rate": 0.002,
+  "batch_size": 32,
+  "max_epochs": 70,
+  "patience": 8,
+  "threads": 1,
+  "torch_version": "2.8.0",
+  "split_sizes": {
+    "train": 1284,
+    "val": 161,
+    "test": 161
+  },
+  "best_epoch": 23,
+  "validation": {
+    "epoch": 23,
+    "train_loss": 3.208981784263053,
+    "train_accuracy": 0.3321349421324797,
+    "val_loss": 3.6834773220303734,
+    "val_accuracy": 0.34257343814646257
+  },
+  "test": {
+    "loss": 3.6804685386191625,
+    "accuracy": 0.34677738236457095,
+    "count": 2529,
+    "perplexity": 39.66497429174134
+  }
+}
