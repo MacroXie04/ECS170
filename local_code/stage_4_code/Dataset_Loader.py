@@ -11,6 +11,7 @@ from ..base_class.dataset import dataset
 
 PAD, UNK, EOS = 0, 1, 2
 TOKEN = re.compile(r"[a-z0-9]+(?:'[a-z0-9]+)?|[.!?,;:]")
+REVIEW_LIMIT = 200
 
 
 def tokenize(text):
@@ -19,10 +20,21 @@ def tokenize(text):
     return TOKEN.findall(text)
 
 
+def review_tokens(text, review_window):
+    tokens = tokenize(text)
+    if review_window == "head-tail" and len(tokens) > REVIEW_LIMIT:
+        half = REVIEW_LIMIT // 2
+        return tokens[:half] + tokens[-half:]
+    return tokens[:REVIEW_LIMIT]
+
+
 class Dataset_Loader(dataset):
-    def __init__(self, root):
+    def __init__(self, root, review_window="head"):
         super().__init__("Stage 4", "IMDb reviews and short jokes")
         self.root = root
+        if review_window not in ("head", "head-tail"):
+            raise ValueError(f"Unknown review window: {review_window}")
+        self.review_window = review_window
 
     def reviews(self, split, smoke):
         rows = []
@@ -60,8 +72,8 @@ class Dataset_Loader(dataset):
             stream = []
             for review in train:
                 text = review[0]
-                tokens = tokenize(text)
-                stream.extend(tokens[:200])
+                tokens = review_tokens(text, self.review_window)
+                stream.extend(tokens)
 
             cap = 20000
             # 200 is the maximum number of token we get from each row, 20000 is the maximum size of our finalized vocabulary.
@@ -111,7 +123,7 @@ class Dataset_Loader(dataset):
                 for review in split_rows:
                     text = review[0]
                     label = review[1]
-                    tokens = tokenize(text)[:200]
+                    tokens = review_tokens(text, self.review_window)
 
                     token_ids = []
                     for token in tokens:

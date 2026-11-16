@@ -19,7 +19,7 @@ PROMPTS = ("what did the", "why did the", "how do you")
 SEED = 170
 
 
-def run_experiment(task, cell, splits, vocab, training_jokes, output, smoke):
+def run_experiment(task, cell, splits, vocab, training_jokes, output, smoke, review_window="head"):
     output.mkdir(parents=True, exist_ok=False)
     torch.manual_seed(SEED)
 
@@ -93,15 +93,16 @@ def run_experiment(task, cell, splits, vocab, training_jokes, output, smoke):
         "validation": history[best_epoch - 1],
         "test": test,
     }
+    checkpoint = {"state_dict": model.state_dict(), "settings": model_settings, "vocab": vocab}
+    if task == "classify":
+        record["review_window"] = review_window
+        checkpoint["review_window"] = review_window
 
     with (output / "history.csv").open("w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=list(history[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(history)
-    torch.save(
-        {"state_dict": model.state_dict(), "settings": model_settings, "vocab": vocab},
-        output / "model.pt",
-    )
+    torch.save(checkpoint, output / "model.pt")
     (output / "record.json").write_text(json.dumps(record, indent=2) + "\n")
 
 
