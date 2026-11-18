@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import csv
 import hashlib
+from contextlib import nullcontext
+from io import BytesIO
 import html
 import json
 import random
@@ -16,6 +18,7 @@ import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Iterable, Sequence
+from zipfile import ZipFile
 
 from local_code.base_class.dataset import dataset
 
@@ -30,6 +33,22 @@ def tokenize(text: str) -> list[str]:
     text = unicodedata.normalize("NFKC", html.unescape(str(text)))
     text = _HTML_TAG.sub(" ", text).replace("’", "'").replace("‘", "'")
     return _WORD_OR_PUNCT.findall(text.lower())
+
+
+def truncate_tokens(ids: Sequence[int], max_length: int, mode: str = "head") -> list[int]:
+    """Retain the first tokens, or both ends, within a fixed length budget."""
+    if max_length < 1:
+        raise ValueError("max_length must be positive")
+    if mode not in {"head", "head_tail"}:
+        raise ValueError("truncation_mode must be head or head_tail")
+    values = list(ids)
+    if len(values) <= max_length:
+        return values or [UNK]
+    if mode == "head":
+        return values[:max_length]
+    first = (max_length + 1) // 2
+    last = max_length // 2
+    return values[:first] + (values[-last:] if last else [])
 
 
 def detokenize(tokens: Iterable[str]) -> str:
@@ -107,7 +126,9 @@ def _partition_metadata(partitions: dict[str, list[dict]], vocab: Vocabulary) ->
     split_sets = {name: set(ids) for name, ids in split_ids.items()}
     normalized = {name: {_normalized(row["text"]) for row in records}
                   for name, records in partitions.items()}
-    pairs = (("train", "validation"), ("train", "test"), ("validation", "test"))
+    pairs = tuple((a, b) for a, b in
+                  (("train", "validation"), ("train", "test"), ("validation", "test"))
+                  if a in partitions and b in partitions)
     return {
         "counts": {name: len(records) for name, records in partitions.items()},
         "split_ids": split_ids,
@@ -143,24 +164,61 @@ class Dataset_Loader(dataset):
     def load(self):
         return self.load_classification()
 
-    def load_classification(self) -> dict:
+    def load_classification(self, include_test: bool = True,
+                            truncation_mode: str = "head",
+                            archive_path: str | Path | None = None) -> dict:
+        """Load a fixed IMDb train/validation split, optionally omitting test I/O.
+
+        ``head`` reproduces the original first-N-token baseline. ``head_tail``
+        retains the first ceil(N/2) and last floor(N/2) tokens when truncated.
+        ``archive_path`` reads selected archive members directly, avoiding the
+        slow small-file reads of the extracted course dataset.
+        """
+        if truncation_mode not in {"head", "head_tail"}:
+            raise ValueError("truncation_mode must be head or head_tail")
         root = self.data_dir / "text_classification"
-        official = {"train": [], "test": []}
+        official = {"train": []}
+        if include_test:
+            official["test"] = []
         source_hash = hashlib.sha256()
-        for split in official:
-            for label_name, label in (("neg", 0), ("pos", 1)):
-                paths = sorted((root / split / label_name).glob("*.txt"))
-                if not paths:
-                    raise FileNotFoundError(f"No review text files in {root / split / label_name}")
-                for path in paths:
-                    payload = path.read_bytes()
-                    identifier = path.relative_to(root).as_posix()
-                    source_hash.update(identifier.encode("utf-8") + b"\0" + payload + b"\0")
-                    official[split].append({"id": identifier,
-                                            "text": payload.decode("utf-8", errors="replace"),
-                                            "label": label})
+        archive_bytes = Path(archive_path).expanduser().read_bytes() if archive_path is not None else None
+        archive_context = ZipFile(BytesIO(archive_bytes)) if archive_bytes is not None else nullcontext()
+        with archive_context as archive:
+            if archive is not None:
+                names = archive.namelist()
+                archive_root = next((prefix for prefix in
+                                     ("stage_4_data/text_classification/", "text_classification/")
+                                     if any(name.startswith(prefix + "train/neg/") and name.endswith(".txt")
+                                            for name in names)), None)
+                if archive_root is None:
+                    raise FileNotFoundError("No IMDb train/neg review files in archive")
+
+            def selected_files(split: str, label_name: str):
+                if archive is None:
+                    for path in sorted((root / split / label_name).glob("*.txt")):
+                        yield path.relative_to(root).as_posix(), path.read_bytes()
+                else:
+                    prefix = archive_root + split + "/" + label_name + "/"
+                    for name in sorted(name for name in names
+                                       if name.startswith(prefix) and name.endswith(".txt")):
+                        yield name[len(archive_root):], archive.read(name)
+
+            for split in official:
+                for label_name, label in (("neg", 0), ("pos", 1)):
+                    found = False
+                    for identifier, payload in selected_files(split, label_name):
+                        found = True
+                        source_hash.update(identifier.encode("utf-8") + b"\0" + payload + b"\0")
+                        official[split].append({"id": identifier,
+                                                "text": payload.decode("utf-8", errors="replace"),
+                                                "label": label})
+                    if not found:
+                        location = archive_path if archive is not None else root / split / label_name
+                        raise FileNotFoundError(f"No review text files in {location} ({split}/{label_name})")
         rng = random.Random(self.seed)
-        partitions = {"train": [], "validation": [], "test": official["test"]}
+        partitions = {"train": [], "validation": []}
+        if include_test:
+            partitions["test"] = official["test"]
         # Group only official-training texts. Test content never influences the
         # validation choice, even when the original dataset contains duplicates.
         groups = defaultdict(list)
@@ -198,7 +256,7 @@ class Dataset_Loader(dataset):
             for row in rows:
                 ids = vocab.encode(row["text"])
                 truncated_counts[name] += len(ids) > self.max_length
-                row["tokens"] = ids[:self.max_length] or [UNK]
+                row["tokens"] = truncate_tokens(ids, self.max_length, truncation_mode)
         metadata = _partition_metadata(partitions, vocab)
         metadata.update({
             "task": "classification", "dataset": "IMDb", "seed": self.seed,
@@ -215,6 +273,14 @@ class Dataset_Loader(dataset):
             "label_counts": {name: dict(Counter(str(r["label"]) for r in rows)) for name, rows in partitions.items()},
             "cleaning": "HTML decoding/removal, Unicode normalization, lowercasing; keep negation, contractions and punctuation",
         })
+        if truncation_mode != "head":
+            metadata["truncation_mode"] = truncation_mode
+        if not include_test:
+            metadata["official_test_loaded"] = False
+            metadata["source_hash_scope"] = "official_train_only"
+        if archive_bytes is not None:
+            metadata["source_container"] = "zip"
+            metadata["archive_sha256"] = hashlib.sha256(archive_bytes).hexdigest()
         return {**partitions, "vocab": vocab, "metadata": metadata}
 
     def load_generation(self) -> dict:

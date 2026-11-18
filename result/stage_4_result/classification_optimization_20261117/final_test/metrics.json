@@ -1,0 +1,27 @@
+{
+  "selected_run": "e_bigru128_meanmax_drop30_512_headtail_s1706",
+  "config_hash": "1e5591ced0976ffde78d0b2761f6ff28241f09806edbfe74233d61c9834047c0",
+  "checkpoint_sha256": "e7c86d34026f6940fdbbb1eed38c18e9b033386e07467152b1e0613cdef00c77",
+  "official_test": {
+    "n_examples": 25000,
+    "loss": 0.2929575445234586,
+    "accuracy": 0.89244,
+    "macro_precision": 0.8932095809840073,
+    "macro_recall": 0.89244,
+    "macro_f1": 0.892387345730897,
+    "confusion_matrix": [
+      [
+        10879,
+        1621
+      ],
+      [
+        1068,
+        11432
+      ]
+    ]
+  },
+  "delta_accuracy_percentage_points_vs_gru_87_184": 2.0600000000000023,
+  "evaluation_seconds": 3.3686736910021864,
+  "test_split_id_sha256": "8009cfbb74d8fd6882a1099ca8c98bd5c9c945eb883f63d6c9ddcf1899f90ee4",
+  "n_test_examples": 25000
+}

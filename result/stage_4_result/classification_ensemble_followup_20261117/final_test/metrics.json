@@ -1,0 +1,65 @@
+{
+  "selection_sha256": "f9d1eba3aa0480d89f162e268485742e10dfa06f89a20ab0052b0dbec8e20823",
+  "members": [
+    {
+      "run": "c_bigru128_meanmax_512_headtail_s1704",
+      "config_hash": "ddeea6abf52f7f7b40a8fb131d5a90187f5577ce24c9845f69bb12da662b1dad",
+      "checkpoint_sha256": "24b49c795c9557b71cba301cb8f164e48644c492fdaeba334627073c55c481a0"
+    },
+    {
+      "run": "e_bigru128_meanmax_drop30_512_headtail_s1705",
+      "config_hash": "4b424a8e05c5b805fa60faf0ae82ea9519c93108e4db3db5ab06d60f3689da2f",
+      "checkpoint_sha256": "01e20d1b2f6b9841d881f80e6a42bbeaf4cd27129800dc6b2b02f79b7352b809"
+    },
+    {
+      "run": "e_bigru128_meanmax_drop30_512_headtail_s1706",
+      "config_hash": "1e5591ced0976ffde78d0b2761f6ff28241f09806edbfe74233d61c9834047c0",
+      "checkpoint_sha256": "e7c86d34026f6940fdbbb1eed38c18e9b033386e07467152b1e0613cdef00c77"
+    }
+  ],
+  "weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "threshold": 0.5,
+  "validation": {
+    "n_examples": 2500,
+    "loss": 0.22740134413741872,
+    "accuracy": 0.9208,
+    "macro_precision": 0.9210425204918032,
+    "macro_recall": 0.9208000000000001,
+    "macro_f1": 0.9207885935574722,
+    "confusion_matrix": [
+      [
+        1136,
+        114
+      ],
+      [
+        84,
+        1166
+      ]
+    ]
+  },
+  "official_test": {
+    "n_examples": 25000,
+    "loss": 0.24715401754829158,
+    "accuracy": 0.90424,
+    "macro_precision": 0.9043276090594068,
+    "macro_recall": 0.9042399999999999,
+    "macro_f1": 0.9042348124380959,
+    "confusion_matrix": [
+      [
+        11211,
+        1289
+      ],
+      [
+        1105,
+        11395
+      ]
+    ]
+  },
+  "evaluation_seconds": 8.447882757987827,
+  "test_split_id_sha256": "8009cfbb74d8fd6882a1099ca8c98bd5c9c945eb883f63d6c9ddcf1899f90ee4",
+  "previous_official_test_exposure": "Original GRU 87.184 percent and selected single BiGRU seed 89.244 percent were previously viewed; this is a repeated official-test use."
+}

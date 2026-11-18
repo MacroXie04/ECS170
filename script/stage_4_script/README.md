@@ -122,3 +122,52 @@ The coherent-generation profile, six additional model runs, all 12 before/after 
 ## Alternative generation methods
 
 [Alternative generation experiments](GENERATION_ALTERNATIVES.md) complete the copy-aware search and disclosed GloVe-GRU follow-up, with frozen final tests, original-panel regression, two independent assistant reviews, and 117 passing tests. Direct training-text reuse decreases, but coherence still drops; the original default is retained. `predict_alternative_generation.py` provides the retained default and an explicit experimental profile. No push or Pull Request was made.
+
+## Classification-only optimization commands
+
+The new classifier search runs only on the fixed official-training-derived train and
+validation partitions. It reads the course ZIP to avoid slow small-file I/O.
+Each run saves its own configuration, source hashes, history, validation
+predictions, learning curve, and best/last checkpoints under
+result/stage_4_result/classification_optimization_20261117/. The original
+baseline and generation result directories are untouched. The selection
+protocol, screening comparison, three-seed comparison, and locked final
+selection are in protocol.json, screening.json, replication.json, and
+selection.json under that directory.
+
+From the repository root, reproduce the selected configuration for each
+model/training seed with the same split seed (1704):
+
+    .venv-cuda/bin/python script/stage_4_script/train_classification.py train --tag c_bigru128_meanmax_512_headtail_s1704 --cell gru --bidirectional --pooling meanmax --max-length 512 --truncation head_tail --model-seed 1704 --device cuda
+    .venv-cuda/bin/python script/stage_4_script/train_classification.py train --tag e_bigru128_meanmax_drop30_512_headtail_s1705 --cell gru --bidirectional --pooling meanmax --max-length 512 --truncation head_tail --model-seed 1705 --device cuda
+    .venv-cuda/bin/python script/stage_4_script/train_classification.py train --tag e_bigru128_meanmax_drop30_512_headtail_s1706 --cell gru --bidirectional --pooling meanmax --max-length 512 --truncation head_tail --model-seed 1706 --device cuda
+
+Training never evaluates the official test split. After validation has selected
+and locked a configuration and checkpoint in selection.json, run the explicit
+full official-test evaluation and then predict from the locked model:
+
+    .venv-cuda/bin/python script/stage_4_script/train_classification.py final-eval --device cuda
+    .venv-cuda/bin/python script/stage_4_script/train_classification.py predict --text "This movie has excellent acting and a moving story." --device cpu
+
+For a fresh experiment, use a new --tag or --root. Existing run configurations
+and locked final-test metrics are guarded against accidental overwrite.
+
+## Three-seed classification ensemble
+
+The classification follow-up uses the three saved dropout-0.3 BiGRU
+checkpoints from the optimization directory. It averages their positive-class
+probabilities with equal weights and uses the fixed 0.5 threshold. Its
+selection, validation evidence, and locked full-test output are under
+result/stage_4_result/classification_ensemble_followup_20261117/.
+The official test was already viewed for the baseline and selected single
+model before this follow-up, so its ensemble evaluation is repeated use.
+
+From the repository root:
+
+    .venv-cuda/bin/python script/stage_4_script/evaluate_classification_ensemble.py validate --selection result/stage_4_result/classification_ensemble_followup_20261117/selection.json
+    .venv-cuda/bin/python script/stage_4_script/evaluate_classification_ensemble.py final-eval --selection result/stage_4_result/classification_ensemble_followup_20261117/selection.json --device cuda
+    .venv-cuda/bin/python script/stage_4_script/evaluate_classification_ensemble.py predict --selection result/stage_4_result/classification_ensemble_followup_20261117/selection.json --text "This movie has excellent acting and a moving story." --device cpu
+
+The evaluator checks the three checkpoint, source, split, vocabulary, and
+official-test fingerprints before reporting test metrics. It refuses to
+replace a completed test result with a changed selection.
