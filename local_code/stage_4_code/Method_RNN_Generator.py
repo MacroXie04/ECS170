@@ -23,6 +23,8 @@ class Method_RNN_Generator(method, nn.Module):
     hidden_size = 128
     num_layers = 1
     rnn_type = 'lstm'              # rnn | lstm | gru
+    glove_path = None              # optional: initialise the embedding from a GloVe file (sets embedding_dim); fine-tuned
+    freeze_embedding = False
     dropout = 0.3
     learning_rate = 2e-3
     weight_decay = 0.0
@@ -41,8 +43,11 @@ class Method_RNN_Generator(method, nn.Module):
         self.val_loss_history = []
         self.best_epoch = None
 
-    def build(self, vocab_size):
+    def build(self, vocab_size, embedding_matrix=None):
         self.embedding = nn.Embedding(vocab_size, self.embedding_dim, padding_idx=0)
+        if embedding_matrix is not None:
+            self.embedding.weight.data.copy_(torch.as_tensor(embedding_matrix))
+            self.embedding.weight.requires_grad = not self.freeze_embedding
         cell = {'rnn': nn.RNN, 'lstm': nn.LSTM, 'gru': nn.GRU}[self.rnn_type]
         self.rnn = cell(self.embedding_dim, self.hidden_size, num_layers=self.num_layers, batch_first=True,
                         dropout=self.dropout if self.num_layers > 1 else 0.0)
@@ -97,9 +102,11 @@ class Method_RNN_Generator(method, nn.Module):
                 print('restored epoch %d (lowest validation loss %.4f, perplexity %.1f)' % (self.best_epoch, best, np.exp(best)))
 
     @torch.no_grad()
-    def generate(self, start_words, max_len=40, temperature=0.0, top_k=None, seed=None):
+    def generate(self, start_words, max_len=40, temperature=0.0, top_k=None, seed=None, min_len=0, no_repeat=False):
         '''start_words: list of word tokens. temperature 0 = always the most likely token (greedy);
-        temperature > 0 samples (optionally only from the top_k tokens). Returns the full token list.'''
+        temperature > 0 samples (optionally only from the top_k tokens). Returns the full token list.
+        min_len: <eos> is not allowed before the joke has this many tokens (the start words count).
+        no_repeat: never repeat a word pair that is already in the joke (stops loops like 'a joke and a joke and a joke').'''
         self.eval()
         vocab = self.data['vocab']
         gen = torch.Generator().manual_seed(seed) if seed is not None else None
@@ -113,6 +120,12 @@ class Method_RNN_Generator(method, nn.Module):
                 for ch in ('.', ',', '!', '?'):
                     if ch in vocab.stoi:
                         step[vocab.stoi[ch]] = -float('inf')
+            if min_len and len(tokens) < min_len:
+                step[2] = -float('inf')                             # too short to stop yet
+            if no_repeat:
+                for a, b in zip(tokens, tokens[1:]):
+                    if a == tokens[-1] and b in vocab.stoi:
+                        step[vocab.stoi[b]] = -float('inf')
             if temperature <= 0:
                 nxt = int(step.argmax())
             else:
@@ -131,7 +144,12 @@ class Method_RNN_Generator(method, nn.Module):
         torch.manual_seed(self.seed)
         np.random.seed(self.seed)
         self.device = get_device() if self.use_gpu else torch.device('cpu')
-        self.build(len(self.data['vocab']))
+        matrix = None
+        if self.glove_path:
+            from local_code.stage_4_code.text_utils import load_glove_matrix
+            matrix, found, self.embedding_dim = load_glove_matrix(self.glove_path, self.data['vocab'], self.seed)
+            print('GloVe: %d of %d vocabulary words found (dimension %d)' % (found, len(self.data['vocab']), self.embedding_dim))
+        self.build(len(self.data['vocab']), matrix)
         self.to(self.device)
         print('method running on', self.device, '|', self.rnn_type.upper(), '| trainable parameters:', self.num_parameters())
         print('--start training...')
