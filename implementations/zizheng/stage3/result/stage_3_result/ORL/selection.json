@@ -1,0 +1,43 @@
+{
+  "rule": "Max validation accuracy, then macro F1, then name; checkpoint by minimum validation loss",
+  "candidates": [
+    "baseline",
+    "depth3",
+    "average_pool",
+    "hidden32",
+    "squared_error"
+  ],
+  "selected": "average_pool",
+  "config": {
+    "channels": [
+      16,
+      32
+    ],
+    "kernel": 3,
+    "pool": "average",
+    "grid": [
+      7,
+      5
+    ],
+    "hidden": 128,
+    "dropout": 0.3,
+    "batch_norm": false,
+    "loss": "cross_entropy",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 40,
+    "epochs": 65,
+    "patience": 15,
+    "seed": 42,
+    "augment": false
+  },
+  "dataset": "ORL",
+  "train_source": {
+    "file": "ORL",
+    "partition": "train",
+    "rows": 360,
+    "sha256": "94a49cfe24429ccb7caba3439924a30cf5dfbe5fbfa003b7d4edb70d17a7a271"
+  },
+  "source_sha256": "79dac9e85b9a2069778d0ee1a07241f3631a4cddbf6207fa553e5e67a9caf561",
+  "validation_accuracy": 0.975
+}

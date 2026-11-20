@@ -13,8 +13,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def verify(root=ROOT, check_history=False):
-    manifest = json.loads((root / "provenance.json").read_text())
+def verify(root=ROOT, check_history=False, manifest_path="provenance.json"):
+    manifest = json.loads((root / manifest_path).read_text())
     errors = []
     count = 0
     for member in manifest["implementations"]:
@@ -43,15 +43,17 @@ def verify(root=ROOT, check_history=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check-history", action="store_true")
+    parser.add_argument("--manifest", default="provenance.json",
+                        help="Source manifest relative to the repository root")
     args = parser.parse_args()
     try:
-        members, count = verify(check_history=args.check_history)
+        members, count = verify(check_history=args.check_history, manifest_path=args.manifest)
     except (ValueError, OSError, KeyError) as exc:
         print(str(exc), file=sys.stderr)
         return 1
     print(f"Verified {count} original files across {members} implementations.")
     if args.check_history:
-        print("All four source commits are ancestors of HEAD.")
+        print(f"All {members} source commits are ancestors of HEAD.")
     return 0
 
 

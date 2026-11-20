@@ -1,167 +1,83 @@
-# ECS 170 course project
+# ECS 170 — Stage 2 and Stage 3 team implementations
 
-- [Stage 3: CNN image classification](#stage-3-cnn-image-classification)
-- [Stage 2: team integration](#stage-2-team-integration)
+## Stage 3
 
-## Stage 3: CNN image classification
+The four Stage 3 submissions are integrated as separate runnable projects. Their
+original commits remain in Git history, and their source files and committed
+results are preserved byte-for-byte. Each project keeps its own CNNs, training
+protocol, and evaluation code; the shared root is not assigned to one member.
 
-Stage 3 trains CNNs on the instructor's MNIST, ORL, and CIFAR-10 datasets and
-compares configurations on each. The code follows the course template:
-`local_code/stage_3_code/` holds the dataset, method, setting, evaluate, and
-result classes, and `script/stage_3_script/` holds the entry points.
+| Member | Stage 3 project | Source PR | Source commit |
+|---|---|---|---|
+| Hongzhe Xie | [implementations/hongzhe/stage3](implementations/hongzhe/stage3) | [#6](https://github.com/MacroXie04/ECS170/pull/6) | `41cb6f0` |
+| Xiaoyu Feng | [implementations/xiaoyu/stage3](implementations/xiaoyu/stage3) | [#7](https://github.com/MacroXie04/ECS170/pull/7) | `011ea2c` |
+| Zizheng Wang | [implementations/zizheng/stage3](implementations/zizheng/stage3) | [#8](https://github.com/MacroXie04/ECS170/pull/8) | `5d23e34` |
+| Aileen Zheng | [implementations/aileen/stage3](implementations/aileen/stage3) | [#9](https://github.com/MacroXie04/ECS170/pull/9) | `4e49b4e` |
 
-### Install
+Each directory contains its source branch tree except the inherited
+`implementations/` archives, which already exist at the repository root.
+Supporting base classes and Stage 2 modules are included because some Stage 3
+implementations import them. Nested workflow files are historical copies and
+are not active workflows. Inherited Stage 2 integration commands in these
+snapshots should be run from the repository root instead.
 
-Use Python 3.12 or newer. For CPU training:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-For an NVIDIA GPU, install the same PyTorch version from the CUDA index first.
-Blackwell GPUs need CUDA 12.8 or newer, so use `cu130`:
-
-```bash
-python -m pip install --index-url https://download.pytorch.org/whl/cu130 'torch==2.14.1'
-python -m pip install -r requirements.txt
-```
-
-No dependency was added for Stage 3. Download the instructor's data from its
-public link (no account needed) and verify the checksums:
+`provenance_stage3.json` records all 1,458 imported files and source commits.
+The earlier Stage 2 manifest and its 350 files remain intact. Verify both with:
 
 ```bash
-python script/stage_3_script/prepare_stage3_data.py
+python script/integration/verify_sources.py --check-history
+python script/integration/verify_sources.py --manifest provenance_stage3.json --check-history
 ```
 
-### Commands
+### Reproduce Stage 3
 
-All commands run through `script/stage_3_script/run_stage3.py`. `--device`
-accepts `auto` (the default: CUDA, then MPS, then CPU), `cpu`, `cuda`, `cuda:N`,
-or `mps`. `--threads` sets the CPU thread count.
+Install the root `requirements.txt` using Python 3.13. Keep archived source
+snapshots unchanged by copying the selected project into the ignored `runs/`
+directory before training. For example, from the repository root:
 
-| Task | Command |
+```bash
+mkdir -p runs/stage3
+cp -R implementations/xiaoyu/stage3 runs/stage3/xiaoyu
+cd runs/stage3/xiaoyu
+# Place the instructor's MNIST, ORL and CIFAR files in data/stage_3_data/.
+python script/stage_3_script/script_experiments.py
+```
+
+Use a new destination for each copy. The commands below are relative to that
+member's copied project root; see each original README for full settings.
+
+| Member | Commands |
 |---|---|
-| List configurations | `python script/stage_3_script/run_stage3.py list` |
-| Check data, models, and checkpoints | `python script/stage_3_script/run_stage3.py preflight` |
-| Train one dataset and config | `python script/stage_3_script/run_stage3.py train --dataset cifar --config baseline --seed 2026` |
-| Run all required experiments | `python script/stage_3_script/run_stage3.py run-all --jobs 2` |
-| Resume from a checkpoint | `python script/stage_3_script/run_stage3.py resume --dataset cifar --config baseline --seed 2026` |
-| Fix the plan before testing | `python script/stage_3_script/run_stage3.py lock-protocol` |
-| Evaluate a checkpoint | `python script/stage_3_script/run_stage3.py evaluate --dataset cifar --config baseline --seed 2026` |
-| Reload every checkpoint and compare | `python script/stage_3_script/run_stage3.py verify` |
-| Rebuild tables and figures | `python script/stage_3_script/run_stage3.py summarize` |
-| Run one dataset's configurations | `python script/stage_3_script/script_cnn_mnist.py` (also `script_cnn_orl.py`, `script_cnn_cifar.py`) |
+| Hongzhe | `python script/stage_3_script/run_stage3.py run-all --result-root result/fresh_stage3` |
+| Xiaoyu | `python script/stage_3_script/script_experiments.py` |
+| Zizheng | `python script/stage_3_script/script_cnn.py compare --output result/fresh_stage3`, then `python script/stage_3_script/script_cnn.py final --output result/fresh_stage3` |
+| Aileen | `python script/stage_3_script/script_cnn.py MNIST` (repeat with `ORL` and `CIFAR`); `python script/stage_3_script/script_ablation.py` for the configuration study |
 
-`train` drops the test split as soon as the file is loaded, so no model or
-statistic sees it. `run-all` locks the plan, trains every run, then evaluates. Rerun `run-all` to continue after a stop: finished runs are
-skipped and interrupted runs resume from their last epoch. `resume --checkpoint
-PATH` continues from a specific file of that run. A run with a saved test result
-cannot train further, because the result would no longer describe the model on
-disk. `evaluate` saves the first result for a run; later calls compare against that result instead of replacing it.
-`evaluate --checkpoint PATH` reports under the run's `evaluations/` folder and
-leaves the formal result alone.
+Hongzhe's archived status files mark completed runs, while checkpoints are
+excluded from Git. A fresh `--result-root` is necessary to train anew;
+checkpoint verification must use that same newly trained result directory.
+Zizheng's fresh output directory similarly keeps archived validation/final
+records separate. Aileen's original ablation script reuses the per-dataset
+prediction filename across configurations; retain separate runtime copies if
+individual configuration prediction files are needed.
 
-To try a change without affecting formal results, use a pilot run:
+The original experimental protocols remain unchanged. Hongzhe and Zizheng use
+validation-based selection; Xiaoyu and Aileen compare configurations using test
+results, so those comparisons are descriptive. This merge does not rerun full
+training or create new official benchmark scores.
 
-```bash
-python script/stage_3_script/run_stage3.py train --dataset orl --tag try_lr --set learning_rate=0.0005
-```
+### Stage 3 checks
 
-Pilot runs go to `pilot_runs/` and cannot read the test set.
+The Stage 3 integration workflow verifies both source manifests and ancestry,
+runs the original Hongzhe and Zizheng unit tests, and smoke-tests Xiaoyu and
+Aileen on synthetic inputs for MNIST, ORL and CIFAR. Data-dependent tests may
+skip when the instructor datasets are absent. Synthetic checks validate that
+training/evaluation runs and are not accuracy benchmarks.
 
-### Protocol
+## Stage 2
 
-- **Data:** the instructor's train and test splits are used unchanged. A
-  stratified validation set comes from the training set only, with split seed
-  170, and every run on a dataset shares it.
-
-  | Dataset | Optimization | Validation | Test |
-  |---|---:|---:|---:|
-  | MNIST | 54,000 | 6,000 | 10,000 |
-  | ORL | 320 (8 per person) | 40 (1 per person) | 40 |
-  | CIFAR-10 | 45,000 | 5,000 | 10,000 |
-
-- **Preprocessing:** pixels are scaled to [0, 1], then normalized with per-channel
-  statistics from the optimization images only. ORL keeps one of its three
-  identical channels, and its labels 1–40 map to 0–39. Random shifts and flips
-  apply to training batches only.
-- **Checkpoint selection:** each run keeps the epoch with the highest validation
-  accuracy, then the lowest validation cross-entropy, then the earliest epoch.
-- **Configuration selection:** each dataset's final choice has the highest mean
-  validation accuracy over seeds, then the lowest mean validation cross-entropy,
-  then the fewest parameters. Test results play no part.
-- **Fixed in advance:** `protocol.json` records the configurations and rules
-  before any test evaluation, and `test_access_log.jsonl` records every model
-  evaluation on the test set. `preflight` also loads the test split, but only
-  to check its size, shape, labels, and overlap with training images.
-- **Reproducibility:** seeds, data order, and augmentation are fixed and restored
-  on resume. Exact reruns need the same PyTorch build, hardware, and thread count.
-  Results from different devices are not expected to match exactly.
-
-### Results
-
-Each run lives in `result/stage_3_result/runs/<dataset>/<config>/seed_<seed>/`:
-
-| File | Contents |
-|---|---|
-| `config.json`, `split.json`, `environment.json` | Full configuration and seeds, split and normalization, device and dependency versions |
-| `history.csv`, `history.json`, `train.log` | Per-epoch losses, accuracy, and timing; the training log |
-| `model_summary.txt` | Layers, output shapes, and parameter counts |
-| `test_metrics.json` | Accuracy, macro and weighted precision, recall, and F1, confusion matrix |
-| `test_predictions.npz` | True and predicted labels for the full test set |
-| `checkpoints/best.pt`, `checkpoints/last.pt` | Selected checkpoint and latest resume state (ignored by git) |
-
-`result/stage_3_result/summary/` holds the combined results: `SUMMARY.md`,
-`config_comparison.csv`, `runs.csv`, `best_configs.json`, learning curves and
-architecture diagrams in `figures/`, and per-configuration structure text in
-`architecture/`. `pilot_runs/` keeps the validation-only trial runs.
-
-`verify` writes `summary/reload_verification.json`. The formal checks were kept
-as `reload_verification_cuda.json` and `reload_verification_cpu.json`. The CUDA
-check matched all 72 runs exactly. The CPU check matched 71: rounding differences
-changed one of 10,000 predictions in `cifar/kernel5/seed_2028`, and `verify`
-reports any metric change above 1e-6 as a failure.
-
-The formal results came from one command on an NVIDIA RTX PRO 4500 Blackwell:
-
-```bash
-python script/stage_3_script/run_stage3.py run-all --device cuda --jobs 3 --threads 4
-```
-
-Training times were measured with three runs sharing the GPU, so they compare
-configurations only roughly.
-
-### ORL follow-up
-
-`script/stage_3_followup/run_orl_followup.py` is a supplementary experiment. It
-picks an ORL configuration by 9-fold cross-validation on the 360 training images,
-refits that configuration on all 360 for three seeds, and scores their ensemble.
-Run its stages in order:
-
-```bash
-python script/stage_3_followup/run_orl_followup.py register
-python script/stage_3_followup/run_orl_followup.py cv --jobs 3
-python script/stage_3_followup/run_orl_followup.py refit
-python script/stage_3_followup/run_orl_followup.py test
-```
-
-It was proposed after the formal ORL test scores were known, so its result is not
-a blind estimate and does not replace the formal results. Results are in
-`result/stage_3_result/orl_followup/`; start with `FOLLOWUP.md`. Its test read is
-logged in that folder's own `test_access_log.jsonl`.
-
-### Tests
-
-```bash
-python -m unittest discover -s tests/stage3
-```
-
-## Stage 2: team integration
-
-`Dev` brings the four members' implementations together while preserving their
-original source files and saved experiments. Each implementation retains its own
-architecture, training settings, and evaluation protocol. This integration does
-not replace them with a single algorithm or change `main`.
+The Stage 2 integration preserves the four original implementations and saved
+experiments. Each retains its own architecture, settings, and evaluation protocol.
 
 | Member | Directory | Source branch | Source commit |
 |---|---|---|---|
@@ -178,7 +94,7 @@ own project roots. `provenance.json` records the source files and their hashes;
 `python script/integration/verify_sources.py --check-history` checks preservation
 and confirms that all four source commits are in the integrated branch history.
 
-### Run with shared data
+## Run with shared data
 
 Use Python 3.13 and install the pinned dependencies:
 
@@ -213,7 +129,7 @@ configurations. See each member's source and saved configurations for details.
 Cross-member differences are not controlled ablations, and new results can
 differ slightly with the execution platform.
 
-### Automated checks
+## Automated checks
 
 - **Dev integration:** pushes to `Dev` and pull requests targeting `Dev` or
   `main` verify snapshot preservation, run the original Hongzhe and Zizheng

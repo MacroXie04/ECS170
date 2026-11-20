@@ -1,0 +1,44 @@
+{
+  "rule": "Max validation accuracy, then macro F1, then name; checkpoint by minimum validation loss",
+  "candidates": [
+    "baseline",
+    "depth3",
+    "average_pool",
+    "hidden32",
+    "squared_error"
+  ],
+  "selected": "depth3",
+  "config": {
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel": 3,
+    "pool": "max",
+    "grid": [
+      4,
+      4
+    ],
+    "hidden": 128,
+    "dropout": 0.2,
+    "batch_norm": true,
+    "loss": "cross_entropy",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "epochs": 23,
+    "patience": 6,
+    "seed": 42,
+    "augment": true
+  },
+  "dataset": "CIFAR",
+  "train_source": {
+    "file": "CIFAR",
+    "partition": "train",
+    "rows": 50000,
+    "sha256": "04178bcd1198435941ecf94037f09d87f5f9a51ee65bf72b6a497bbfe1c825d4"
+  },
+  "source_sha256": "79dac9e85b9a2069778d0ee1a07241f3631a4cddbf6207fa553e5e67a9caf561",
+  "validation_accuracy": 0.7808
+}
