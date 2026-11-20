@@ -1,0 +1,110 @@
+[
+  {
+    "candidate": "baseline_gru_greedy",
+    "checkpoint": "result/stage_4_result/runs/generation_gru_baseline/checkpoints/best.pt",
+    "checkpoint_sha256": "ba39a7bd132a5a6b83ae02e74884ef29c4720f09c0badad2440fa771a6caced5",
+    "epoch": 46,
+    "validation_loss": 5.139519973918453,
+    "panel_size": 12,
+    "eos_rate": 0.75,
+    "repeated_trigram_outputs": 3,
+    "exact_training_copies": 0,
+    "near_training_copies": 0
+  },
+  {
+    "candidate": "baseline_gru_beam",
+    "checkpoint": "result/stage_4_result/runs/generation_gru_baseline/checkpoints/best.pt",
+    "checkpoint_sha256": "ba39a7bd132a5a6b83ae02e74884ef29c4720f09c0badad2440fa771a6caced5",
+    "epoch": 46,
+    "validation_loss": 5.139519973918453,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 1,
+    "near_training_copies": 2
+  },
+  {
+    "candidate": "compact_gru_best_greedy",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/best.pt",
+    "checkpoint_sha256": "9d1c6236b5a571e93c4f44afa7a1a7ae9acac95e85edbe400e7baa4d4395c44f",
+    "epoch": 7,
+    "validation_loss": 4.988721077000383,
+    "panel_size": 12,
+    "eos_rate": 0.75,
+    "repeated_trigram_outputs": 3,
+    "exact_training_copies": 0,
+    "near_training_copies": 0
+  },
+  {
+    "candidate": "compact_gru_best_beam",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/best.pt",
+    "checkpoint_sha256": "9d1c6236b5a571e93c4f44afa7a1a7ae9acac95e85edbe400e7baa4d4395c44f",
+    "epoch": 7,
+    "validation_loss": 4.988721077000383,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 1,
+    "near_training_copies": 2
+  },
+  {
+    "candidate": "compact_gru_late_greedy",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+    "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+    "epoch": 27,
+    "validation_loss": 5.582583987366003,
+    "panel_size": 12,
+    "eos_rate": 0.9166666666666666,
+    "repeated_trigram_outputs": 1,
+    "exact_training_copies": 6,
+    "near_training_copies": 7
+  },
+  {
+    "candidate": "compact_gru_late_beam",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+    "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+    "epoch": 27,
+    "validation_loss": 5.582583987366003,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 6,
+    "near_training_copies": 8
+  },
+  {
+    "candidate": "wide_gru_best_beam",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_wide256/checkpoints/best.pt",
+    "checkpoint_sha256": "657e82b476984a226cc954995f05295e08a2125db8add4832a0794e604e3eb00",
+    "epoch": 24,
+    "validation_loss": 5.100866643137443,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 1,
+    "near_training_copies": 4
+  },
+  {
+    "candidate": "wide_gru_late_beam",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_wide256/checkpoints/last.pt",
+    "checkpoint_sha256": "c45f6ecfbc98c98ca7b8d6c890881e3974843ca782a0d77c5292236171570044",
+    "epoch": 44,
+    "validation_loss": 5.376866385911179,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 4,
+    "near_training_copies": 8
+  },
+  {
+    "candidate": "compact_lstm_late_beam",
+    "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_lstm_compact256/checkpoints/last.pt",
+    "checkpoint_sha256": "b513fa42d09ecf3a834d8264f9cc595c195e2eec9725f3819bf7152ee67b40fb",
+    "epoch": 32,
+    "validation_loss": 5.516746027947932,
+    "panel_size": 12,
+    "eos_rate": 1.0,
+    "repeated_trigram_outputs": 0,
+    "exact_training_copies": 6,
+    "near_training_copies": 8
+  }
+]

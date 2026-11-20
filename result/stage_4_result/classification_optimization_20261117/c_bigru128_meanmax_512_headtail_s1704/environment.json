@@ -1,0 +1,33 @@
+{
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "torch": "2.14.1+cu130",
+  "numpy": "2.5.3",
+  "platform": "Linux-7.0.0-1017-aws-x86_64-with-glibc2.43",
+  "cuda": "13.0",
+  "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+  "device": "cuda",
+  "command": [
+    "script/stage_4_script/train_classification.py",
+    "train",
+    "--tag",
+    "c_bigru128_meanmax_512_headtail_s1704",
+    "--cell",
+    "gru",
+    "--bidirectional",
+    "--pooling",
+    "meanmax",
+    "--max-length",
+    "512",
+    "--truncation",
+    "head_tail",
+    "--device",
+    "cuda"
+  ],
+  "source_sha256": {
+    "local_code/stage_4_code/Dataset_Loader.py": "8d5706794853d43788adaaaf4ee601d41c4609f9bd68be06899bef93fb745d65",
+    "local_code/stage_4_code/Method_Classifier.py": "4417be7442294fac5d9c6b8cb6a457468d9d6553b9e750fba09e92aa8e25977c",
+    "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+    "script/stage_4_script/train_classification.py": "8d011e3c7a5f14c8ad9e94f6bbe839c640a38e0f9d9139fd82e7c637df61729d"
+  },
+  "git_head": "4af3e4c579997f874f02468216b8d39967a4fdf2"
+}

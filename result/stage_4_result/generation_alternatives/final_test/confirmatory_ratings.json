@@ -1,0 +1,152 @@
+[
+  {
+    "id": "A001",
+    "score": 1,
+    "reason": "The legless-cow setup does not support the lean-beef answer; the phrasing is readable but the wordplay is mismatched."
+  },
+  {
+    "id": "A002",
+    "score": 1,
+    "reason": "This is only a readable cross-post attribution, with no actual joke or responsive punchline."
+  },
+  {
+    "id": "A003",
+    "score": 0,
+    "reason": "Going to the other day is a malformed action, and the cancellation has no clear event to refer to."
+  },
+  {
+    "id": "A004",
+    "score": 2,
+    "reason": "The conversational opening is awkward, but the legless cow and ground-beef answer form a complete understandable pun."
+  },
+  {
+    "id": "A005",
+    "score": 2,
+    "reason": "Vulgar matches profanity and echoes bulgur wheat, connecting the grain setup to the answer."
+  },
+  {
+    "id": "A006",
+    "score": 2,
+    "reason": "The stretched Audi name imitates a wolf howl while answering the car question."
+  },
+  {
+    "id": "A007",
+    "score": 0,
+    "reason": "Fell of the mud leaves the central action grammatically broken; the intended dirty/mud connection does not complete it."
+  },
+  {
+    "id": "A008",
+    "score": 1,
+    "reason": "The introductory question is awkward and the legless-cow setup does not explain lean beef."
+  },
+  {
+    "id": "A009",
+    "score": 0,
+    "reason": "What cars do you call a cow combines incompatible question structures and does not form an understandable setup."
+  },
+  {
+    "id": "A010",
+    "score": 2,
+    "reason": "An umbrella is connected to drizzle, and the rapper-style fo-drizzle wording supplies responsive wordplay despite an article typo."
+  },
+  {
+    "id": "A011",
+    "score": 1,
+    "reason": "A bicycle avoiding the road has no established connection to seeing salad dressing."
+  },
+  {
+    "id": "A012",
+    "score": 0,
+    "reason": "Invisible has no grammatical owner or defined referent for favorite drink, leaving the question malformed."
+  },
+  {
+    "id": "A013",
+    "score": 1,
+    "reason": "The relationship abruptly becomes an unexplained he, and the modesty sentence does not resolve that setup."
+  },
+  {
+    "id": "A014",
+    "score": 2,
+    "reason": "The attribution is followed by a complete legless-cow and ground-beef pun."
+  },
+  {
+    "id": "A015",
+    "score": 1,
+    "reason": "The cow with no legs does not explain the lean-beef answer, despite the recognizable question structure."
+  },
+  {
+    "id": "A016",
+    "score": 1,
+    "reason": "The relationship/bar metaphor has no understandable connection to the bartender declaring himself a wholesaler."
+  },
+  {
+    "id": "A017",
+    "score": 2,
+    "reason": "The horse becoming dirty in mud gives a clear literal interpretation of dirty joke."
+  },
+  {
+    "id": "A018",
+    "score": 1,
+    "reason": "Being outstanding in a field does not explain Snoop Dogg using a bus."
+  },
+  {
+    "id": "A019",
+    "score": 0,
+    "reason": "I hate people to be addicted is malformed, and the ending lacks a referent or completed comparison."
+  },
+  {
+    "id": "A020",
+    "score": 1,
+    "reason": "The boogers explanation does not identify something invisible that smells like carrots."
+  },
+  {
+    "id": "A021",
+    "score": 0,
+    "reason": "The final those-who clause is an unfinished fragment and does not complete the stated conflict setup."
+  },
+  {
+    "id": "A022",
+    "score": 2,
+    "reason": "Pizza supports literal cheesiness while the joke can be figuratively cheesy; the hearing-a-joke framing remains understandable."
+  },
+  {
+    "id": "A023",
+    "score": 1,
+    "reason": "The tame-way phrase does not answer the possession question or establish a complete rabbit-related pun."
+  },
+  {
+    "id": "A024",
+    "score": 2,
+    "reason": "The melon name evokes cannot elope, which connects to Romeo and Juliet and answers the setup."
+  },
+  {
+    "id": "A025",
+    "score": 0,
+    "reason": "People, the girlfriend, and the eyebrow statement are joined without a coherent clause structure or completed punchline."
+  },
+  {
+    "id": "A026",
+    "score": 2,
+    "reason": "Other people forgetting the middle-child observance directly supports the familiar overlooked-middle-child premise."
+  },
+  {
+    "id": "A027",
+    "score": 1,
+    "reason": "The unspecified addiction has no understandable connection to the dangling up-there comparison."
+  },
+  {
+    "id": "A028",
+    "score": 2,
+    "reason": "The legless cow being on the ground connects directly to ground beef, forming a complete pun."
+  },
+  {
+    "id": "A029",
+    "score": 1,
+    "reason": "A problem with no eyes is not connected to other people forgetting something."
+  },
+  {
+    "id": "A030",
+    "score": 1,
+    "reason": "A television program about religious orders has no stated connection to pulling a mussel."
+  }
+]

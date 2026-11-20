@@ -1,0 +1,3 @@
+# Optional PDF report dependencies; training dependencies are in ../../requirements.txt.
+reportlab==5.1.0
+pypdf==7.0.1

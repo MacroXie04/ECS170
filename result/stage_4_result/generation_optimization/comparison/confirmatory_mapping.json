@@ -1,0 +1,146 @@
+[
+  {
+    "id": "H001",
+    "original_id": "G011",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 10
+  },
+  {
+    "id": "H002",
+    "original_id": "G022",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 9
+  },
+  {
+    "id": "H003",
+    "original_id": "G028",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 2
+  },
+  {
+    "id": "H004",
+    "original_id": "G050",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "H005",
+    "original_id": "G104",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 0
+  },
+  {
+    "id": "H006",
+    "original_id": "G012",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 8
+  },
+  {
+    "id": "H007",
+    "original_id": "G058",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "H008",
+    "original_id": "G107",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 4
+  },
+  {
+    "id": "H009",
+    "original_id": "G082",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 1
+  },
+  {
+    "id": "H010",
+    "original_id": "G099",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "H011",
+    "original_id": "G101",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "H012",
+    "original_id": "G060",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 5
+  },
+  {
+    "id": "H013",
+    "original_id": "G048",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "H014",
+    "original_id": "G041",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "H015",
+    "original_id": "G013",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "H016",
+    "original_id": "G001",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "H017",
+    "original_id": "G052",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 7
+  },
+  {
+    "id": "H018",
+    "original_id": "G085",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 11
+  },
+  {
+    "id": "H019",
+    "original_id": "G063",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "H020",
+    "original_id": "G081",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "H021",
+    "original_id": "G097",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "H022",
+    "original_id": "G087",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "H023",
+    "original_id": "G073",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 6
+  },
+  {
+    "id": "H024",
+    "original_id": "G086",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 3
+  }
+]

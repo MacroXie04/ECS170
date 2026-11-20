@@ -1,0 +1,38 @@
+{
+  "tag": "b_bilstm128_512_headtail_s1704",
+  "config_hash": "5c691dcbbbbbd9a052d457f2932afa6ec6f3aa6edc71f01dd3e237f912c39a9c",
+  "best_checkpoint_sha256": "51a65c2ba26f7e0b2f5e92017067645b31a41ff814d092da1684374ce6c791fd",
+  "best_epoch": 4,
+  "epochs_completed": 12,
+  "parameters": 2824706,
+  "validation": {
+    "n_examples": 2500,
+    "loss": 0.25256411373865834,
+    "accuracy": 0.9024,
+    "macro_precision": 0.902483458970052,
+    "macro_recall": 0.9024,
+    "macro_f1": 0.9023949401536976,
+    "confusion_matrix": [
+      [
+        1119,
+        131
+      ],
+      [
+        113,
+        1137
+      ]
+    ]
+  },
+  "train_seconds": 126.45217031997163,
+  "total_seconds": 136.38596383197,
+  "peak_gpu_memory_bytes": 656237568,
+  "split_id_sha256": {
+    "train": "39d9175e1d67966cd1ef82ab17cde187ea30d29fefc24403808097c81569c755",
+    "validation": "f191b8ba4ce6b737e97362ba1840a6a8c3f8158f19149a8402ab29e39b85cce9"
+  },
+  "vocabulary_sha256": "de8e34f46a7330e786fca93cad8de4bce2e7bf9a259bb77f3ed21c3153c01737",
+  "truncated_counts": {
+    "train": 2390,
+    "validation": 278
+  }
+}

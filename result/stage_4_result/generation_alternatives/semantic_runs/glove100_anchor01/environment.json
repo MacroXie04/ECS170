@@ -1,0 +1,20 @@
+{
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "torch": "2.14.1+cu130",
+  "numpy": "2.5.3",
+  "platform": "Linux-7.0.0-1017-aws-x86_64-with-glibc2.43",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+  "command": [
+    "script/stage_4_script/train_semantic_generation.py"
+  ],
+  "git_head": "8e2babdc27cd42f923854579b485ecd9a8fce9c2",
+  "source_sha256": {
+    "local_code/stage_4_code/Semantic_Generation.py": "77454d1735c7d83dfa97adf5dc1c93026232f4b594740da1fb3871642c749cd2",
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+    "script/stage_4_script/train_semantic_generation.py": "f104e911261a9f8f3d054ab6673e82faa4a599d99c08d6fa09e9b64e75d44afc"
+  },
+  "pretrained_disclosure": "Uses external GloVe6B100d word vectors. Does not use external text-generation weights or retrieved jokes."
+}

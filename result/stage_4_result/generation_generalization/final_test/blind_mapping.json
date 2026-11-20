@@ -1,0 +1,242 @@
+[
+  {
+    "id": "N001",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 10
+  },
+  {
+    "id": "N002",
+    "candidate": "previous_late_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "N003",
+    "candidate": "previous_late_beam",
+    "prompt_index": 13
+  },
+  {
+    "id": "N004",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "N005",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 2
+  },
+  {
+    "id": "N006",
+    "candidate": "previous_late_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "N007",
+    "candidate": "previous_late_beam",
+    "prompt_index": 12
+  },
+  {
+    "id": "N008",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "N009",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 11
+  },
+  {
+    "id": "N010",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "N011",
+    "candidate": "previous_late_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "N012",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "N013",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 0
+  },
+  {
+    "id": "N014",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 9
+  },
+  {
+    "id": "N015",
+    "candidate": "previous_late_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "N016",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "N017",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 3
+  },
+  {
+    "id": "N018",
+    "candidate": "previous_late_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "N019",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 14
+  },
+  {
+    "id": "N020",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 8
+  },
+  {
+    "id": "N021",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 5
+  },
+  {
+    "id": "N022",
+    "candidate": "previous_late_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "N023",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 12
+  },
+  {
+    "id": "N024",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "N025",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "N026",
+    "candidate": "previous_late_beam",
+    "prompt_index": 15
+  },
+  {
+    "id": "N027",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 1
+  },
+  {
+    "id": "N028",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 15
+  },
+  {
+    "id": "N029",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 13
+  },
+  {
+    "id": "N030",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "N031",
+    "candidate": "previous_late_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "N032",
+    "candidate": "previous_late_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "N033",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "N034",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "N035",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 12
+  },
+  {
+    "id": "N036",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "N037",
+    "candidate": "previous_late_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "N038",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 4
+  },
+  {
+    "id": "N039",
+    "candidate": "previous_late_beam",
+    "prompt_index": 14
+  },
+  {
+    "id": "N040",
+    "candidate": "previous_late_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "N041",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "N042",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 13
+  },
+  {
+    "id": "N043",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 7
+  },
+  {
+    "id": "N044",
+    "candidate": "tied_mix25_beam",
+    "prompt_index": 15
+  },
+  {
+    "id": "N045",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 6
+  },
+  {
+    "id": "N046",
+    "candidate": "previous_late_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "N047",
+    "candidate": "previous_late_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "N048",
+    "candidate": "tied_mix25_screened",
+    "prompt_index": 14
+  }
+]

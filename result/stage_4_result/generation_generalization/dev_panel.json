@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "seed": 1704,
+  "prompts": [
+    {
+      "id": "joke/1210",
+      "prompt": "did you hear",
+      "train_prefix_count": 30,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/598",
+      "prompt": "why was the",
+      "train_prefix_count": 19,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/416",
+      "prompt": "what did one",
+      "train_prefix_count": 14,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/659",
+      "prompt": "why couldn't the",
+      "train_prefix_count": 7,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/1583",
+      "prompt": "how does a",
+      "train_prefix_count": 6,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/999",
+      "prompt": "what happened to",
+      "train_prefix_count": 4,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/1536",
+      "prompt": "i know a",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/185",
+      "prompt": "there were two",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "validation",
+      "stratum": "seen"
+    },
+    {
+      "id": "joke/1591",
+      "prompt": "a horse walks",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1304",
+      "prompt": "a polar bear",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/683",
+      "prompt": "i came up",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/349",
+      "prompt": "i got hit",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/3",
+      "prompt": "two artists had",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1396",
+      "prompt": "what do ducks",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/10",
+      "prompt": "where do sick",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    },
+    {
+      "id": "joke/1236",
+      "prompt": "why don't melons",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation",
+      "stratum": "unseen"
+    }
+  ],
+  "sha256": "979c75aa6ba4cb6b672330fbf7efeb22cbd7502d525b7a2bca92160dd97c69f2",
+  "frozen_at_utc": "2026-11-12T12:00:41.324736+00:00",
+  "source_commit": "6df65a8f48134d8752081043c88f4271bcf84987",
+  "selection": "Frozen before generation_generalization model outputs. Sixteen validation-only prefixes excluding every previous 12-panel prefix, with eight train-seen and eight train-unseen prefixes; all tokens in the frozen training vocabulary. Seen frequencies span 30 to 1; narrative and question setups included. Neutral wordplay examples were selected by reading validation texts, without inspecting any new generated completions.",
+  "selection_type": "manually stratified development panel, not a random population estimate",
+  "test_policy": "No test texts or prefixes inspected for this panel. Reserve a test-prefix panel until model/profile selection is frozen; do not tune after its evaluation.",
+  "prior_panel_sha256": "97cf87c7515dc306a1cd310a25acd1540ff332c108fb2363c9387353895d74a8",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "train_rows_sha256": "90f320d8b053f64d866620d9b04198826df8f7e306354729debeddf7ec636f78",
+  "validation_rows_sha256": "844805123683ba4ee93e960e3094549765303f86a9a400f942e76c96b88fa354",
+  "source_sha256": {
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "script/stage_4_script/compare_generation.py": "036444376c4aabefe53055d97438a35e6e18e67d5a8030cf6ba4d7c166e28b5c"
+  },
+  "coverage": {
+    "seen": 8,
+    "unseen": 8,
+    "seen_prefix_frequency_min": 1,
+    "seen_prefix_frequency_max": 30
+  },
+  "evaluation_notes": [
+    "Blindly rate coherence separately from novelty and reveal candidate identity only after ratings.",
+    "Primary useful-output count: coherence score 2 AND not a near training copy; also report all component counts.",
+    "Copy filtering, EOS enforcement and repeated-ngram blocking are generation controls, not evidence that model parameters generalize.",
+    "Do not supply validation reference completions to the generation model or blinded reviewer."
+  ]
+}

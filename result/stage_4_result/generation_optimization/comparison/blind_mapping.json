@@ -1,0 +1,542 @@
+[
+  {
+    "id": "G001",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "G002",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 6
+  },
+  {
+    "id": "G003",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 9
+  },
+  {
+    "id": "G004",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "G005",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "G006",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "G007",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "G008",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "G009",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "G010",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 5
+  },
+  {
+    "id": "G011",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 10
+  },
+  {
+    "id": "G012",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 8
+  },
+  {
+    "id": "G013",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "G014",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 7
+  },
+  {
+    "id": "G015",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "G016",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "G017",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "G018",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 8
+  },
+  {
+    "id": "G019",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 2
+  },
+  {
+    "id": "G020",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 5
+  },
+  {
+    "id": "G021",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "G022",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 9
+  },
+  {
+    "id": "G023",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "G024",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "G025",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "G026",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "G027",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 4
+  },
+  {
+    "id": "G028",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 2
+  },
+  {
+    "id": "G029",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "G030",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "G031",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "G032",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "G033",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 9
+  },
+  {
+    "id": "G034",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "G035",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "G036",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "G037",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "G038",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 0
+  },
+  {
+    "id": "G039",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "G040",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "G041",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "G042",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 4
+  },
+  {
+    "id": "G043",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 3
+  },
+  {
+    "id": "G044",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "G045",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 8
+  },
+  {
+    "id": "G046",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "G047",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "G048",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "G049",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "G050",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "G051",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "G052",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 7
+  },
+  {
+    "id": "G053",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "G054",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "G055",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "G056",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "G057",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 11
+  },
+  {
+    "id": "G058",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "G059",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "G060",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 5
+  },
+  {
+    "id": "G061",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 2
+  },
+  {
+    "id": "G062",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 10
+  },
+  {
+    "id": "G063",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "G064",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "G065",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 1
+  },
+  {
+    "id": "G066",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "G067",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "G068",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "G069",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "G070",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 0
+  },
+  {
+    "id": "G071",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "G072",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 1
+  },
+  {
+    "id": "G073",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 6
+  },
+  {
+    "id": "G074",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "G075",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "G076",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "G077",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 11
+  },
+  {
+    "id": "G078",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 6
+  },
+  {
+    "id": "G079",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "G080",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "G081",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "G082",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 1
+  },
+  {
+    "id": "G083",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "G084",
+    "candidate": "baseline_gru_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "G085",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 11
+  },
+  {
+    "id": "G086",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 3
+  },
+  {
+    "id": "G087",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "G088",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "G089",
+    "candidate": "compact_gru_best_greedy",
+    "prompt_index": 10
+  },
+  {
+    "id": "G090",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "G091",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "G092",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "G093",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 7
+  },
+  {
+    "id": "G094",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "G095",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "G096",
+    "candidate": "wide_gru_late_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "G097",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "G098",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "G099",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "G100",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "G101",
+    "candidate": "compact_gru_late_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "G102",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "G103",
+    "candidate": "wide_gru_best_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "G104",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 0
+  },
+  {
+    "id": "G105",
+    "candidate": "compact_lstm_late_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "G106",
+    "candidate": "compact_gru_late_greedy",
+    "prompt_index": 3
+  },
+  {
+    "id": "G107",
+    "candidate": "baseline_gru_greedy",
+    "prompt_index": 4
+  },
+  {
+    "id": "G108",
+    "candidate": "compact_gru_best_beam",
+    "prompt_index": 4
+  }
+]

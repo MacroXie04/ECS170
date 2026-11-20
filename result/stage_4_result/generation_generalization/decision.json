@@ -1,0 +1,42 @@
+{
+  "locked_at_utc": "2026-11-12T12:08:55.000966+00:00",
+  "promoted": false,
+  "selected": "previous_late_beam",
+  "best_joint_candidate": "tied_mix50_beam",
+  "previous": "previous_late_beam",
+  "selection_rule": "Select by count of score2 coherent outputs that also pass the fixed novelty criteria; all16 prompts stay in denominator, including no-output. Tie-break by total coherence score2 count then lower validation NLL. Promote only if joint count improves over previous_late_beam and total score2 count declines by at most2/16; otherwise preserve previous default and expose novelty mode as experimental. Include two predeclared tied-weight regularized GRU models (128/.35/AdamW.01;256/.35/AdamW.01/smoothing.05) in the same comparison before locking. Do not tune after test-prefix evaluation.",
+  "review_bindings": {
+    "initial_comparison": {
+      "outputs.json": "f990e444afc414962fa3c6d8e45e2da5571a5b5dc2a806ea7f4aa6c627ec45d4",
+      "blind_review.json": "a69d24a4dd6aadf79b698285d05f15bfacc5175762a782768046e148177a694b",
+      "blind_mapping.json": "a7d4a7057ca70513a8b34128257442ac699784e081bec8b54587d6a5c4287af1",
+      "coherence_ratings.json": "41cf66aefe29ab0701e8841c1739e67d4ad5f009fc0b7b5d447ed5e5633d6b01",
+      "metrics.json": "f76ff7890bdf1798a585b9e06d272111578fda28ab5c3104750647735dfaa114",
+      "provenance.json": "e08e0b4d46710fdd90f795b49a697b018fd4f4e4a3b3c4aebcd568d46a6bf0bd"
+    },
+    "regularized_comparison": {
+      "outputs.json": "20a11b7413960e2c7f6c7160cfd6b3f7315d5e574684f696c68855b068842b2f",
+      "blind_review.json": "cea35998788fa9694ddd928b2b0799864a8cb0c7b31f58133fa0d56b62ea43cc",
+      "blind_mapping.json": "01111164b8f647b2acebeac31d157cd4d3e03564bfc44fa7f9c76c3eac8819df",
+      "coherence_ratings.json": "ed4f7db678c783ca1bce491b6343e3704b8eca86ddc4e09dfdb32f6b4bf2ef0b",
+      "metrics.json": "88f79ca64c7374df0bbaf2fea290a7a5fb2b5bb5419b5e01cf7363f78c23466b",
+      "provenance.json": "7e1173645abb897fcff8d5a8fb252515f71b6bb205dcba6a4185c69dffc7b3c3"
+    },
+    "tied_mixture_comparison": {
+      "outputs.json": "feb051dcb16df8e6d4d7e13d464754dbccc5b4a6cee5bf10563662f031e8d0cf",
+      "blind_review.json": "87724790440bbd21abaf04a58b63fedb29426da0daa4d4988241dcb0f93a6f0d",
+      "blind_mapping.json": "517d296ab39adb1824625d7f603b70dd2d9c8b712d08295b1c7b5e141581cb89",
+      "coherence_ratings.json": "f706cefbfdd61ce8dcdf5b3dcc520364cbba7017d6d5f3c50744f2ef5f2635d8",
+      "metrics.json": "efe4c1e942bfe626de7af12427145eb4ec240bf7525d31bc3535f2450e629ad5",
+      "provenance.json": "20d9fd9652ef937869e30571e552538ed9b51f9455cb9f097a39ecf1df7f3141"
+    }
+  },
+  "profile_sha256": {
+    "recommendation.json": "9deebd80b9c399453325a9aebd4410bae5b7cc9d526c3cb1490fcc7273b12440",
+    "recommendation_predictive.json": "3e10904043d0a6edc2e8c1b753d016aadb8774971d7001e60f1563fa758ce088",
+    "recommendation_strict.json": "7c6384a7aebbe301845ab5c9371c4190a4367fbd251c9df5f08761200492668e"
+  },
+  "finalizer_sha256": "a0fdc368606a95a948eec7f3a30359a2854d96ce98610658ee64b34f472eb400",
+  "test_evaluated_at_selection": false,
+  "note": "A failed joint coherence/novelty threshold retains the previous default; experimental profiles remain explicit opt-ins."
+}

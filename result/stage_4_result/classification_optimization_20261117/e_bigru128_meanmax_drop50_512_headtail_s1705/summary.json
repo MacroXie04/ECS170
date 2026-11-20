@@ -1,0 +1,38 @@
+{
+  "tag": "e_bigru128_meanmax_drop50_512_headtail_s1705",
+  "config_hash": "742776908cd2e17b92adea0b296089971669be30627b2ceea7deccef0c94bb9a",
+  "best_checkpoint_sha256": "550f8d1c6c051cedc34973bd6b337870e22a3190b04615c9864a4c8aef297d5a",
+  "best_epoch": 11,
+  "epochs_completed": 19,
+  "parameters": 2759170,
+  "validation": {
+    "n_examples": 2500,
+    "loss": 0.3085656949639331,
+    "accuracy": 0.9136,
+    "macro_precision": 0.9139062243810461,
+    "macro_recall": 0.9136,
+    "macro_f1": 0.9135840164996918,
+    "confusion_matrix": [
+      [
+        1125,
+        125
+      ],
+      [
+        91,
+        1159
+      ]
+    ]
+  },
+  "train_seconds": 205.57576694298768,
+  "total_seconds": 217.97895728296135,
+  "peak_gpu_memory_bytes": 677192704,
+  "split_id_sha256": {
+    "train": "39d9175e1d67966cd1ef82ab17cde187ea30d29fefc24403808097c81569c755",
+    "validation": "f191b8ba4ce6b737e97362ba1840a6a8c3f8158f19149a8402ab29e39b85cce9"
+  },
+  "vocabulary_sha256": "de8e34f46a7330e786fca93cad8de4bce2e7bf9a259bb77f3ed21c3153c01737",
+  "truncated_counts": {
+    "train": 2390,
+    "validation": 278
+  }
+}

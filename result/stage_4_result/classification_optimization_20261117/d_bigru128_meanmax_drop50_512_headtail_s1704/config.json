@@ -1,0 +1,46 @@
+{
+  "tag": "d_bigru128_meanmax_drop50_512_headtail_s1704",
+  "data_dir": "/home/ubuntu/PycharmProjects/ECS170/data/stage_4_data",
+  "archive_path": "/home/ubuntu/PycharmProjects/ECS170/data/stage_4_data.zip",
+  "archive_sha256": "a951bcc28bd86dd2601922167321e49d9208c8e5fbe96aa4f09ff4bed815b89b",
+  "split_seed": 1704,
+  "model_seed": 1704,
+  "model": {
+    "vocab_size": 20000,
+    "cell": "gru",
+    "embedding_dim": 128,
+    "hidden_dim": 128,
+    "num_layers": 1,
+    "dropout": 0.5,
+    "bidirectional": true,
+    "pooling": "meanmax",
+    "pad_id": 0
+  },
+  "max_vocab": 20000,
+  "max_length": 512,
+  "truncation_mode": "head_tail",
+  "batch_size": 128,
+  "max_epochs": 30,
+  "patience": 8,
+  "learning_rate": 0.001,
+  "optimizer": "adam",
+  "weight_decay": 0.0,
+  "scheduler": false,
+  "gradient_clip_norm": 1.0,
+  "checkpoint_selection": "lowest validation cross-entropy; earliest tie",
+  "source_sha256": {
+    "local_code/stage_4_code/Dataset_Loader.py": "8d5706794853d43788adaaaf4ee601d41c4609f9bd68be06899bef93fb745d65",
+    "local_code/stage_4_code/Method_Classifier.py": "4417be7442294fac5d9c6b8cb6a457468d9d6553b9e750fba09e92aa8e25977c",
+    "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+    "script/stage_4_script/train_classification.py": "8d011e3c7a5f14c8ad9e94f6bbe839c640a38e0f9d9139fd82e7c637df61729d"
+  },
+  "git_head": "4af3e4c579997f874f02468216b8d39967a4fdf2",
+  "data_fingerprint": {
+    "split_id_sha256": {
+      "train": "39d9175e1d67966cd1ef82ab17cde187ea30d29fefc24403808097c81569c755",
+      "validation": "f191b8ba4ce6b737e97362ba1840a6a8c3f8158f19149a8402ab29e39b85cce9"
+    },
+    "vocabulary_sha256": "de8e34f46a7330e786fca93cad8de4bce2e7bf9a259bb77f3ed21c3153c01737",
+    "source_sha256_train_only": "8db29e25ff8005e0380f71244393a4b166aab36cce5e78930324fb3948acaf9a"
+  }
+}

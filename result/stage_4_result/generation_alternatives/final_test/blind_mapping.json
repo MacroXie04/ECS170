@@ -1,0 +1,162 @@
+[
+  {
+    "id": "A004",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 0
+  },
+  {
+    "id": "A011",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 1
+  },
+  {
+    "id": "A010",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 2
+  },
+  {
+    "id": "A006",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 3
+  },
+  {
+    "id": "A002",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 4
+  },
+  {
+    "id": "A017",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 5
+  },
+  {
+    "id": "A026",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 6
+  },
+  {
+    "id": "A005",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 7
+  },
+  {
+    "id": "A027",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 8
+  },
+  {
+    "id": "A025",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 9
+  },
+  {
+    "id": "A023",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 10
+  },
+  {
+    "id": "A028",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 11
+  },
+  {
+    "id": "A021",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 12
+  },
+  {
+    "id": "A013",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 13
+  },
+  {
+    "id": "A022",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 14
+  },
+  {
+    "id": "A012",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 15
+  },
+  {
+    "id": "A015",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 0
+  },
+  {
+    "id": "A011",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 1
+  },
+  {
+    "id": "A018",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 2
+  },
+  {
+    "id": "A009",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 3
+  },
+  {
+    "id": "A014",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 4
+  },
+  {
+    "id": "A007",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 5
+  },
+  {
+    "id": "A008",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 6
+  },
+  {
+    "id": "A024",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 7
+  },
+  {
+    "id": "A027",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 8
+  },
+  {
+    "id": "A019",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 9
+  },
+  {
+    "id": "A029",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 10
+  },
+  {
+    "id": "A001",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 11
+  },
+  {
+    "id": "A030",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 12
+  },
+  {
+    "id": "A016",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 13
+  },
+  {
+    "id": "A003",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 14
+  },
+  {
+    "id": "A020",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 15
+  }
+]

@@ -1,0 +1,553 @@
+{
+  "reviewer": "assistant qualitative review, not human study",
+  "rubric": {
+    "0": "Broken syntax, looping, abrupt/incomplete continuation, or no interpretable completed thought.",
+    "1": "Mostly readable sentence/template, but setup and answer are disconnected, contradictory, or end in generic filler.",
+    "2": "Complete readable setup/continuation with a semantically relevant answer or wordplay, even if familiar or only mildly funny.",
+    "note": "Coherence, not humor or novelty. Minor awkward wording does not by itself prevent 2 when the setup-answer relation remains clear. Model/configuration labels were not provided to the reviewer; identical texts receive identical scores."
+  },
+  "ratings": [
+    {
+      "id": "G001",
+      "score": 2,
+      "reason": "The squid/tentacles and ten-tickles wordplay gives a relevant answer."
+    },
+    {
+      "id": "G002",
+      "score": 1,
+      "reason": "The dentist question and outstanding-in-a-field answer are unrelated."
+    },
+    {
+      "id": "G003",
+      "score": 0,
+      "reason": "The time-flies sentence is malformed and the seeing-eye phrase is unfinished."
+    },
+    {
+      "id": "G004",
+      "score": 0,
+      "reason": "The time-flies construction does not form a clear joke or completed thought."
+    },
+    {
+      "id": "G005",
+      "score": 1,
+      "reason": "The book setup is readable, but gluten-tag does not relate to anti-gravity."
+    },
+    {
+      "id": "G006",
+      "score": 2,
+      "reason": "Ground beef is a relevant legless-cow pun with a complete setup and answer."
+    },
+    {
+      "id": "G007",
+      "score": 2,
+      "reason": "The squid/tentacles and ten-tickles wordplay gives a relevant answer."
+    },
+    {
+      "id": "G008",
+      "score": 0,
+      "reason": "The text stops at an unanswered setup question."
+    },
+    {
+      "id": "G009",
+      "score": 2,
+      "reason": "The wording is strained, but radiation/gramma-ray and cookie-baking connect in recognizable wordplay."
+    },
+    {
+      "id": "G010",
+      "score": 0,
+      "reason": "The question lacks a main verb and the answer does not repair it."
+    },
+    {
+      "id": "G011",
+      "score": 0,
+      "reason": "The setup degenerates into repeated punctuation without a resolution."
+    },
+    {
+      "id": "G012",
+      "score": 0,
+      "reason": "The question is syntactically incomplete and the answer is unrelated."
+    },
+    {
+      "id": "G013",
+      "score": 2,
+      "reason": "Loafers connects bread-making and footwear in a complete joke."
+    },
+    {
+      "id": "G014",
+      "score": 0,
+      "reason": "The setup degenerates into repeated punctuation without a resolution."
+    },
+    {
+      "id": "G015",
+      "score": 2,
+      "reason": "Ground beef is a relevant legless-cow pun with a complete setup and answer."
+    },
+    {
+      "id": "G016",
+      "score": 1,
+      "reason": "A readable naming template ends with a stick answer unrelated to the cow."
+    },
+    {
+      "id": "G017",
+      "score": 0,
+      "reason": "The time-flies construction is an incomplete, malformed phrase."
+    },
+    {
+      "id": "G018",
+      "score": 0,
+      "reason": "The what-side-of question is malformed and has no coherent predicate."
+    },
+    {
+      "id": "G019",
+      "score": 2,
+      "reason": "The fish hitting a dam supplies a relevant dam/damn punchline."
+    },
+    {
+      "id": "G020",
+      "score": 2,
+      "reason": "Loafers connects bread-making and footwear in a complete joke."
+    },
+    {
+      "id": "G021",
+      "score": 0,
+      "reason": "The reading and walking clauses are joined ungrammatically and remain unfinished."
+    },
+    {
+      "id": "G022",
+      "score": 0,
+      "reason": "The setup is malformed and the response is unfinished filler."
+    },
+    {
+      "id": "G023",
+      "score": 0,
+      "reason": "This is only a bar-joke setup, with no continuation or resolution."
+    },
+    {
+      "id": "G024",
+      "score": 0,
+      "reason": "The text stops at an unanswered setup question."
+    },
+    {
+      "id": "G025",
+      "score": 2,
+      "reason": "Ground beef is a relevant legless-cow pun with a complete setup and answer."
+    },
+    {
+      "id": "G026",
+      "score": 0,
+      "reason": "The what-kind-of construction has no noun before the inserted naming question."
+    },
+    {
+      "id": "G027",
+      "score": 2,
+      "reason": "Humblebee directly connects the bee and refusal to take credit."
+    },
+    {
+      "id": "G028",
+      "score": 1,
+      "reason": "The answer is readable but does not explain what zero says to the other figure."
+    },
+    {
+      "id": "G029",
+      "score": 0,
+      "reason": "The text stops at an unanswered setup question."
+    },
+    {
+      "id": "G030",
+      "score": 1,
+      "reason": "The boats and cow categories are mixed despite a recognizable ground-beef fragment."
+    },
+    {
+      "id": "G031",
+      "score": 2,
+      "reason": "The squid/tentacles and ten-tickles wordplay gives a relevant answer."
+    },
+    {
+      "id": "G032",
+      "score": 0,
+      "reason": "This is only a bar-joke setup, with no continuation or resolution."
+    },
+    {
+      "id": "G033",
+      "score": 0,
+      "reason": "The setup is malformed and the response is unfinished filler."
+    },
+    {
+      "id": "G034",
+      "score": 2,
+      "reason": "Ground beef is a relevant legless-cow pun with a complete setup and answer."
+    },
+    {
+      "id": "G035",
+      "score": 0,
+      "reason": "This is only a bar-joke setup, with no continuation or resolution."
+    },
+    {
+      "id": "G036",
+      "score": 0,
+      "reason": "The what-side-of construction is missing its object before the inserted naming question."
+    },
+    {
+      "id": "G037",
+      "score": 0,
+      "reason": "The question is missing a main verb and ends without an answer."
+    },
+    {
+      "id": "G038",
+      "score": 2,
+      "reason": "Ground beef is a relevant legless-cow pun with a complete setup and answer."
+    },
+    {
+      "id": "G039",
+      "score": 2,
+      "reason": "Scholar ships links smart people and boats in a complete pun."
+    },
+    {
+      "id": "G040",
+      "score": 0,
+      "reason": "The wondering-to-the-other-day phrase is malformed and incomplete."
+    },
+    {
+      "id": "G041",
+      "score": 2,
+      "reason": "Ground beef is a relevant legless-cow pun with a complete setup and answer."
+    },
+    {
+      "id": "G042",
+      "score": 0,
+      "reason": "The question combines incompatible fragments without a complete grammatical predicate."
+    },
+    {
+      "id": "G043",
+      "score": 1,
+      "reason": "The naming template is readable, but a little is an unfinished, unrelated answer."
+    },
+    {
+      "id": "G044",
+      "score": 1,
+      "reason": "The answer gives a motive instead of a location and introduces an unsupported slide."
+    },
+    {
+      "id": "G045",
+      "score": 2,
+      "reason": "The wording is strained, but radiation/gramma-ray and cookie-baking connect in recognizable wordplay."
+    },
+    {
+      "id": "G046",
+      "score": 0,
+      "reason": "The time-flies, addiction, and sound-comparison fragments do not form a clear setup."
+    },
+    {
+      "id": "G047",
+      "score": 2,
+      "reason": "Armies and sleevies creates a relevant arms/sleeves pun."
+    },
+    {
+      "id": "G048",
+      "score": 1,
+      "reason": "The physical-bar pun is recognizable, but a third person appears without the required preceding people."
+    },
+    {
+      "id": "G049",
+      "score": 2,
+      "reason": "The fish hitting a dam supplies a relevant dam/damn punchline."
+    },
+    {
+      "id": "G050",
+      "score": 2,
+      "reason": "The visual resemblance of eight to a belted zero supplies a relevant answer."
+    },
+    {
+      "id": "G051",
+      "score": 0,
+      "reason": "Wondering a bar is malformed and the text ends without a completed thought."
+    },
+    {
+      "id": "G052",
+      "score": 0,
+      "reason": "The malformed reading-a-bar setup degenerates into repeated punctuation."
+    },
+    {
+      "id": "G053",
+      "score": 0,
+      "reason": "This is only a bar-joke setup, with no continuation or resolution."
+    },
+    {
+      "id": "G054",
+      "score": 2,
+      "reason": "Despite awkward naming wording, ground beef clearly fits the legless-cow setup."
+    },
+    {
+      "id": "G055",
+      "score": 0,
+      "reason": "The text stops at the question followed by an unmatched quotation mark."
+    },
+    {
+      "id": "G056",
+      "score": 1,
+      "reason": "The question mixes a side of people with a cow, despite a recognizable ground-beef ending."
+    },
+    {
+      "id": "G057",
+      "score": 0,
+      "reason": "The malformed setup trails into repeated punctuation with no resolution."
+    },
+    {
+      "id": "G058",
+      "score": 2,
+      "reason": "The unexpected desert tree and obstacle/optical-illusion wordplay form a connected narrative."
+    },
+    {
+      "id": "G059",
+      "score": 2,
+      "reason": "The visual resemblance of eight to a belted zero supplies a relevant answer."
+    },
+    {
+      "id": "G060",
+      "score": 0,
+      "reason": "The question lacks a main verb and the answer does not repair it."
+    },
+    {
+      "id": "G061",
+      "score": 1,
+      "reason": "The question is readable but the a-little response is incomplete filler."
+    },
+    {
+      "id": "G062",
+      "score": 1,
+      "reason": "The bar scene is readable, but the wholesaler statement has no established connection or payoff."
+    },
+    {
+      "id": "G063",
+      "score": 2,
+      "reason": "The wording is strained, but radiation/gramma-ray and cookie-baking connect in recognizable wordplay."
+    },
+    {
+      "id": "G064",
+      "score": 2,
+      "reason": "Ground beef is a relevant legless-cow pun with a complete setup and answer."
+    },
+    {
+      "id": "G065",
+      "score": 1,
+      "reason": "The recognizable chicken question ends in an incomplete, unrelated a-little answer."
+    },
+    {
+      "id": "G066",
+      "score": 0,
+      "reason": "The wondering-in-the-middle-day phrase does not complete a coherent thought."
+    },
+    {
+      "id": "G067",
+      "score": 2,
+      "reason": "Despite awkward wear wording, the Vulcan and Spock/spark-plug relation is clear and relevant."
+    },
+    {
+      "id": "G068",
+      "score": 0,
+      "reason": "The time-flies construction does not form a clear joke or completed thought."
+    },
+    {
+      "id": "G069",
+      "score": 0,
+      "reason": "The text supplies a reading setup but no continuation or resolution."
+    },
+    {
+      "id": "G070",
+      "score": 1,
+      "reason": "The naming question is readable, but a stick is unrelated to the legless-cow setup."
+    },
+    {
+      "id": "G071",
+      "score": 0,
+      "reason": "The question is syntactically incomplete and has no answer."
+    },
+    {
+      "id": "G072",
+      "score": 2,
+      "reason": "The playground context supports the other-side/other-slide pun."
+    },
+    {
+      "id": "G073",
+      "score": 1,
+      "reason": "The location question and outstanding answer are disconnected."
+    },
+    {
+      "id": "G074",
+      "score": 2,
+      "reason": "Despite awkward naming wording, ground beef clearly fits the legless-cow setup."
+    },
+    {
+      "id": "G075",
+      "score": 2,
+      "reason": "Armies and sleevies creates a relevant arms/sleeves pun."
+    },
+    {
+      "id": "G076",
+      "score": 0,
+      "reason": "The question lacks a verb, even though the ending resembles a known naming pun."
+    },
+    {
+      "id": "G077",
+      "score": 1,
+      "reason": "The desert-tree setup is readable, but too saucy has no established connection."
+    },
+    {
+      "id": "G078",
+      "score": 1,
+      "reason": "The location question receives an incomplete and unrelated a-little response."
+    },
+    {
+      "id": "G079",
+      "score": 0,
+      "reason": "The text is an underspecified wondering fragment without a joke continuation."
+    },
+    {
+      "id": "G080",
+      "score": 0,
+      "reason": "The reading and walking clauses are joined ungrammatically."
+    },
+    {
+      "id": "G081",
+      "score": 0,
+      "reason": "The text supplies a book setup but no continuation or resolution."
+    },
+    {
+      "id": "G082",
+      "score": 1,
+      "reason": "The chicken-road question and outstanding answer are unrelated."
+    },
+    {
+      "id": "G083",
+      "score": 0,
+      "reason": "Reading a bar is malformed and ends without a completed thought."
+    },
+    {
+      "id": "G084",
+      "score": 1,
+      "reason": "The location question and outstanding answer are disconnected."
+    },
+    {
+      "id": "G085",
+      "score": 0,
+      "reason": "The malformed wondering-a-bar setup degenerates into repeated punctuation."
+    },
+    {
+      "id": "G086",
+      "score": 1,
+      "reason": "The cow/lightbulb setup and buccaneer answer have no established relationship."
+    },
+    {
+      "id": "G087",
+      "score": 2,
+      "reason": "Vel-crows connects birds and sticking together through the Velcro pun."
+    },
+    {
+      "id": "G088",
+      "score": 2,
+      "reason": "The playground context supports the other-side/other-slide pun."
+    },
+    {
+      "id": "G089",
+      "score": 0,
+      "reason": "The setup degenerates into repeated punctuation without a resolution."
+    },
+    {
+      "id": "G090",
+      "score": 2,
+      "reason": "The playground context supports the other-side/other-slide pun."
+    },
+    {
+      "id": "G091",
+      "score": 0,
+      "reason": "Wondering a bar is malformed and the text ends without a completed thought."
+    },
+    {
+      "id": "G092",
+      "score": 0,
+      "reason": "The text stops at the question followed by an unmatched quotation mark."
+    },
+    {
+      "id": "G093",
+      "score": 0,
+      "reason": "The book setup degenerates into repeated punctuation without a resolution."
+    },
+    {
+      "id": "G094",
+      "score": 0,
+      "reason": "This is only a bar-joke setup, with no continuation or resolution."
+    },
+    {
+      "id": "G095",
+      "score": 0,
+      "reason": "The text stops at an unanswered setup question."
+    },
+    {
+      "id": "G096",
+      "score": 1,
+      "reason": "The cow/beer pun is recognizable, but the question incorrectly asks for a kind of house."
+    },
+    {
+      "id": "G097",
+      "score": 2,
+      "reason": "Armies and sleevies creates a relevant arms/sleeves pun."
+    },
+    {
+      "id": "G098",
+      "score": 2,
+      "reason": "The Vulcan and Spock/spark-plug relation supplies a relevant mechanical answer."
+    },
+    {
+      "id": "G099",
+      "score": 1,
+      "reason": "The clown/taste pun is recognizable, but time flies lacks a clear setup interpretation."
+    },
+    {
+      "id": "G100",
+      "score": 0,
+      "reason": "The text stops at an unanswered setup question."
+    },
+    {
+      "id": "G101",
+      "score": 2,
+      "reason": "The playground context supports the other-side/other-slide pun."
+    },
+    {
+      "id": "G102",
+      "score": 0,
+      "reason": "The time-flies phrase is malformed and freight does not resolve it."
+    },
+    {
+      "id": "G103",
+      "score": 1,
+      "reason": "The answer borrows a slide pun without a playground or other supporting context."
+    },
+    {
+      "id": "G104",
+      "score": 1,
+      "reason": "The cow-with-a-cow setup and buccaneer answer are unrelated."
+    },
+    {
+      "id": "G105",
+      "score": 0,
+      "reason": "The what-side-of-the-difference question is malformed despite a geographic answer fragment."
+    },
+    {
+      "id": "G106",
+      "score": 2,
+      "reason": "The squid/tentacles and ten-tickles wordplay gives a relevant answer."
+    },
+    {
+      "id": "G107",
+      "score": 0,
+      "reason": "The question is syntactically incomplete and the answer is unrelated."
+    },
+    {
+      "id": "G108",
+      "score": 1,
+      "reason": "The question mixes people and a cow, despite a recognizable ground-beef ending."
+    }
+  ],
+  "input_sha256": "4cf2633259954bf118f0dd42f6ea1f06eb92a5c474fd1f26feb70d8e9fd7e7ad",
+  "mapping_sha256": "a114cbba2c70d80e63d15fb076e876fd7fc9fb5af7ef31f981b25e9ba82ae0a2"
+}

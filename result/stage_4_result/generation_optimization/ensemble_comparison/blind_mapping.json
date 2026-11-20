@@ -1,0 +1,182 @@
+[
+  {
+    "id": "E001",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "E002",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "E003",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "E004",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "E005",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "E006",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "E007",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "E008",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "E009",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "E010",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "E011",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "E012",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "E013",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "E014",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "E015",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "E016",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "E017",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "E018",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "E019",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "E020",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 4
+  },
+  {
+    "id": "E021",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "E022",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 7
+  },
+  {
+    "id": "E023",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "E024",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 5
+  },
+  {
+    "id": "E025",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 1
+  },
+  {
+    "id": "E026",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "E027",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 10
+  },
+  {
+    "id": "E028",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "E029",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 9
+  },
+  {
+    "id": "E030",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 3
+  },
+  {
+    "id": "E031",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 6
+  },
+  {
+    "id": "E032",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 2
+  },
+  {
+    "id": "E033",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 11
+  },
+  {
+    "id": "E034",
+    "candidate": "compact_gru_probability_mix_late_75_beam",
+    "prompt_index": 8
+  },
+  {
+    "id": "E035",
+    "candidate": "compact_gru_probability_mix_late_50_beam",
+    "prompt_index": 0
+  },
+  {
+    "id": "E036",
+    "candidate": "compact_gru_probability_mix_late_25_beam",
+    "prompt_index": 6
+  }
+]

@@ -21,3 +21,34 @@ env/
 /data/stage_2_data/
 /data/train.csv
 /data/test.csv
+
+# Stage 3: instructor data, course documents, and large run outputs stay local.
+/data/stage_3_data/
+/result/stage_3_result/**/checkpoints/
+/result/stage_3_result/**/process_output.log
+/result/stage_3_result/**/.*.*
+
+# Stage 4: keep instructor data and model binaries on the GPU server.
+/data/stage_4_data/
+/data/stage_4_data.zip
+/result/stage_4_result/**/checkpoints/
+/result/stage_4_result/smoke/
+/result/stage_4_result/*.log
+/result/stage_4_result/*.pid
+/result/stage_4_result/*.exit
+/output/pdf/Stage_4_Report_Draft.pdf
+
+# Stage 4 generation follow-up process logs stay local.
+/result/stage_4_result/generation_optimization/*.log
+/result/stage_4_result/generation_optimization/*.exit
+
+# Stage 4 generalization experiment logs stay local.
+/result/stage_4_result/generation_generalization/**/*.log
+/result/stage_4_result/generation_generalization/*.log
+/result/stage_4_result/generation_generalization/**/*.exit
+
+# Alternative generation: keep training-text pairs, model caches and process logs private.
+/result/stage_4_result/generation_alternatives/coherence_ranker/pairs.json
+/result/stage_4_result/generation_alternatives/**/*.log
+/result/stage_4_result/generation_alternatives/*.log
+/result/stage_4_result/generation_alternatives/**/*.exit

@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "test_evaluated": false,
+  "cpu_cuda_nll_tolerance": 0.0005,
+  "full_incremental_tolerance": 1e-05,
+  "method": "Independent history/config/source/checkpoint/vocabulary binding; both checkpoints replay all validation targets on CPU; incremental/full forward equivalence.",
+  "runs": [
+    {
+      "run": "tied128_dropout35",
+      "matches_baseline_split_vocabulary_raw_data": true,
+      "validation_targets": 3265,
+      "checkpoints": {
+        "best": {
+          "epoch": 34,
+          "sha256": "de4d8aebeb8bd8ee81e704687602145cda7f00e4bb5ca44bda2d44cc34430836",
+          "cpu_validation_loss": 5.064999805584801,
+          "difference_from_saved_cuda": -9.720759956977076e-07,
+          "tied_weights": true,
+          "zero_pad": true,
+          "full_incremental_max_abs_difference": 3.337860107421875e-06
+        },
+        "last": {
+          "epoch": 46,
+          "sha256": "fe64367bd78cd534d95f7b4339dad59a7169428df256f83f7e028f573f447bb0",
+          "cpu_validation_loss": 5.114603123803599,
+          "difference_from_saved_cuda": 5.98200612600408e-06,
+          "tied_weights": true,
+          "zero_pad": true,
+          "full_incremental_max_abs_difference": 3.814697265625e-06
+        }
+      }
+    },
+    {
+      "run": "tied256_dropout35_smooth05",
+      "matches_baseline_split_vocabulary_raw_data": true,
+      "validation_targets": 3265,
+      "checkpoints": {
+        "best": {
+          "epoch": 22,
+          "sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+          "cpu_validation_loss": 4.824826447047282,
+          "difference_from_saved_cuda": 2.3180273736045365e-06,
+          "tied_weights": true,
+          "zero_pad": true,
+          "full_incremental_max_abs_difference": 5.245208740234375e-06
+        },
+        "last": {
+          "epoch": 34,
+          "sha256": "1f118f905cceda5b2c03a84217e48eb354242e020977bcf00cb124fda62f0ed5",
+          "cpu_validation_loss": 4.89513528306853,
+          "difference_from_saved_cuda": -1.5852316232134456e-05,
+          "tied_weights": true,
+          "zero_pad": true,
+          "full_incremental_max_abs_difference": 5.7220458984375e-06
+        }
+      }
+    }
+  ]
+}

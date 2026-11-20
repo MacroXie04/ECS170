@@ -1,0 +1,12 @@
+{
+  "panel_sha256": "97cf87c7515dc306a1cd310a25acd1540ff332c108fb2363c9387353895d74a8",
+  "dataset_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "source_sha256": {
+    "script/stage_4_script/compare_generation.py": "036444376c4aabefe53055d97438a35e6e18e67d5a8030cf6ba4d7c166e28b5c",
+    "local_code/stage_4_code/Generation_Decoder.py": "8aff028a2c487cb7e2f3648d7e750e23a0205cc2e8a679a9a6d8fc2b2b46d69e",
+    "local_code/stage_4_code/Generation_Optimization.py": "1ce51b0d3690783a79b1568335805f33742f5d850542e9991a55ee835f715def"
+  },
+  "purpose": "Validation-only qualitative selection; test texts never used in this comparison",
+  "copy_metric": "SequenceMatcher token ratio >=0.90 is a near copy; exact normalized token equality separately"
+}

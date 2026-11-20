@@ -1,0 +1,16 @@
+{
+  "name": "tied256_dropout35_smooth05",
+  "parameters": 1474409,
+  "best_epoch": 22,
+  "epochs_completed": 34,
+  "validation": {
+    "loss": 4.824824129019908,
+    "accuracy": 0.29433384379785604,
+    "count": 3265
+  },
+  "last_validation": 4.895151135384762,
+  "train_seconds": 3.9443894622381777,
+  "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+  "config_hash": "b0b960d9b7da0552a02f3003ccb164d3a50cb8a5dfe920376401bcc80eb44246",
+  "test_evaluated": false
+}
