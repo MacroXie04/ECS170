@@ -1,8 +1,10 @@
 # Stage 4: recurrent text classification and generation
 
-This implementation trains RNN, LSTM, and GRU models for IMDb sentiment classification and short-joke generation. The six full-data runs are complete on `code-server-gpu`, in `/home/ubuntu/PycharmProjects/ECS170`, branch `stage4-rnn-hongzhe`. Work remains on the server: no push or pull request has been made.
+This implementation trains RNN, LSTM, and GRU models for IMDb sentiment classification and short-joke generation. The six full-data baseline runs were completed on code-server-gpu on branch stage4-rnn-hongzhe. This implementation is integrated into stage4-dev alongside three team implementations; see the Stage 4 DEV integration guide.
 
-The GitHub repository is public. Keep instructor datasets, checkpoints, student identifiers/contact details, and the report PDF off GitHub. Data, checkpoint directories, and the draft PDF are ignored by Git. The report is a **local review draft**: team review and an accessible submission source-code link are still needed before submission.
+The GitHub repository is public. Keep instructor datasets, checkpoints, student identifiers/contact details, and the report PDF off GitHub. Data, checkpoint directories, and the draft PDF are ignored by Git. The report remains a draft for team review; the stage4-dev source link is in the integration guide.
+
+Integration guide: [Stage 4 DEV integration](STAGE4_DEV_INTEGRATION.md).
 
 ## Environment and setup
 
@@ -109,7 +111,7 @@ The report builder requires ReportLab and pypdf, plus the analysis dependencies 
 .venv-cuda/bin/python script/stage_4_script/build_stage4_report.py
 ```
 
-The builder recomputes metrics from saved test evidence, rejects smoke runs and mismatched scores, and verifies a five-page PDF. Output: `output/pdf/Stage_4_Report_Draft.pdf` (ignored, local only). Team review and the submission source-code link remain pending; no Canvas submission has been made by these scripts.
+The builder recomputes metrics from saved test evidence, rejects smoke runs and mismatched scores, and verifies a five-page PDF. Output: `output/pdf/Stage_4_Report_Draft.pdf` (ignored, local only). Team review and submission remain separate from generating this local draft.
 
 ## Generation follow-up
 
@@ -121,7 +123,7 @@ The coherent-generation profile, six additional model runs, all 12 before/after 
 
 ## Alternative generation methods
 
-[Alternative generation experiments](GENERATION_ALTERNATIVES.md) complete the copy-aware search and disclosed GloVe-GRU follow-up, with frozen final tests, original-panel regression, two independent assistant reviews, and 117 passing tests. Direct training-text reuse decreases, but coherence still drops; the original default is retained. `predict_alternative_generation.py` provides the retained default and an explicit experimental profile. No push or Pull Request was made.
+[Alternative generation experiments](GENERATION_ALTERNATIVES.md) complete the copy-aware search and disclosed GloVe-GRU follow-up, with frozen final tests, original-panel regression, two independent assistant reviews, and 117 passing tests. Direct training-text reuse decreases, but coherence still drops; the original default is retained. `predict_alternative_generation.py` provides the retained default and an explicit experimental profile. This work is now included in stage4-dev.
 
 ## Classification-only optimization commands
 

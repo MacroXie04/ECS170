@@ -1,5 +1,7 @@
 # ECS 170 Fall 2026 — Stage 4: RNN Text Classification and Generation
 
+This is the Xiaoyu implementation, preserved under local_code/stage_4_code/xiaoyu/ in stage4-dev. Its command scripts remain at the paths below. See [Stage 4 DEV integration](script/stage_4_script/STAGE4_DEV_INTEGRATION.md) for the other team implementations.
+
 ## Data
 
 - `data/stage_4_data/text_classification/`: IMDb movie-review sentiment dataset. The provided split contains 25,000 training and 25,000 testing reviews, divided into `pos` and `neg` folders. This is binary sentiment classification, not rating prediction.
