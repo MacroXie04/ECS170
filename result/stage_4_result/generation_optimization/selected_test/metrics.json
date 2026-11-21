@@ -1,0 +1,13 @@
+{
+  "candidate": "compact_gru_late_beam",
+  "test": {
+    "n_examples": 161,
+    "n_tokens": 2961,
+    "loss": 5.785620258451112,
+    "perplexity": 325.5839236763727,
+    "token_accuracy": 0.2951705504896994
+  },
+  "selection_file_sha256": "c880ad9385bf7c317c10a7648e0d9e79b8a476110ca945675f067f9045804cba",
+  "evaluated_after_validation_profile_selection": true,
+  "test_id_sha256": "1a5f1560e24b8531c9eba26d1ac330ef9d212d603d49fb08100e066ee91a361a"
+}

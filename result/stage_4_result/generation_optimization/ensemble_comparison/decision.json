@@ -1,0 +1,11 @@
+{
+  "rule": "Replace late-GRU + beam only if the mixture retains at least 9/12 score-2 coherence on the same panel and lowers validation NLL; otherwise retain the current default.",
+  "passing_candidates": [],
+  "decision": "Keep the existing late-GRU plus beam profile; no mixture met the coherence threshold.",
+  "retained_candidate": "compact_gru_late_beam",
+  "recommendation_sha256": "c880ad9385bf7c317c10a7648e0d9e79b8a476110ca945675f067f9045804cba",
+  "input_sha256": "b8aaf98d05b9bfc62b9248056a86ec5fca0f3d8359ec9eebda300494a3c8e292",
+  "ratings_sha256": "23b7c79da91622bc383cf7d9022d2d0ccfb8eb54977eaf7486005949f6018a5f",
+  "test_evaluation_performed": false,
+  "reviewer": "Independent assistant qualitative review, not a human study"
+}

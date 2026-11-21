@@ -1,0 +1,20 @@
+{
+  "status": "verified",
+  "python_optimization_enabled": true,
+  "checks": [
+    "panel_train_rows_sha256",
+    "panel_validation_rows_sha256",
+    "panel_vocabulary_sha256",
+    "candidate_raw_copy_cost",
+    "candidate_weighted_copy_cost",
+    "candidate_search_objective",
+    "candidate_token_count",
+    "candidate_novelty",
+    "candidate_decoding_weight",
+    "missing_source_bindings",
+    "source_hash_changed",
+    "repository_path_escape"
+  ],
+  "auditor_sha256": "abbba92f930222978ec098bad8040cb779783031a4ea51f90e81fca5decb69d8",
+  "note": "In-memory mutations only; no experiment files changed."
+}

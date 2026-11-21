@@ -1,0 +1,20 @@
+{
+  "panel_sha256": "9255a95c16092ade17fb644e2b387734a214f5b3f5446e509a11210ac2c4fd8a",
+  "spec_sha256": "76e542fb88c0cba5f35e4f4b275820e2a1da454c116e6bf07fbf2198d0e4b39c",
+  "source_sha256": {
+    "script/stage_4_script/compare_generalization.py": "0d8a6da36a109d213419002dd3e0edef26c1fccbff427ccc756221dc5afe1c3a",
+    "script/stage_4_script/compare_generation.py": "036444376c4aabefe53055d97438a35e6e18e67d5a8030cf6ba4d7c166e28b5c",
+    "local_code/stage_4_code/Novel_Generation.py": "7c418ac2b7a4145f14adb74db2fee19986bf1ee5a2a71966177bb528ba8687c7",
+    "local_code/stage_4_code/Generation_Decoder.py": "8aff028a2c487cb7e2f3648d7e750e23a0205cc2e8a679a9a6d8fc2b2b46d69e",
+    "local_code/stage_4_code/Generation_Optimization.py": "1ce51b0d3690783a79b1568335805f33742f5d850542e9991a55ee835f715def",
+    "local_code/stage_4_code/Generation_Ensemble.py": "b0a2327bf4dac95bba767c8a8509172f61eb65b29c02a8414a2c1e2afcc1159f",
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "local_code/stage_4_code/Regularized_Generation.py": "d9800c98c1c845013c38ffc63824c8d8c05bd9e7fd7d5b027f259fdf015ad6c1"
+  },
+  "data_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "split": "validation",
+  "selection_rule": "Select by count of score2 coherent outputs that also pass the fixed novelty criteria; all16 prompts stay in denominator, including no-output. Tie-break by total coherence score2 count then lower validation NLL. Promote only if joint count improves over previous_late_beam and total score2 count declines by at most2/16; otherwise preserve previous default and expose novelty mode as experimental. Include two predeclared tied-weight regularized GRU models (128/.35/AdamW.01;256/.35/AdamW.01/smoothing.05) in the same comparison before locking. Do not tune after test-prefix evaluation.",
+  "torch": "2.14.1+cu130",
+  "device": "cuda"
+}

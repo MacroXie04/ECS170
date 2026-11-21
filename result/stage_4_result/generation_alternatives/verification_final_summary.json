@@ -1,0 +1,230 @@
+{
+  "status": "verified",
+  "created_at_utc": "2026-11-13T01:34:44.456931+00:00",
+  "audit_script_sha256": "6e0d2310bce44cf5e49dda6446d78869e77294fe8a6746d3297b506f1aaf3c3e",
+  "decision_sha256": "556ccf7f6b953db7bad7a6a6cae81f107de71ec17254f7f76e410ba875dbf965",
+  "final_summary_sha256": "61e5e331232c5f059b59c312f1f2b800b7ba569bfa263d068767016d5dfa0e36",
+  "final_paths_audit_sha256": "52fbd160967b6f13f52bdde5e423354af1356d16b344cac686caebaabe924a6e",
+  "selection_guard_audit_sha256": "51bc55179183e9b59663f1f95b013e9f053df265404bcb109f27d4a811abf57c",
+  "profile_sha256": {
+    "recommendation.json": "958146a789c063ba7682561517bc93cd735ff23bdf6fbddc14c01068aca6a0ad",
+    "recommendation_experimental.json": "9cc9fe00aac0548abde7577cc00d6ddb6956c25f42789889fe69339c0f3f1bd6"
+  },
+  "profile_selection_changed": false,
+  "seeded_test_prefix_selection_verified": true,
+  "original12_regression_panel_verified": true,
+  "panels": [
+    {
+      "comparison": "final_test",
+      "prompt_count": 16,
+      "reviews": {
+        "unique_texts": 30,
+        "mapped_outputs": 32,
+        "reviews": {
+          "coherence_ratings.json": {
+            "sha256": "87d84d5654b9d4909a4f15852ca028845a109196f79d0596c0a386761cb4af85",
+            "unique_ratings": 30,
+            "mapped_outputs": 32
+          },
+          "confirmatory_ratings.json": {
+            "sha256": "d5ed4d3d4ab6b69514192538b2f91a8fb0a9c46f116e1195eeb9be32500293be",
+            "unique_ratings": 30,
+            "mapped_outputs": 32
+          }
+        }
+      },
+      "candidate_counts": [
+        {
+          "candidate": "previous_late__old_beam5",
+          "count": 16,
+          "coherent_count": 8,
+          "direct_copy_free_coherent_count": 0,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 5,
+          "copied_continuations": 13,
+          "direct_copy_count": 13,
+          "confirmatory": {
+            "coherent_count": 8,
+            "direct_copy_free_coherent_count": 0,
+            "strict_novel_coherent_count": 0,
+            "score_counts": {
+              "0": 3,
+              "1": 5,
+              "2": 8
+            },
+            "seen_coherent": 6,
+            "unseen_coherent": 2
+          },
+          "reviewer_score_disagreements": 1
+        },
+        {
+          "candidate": "semantic_late_mix50__direct_union",
+          "count": 16,
+          "coherent_count": 2,
+          "direct_copy_free_coherent_count": 2,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 0,
+          "copied_continuations": 0,
+          "direct_copy_count": 0,
+          "confirmatory": {
+            "coherent_count": 2,
+            "direct_copy_free_coherent_count": 2,
+            "strict_novel_coherent_count": 0,
+            "score_counts": {
+              "0": 4,
+              "1": 10,
+              "2": 2
+            },
+            "seen_coherent": 2,
+            "unseen_coherent": 0
+          },
+          "reviewer_score_disagreements": 1
+        }
+      ]
+    },
+    {
+      "comparison": "regression",
+      "prompt_count": 12,
+      "reviews": {
+        "unique_texts": 24,
+        "mapped_outputs": 24,
+        "reviews": {
+          "coherence_ratings.json": {
+            "sha256": "e64104d0eb13dfc1fcb4d4902e0c0d2cbb7e397666a0bbd1e0b781479432188b",
+            "unique_ratings": 24,
+            "mapped_outputs": 24
+          },
+          "confirmatory_ratings.json": {
+            "sha256": "73ed3b92479a8e2eb1536f75dc52988079001452385833b779e7c0d17c33979c",
+            "unique_ratings": 24,
+            "mapped_outputs": 24
+          }
+        }
+      },
+      "candidate_counts": [
+        {
+          "candidate": "previous_late__old_beam5",
+          "count": 12,
+          "coherent_count": 8,
+          "direct_copy_free_coherent_count": 0,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 7,
+          "copied_continuations": 11,
+          "direct_copy_count": 11,
+          "confirmatory": {
+            "coherent_count": 9,
+            "direct_copy_free_coherent_count": 1,
+            "strict_novel_coherent_count": 1,
+            "score_counts": {
+              "0": 0,
+              "1": 3,
+              "2": 9
+            },
+            "seen_coherent": 7,
+            "unseen_coherent": 2
+          },
+          "reviewer_score_disagreements": 1
+        },
+        {
+          "candidate": "semantic_late_mix50__direct_union",
+          "count": 12,
+          "coherent_count": 1,
+          "direct_copy_free_coherent_count": 1,
+          "strict_novel_coherent_count": 0,
+          "exact_full_copies": 0,
+          "copied_continuations": 0,
+          "direct_copy_count": 0,
+          "confirmatory": {
+            "coherent_count": 0,
+            "direct_copy_free_coherent_count": 0,
+            "strict_novel_coherent_count": 0,
+            "score_counts": {
+              "0": 4,
+              "1": 8,
+              "2": 0
+            },
+            "seen_coherent": 0,
+            "unseen_coherent": 0
+          },
+          "reviewer_score_disagreements": 2
+        }
+      ]
+    }
+  ],
+  "note": "No model replay or semantic rerating; all summaries and bindings independently checked.",
+  "guard_integrity": {
+    "status": "verified",
+    "created_at_utc": "2026-11-13T01:34:44.157957+00:00",
+    "audit_script_sha256": "6e0d2310bce44cf5e49dda6446d78869e77294fe8a6746d3297b506f1aaf3c3e",
+    "archived_decision_sha256": "12a7a178999a4f10669a37e68d99cb07e4daa2f8479db813aa63481b452b797a",
+    "archived_finalizer_sha256": "8badd7240266b7c6257db7846682287ee39408755a240d1d76db1ef6165dcb12",
+    "current_decision_sha256": "556ccf7f6b953db7bad7a6a6cae81f107de71ec17254f7f76e410ba875dbf965",
+    "current_finalizer_sha256": "91c6e96a36b7edc489a5e370a6fa404f73cf2f0014a055b7a3840394142e7184",
+    "auditor_source_sha256": "abbba92f930222978ec098bad8040cb779783031a4ea51f90e81fca5decb69d8",
+    "allowed_decision_changes": [
+      "locked_at_utc",
+      "finalizer_sha256"
+    ],
+    "ranking_and_qualifies_ast_unchanged": true,
+    "complete_candidate_families": 17,
+    "mapped_outputs": 272,
+    "review": {
+      "unique_texts": 130,
+      "mapped_outputs": 272,
+      "reviews": {
+        "coherence_ratings.json": {
+          "sha256": "cfcdc743c6ce5e6e4bc71a4a5c1ffb582e23468e6c95bafa5fee9e3c3ead6cc3",
+          "unique_ratings": 130,
+          "mapped_outputs": 272
+        }
+      }
+    },
+    "promoted": false,
+    "selected": "previous_late__old_beam5",
+    "experimental": "semantic_late_mix50__direct_union",
+    "profiles": {
+      "recommendation.json": {
+        "sha256": "958146a789c063ba7682561517bc93cd735ff23bdf6fbddc14c01068aca6a0ad",
+        "candidate": "previous_late__old_beam5",
+        "status": "previous_default_retained",
+        "components": [
+          {
+            "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+            "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+            "epoch": 27
+          }
+        ]
+      },
+      "recommendation_experimental.json": {
+        "sha256": "9cc9fe00aac0548abde7577cc00d6ddb6956c25f42789889fe69339c0f3f1bd6",
+        "candidate": "semantic_late_mix50__direct_union",
+        "status": "experimental_best_alternative",
+        "components": [
+          {
+            "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+            "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7",
+            "epoch": 21
+          },
+          {
+            "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+            "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+            "epoch": 27
+          }
+        ]
+      }
+    },
+    "baseline_counts": {
+      "coherent_count": 7,
+      "direct_copy_free_coherent_count": 1,
+      "strict_novel_coherent_count": 0,
+      "direct_copy_count": 7
+    },
+    "experimental_counts": {
+      "coherent_count": 4,
+      "direct_copy_free_coherent_count": 4,
+      "strict_novel_coherent_count": 3,
+      "direct_copy_count": 0
+    },
+    "note": "No semantic ratings or model generations changed; this audit checks bindings and independently recomputes the recorded decision."
+  }
+}

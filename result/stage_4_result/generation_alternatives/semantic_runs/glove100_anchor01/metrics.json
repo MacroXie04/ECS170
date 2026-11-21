@@ -1,0 +1,19 @@
+{
+  "name": "glove100_anchor01",
+  "parameters": 724845,
+  "best_epoch": 12,
+  "epochs_completed": 27,
+  "validation": {
+    "loss": 5.585228632274119,
+    "accuracy": 0.21531393568147014,
+    "count": 3265
+  },
+  "last_validation": 6.10886338892611,
+  "train_seconds": 2.810054272064008,
+  "checkpoint_sha256": "372ae63668e4695ace469d0549243d1db81dc3299a6f68cd139abbc02183dafd",
+  "config_hash": "d530236e14204586de0973059f992b148e4c10e5f71bd7bf2e483fd4cbf98965",
+  "test_evaluated": false,
+  "external_word_embeddings": true,
+  "matched_types": 3882,
+  "matched_type_fraction": 0.9249463902787706
+}

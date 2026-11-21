@@ -1,0 +1,89 @@
+{
+  "selection_rule": "Highest 3-seed mean validation accuracy; ties use lower mean validation loss, then fewer parameters. Final tested seed is median validation accuracy; accuracy ties use lower validation loss, then smaller seed.",
+  "group_order": [
+    "bigru128_meanmax_dropout03",
+    "bigru128_meanmax_dropout05"
+  ],
+  "groups": {
+    "bigru128_meanmax_dropout03": {
+      "rows": [
+        {
+          "tag": "c_bigru128_meanmax_512_headtail_s1704",
+          "model_seed": 1704,
+          "validation_accuracy": 0.9148,
+          "validation_loss": 0.2524251595282663,
+          "validation_macro_f1": 0.9147792606808793,
+          "best_epoch": 6,
+          "config_hash": "ddeea6abf52f7f7b40a8fb131d5a90187f5577ce24c9845f69bb12da662b1dad",
+          "best_checkpoint_sha256": "24b49c795c9557b71cba301cb8f164e48644c492fdaeba334627073c55c481a0"
+        },
+        {
+          "tag": "e_bigru128_meanmax_drop30_512_headtail_s1705",
+          "model_seed": 1705,
+          "validation_accuracy": 0.9036,
+          "validation_loss": 0.26349254502240144,
+          "validation_macro_f1": 0.9035996143984576,
+          "best_epoch": 5,
+          "config_hash": "4b424a8e05c5b805fa60faf0ae82ea9519c93108e4db3db5ab06d60f3689da2f",
+          "best_checkpoint_sha256": "01e20d1b2f6b9841d881f80e6a42bbeaf4cd27129800dc6b2b02f79b7352b809"
+        },
+        {
+          "tag": "e_bigru128_meanmax_drop30_512_headtail_s1706",
+          "model_seed": 1706,
+          "validation_accuracy": 0.9064,
+          "validation_loss": 0.27770170875562744,
+          "validation_macro_f1": 0.9063530116871441,
+          "best_epoch": 6,
+          "config_hash": "1e5591ced0976ffde78d0b2761f6ff28241f09806edbfe74233d61c9834047c0",
+          "best_checkpoint_sha256": "e7c86d34026f6940fdbbb1eed38c18e9b033386e07467152b1e0613cdef00c77"
+        }
+      ],
+      "mean_validation_accuracy": 0.9082666666666667,
+      "sample_sd_validation_accuracy": 0.005828664798505161,
+      "mean_validation_loss": 0.26453980443543174,
+      "parameters": 2759170
+    },
+    "bigru128_meanmax_dropout05": {
+      "rows": [
+        {
+          "tag": "d_bigru128_meanmax_drop50_512_headtail_s1704",
+          "model_seed": 1704,
+          "validation_accuracy": 0.9084,
+          "validation_loss": 0.28780093651125016,
+          "validation_macro_f1": 0.9083840368345781,
+          "best_epoch": 7,
+          "config_hash": "76b7c89e9f4d59c90db9bea1eca3616af17d7e012510da90348c960eb4968981",
+          "best_checkpoint_sha256": "38b57cc74a9235c91f192be268babb716f51573472f9f5d6bf4e4c36ec1e5b16"
+        },
+        {
+          "tag": "e_bigru128_meanmax_drop50_512_headtail_s1705",
+          "model_seed": 1705,
+          "validation_accuracy": 0.9136,
+          "validation_loss": 0.3085656949639331,
+          "validation_macro_f1": 0.9135840164996918,
+          "best_epoch": 11,
+          "config_hash": "742776908cd2e17b92adea0b296089971669be30627b2ceea7deccef0c94bb9a",
+          "best_checkpoint_sha256": "550f8d1c6c051cedc34973bd6b337870e22a3190b04615c9864a4c8aef297d5a"
+        },
+        {
+          "tag": "e_bigru128_meanmax_drop50_512_headtail_s1706",
+          "model_seed": 1706,
+          "validation_accuracy": 0.9016,
+          "validation_loss": 0.302221045571781,
+          "validation_macro_f1": 0.9015137102523747,
+          "best_epoch": 6,
+          "config_hash": "185c6c2dec5f6f3fff183d63ab2bda5f270dbe7212811c722be87f82a73650fa",
+          "best_checkpoint_sha256": "a8d895ac7fde689d56d05f5b45dc9fd4e66452b9daddec451ae1438b2d837be5"
+        }
+      ],
+      "mean_validation_accuracy": 0.9078666666666666,
+      "sample_sd_validation_accuracy": 0.006017751518078277,
+      "mean_validation_loss": 0.29952922568232143,
+      "parameters": 2759170
+    }
+  },
+  "winner": "bigru128_meanmax_dropout03",
+  "median_seed_selected": 1706,
+  "selected_run": "e_bigru128_meanmax_drop30_512_headtail_s1706",
+  "test_metrics_used_for_selection": false
+}

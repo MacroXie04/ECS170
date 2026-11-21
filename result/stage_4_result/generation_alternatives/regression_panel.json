@@ -1,0 +1,104 @@
+{
+  "prompts": [
+    {
+      "id": "joke/940",
+      "prompt": "what do you",
+      "train_prefix_count": 153,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1183",
+      "prompt": "why did the",
+      "train_prefix_count": 73,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/648",
+      "prompt": "what did the",
+      "train_prefix_count": 64,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/867",
+      "prompt": "how do you",
+      "train_prefix_count": 25,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/786",
+      "prompt": "what kind of",
+      "train_prefix_count": 17,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/550",
+      "prompt": "what does a",
+      "train_prefix_count": 11,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1169",
+      "prompt": "where did the",
+      "train_prefix_count": 6,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1537",
+      "prompt": "i'm reading a",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/858",
+      "prompt": "what side of",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/89",
+      "prompt": "time flies like",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1279",
+      "prompt": "a guy walks",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    },
+    {
+      "id": "joke/1262",
+      "prompt": "i was wondering",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "validation"
+    }
+  ],
+  "sha256": "97cf87c7515dc306a1cd310a25acd1540ff332c108fb2363c9387353895d74a8",
+  "locked_at_utc": "2026-11-13T01:14:53.076945+00:00",
+  "decision_sha256": "556ccf7f6b953db7bad7a6a6cae81f107de71ec17254f7f76e410ba875dbf965",
+  "train_rows_sha256": "90f320d8b053f64d866620d9b04198826df8f7e306354729debeddf7ec636f78",
+  "validation_rows_sha256": "844805123683ba4ee93e960e3094549765303f86a9a400f942e76c96b88fa354",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "source_sha256": {
+    "script/stage_4_script/evaluate_alternatives_test.py": "730316a6223c2fcbb60f22fc129aa71f81cd1ebfb5bfad3153fe2f246bde7733",
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9"
+  },
+  "selection": "Original12 development prefixes reused ONLY as a regression check after locking; not fresh validation/test evidence.",
+  "coverage": {
+    "seen": 8,
+    "unseen": 4
+  },
+  "limitation": "No tuning follows these outputs. Test corpus loss has been used previously; fresh prefix panel is not a wholly new dataset."
+}

@@ -1,0 +1,13 @@
+{
+  "candidate": "Equal arithmetic mean of positive-class probabilities from all three previously selected BiGRU mean+max dropout-0.3 best-validation-loss checkpoints; fixed threshold 0.5; no learned ensemble weights or new training.",
+  "members": [
+    "c_bigru128_meanmax_512_headtail_s1704",
+    "e_bigru128_meanmax_drop30_512_headtail_s1705",
+    "e_bigru128_meanmax_drop30_512_headtail_s1706"
+  ],
+  "outer_split": "Original grouped 22500/2500 training/validation split unchanged.",
+  "selection": "This ensemble was proposed before inspecting its combined validation score. Use all three seeds; no subset or weight search. Assess validation before any new official test evaluation.",
+  "test_disclosure": "Baseline 87.184 percent and previous selected single-model 89.244 percent official test results were already viewed. Any new ensemble test is repeated exploratory use, not an untouched holdout. Do not alter membership, weights, or threshold after seeing it.",
+  "no_external_data": true,
+  "classification_only": true
+}

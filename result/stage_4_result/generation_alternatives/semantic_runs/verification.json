@@ -1,0 +1,80 @@
+{
+  "status": "verified",
+  "tests": 7,
+  "scope": "Both best/last semantic checkpoints, complete validation replay; no test loss or generated joke inspection.",
+  "data_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "cross_backend_nll_tolerance": 0.0005,
+  "torch": "2.14.1+cu130",
+  "checkpoints": [
+    {
+      "run": "glove100_finetune",
+      "checkpoint": "best.pt",
+      "checkpoint_sha256": "f0ec81c80a818818b6cdea4abdfa3836cb3841351abbddc9aa55487380c34d49",
+      "epoch": 12,
+      "expected_validation_loss": 5.582459412088438,
+      "cpu_validation": {
+        "loss": 5.582465767969946,
+        "accuracy": 0.21531393568147014,
+        "count": 3265
+      },
+      "absolute_loss_error": 6.355881508213201e-06,
+      "forward_step_max_abs_error": 3.814697265625e-06,
+      "pad_exactly_zero": true,
+      "prior_manifest_member_and_checkpoint_reference_verified": true
+    },
+    {
+      "run": "glove100_finetune",
+      "checkpoint": "last.pt",
+      "checkpoint_sha256": "ae119674a0f03f1076582e6cdf1fa22673d8798b5c3a57beb4b95b495c52f198",
+      "epoch": 27,
+      "expected_validation_loss": 6.123965561590735,
+      "cpu_validation": {
+        "loss": 6.123996518472435,
+        "accuracy": 0.26401225114854515,
+        "count": 3265
+      },
+      "absolute_loss_error": 3.095688169985067e-05,
+      "forward_step_max_abs_error": 7.62939453125e-06,
+      "pad_exactly_zero": true,
+      "prior_manifest_member_and_checkpoint_reference_verified": true
+    },
+    {
+      "run": "glove100_anchor01",
+      "checkpoint": "best.pt",
+      "checkpoint_sha256": "372ae63668e4695ace469d0549243d1db81dc3299a6f68cd139abbc02183dafd",
+      "epoch": 12,
+      "expected_validation_loss": 5.585228632274119,
+      "cpu_validation": {
+        "loss": 5.58524889631987,
+        "accuracy": 0.21531393568147014,
+        "count": 3265
+      },
+      "absolute_loss_error": 2.02640457507286e-05,
+      "forward_step_max_abs_error": 4.76837158203125e-06,
+      "pad_exactly_zero": true,
+      "prior_manifest_member_and_checkpoint_reference_verified": true
+    },
+    {
+      "run": "glove100_anchor01",
+      "checkpoint": "last.pt",
+      "checkpoint_sha256": "280224be5cbb74a995ba0b28576c1becf24bb34fa32206372d7420f76baec351",
+      "epoch": 27,
+      "expected_validation_loss": 6.10886338892611,
+      "cpu_validation": {
+        "loss": 6.108889261102603,
+        "accuracy": 0.2637059724349158,
+        "count": 3265
+      },
+      "absolute_loss_error": 2.58721764927472e-05,
+      "forward_step_max_abs_error": 6.67572021484375e-06,
+      "pad_exactly_zero": true,
+      "prior_manifest_member_and_checkpoint_reference_verified": true
+    }
+  ],
+  "source_sha256": {
+    "local_code/stage_4_code/Semantic_Generation.py": "77454d1735c7d83dfa97adf5dc1c93026232f4b594740da1fb3871642c749cd2",
+    "script/stage_4_script/train_semantic_generation.py": "f104e911261a9f8f3d054ab6673e82faa4a599d99c08d6fa09e9b64e75d44afc",
+    "tests/stage4/test_semantic_generation.py": "6c4a836bd955bb707c4b3e988b04c809f50f0687b2e3365a45119e72d14c7f21"
+  }
+}

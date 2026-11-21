@@ -1,0 +1,12 @@
+{
+  "selected_run": "e_bigru128_meanmax_drop30_512_headtail_s1706",
+  "config_hash": "1e5591ced0976ffde78d0b2761f6ff28241f09806edbfe74233d61c9834047c0",
+  "best_checkpoint_sha256": "e7c86d34026f6940fdbbb1eed38c18e9b033386e07467152b1e0613cdef00c77",
+  "selection_rule": "Highest 3-seed mean validation accuracy; ties use lower mean validation loss, then fewer parameters. Final tested seed is median validation accuracy; accuracy ties use lower validation loss, then smaller seed.",
+  "locked_before_test": true,
+  "locked_at_utc": "2026-11-18T05:03:17.453424+00:00",
+  "winning_configuration": "bigru128_meanmax_dropout03",
+  "median_model_seed": 1706,
+  "replication_file": "replication.json",
+  "historical_test_disclosure": "The original baseline GRU test accuracy 87.184 percent was viewed before this optimization; it was not used to choose candidates or seed."
+}
