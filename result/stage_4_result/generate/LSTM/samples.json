@@ -1,0 +1,29 @@
+[
+  {
+    "prompt": "what did the",
+    "generated": "what did the fish say when it hit the wall? dam",
+    "ended_with_eos": true,
+    "training_jokes_with_prefix": 66,
+    "closest_training_joke": "what did the fish say when it hit the wall? dam",
+    "shared_prefix_tokens": 12,
+    "exact_training_match": true
+  },
+  {
+    "prompt": "why did the",
+    "generated": "why did the chicken cross the road? because he was a little joke.",
+    "ended_with_eos": true,
+    "training_jokes_with_prefix": 77,
+    "closest_training_joke": "why did the chicken cross the road? to get away from gordon ramsey",
+    "shared_prefix_tokens": 8,
+    "exact_training_match": false
+  },
+  {
+    "prompt": "how do you",
+    "generated": "how do you make a squid laugh? a cow.",
+    "ended_with_eos": true,
+    "training_jokes_with_prefix": 26,
+    "closest_training_joke": "how do you make a squid laugh? ten tickles.",
+    "shared_prefix_tokens": 8,
+    "exact_training_match": false
+  }
+]
