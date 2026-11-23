@@ -1,0 +1,86 @@
+{
+  "cell": "rnn",
+  "train": {
+    "n_jokes": 1297,
+    "n_target_tokens": 23060,
+    "cross_entropy": 3.864765489483955,
+    "perplexity": 47.69208682527602,
+    "token_accuracy": 0.2911968777103209
+  },
+  "validation": {
+    "n_jokes": 164,
+    "n_target_tokens": 2983,
+    "cross_entropy": 5.384619942696111,
+    "perplexity": 218.02722551965564,
+    "token_accuracy": 0.25209520616828696
+  },
+  "test": {
+    "n_jokes": 161,
+    "n_target_tokens": 2696,
+    "cross_entropy": 5.5253309481929245,
+    "perplexity": 250.9693821419349,
+    "token_accuracy": 0.25
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 7.2550272919257
+    },
+    {
+      "epoch": 2,
+      "train_loss": 6.04917834036679
+    },
+    {
+      "epoch": 3,
+      "train_loss": 5.769506771959436
+    },
+    {
+      "epoch": 4,
+      "train_loss": 5.556142700307801
+    },
+    {
+      "epoch": 5,
+      "train_loss": 5.369999386823808
+    },
+    {
+      "epoch": 6,
+      "train_loss": 5.198905966970472
+    },
+    {
+      "epoch": 7,
+      "train_loss": 5.035053074225486
+    },
+    {
+      "epoch": 8,
+      "train_loss": 4.8869948212622765
+    },
+    {
+      "epoch": 9,
+      "train_loss": 4.743736733401845
+    },
+    {
+      "epoch": 10,
+      "train_loss": 4.610018213355635
+    },
+    {
+      "epoch": 11,
+      "train_loss": 4.4792135739678
+    },
+    {
+      "epoch": 12,
+      "train_loss": 4.351770075610277
+    },
+    {
+      "epoch": 13,
+      "train_loss": 4.230490448024101
+    },
+    {
+      "epoch": 14,
+      "train_loss": 4.110720039809774
+    },
+    {
+      "epoch": 15,
+      "train_loss": 3.9928316691391177
+    }
+  ]
+}

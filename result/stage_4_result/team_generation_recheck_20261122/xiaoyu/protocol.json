@@ -1,0 +1,43 @@
+{
+  "source": "Xiaoyu Stage 4 generator, originally PR #14 d0797e8; generation code unchanged at PR #14 4e6e007",
+  "source_files": {
+    "local_code/stage_4_code/xiaoyu/Dataset_Loader.py": "fc46d60e2eefe3840fafa84e20de84d4d518f32b4d6b3eddc932b4b31154ec89",
+    "local_code/stage_4_code/xiaoyu/Method_RNN_Generation.py": "81cc85ca7d8d4dee0c826c4c306557702cd8587f5ca51c2c0a0a979470fa13b1"
+  },
+  "data_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+  "split_sha256": "8b9f30e14d63867913d1ba8a389a5ea704aab181affa59a730fc230f6c5b441a",
+  "split_policy": "Exact canonical Hongzhe baseline joke IDs, duplicate normalized jokes grouped; source 1,622 jokes",
+  "split_counts": {
+    "train": 1297,
+    "validation": 164,
+    "test": 161
+  },
+  "vocab": "Xiaoyu tokenizer, Xiaoyu vocabulary builder fit on train split only",
+  "vocab_size": 4184,
+  "oov": {
+    "train": {
+      "unknown_targets": 0,
+      "predicted_tokens": 23060
+    },
+    "validation": {
+      "unknown_targets": 314,
+      "predicted_tokens": 2983
+    },
+    "test": {
+      "unknown_targets": 326,
+      "predicted_tokens": 2696
+    }
+  },
+  "settings": {
+    "seed": 2,
+    "max_len": 70,
+    "max_vocab": 10000,
+    "epochs": 15,
+    "batch_size": 32,
+    "embedding_dim": 50,
+    "hidden_size": 128,
+    "learning_rate": 0.001,
+    "device": "cuda",
+    "selected_epoch": "epoch 15, matching original fixed training schedule; no test-based selection"
+  }
+}

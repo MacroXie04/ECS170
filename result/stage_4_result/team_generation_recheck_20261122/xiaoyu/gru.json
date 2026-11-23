@@ -1,0 +1,86 @@
+{
+  "cell": "gru",
+  "train": {
+    "n_jokes": 1297,
+    "n_target_tokens": 23060,
+    "cross_entropy": 3.761021398195265,
+    "perplexity": 42.99231583424111,
+    "token_accuracy": 0.30333911535125757
+  },
+  "validation": {
+    "n_jokes": 164,
+    "n_target_tokens": 2983,
+    "cross_entropy": 5.415413171382626,
+    "perplexity": 224.8454261851249,
+    "token_accuracy": 0.2701977874622863
+  },
+  "test": {
+    "n_jokes": 161,
+    "n_target_tokens": 2696,
+    "cross_entropy": 5.541941656910701,
+    "perplexity": 255.17297713911722,
+    "token_accuracy": 0.26743323442136496
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 7.438955806217707
+    },
+    {
+      "epoch": 2,
+      "train_loss": 6.114223222699459
+    },
+    {
+      "epoch": 3,
+      "train_loss": 5.799895072872496
+    },
+    {
+      "epoch": 4,
+      "train_loss": 5.57225208836644
+    },
+    {
+      "epoch": 5,
+      "train_loss": 5.371438933059845
+    },
+    {
+      "epoch": 6,
+      "train_loss": 5.1854457458411725
+    },
+    {
+      "epoch": 7,
+      "train_loss": 5.013676569302601
+    },
+    {
+      "epoch": 8,
+      "train_loss": 4.850904194665596
+    },
+    {
+      "epoch": 9,
+      "train_loss": 4.698339448177804
+    },
+    {
+      "epoch": 10,
+      "train_loss": 4.554435587260171
+    },
+    {
+      "epoch": 11,
+      "train_loss": 4.413325267962962
+    },
+    {
+      "epoch": 12,
+      "train_loss": 4.27770323480406
+    },
+    {
+      "epoch": 13,
+      "train_loss": 4.147243938038686
+    },
+    {
+      "epoch": 14,
+      "train_loss": 4.021491636572356
+    },
+    {
+      "epoch": 15,
+      "train_loss": 3.8971763673080946
+    }
+  ]
+}

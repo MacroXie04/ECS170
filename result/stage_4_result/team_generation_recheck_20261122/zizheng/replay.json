@@ -1,0 +1,128 @@
+{
+  "cross_split_overlap": {
+    "train/test": 0,
+    "train/val": 0,
+    "val/test": 0
+  },
+  "data_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+  "encoded_split_sha256": {
+    "test": "950040333ddc88a37c0236ba1ae280b189abebfed965233e7c9aa7d22e16a138",
+    "train": "8b1e9cd0c2d4dc6b9fd57c9cd311d081202b8b96254362091873531956fca23e",
+    "val": "cf10481931205b4eafe7c98a8eebc12bd37bae2896fedf86e48db7ac4b3b2923"
+  },
+  "models": {
+    "GRU": {
+      "best_epoch": 25,
+      "checkpoint_sha256": "caed3f6f667d2a25a86cf717adcc14c024babb4aa46937dfe93e2e0173c047dd",
+      "consistent_with_saved_record": true,
+      "delta": {
+        "loss": 1.4169360396110164e-07,
+        "perplexity": 5.147540719008248e-06,
+        "token_accuracy": 0.0
+      },
+      "observed": {
+        "loss": 3.592607413039654,
+        "perplexity": 36.328676406193246,
+        "scored_tokens": 2529,
+        "token_accuracy": 0.3479636219849743
+      },
+      "record_sha256": "d9208e0ce5fd338bf4329e83fd2fbc0c0375715d44a666a779a21d732b99a9c2",
+      "record_torch_version": "2.8.0",
+      "saved": {
+        "loss": 3.59260727134605,
+        "perplexity": 36.32867125865253,
+        "scored_tokens": 2529,
+        "token_accuracy": 0.3479636219849743
+      },
+      "settings": {
+        "cell": "GRU",
+        "dropout": 0.2,
+        "embedding_size": 64,
+        "hidden_size": 96,
+        "task": "generate",
+        "vocab_size": 1616
+      },
+      "vocab_matches": true
+    },
+    "LSTM": {
+      "best_epoch": 35,
+      "checkpoint_sha256": "7b9113ffe876f9cf863f56a0065539f4b40c0b678a479d057e9a9f7899087c55",
+      "consistent_with_saved_record": true,
+      "delta": {
+        "loss": 4.9022404802201436e-08,
+        "perplexity": 1.8389279787811574e-06,
+        "token_accuracy": 0.0
+      },
+      "observed": {
+        "loss": 3.6246606499463403,
+        "perplexity": 37.511991303183486,
+        "scored_tokens": 2529,
+        "token_accuracy": 0.3610122578094108
+      },
+      "record_sha256": "51e01814d0bd7be90180b8f021b5c69ebcfcde94c43be1aad6cec46a6f388e20",
+      "record_torch_version": "2.8.0",
+      "saved": {
+        "loss": 3.6246606009239355,
+        "perplexity": 37.51198946425551,
+        "scored_tokens": 2529,
+        "token_accuracy": 0.3610122578094108
+      },
+      "settings": {
+        "cell": "LSTM",
+        "dropout": 0.2,
+        "embedding_size": 64,
+        "hidden_size": 96,
+        "task": "generate",
+        "vocab_size": 1616
+      },
+      "vocab_matches": true
+    },
+    "RNN": {
+      "best_epoch": 23,
+      "checkpoint_sha256": "2919cd1073b7a8dcd3f16557f8b0850b004c9bc0407892c37fac6f250f24da16",
+      "consistent_with_saved_record": true,
+      "delta": {
+        "loss": 0.0,
+        "perplexity": 0.0,
+        "token_accuracy": 0.0
+      },
+      "observed": {
+        "loss": 3.6804685386191625,
+        "perplexity": 39.66497429174134,
+        "scored_tokens": 2529,
+        "token_accuracy": 0.34677738236457095
+      },
+      "record_sha256": "90a1fb2615379857b652342d42c23c46de48cecdc9056b3f4c0e815028a95107",
+      "record_torch_version": "2.8.0",
+      "saved": {
+        "loss": 3.6804685386191625,
+        "perplexity": 39.66497429174134,
+        "scored_tokens": 2529,
+        "token_accuracy": 0.34677738236457095
+      },
+      "settings": {
+        "cell": "RNN",
+        "dropout": 0.2,
+        "embedding_size": 64,
+        "hidden_size": 96,
+        "task": "generate",
+        "vocab_size": 1616
+      },
+      "vocab_matches": true
+    }
+  },
+  "repo_head": "08f7e26c495e7fc2e4cd239bf83d5c83227947df",
+  "source_sha256": {
+    "local_code/stage_4_code/zizheng/Dataset_Loader.py": "f049de053e7cd41bcc26d73ea93ba27108e1bcdfccd54eb7ebee0e5b29607871",
+    "local_code/stage_4_code/zizheng/Method_RNN.py": "cf2ebc7f3236162ecf59d27639cfdb7731b104c895147aceffe4f8616793c4fb",
+    "local_code/stage_4_code/zizheng/Setting.py": "36a40b87d8fa088484fd7bb96ac56a23bebe29704d5ff71cffc12ee022caf4e7"
+  },
+  "split_sizes": {
+    "test": 161,
+    "train": 1284,
+    "val": 161
+  },
+  "torch_version_replay": "2.14.1+cu130",
+  "vocab_sha256": "868a6a9421e3cc8509d15bcf03cf55cdb65660ded8ed2f5cb546a83df36bdf6d",
+  "vocab_size": 1616
+}

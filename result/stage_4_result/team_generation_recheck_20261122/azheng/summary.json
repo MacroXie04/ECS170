@@ -1,0 +1,59 @@
+{
+  "protocol": "Azheng generator; frozen Hongzhe joke split IDs; her tokenization and 40-token limit; train-only min-frequency-2 vocabulary; model seed 2; 60 epochs; best validation checkpoint; no test use in selection",
+  "data": {
+    "counts": {
+      "train": 1297,
+      "validation": 163,
+      "test": 161
+    },
+    "dropped_ids": [
+      "joke/1042"
+    ],
+    "vocab_size": 1618,
+    "unknown_target_rate": 0.1748043235184495,
+    "tokenized_duplicate_overlap": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "raw_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+    "split_sha256": "8b9f30e14d63867913d1ba8a389a5ea704aab181affa59a730fc230f6c5b441a",
+    "model_source_sha256": "d851db7ba470f19371453a1de6f8f9464ce0afa2096c9218b6decd966fc516bb",
+    "loader_source_sha256": "622eaac1c34b6a597bc27f56ffb1da861f84452f5428716681cdd4ed213c2635"
+  },
+  "results": {
+    "rnn": {
+      "best_epoch": 20,
+      "epochs_completed": 60,
+      "validation_cross_entropy": 3.6592835488871898,
+      "validation_perplexity": 38.83351059041185,
+      "test_cross_entropy": 3.5978105781774135,
+      "test_perplexity": 36.518193124597836,
+      "test_examples": 161,
+      "test_targets": 2683,
+      "checkpoint_replay_passed": true
+    },
+    "lstm": {
+      "best_epoch": 33,
+      "epochs_completed": 60,
+      "validation_cross_entropy": 3.5747065335117227,
+      "validation_perplexity": 35.68414717754078,
+      "test_cross_entropy": 3.513761414461424,
+      "test_perplexity": 33.574317496087,
+      "test_examples": 161,
+      "test_targets": 2683,
+      "checkpoint_replay_passed": true
+    },
+    "gru": {
+      "best_epoch": 24,
+      "epochs_completed": 60,
+      "validation_cross_entropy": 3.583474027353041,
+      "validation_perplexity": 35.9983832365951,
+      "test_cross_entropy": 3.5380906692601566,
+      "test_perplexity": 34.40117322790594,
+      "test_examples": 161,
+      "test_targets": 2683,
+      "checkpoint_replay_passed": true
+    }
+  }
+}
