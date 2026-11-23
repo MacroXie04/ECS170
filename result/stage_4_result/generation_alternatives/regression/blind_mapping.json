@@ -1,0 +1,122 @@
+[
+  {
+    "id": "A006",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 0
+  },
+  {
+    "id": "A009",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 1
+  },
+  {
+    "id": "A014",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 2
+  },
+  {
+    "id": "A003",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 3
+  },
+  {
+    "id": "A002",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 4
+  },
+  {
+    "id": "A013",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 5
+  },
+  {
+    "id": "A022",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 6
+  },
+  {
+    "id": "A005",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 7
+  },
+  {
+    "id": "A023",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 8
+  },
+  {
+    "id": "A021",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 9
+  },
+  {
+    "id": "A020",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 10
+  },
+  {
+    "id": "A024",
+    "candidate": "previous_late__old_beam5",
+    "prompt_index": 11
+  },
+  {
+    "id": "A018",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 0
+  },
+  {
+    "id": "A008",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 1
+  },
+  {
+    "id": "A019",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 2
+  },
+  {
+    "id": "A010",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 3
+  },
+  {
+    "id": "A015",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 4
+  },
+  {
+    "id": "A012",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 5
+  },
+  {
+    "id": "A011",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 6
+  },
+  {
+    "id": "A016",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 7
+  },
+  {
+    "id": "A004",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 8
+  },
+  {
+    "id": "A007",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 9
+  },
+  {
+    "id": "A017",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 10
+  },
+  {
+    "id": "A001",
+    "candidate": "semantic_late_mix50__direct_union",
+    "prompt_index": 11
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-18T04:23:26Z",
+  "purpose": "IMDb classification optimization only; no generation experiments or course report",
+  "data_rule": {
+    "official_train_validation_group_split_seed": 1704,
+    "split": "Preserve the original normalized-text groups and saved 22500/2500 split",
+    "vocabulary": "Fit only on the 22500 training examples",
+    "candidate_test_access": "Training loads only official train and its validation partition; no candidate official-test metrics"
+  },
+  "budget": {
+    "initial_plan": "Approximately 8 screening runs, then 2 additional seeds for each of the top 2 configurations (approximately 12 runs total)",
+    "adaptation": "Choose later comparisons from validation evidence; stop refinements at a validation plateau",
+    "per_run": "At most 30 epochs; early stop after 8 epochs without lower validation loss"
+  },
+  "stages": [
+    "A: GRU 256 head reproduction, 512 head, 512 first256+last256",
+    "B: at the promising input view compare BiGRU and BiLSTM; test hidden 256 if capacity looks limiting",
+    "C: compare masked mean with max or mean+max on a promising architecture",
+    "D: at most two targeted training refinements, such as AdamW with weight decay, learning-rate schedule, or dropout"
+  ],
+  "checkpoint_rule": "For every run use the earliest checkpoint with the lowest validation cross-entropy.",
+  "screening_rule": "Rank seed-1704 configurations by validation accuracy at the selected checkpoint; ties use lower validation loss, then fewer parameters. Take the top two configurations to replication.",
+  "replication_rule": "Keep the split seed at 1704. For each of the two selected configurations use model/training seeds 1704, 1705, and 1706. Choose highest three-seed mean validation accuracy; ties use lower mean validation loss, then fewer parameters.",
+  "final_seed_rule": "Evaluate only the winning configuration's seed with median validation accuracy. Accuracy ties use lower validation loss, then smaller numerical seed.",
+  "final_test_rule": "Write selection.json with configuration and checkpoint SHA-256 before explicit official-test evaluation. Report the selected seed's full 25000-example metrics.",
+  "historical_test_disclosure": "The original GRU baseline official-test accuracy of 87.184 percent was already viewed; the official test set cannot be described as completely unseen."
+}

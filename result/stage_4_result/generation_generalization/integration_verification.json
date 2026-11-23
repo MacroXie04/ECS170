@@ -1,0 +1,330 @@
+{
+  "passed": true,
+  "prompt": "What do you",
+  "prompt_role": "Previously used development prefix; not a fresh test prefix.",
+  "method": "All 3 locked profiles run on CPU and CUDA; strict profile repeats twice per backend with identical IDs/status/rejections; checkpoints/source/data bindings validated by real CLI API; global RNG/profile files unchanged.",
+  "strict_cross_backend_selected_ids_equal": true,
+  "cross_backend_note": "Same-backend determinism is required; floating-point CPU/CUDA candidate ranking can differ.",
+  "test_panel_read": false,
+  "quality_claim": false,
+  "runs": [
+    {
+      "profile": "recommendation",
+      "candidate": "previous_late_beam",
+      "device": "cpu",
+      "repetition": 1,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "9deebd80b9c399453325a9aebd4410bae5b7cc9d526c3cb1490fcc7273b12440",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 8,
+      "global_rng_unchanged": true,
+      "seconds": 0.9372271689935587
+    },
+    {
+      "profile": "recommendation_predictive",
+      "candidate": "tied_mix25_beam",
+      "device": "cpu",
+      "repetition": 1,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "3e10904043d0a6edc2e8c1b753d016aadb8774971d7001e60f1563fa758ce088",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+          "epoch": 22
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 10,
+      "global_rng_unchanged": true,
+      "seconds": 1.2776476590079255
+    },
+    {
+      "profile": "recommendation_strict",
+      "candidate": "tied_mix25_screened",
+      "device": "cpu",
+      "repetition": 1,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        3693,
+        28,
+        57,
+        126,
+        5,
+        6,
+        1891,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "7c6384a7aebbe301845ab5c9371c4190a4367fbd251c9df5f08761200492668e",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+          "epoch": 22
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 10,
+      "global_rng_unchanged": true,
+      "seconds": 0.9836539200041443
+    },
+    {
+      "profile": "recommendation_strict",
+      "candidate": "tied_mix25_screened",
+      "device": "cpu",
+      "repetition": 2,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        3693,
+        28,
+        57,
+        126,
+        5,
+        6,
+        1891,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "7c6384a7aebbe301845ab5c9371c4190a4367fbd251c9df5f08761200492668e",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+          "epoch": 22
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 10,
+      "global_rng_unchanged": true,
+      "seconds": 0.9051259839907289
+    },
+    {
+      "profile": "recommendation",
+      "candidate": "previous_late_beam",
+      "device": "cuda",
+      "repetition": 1,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "9deebd80b9c399453325a9aebd4410bae5b7cc9d526c3cb1490fcc7273b12440",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 8,
+      "global_rng_unchanged": true,
+      "seconds": 1.118121431034524
+    },
+    {
+      "profile": "recommendation_predictive",
+      "candidate": "tied_mix25_beam",
+      "device": "cuda",
+      "repetition": 1,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "3e10904043d0a6edc2e8c1b753d016aadb8774971d7001e60f1563fa758ce088",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+          "epoch": 22
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 10,
+      "global_rng_unchanged": true,
+      "seconds": 1.081061034987215
+    },
+    {
+      "profile": "recommendation_strict",
+      "candidate": "tied_mix25_screened",
+      "device": "cuda",
+      "repetition": 1,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        3693,
+        28,
+        57,
+        126,
+        5,
+        6,
+        1891,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "7c6384a7aebbe301845ab5c9371c4190a4367fbd251c9df5f08761200492668e",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+          "epoch": 22
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 10,
+      "global_rng_unchanged": true,
+      "seconds": 0.9748871870106086
+    },
+    {
+      "profile": "recommendation_strict",
+      "candidate": "tied_mix25_screened",
+      "device": "cuda",
+      "repetition": 2,
+      "status": "selected",
+      "selected_ids": [
+        2,
+        8,
+        13,
+        9,
+        26,
+        6,
+        3693,
+        28,
+        57,
+        126,
+        5,
+        6,
+        1891,
+        4,
+        3
+      ],
+      "ended_with_eos": true,
+      "profile_sha256": "7c6384a7aebbe301845ab5c9371c4190a4367fbd251c9df5f08761200492668e",
+      "checkpoint_bindings": [
+        {
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+          "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a",
+          "epoch": 22
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca",
+          "epoch": 27
+        }
+      ],
+      "source_binding_count": 10,
+      "global_rng_unchanged": true,
+      "seconds": 0.957127348985523
+    }
+  ]
+}

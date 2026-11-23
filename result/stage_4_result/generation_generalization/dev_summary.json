@@ -1,0 +1,370 @@
+[
+  {
+    "candidate": "previous_late_beam",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 5,
+      "1": 4,
+      "2": 7
+    },
+    "coherent_count": 7,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 6,
+    "copied_continuations": 13,
+    "high_similarity_outputs": 15,
+    "novelty_eligible_count": 1,
+    "output_count": 16,
+    "seen_coherent": 6,
+    "unseen_coherent": 1,
+    "validation_loss": 5.582583987366003,
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ]
+    },
+    "mode": "beam"
+  },
+  {
+    "candidate": "previous_late_screened",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 5,
+      "1": 11,
+      "2": 0
+    },
+    "coherent_count": 0,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 0,
+    "high_similarity_outputs": 0,
+    "novelty_eligible_count": 16,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 0,
+    "validation_loss": 5.582583987366003,
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ]
+    },
+    "mode": "screened"
+  },
+  {
+    "candidate": "mix25_beam",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 10,
+      "1": 5,
+      "2": 1
+    },
+    "coherent_count": 1,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 13,
+    "high_similarity_outputs": 14,
+    "novelty_eligible_count": 2,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 1,
+    "validation_loss": 4.899707853775842,
+    "model_spec": {
+      "name": "mix25",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.25
+    },
+    "mode": "beam"
+  },
+  {
+    "candidate": "mix25_screened",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 9,
+      "1": 7,
+      "2": 0
+    },
+    "coherent_count": 0,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 0,
+    "high_similarity_outputs": 0,
+    "novelty_eligible_count": 16,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 0,
+    "validation_loss": 4.899707853775842,
+    "model_spec": {
+      "name": "mix25",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.25
+    },
+    "mode": "screened"
+  },
+  {
+    "candidate": "tied128_dropout35_beam",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 15,
+      "1": 1,
+      "2": 0
+    },
+    "coherent_count": 0,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 9,
+    "high_similarity_outputs": 9,
+    "novelty_eligible_count": 6,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 0,
+    "validation_loss": 5.065001076761103,
+    "model_spec": {
+      "name": "tied128_dropout35",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied128_dropout35/checkpoints/best.pt"
+        }
+      ]
+    },
+    "mode": "beam"
+  },
+  {
+    "candidate": "tied128_dropout35_screened",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 12,
+      "1": 4,
+      "2": 0
+    },
+    "coherent_count": 0,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 0,
+    "high_similarity_outputs": 0,
+    "novelty_eligible_count": 16,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 0,
+    "validation_loss": 5.065001076761103,
+    "model_spec": {
+      "name": "tied128_dropout35",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied128_dropout35/checkpoints/best.pt"
+        }
+      ]
+    },
+    "mode": "screened"
+  },
+  {
+    "candidate": "tied256_dropout35_smooth05_beam",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 13,
+      "1": 2,
+      "2": 1
+    },
+    "coherent_count": 1,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 10,
+    "high_similarity_outputs": 10,
+    "novelty_eligible_count": 5,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 1,
+    "validation_loss": 4.824824278570062,
+    "model_spec": {
+      "name": "tied256_dropout35_smooth05",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        }
+      ]
+    },
+    "mode": "beam"
+  },
+  {
+    "candidate": "tied256_dropout35_smooth05_screened",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 9,
+      "1": 7,
+      "2": 0
+    },
+    "coherent_count": 0,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 0,
+    "high_similarity_outputs": 0,
+    "novelty_eligible_count": 16,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 0,
+    "validation_loss": 4.824824278570062,
+    "model_spec": {
+      "name": "tied256_dropout35_smooth05",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        }
+      ]
+    },
+    "mode": "screened"
+  },
+  {
+    "candidate": "tied_mix25_beam",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 11,
+      "1": 3,
+      "2": 2
+    },
+    "coherent_count": 2,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 12,
+    "high_similarity_outputs": 13,
+    "novelty_eligible_count": 2,
+    "output_count": 16,
+    "seen_coherent": 1,
+    "unseen_coherent": 1,
+    "validation_loss": 4.725206678311639,
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.25
+    },
+    "mode": "beam"
+  },
+  {
+    "candidate": "tied_mix25_screened",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 5,
+      "1": 11,
+      "2": 0
+    },
+    "coherent_count": 0,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 0,
+    "high_similarity_outputs": 0,
+    "novelty_eligible_count": 16,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 0,
+    "validation_loss": 4.725206678311639,
+    "model_spec": {
+      "name": "tied_mix25",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.25
+    },
+    "mode": "screened"
+  },
+  {
+    "candidate": "tied_mix50_beam",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 7,
+      "1": 1,
+      "2": 8
+    },
+    "coherent_count": 8,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 6,
+    "copied_continuations": 15,
+    "high_similarity_outputs": 16,
+    "novelty_eligible_count": 0,
+    "output_count": 16,
+    "seen_coherent": 6,
+    "unseen_coherent": 2,
+    "validation_loss": 4.763324021343798,
+    "model_spec": {
+      "name": "tied_mix50",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.5
+    },
+    "mode": "beam"
+  },
+  {
+    "candidate": "tied_mix50_screened",
+    "panel_size": 16,
+    "coherence_score_counts": {
+      "0": 4,
+      "1": 12,
+      "2": 0
+    },
+    "coherent_count": 0,
+    "novel_coherent_count": 0,
+    "exact_training_copies": 0,
+    "copied_continuations": 0,
+    "high_similarity_outputs": 0,
+    "novelty_eligible_count": 16,
+    "output_count": 16,
+    "seen_coherent": 0,
+    "unseen_coherent": 0,
+    "validation_loss": 4.763324021343798,
+    "model_spec": {
+      "name": "tied_mix50",
+      "components": [
+        {
+          "loader": "regularized",
+          "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt"
+        }
+      ],
+      "late_weight": 0.5
+    },
+    "mode": "screened"
+  }
+]

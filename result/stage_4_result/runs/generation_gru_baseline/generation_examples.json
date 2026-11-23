@@ -1,0 +1,44 @@
+[
+  {
+    "prefix": "what do you",
+    "source_split": "train",
+    "reference_id": "joke/1423",
+    "reference": "What do you call a plastic sheep? Lambinated!",
+    "greedy": "what do you call a cow with a cow? a buccaneer",
+    "sampled": "what do you call a sheep with no legs?",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1704
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "why did the",
+    "source_split": "train",
+    "reference_id": "joke/1113",
+    "reference": "Why did the banker leave his job? he lost interest",
+    "greedy": "why did the chicken cross the road? because he was outstanding!",
+    "sampled": "why did the other cross the road? a pretty...",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1705
+    },
+    "max_new_tokens": 40
+  },
+  {
+    "prefix": "what did the",
+    "source_split": "train",
+    "reference_id": "joke/1305",
+    "reference": "What did the hot dogs name their child? Frank",
+    "greedy": "what did the 0 say to the other? he was outstanding!",
+    "sampled": "what did the german say when he was outstanding in his nuremberg? a little",
+    "sampling": {
+      "temperature": 0.8,
+      "top_k": 20,
+      "seed": 1706
+    },
+    "max_new_tokens": 40
+  }
+]

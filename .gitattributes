@@ -1,2 +1,5 @@
-# Preserve imported Stage 3 files byte-for-byte, including original CSV newlines.
-implementations/*/stage3/** -text
+
+# CSV evidence uses the standard CRLF line terminator.
+result/stage_4_result/runs/*/test_predictions.csv whitespace=cr-at-eol
+result/stage_4_result/** linguist-generated=true
+result/stage_4_result/**/test_predictions.csv whitespace=cr-at-eol

@@ -1,0 +1,386 @@
+[
+  {
+    "id": "N001",
+    "prompt": "did you hear",
+    "text": "did you hear about the road?",
+    "no_output": false
+  },
+  {
+    "id": "N002",
+    "prompt": "a horse walks",
+    "text": "a horse walks into a bar... he said \"",
+    "no_output": false
+  },
+  {
+    "id": "N003",
+    "prompt": "how does a",
+    "text": "how does a pirate to make a lightbulb? a buccaneer.",
+    "no_output": false
+  },
+  {
+    "id": "N004",
+    "prompt": "how does a",
+    "text": "how does a cactus do you call a lot of bread? a stick.",
+    "no_output": false
+  },
+  {
+    "id": "N005",
+    "prompt": "how does a",
+    "text": "how does a cow say to the other?",
+    "no_output": false
+  },
+  {
+    "id": "N006",
+    "prompt": "i came up",
+    "text": "i came up to the other day.",
+    "no_output": false
+  },
+  {
+    "id": "N007",
+    "prompt": "what did one",
+    "text": "what did one people say to the other?",
+    "no_output": false
+  },
+  {
+    "id": "N008",
+    "prompt": "two artists had",
+    "text": "two artists had a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N009",
+    "prompt": "i came up",
+    "text": "i came up for a bar... he asked have it was too cheesy.",
+    "no_output": false
+  },
+  {
+    "id": "N010",
+    "prompt": "two artists had",
+    "text": "two artists had a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N011",
+    "prompt": "a polar bear",
+    "text": "a polar bear into the other, what did the 0 say to the winter? \"",
+    "no_output": false
+  },
+  {
+    "id": "N012",
+    "prompt": "why was the",
+    "text": "why was the pirate cross the road? he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N013",
+    "prompt": "what do ducks",
+    "text": "what do ducks call a cow with no legs? a stick",
+    "no_output": false
+  },
+  {
+    "id": "N014",
+    "prompt": "why was the",
+    "text": "why was the chicken cross the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N015",
+    "prompt": "i came up",
+    "text": "i came up to be a hotel... but the doctor says, what do you call a cow? no eyes!",
+    "no_output": false
+  },
+  {
+    "id": "N016",
+    "prompt": "a polar bear",
+    "text": "a polar bear walks into a bar.",
+    "no_output": false
+  },
+  {
+    "id": "N017",
+    "prompt": "a polar bear",
+    "text": "a polar bear into a bar.",
+    "no_output": false
+  },
+  {
+    "id": "N018",
+    "prompt": "what do ducks",
+    "text": "what do ducks say to the other? you!",
+    "no_output": false
+  },
+  {
+    "id": "N019",
+    "prompt": "why don't melons",
+    "text": "why don't melons people like to change a lightbulb? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N020",
+    "prompt": "what do ducks",
+    "text": "what do ducks say to the other?",
+    "no_output": false
+  },
+  {
+    "id": "N021",
+    "prompt": "what happened to",
+    "text": "what happened to the 8? \"",
+    "no_output": false
+  },
+  {
+    "id": "N022",
+    "prompt": "what happened to",
+    "text": "what happened to the chicken say when it take to change a lightbulb?",
+    "no_output": false
+  },
+  {
+    "id": "N023",
+    "prompt": "where do sick",
+    "text": "where do sick say to the other? \"",
+    "no_output": false
+  },
+  {
+    "id": "N024",
+    "prompt": "i came up",
+    "text": "i came up into a bar.",
+    "no_output": false
+  },
+  {
+    "id": "N025",
+    "prompt": "why couldn't the",
+    "text": "why couldn't the chicken cross the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N026",
+    "prompt": "i know a",
+    "text": "i know a man walks into a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N027",
+    "prompt": "why was the",
+    "text": "why was the chicken cross the road?",
+    "no_output": false
+  },
+  {
+    "id": "N028",
+    "prompt": "why don't melons",
+    "text": "why don't melons people in the road? because it was a little.",
+    "no_output": false
+  },
+  {
+    "id": "N029",
+    "prompt": "how does a",
+    "text": "how does a pirate to make a lightbulb? a buccaneer.",
+    "no_output": false
+  },
+  {
+    "id": "N030",
+    "prompt": "why don't melons",
+    "text": "why don't melons people like to change a lightbulb? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N031",
+    "prompt": "where do sick",
+    "text": "where do sick say to the other?",
+    "no_output": false
+  },
+  {
+    "id": "N032",
+    "prompt": "what happened to",
+    "text": "what happened to the octopus when he hit his armies? a buccaneer!",
+    "no_output": false
+  },
+  {
+    "id": "N033",
+    "prompt": "there were two",
+    "text": "there were two going to the other day.",
+    "no_output": false
+  },
+  {
+    "id": "N034",
+    "prompt": "i know a",
+    "text": "i know a woman joke... i was going to be a bar..",
+    "no_output": false
+  },
+  {
+    "id": "N035",
+    "prompt": "i got hit",
+    "text": "i got hit a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N036",
+    "prompt": "did you hear",
+    "text": "did you hear about the scarecrow who was the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N037",
+    "prompt": "i know a",
+    "text": "i know a girl walks into a bar... he was outstanding in his head.",
+    "no_output": false
+  },
+  {
+    "id": "N038",
+    "prompt": "i know a",
+    "text": "i know a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N039",
+    "prompt": "i got hit",
+    "text": "i got hit a bar...",
+    "no_output": false
+  },
+  {
+    "id": "N040",
+    "prompt": "a horse walks",
+    "text": "a horse walks into a bar.",
+    "no_output": false
+  },
+  {
+    "id": "N041",
+    "prompt": "a horse walks",
+    "text": "a horse walks into a bar... i was the world.",
+    "no_output": false
+  },
+  {
+    "id": "N042",
+    "prompt": "why couldn't the",
+    "text": "why couldn't the chicken cross the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N043",
+    "prompt": "why was the",
+    "text": "why was the chicken cross the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N044",
+    "prompt": "a polar bear",
+    "text": "a polar bear walks into a bar... he was really bad out of them.",
+    "no_output": false
+  },
+  {
+    "id": "N045",
+    "prompt": "there were two",
+    "text": "there were two - joke from my 9 year old. i don't know he was outstanding in his field!",
+    "no_output": false
+  },
+  {
+    "id": "N046",
+    "prompt": "i got hit",
+    "text": "i got hit a dirty joke? i don't know in the street.",
+    "no_output": false
+  },
+  {
+    "id": "N047",
+    "prompt": "two artists had",
+    "text": "two artists had a dirty joke... it's a fight.",
+    "no_output": false
+  },
+  {
+    "id": "N048",
+    "prompt": "why couldn't the",
+    "text": "why couldn't the chicken cross the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N049",
+    "prompt": "what did one",
+    "text": "what did one snowman say to the other? \"",
+    "no_output": false
+  },
+  {
+    "id": "N050",
+    "prompt": "did you hear",
+    "text": "did you hear about the scarecrow who was the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N051",
+    "prompt": "what did one",
+    "text": "what did one fly say to the other? \" you!",
+    "no_output": false
+  },
+  {
+    "id": "N052",
+    "prompt": "did you hear",
+    "text": "did you hear about the chicken cross a road? he was little.",
+    "no_output": false
+  },
+  {
+    "id": "N053",
+    "prompt": "two artists had",
+    "text": "two artists had a dirty joke... but i think it was the world.",
+    "no_output": false
+  },
+  {
+    "id": "N054",
+    "prompt": "there were two",
+    "text": "there were two going to the other day.",
+    "no_output": false
+  },
+  {
+    "id": "N055",
+    "prompt": "what did one",
+    "text": "what did one fish say to the other day? \"",
+    "no_output": false
+  },
+  {
+    "id": "N056",
+    "prompt": "there were two",
+    "text": "there were two types of people in the world.",
+    "no_output": false
+  },
+  {
+    "id": "N057",
+    "prompt": "a horse walks",
+    "text": "a horse walks into a bar.",
+    "no_output": false
+  },
+  {
+    "id": "N058",
+    "prompt": "where do sick",
+    "text": "where do sick wear to live? because they make a little joke!",
+    "no_output": false
+  },
+  {
+    "id": "N059",
+    "prompt": "why don't melons",
+    "text": "why don't melons people in the road? because it was a little.",
+    "no_output": false
+  },
+  {
+    "id": "N060",
+    "prompt": "what happened to",
+    "text": "what happened to the pirate say to the other? he was their head.",
+    "no_output": false
+  },
+  {
+    "id": "N061",
+    "prompt": "where do sick",
+    "text": "where do sick get to his road? he was outstanding in the other",
+    "no_output": false
+  },
+  {
+    "id": "N062",
+    "prompt": "what do ducks",
+    "text": "what do ducks call a cow with no legs? ground beef.",
+    "no_output": false
+  },
+  {
+    "id": "N063",
+    "prompt": "why couldn't the",
+    "text": "why couldn't the chicken cross the road? because he was outstanding in his field.",
+    "no_output": false
+  },
+  {
+    "id": "N064",
+    "prompt": "i got hit",
+    "text": "i got hit the street... but it wanted to the other.",
+    "no_output": false
+  }
+]

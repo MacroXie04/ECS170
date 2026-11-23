@@ -1,0 +1,6020 @@
+[
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 0,
+    "prompt": "you know what",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "you know what do you call a cow with no legs? ground beef.",
+      "continuation": "do you call a cow with no legs? ground beef.",
+      "ids": [
+        2,
+        9,
+        79,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "prompt": "you know what",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 10,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -5.715517968985253,
+      "average_log_probability": -0.43965522838348103,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9166666666666666,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 0.8461538461538461,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8888888888888888,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 10,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        }
+      }
+    },
+    "text": "you know what do you call a cow with no legs? ground beef.",
+    "blind_id": "A004"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 1,
+    "prompt": "why didn't the",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why didn't the bicycle cross the road? because it saw the salad dressing.",
+      "continuation": "bicycle cross the road? because it saw the salad dressing.",
+      "ids": [
+        2,
+        17,
+        117,
+        7,
+        474,
+        103,
+        7,
+        181,
+        5,
+        31,
+        19,
+        193,
+        7,
+        440,
+        348,
+        4,
+        3
+      ],
+      "prompt": "why didn't the",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 10,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -5.142097950276355,
+      "average_log_probability": -0.3955459961751042,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.72,
+          "nearest_match_ids": [
+            "joke/128"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.6923076923076923,
+          "shared_match_ids": [
+            "joke/128"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7058823529411765,
+          "nearest_match_ids": [
+            "joke/913"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.6,
+          "shared_match_ids": [
+            "joke/1621",
+            "joke/217",
+            "joke/913",
+            "joke/1094",
+            "joke/128"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "why didn't the bicycle cross the road? because it saw the salad dressing.",
+    "blind_id": "A011"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 2,
+    "prompt": "why does snoop",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why does snoop dog carry and umbrella? fo - drizzle",
+      "continuation": "dog carry and umbrella? fo - drizzle",
+      "ids": [
+        2,
+        17,
+        43,
+        696,
+        118,
+        1079,
+        21,
+        1596,
+        5,
+        2497,
+        22,
+        1174,
+        3
+      ],
+      "prompt": "why does snoop",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 9,
+      "new_word_count": 6,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -3.178240961832993,
+      "average_log_probability": -0.35313788464811036,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1616"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1616"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1616"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1616"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1616"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1616"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1616"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1616"
+          ]
+        }
+      }
+    },
+    "text": "why does snoop dog carry and umbrella? fo - drizzle",
+    "blind_id": "A010"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 3,
+    "prompt": "what cars do",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "what cars do wolves drive? auuuuuuuuuuuuudis!",
+      "continuation": "wolves drive? auuuuuuuuuuuuudis!",
+      "ids": [
+        2,
+        8,
+        480,
+        13,
+        4150,
+        489,
+        5,
+        1813,
+        11,
+        3
+      ],
+      "prompt": "what cars do",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 6,
+      "new_word_count": 3,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -1.656611085803819,
+      "average_log_probability": -0.27610184763396983,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/207"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/207"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/207"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/207"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/207"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/207"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/207"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/207"
+          ]
+        }
+      }
+    },
+    "text": "what cars do wolves drive? auuuuuuuuuuuuudis!",
+    "blind_id": "A006"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 4,
+    "prompt": "x - post from",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "x - post from r / jokes.",
+      "continuation": "r / jokes.",
+      "ids": [
+        2,
+        261,
+        22,
+        229,
+        53,
+        123,
+        32,
+        108,
+        4,
+        3
+      ],
+      "prompt": "x - post from",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 5,
+      "new_word_count": 2,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -5.087046501003298,
+      "average_log_probability": -1.0174093002006597,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.43478260869565216,
+          "nearest_match_ids": [
+            "joke/1619",
+            "joke/212"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1619",
+            "joke/212",
+            "joke/264",
+            "joke/247",
+            "joke/1608"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.23529411764705882,
+          "nearest_match_ids": [
+            "joke/1619",
+            "joke/212"
+          ],
+          "max_shared_token_count": 2,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1619",
+            "joke/212",
+            "joke/264",
+            "joke/247",
+            "joke/1608"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1619",
+            "joke/212",
+            "joke/264",
+            "joke/247",
+            "joke/1608"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/212",
+            "joke/1608"
+          ]
+        }
+      }
+    },
+    "text": "x - post from r / jokes.",
+    "blind_id": "A002"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 5,
+    "prompt": "wanna hear a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "wanna hear a dirty joke? a white horse fell in the mud.",
+      "continuation": "dirty joke? a white horse fell in the mud.",
+      "ids": [
+        2,
+        462,
+        62,
+        6,
+        216,
+        50,
+        5,
+        6,
+        259,
+        308,
+        174,
+        18,
+        7,
+        428,
+        4,
+        3
+      ],
+      "prompt": "wanna hear a",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -1.7322451581880811,
+      "average_log_probability": -0.14435376318234008,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/545"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/545"
+          ],
+          "max_shared_token_count": 12,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/545"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/545"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/545"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/545"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/545"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/545"
+          ]
+        }
+      }
+    },
+    "text": "wanna hear a dirty joke? a white horse fell in the mud.",
+    "blind_id": "A017"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 6,
+    "prompt": "did you know",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "did you know yesterday was national middle child day? don't worry, no one else remembered either.",
+      "continuation": "yesterday was national middle child day? don't worry, no one else remembered either.",
+      "ids": [
+        2,
+        16,
+        9,
+        79,
+        558,
+        23,
+        3157,
+        426,
+        762,
+        110,
+        5,
+        59,
+        556,
+        12,
+        57,
+        40,
+        2368,
+        3493,
+        1192,
+        4,
+        3
+      ],
+      "prompt": "did you know",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 17,
+      "new_word_count": 13,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -7.174396364094484,
+      "average_log_probability": -0.42202331553496963,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/493"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/493"
+          ],
+          "max_shared_token_count": 16,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/493"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/493"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/493"
+          ],
+          "max_shared_token_count": 13,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/493"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/493"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/493"
+          ]
+        }
+      }
+    },
+    "text": "did you know yesterday was national middle child day? don't worry, no one else remembered either.",
+    "blind_id": "A026"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 7,
+    "prompt": "what type of",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "what type of grain uses profanity? vulgar wheat",
+      "continuation": "grain uses profanity? vulgar wheat",
+      "ids": [
+        2,
+        8,
+        256,
+        20,
+        2621,
+        548,
+        3403,
+        5,
+        4078,
+        1615,
+        3
+      ],
+      "prompt": "what type of",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 7,
+      "new_word_count": 5,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -2.3001855189528713,
+      "average_log_probability": -0.3285979312789816,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1087"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1087"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1087"
+          ]
+        },
+        "continuation": {
+          "exact_copy": true,
+          "exact_match_ids": [
+            "joke/1087"
+          ],
+          "nearest_similarity": 1.0,
+          "nearest_match_ids": [
+            "joke/1087"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1087"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1087"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1087"
+          ]
+        }
+      }
+    },
+    "text": "what type of grain uses profanity? vulgar wheat",
+    "blind_id": "A005"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 8,
+    "prompt": "i knew i",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i knew i used to be addicted... but it's definitely up there.",
+      "continuation": "used to be addicted... but it's definitely up there.",
+      "ids": [
+        2,
+        15,
+        420,
+        15,
+        460,
+        10,
+        64,
+        996,
+        4,
+        4,
+        4,
+        51,
+        60,
+        2232,
+        66,
+        71,
+        4,
+        3
+      ],
+      "prompt": "i knew i",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.423998714433552,
+      "average_log_probability": -0.6731427653166823,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.48,
+          "nearest_match_ids": [
+            "joke/831"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.4166666666666667,
+          "shared_match_ids": [
+            "joke/1043",
+            "joke/831",
+            "joke/1608"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5263157894736842,
+          "nearest_match_ids": [
+            "joke/831"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.5555555555555556,
+          "shared_match_ids": [
+            "joke/1043"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "i knew i used to be addicted... but it's definitely up there.",
+    "blind_id": "A027"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 9,
+    "prompt": "i hate people",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i hate people my girlfriend she drew her eyebrows on too high.",
+      "continuation": "my girlfriend she drew her eyebrows on too high.",
+      "ids": [
+        2,
+        15,
+        415,
+        91,
+        29,
+        354,
+        90,
+        1172,
+        98,
+        2422,
+        36,
+        95,
+        306,
+        4,
+        3
+      ],
+      "prompt": "i hate people",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 11,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -8.764239618729441,
+      "average_log_probability": -0.796749056248131,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7692307692307693,
+          "nearest_match_ids": [
+            "joke/456"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.75,
+          "shared_match_ids": [
+            "joke/456"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/456"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/456"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/456"
+          ],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "i hate people my girlfriend she drew her eyebrows on too high.",
+    "blind_id": "A025"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 10,
+    "prompt": "do you have",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "do you have a very calm rabbit? the tame way.",
+      "continuation": "a very calm rabbit? the tame way.",
+      "ids": [
+        2,
+        13,
+        9,
+        41,
+        6,
+        209,
+        1985,
+        180,
+        5,
+        7,
+        3868,
+        195,
+        4,
+        3
+      ],
+      "prompt": "do you have",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 10,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -7.389069099661324,
+      "average_log_probability": -0.7389069099661324,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5142857142857142,
+          "nearest_match_ids": [
+            "joke/1203"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7,
+          "shared_match_ids": [
+            "joke/1203"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.4827586206896552,
+          "nearest_match_ids": [
+            "joke/1203"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1203"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1203"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1203"
+          ]
+        }
+      }
+    },
+    "text": "do you have a very calm rabbit? the tame way.",
+    "blind_id": "A023"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 11,
+    "prompt": "first original joke",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "first original joke! what do you call a cow with no legs? ground beef.",
+      "continuation": "! what do you call a cow with no legs? ground beef.",
+      "ids": [
+        2,
+        200,
+        319,
+        50,
+        11,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "prompt": "first original joke",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -9.185158883294953,
+      "average_log_probability": -0.6123439255529969,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.88,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 0.7857142857142857,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8421052631578947,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        }
+      }
+    },
+    "text": "first original joke! what do you call a cow with no legs? ground beef.",
+    "blind_id": "A028"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 12,
+    "prompt": "i wanna make",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i wanna make a lot of conflict in the world. those who can extrapolate from incomplete data",
+      "continuation": "a lot of conflict in the world. those who can extrapolate from incomplete data",
+      "ids": [
+        2,
+        15,
+        462,
+        80,
+        6,
+        276,
+        20,
+        2138,
+        18,
+        7,
+        260,
+        4,
+        167,
+        46,
+        78,
+        1208,
+        53,
+        2778,
+        1139,
+        3
+      ],
+      "prompt": "i wanna make",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 16,
+      "new_word_count": 14,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -11.510510355163786,
+      "average_log_probability": -0.7194068971977367,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5882352941176471,
+          "nearest_match_ids": [
+            "joke/495"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.4117647058823529,
+          "shared_match_ids": [
+            "joke/495"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7142857142857143,
+          "nearest_match_ids": [
+            "joke/495"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/495"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "i wanna make a lot of conflict in the world. those who can extrapolate from incomplete data",
+    "blind_id": "A021"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 13,
+    "prompt": "my relationship is",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "my relationship is the world's worst at self - deprecating humor. he worried once he was too modest.",
+      "continuation": "the world's worst at self - deprecating humor. he worried once he was too modest.",
+      "ids": [
+        2,
+        29,
+        3489,
+        27,
+        7,
+        982,
+        4164,
+        47,
+        685,
+        22,
+        1152,
+        825,
+        4,
+        25,
+        4162,
+        364,
+        25,
+        23,
+        95,
+        3101,
+        4,
+        3
+      ],
+      "prompt": "my relationship is",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 18,
+      "new_word_count": 14,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -12.017755858614304,
+      "average_log_probability": -0.6676531032563502,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7804878048780488,
+          "nearest_match_ids": [
+            "joke/1594"
+          ],
+          "max_shared_token_count": 15,
+          "shared_fraction": 0.8823529411764706,
+          "shared_match_ids": [
+            "joke/1594"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/1594"
+          ],
+          "max_shared_token_count": 14,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1594"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1594"
+          ],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      }
+    },
+    "text": "my relationship is the world's worst at self - deprecating humor. he worried once he was too modest.",
+    "blind_id": "A013"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 14,
+    "prompt": "i'm going to",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "i'm going to hear a joke about pizza? never mind, it's probably too cheesy.",
+      "continuation": "hear a joke about pizza? never mind, it's probably too cheesy.",
+      "ids": [
+        2,
+        67,
+        241,
+        10,
+        62,
+        6,
+        50,
+        49,
+        433,
+        5,
+        119,
+        648,
+        12,
+        60,
+        898,
+        95,
+        587,
+        4,
+        3
+      ],
+      "prompt": "i'm going to",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -8.88807704571985,
+      "average_log_probability": -0.5925384697146566,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8888888888888888,
+          "nearest_match_ids": [
+            "joke/1085"
+          ],
+          "max_shared_token_count": 12,
+          "shared_fraction": 0.8571428571428571,
+          "shared_match_ids": [
+            "joke/1085"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9523809523809523,
+          "nearest_match_ids": [
+            "joke/1085"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/1085"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/1085"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/1085"
+          ]
+        }
+      }
+    },
+    "text": "i'm going to hear a joke about pizza? never mind, it's probably too cheesy.",
+    "blind_id": "A022"
+  },
+  {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true,
+      "modes": [
+        "old_beam5"
+      ]
+    },
+    "mode": "old_beam5",
+    "prompt_index": 15,
+    "prompt": "what is invisible",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "what is invisible favorite drink? wata",
+      "continuation": "favorite drink? wata",
+      "ids": [
+        2,
+        8,
+        27,
+        630,
+        94,
+        406,
+        5,
+        4100,
+        3
+      ],
+      "prompt": "what is invisible",
+      "sources": [
+        {
+          "strategy": "beam",
+          "seed": 1704,
+          "decoding": {
+            "max_new_tokens": 48,
+            "min_new_tokens": 4,
+            "beam_width": 5,
+            "length_penalty": 0.7,
+            "temperature": 0.8,
+            "top_k": 40,
+            "top_p": 0.9,
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "seed": 1704,
+            "temperature_applies_to": "sample only"
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 5,
+      "new_word_count": 3,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -4.450965143760651,
+      "average_log_probability": -0.8901930287521302,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7692307692307693,
+          "nearest_match_ids": [
+            "joke/917"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/917"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8571428571428571,
+          "nearest_match_ids": [
+            "joke/917"
+          ],
+          "max_shared_token_count": 3,
+          "shared_fraction": 1.0,
+          "shared_match_ids": [
+            "joke/917"
+          ],
+          "exact_training_span": true,
+          "exact_span_match_ids": [
+            "joke/917"
+          ],
+          "exact_training_suffix": true,
+          "exact_suffix_match_ids": [
+            "joke/917"
+          ]
+        }
+      }
+    },
+    "text": "what is invisible favorite drink? wata",
+    "blind_id": "A012"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 0,
+    "prompt": "you know what",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -0.9968670253912418,
+      "eligible_count": 5,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 2,
+      "text": "you know what do you call a cow with no legs? lean beef.",
+      "continuation": "do you call a cow with no legs? lean beef.",
+      "ids": [
+        2,
+        9,
+        79,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        1324,
+        212,
+        4,
+        3
+      ],
+      "prompt": "you know what",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 10,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -12.128715774530589,
+      "average_log_probability": -0.932978136502353,
+      "search_lm_log_probability": -12.01005896454379,
+      "raw_copy_cost": 1.5642083476100275,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "do",
+            "you",
+            "call",
+            "a",
+            "cow"
+          ],
+          "document_frequency": 10,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/208",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927",
+            "joke/980"
+          ],
+          "raw_cost": 0.31622776601683794,
+          "generated_token_index": 4,
+          "generated_word_index": 4,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "you",
+            "call",
+            "a",
+            "cow",
+            "with"
+          ],
+          "document_frequency": 8,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927"
+          ],
+          "raw_cost": 0.35355339059327373,
+          "generated_token_index": 5,
+          "generated_word_index": 5,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "call",
+            "a",
+            "cow",
+            "with",
+            "no"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 6,
+          "generated_word_index": 6,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "a",
+            "cow",
+            "with",
+            "no",
+            "legs"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 7,
+          "generated_word_index": 7,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -12.01005896454379,
+      "normalized_search_score": -5.566218639719063,
+      "equivalent_token_sequence_count": 2,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8333333333333334,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.6923076923076923,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7777777777777778,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.8,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -5.566218639719063
+        },
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -6.109933226377744
+        },
+        {
+          "copy_penalty": 1.5,
+          "normalized_search_score": -6.653647813036426
+        }
+      ]
+    },
+    "text": "you know what do you call a cow with no legs? lean beef.",
+    "blind_id": "A015"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 1,
+    "prompt": "why didn't the",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -0.842732629415132,
+      "eligible_count": 12,
+      "rejections": [
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "copied_continuation"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 0,
+      "text": "why didn't the bicycle cross the road? because it saw the salad dressing.",
+      "continuation": "bicycle cross the road? because it saw the salad dressing.",
+      "ids": [
+        2,
+        17,
+        117,
+        7,
+        474,
+        103,
+        7,
+        181,
+        5,
+        31,
+        19,
+        193,
+        7,
+        440,
+        348,
+        4,
+        3
+      ],
+      "prompt": "why didn't the",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 10,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -10.59228888827907,
+      "average_log_probability": -0.8147914529445438,
+      "search_lm_log_probability": -10.550259404133707,
+      "raw_copy_cost": 2.6543203766865053,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "bicycle",
+            "cross",
+            "the",
+            "road",
+            "because"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/128"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 5,
+          "generated_word_index": 4,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "cross",
+            "the",
+            "road",
+            "because",
+            "it"
+          ],
+          "document_frequency": 2,
+          "training_ids": [
+            "joke/128",
+            "joke/843"
+          ],
+          "raw_cost": 0.7071067811865475,
+          "generated_token_index": 6,
+          "generated_word_index": 5,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "because",
+            "it",
+            "saw",
+            "the",
+            "salad"
+          ],
+          "document_frequency": 4,
+          "training_ids": [
+            "joke/1094",
+            "joke/1621",
+            "joke/217",
+            "joke/913"
+          ],
+          "raw_cost": 0.5,
+          "generated_token_index": 9,
+          "generated_word_index": 8,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "it",
+            "saw",
+            "the",
+            "salad",
+            "dressing"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1094",
+            "joke/1621",
+            "joke/217",
+            "joke/356",
+            "joke/913"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 10,
+          "generated_word_index": 9,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -10.550259404133707,
+      "normalized_search_score": -4.889655473177028,
+      "equivalent_token_sequence_count": 5,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.72,
+          "nearest_match_ids": [
+            "joke/128"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.6923076923076923,
+          "shared_match_ids": [
+            "joke/128"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7058823529411765,
+          "nearest_match_ids": [
+            "joke/913"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.6,
+          "shared_match_ids": [
+            "joke/1621",
+            "joke/217",
+            "joke/913",
+            "joke/1094",
+            "joke/128"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -4.889655473177028
+        },
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -5.812290049750469
+        },
+        {
+          "copy_penalty": 1.5,
+          "normalized_search_score": -6.734924626323909
+        }
+      ]
+    },
+    "text": "why didn't the bicycle cross the road? because it saw the salad dressing.",
+    "blind_id": "A011"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 2,
+    "prompt": "why does snoop",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.088513805353866,
+      "eligible_count": 7,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 9,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 7,
+      "text": "why does snoop dogg use the bus? because he was outstanding in his field.",
+      "continuation": "dogg use the bus? because he was outstanding in his field.",
+      "ids": [
+        2,
+        17,
+        43,
+        696,
+        2290,
+        182,
+        7,
+        756,
+        5,
+        31,
+        25,
+        23,
+        657,
+        18,
+        30,
+        271,
+        4,
+        3
+      ],
+      "prompt": "why does snoop",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -14.889193274954128,
+      "average_log_probability": -1.0635138053538662,
+      "search_lm_log_probability": -14.805819413614762,
+      "raw_copy_cost": 1.7071067811865475,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "because",
+            "he",
+            "was",
+            "outstanding",
+            "in"
+          ],
+          "document_frequency": 2,
+          "training_ids": [
+            "joke/1143",
+            "joke/584"
+          ],
+          "raw_cost": 0.7071067811865475,
+          "generated_token_index": 9,
+          "generated_word_index": 8,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "he",
+            "was",
+            "outstanding",
+            "in",
+            "his"
+          ],
+          "document_frequency": 4,
+          "training_ids": [
+            "joke/1143",
+            "joke/126",
+            "joke/1357",
+            "joke/584"
+          ],
+          "raw_cost": 0.5,
+          "generated_token_index": 10,
+          "generated_word_index": 9,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "was",
+            "outstanding",
+            "in",
+            "his",
+            "field"
+          ],
+          "document_frequency": 4,
+          "training_ids": [
+            "joke/1143",
+            "joke/126",
+            "joke/1357",
+            "joke/584"
+          ],
+          "raw_cost": 0.5,
+          "generated_token_index": 11,
+          "generated_word_index": 10,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -14.805819413614762,
+      "normalized_search_score": -6.607098822323746,
+      "equivalent_token_sequence_count": 11,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.6923076923076923,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7,
+          "nearest_match_ids": [
+            "joke/584"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.6363636363636364,
+          "shared_match_ids": [
+            "joke/584",
+            "joke/1143"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -6.607098822323746
+        }
+      ]
+    },
+    "text": "why does snoop dogg use the bus? because he was outstanding in his field.",
+    "blind_id": "A018"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 3,
+    "prompt": "what cars do",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.2190640593555326,
+      "eligible_count": 3,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_short",
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 9,
+          "reasons": [
+            "copied_continuation"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 8,
+      "text": "what cars do you call a cow with no legs? lean beef.",
+      "continuation": "you call a cow with no legs? lean beef.",
+      "ids": [
+        2,
+        8,
+        480,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        1324,
+        212,
+        4,
+        3
+      ],
+      "prompt": "what cars do",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.75,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -13.587592241678157,
+      "average_log_probability": -1.1322993534731798,
+      "search_lm_log_probability": -13.476049880841499,
+      "raw_copy_cost": 1.2479805815931895,
+      "copy_penalty_cost": 0.935985436194892,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "you",
+            "call",
+            "a",
+            "cow",
+            "with"
+          ],
+          "document_frequency": 8,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927"
+          ],
+          "raw_cost": 0.35355339059327373,
+          "generated_token_index": 4,
+          "generated_word_index": 4,
+          "weighted_cost": 0.2651650429449553
+        },
+        {
+          "lexical_ngram": [
+            "call",
+            "a",
+            "cow",
+            "with",
+            "no"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 5,
+          "generated_word_index": 5,
+          "weighted_cost": 0.33541019662496846
+        },
+        {
+          "lexical_ngram": [
+            "a",
+            "cow",
+            "with",
+            "no",
+            "legs"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 6,
+          "generated_word_index": 6,
+          "weighted_cost": 0.33541019662496846
+        }
+      ],
+      "search_score": -14.412035317036391,
+      "normalized_search_score": -6.952115008373266,
+      "equivalent_token_sequence_count": 3,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8695652173913043,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.6666666666666666,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8235294117647058,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.7777777777777778,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -6.952115008373266
+        }
+      ]
+    },
+    "text": "what cars do you call a cow with no legs? lean beef.",
+    "blind_id": "A009"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 4,
+    "prompt": "x - post from",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.0055783848196587,
+      "eligible_count": 3,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "too_short"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 4,
+      "text": "x - post from r / jokes. what do you call a cow with no legs? ground beef.",
+      "continuation": "r / jokes. what do you call a cow with no legs? ground beef.",
+      "ids": [
+        2,
+        261,
+        22,
+        229,
+        53,
+        123,
+        32,
+        108,
+        4,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        413,
+        212,
+        4,
+        3
+      ],
+      "prompt": "x - post from",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 18,
+      "new_word_count": 13,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -17.093268069611,
+      "average_log_probability": -0.9496260038672778,
+      "search_lm_log_probability": -16.85572050333859,
+      "raw_copy_cost": 2.4586355386099434,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "do",
+            "you",
+            "call",
+            "a",
+            "cow"
+          ],
+          "document_frequency": 10,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/208",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927",
+            "joke/980"
+          ],
+          "raw_cost": 0.31622776601683794,
+          "generated_token_index": 9,
+          "generated_word_index": 7,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "you",
+            "call",
+            "a",
+            "cow",
+            "with"
+          ],
+          "document_frequency": 8,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927"
+          ],
+          "raw_cost": 0.35355339059327373,
+          "generated_token_index": 10,
+          "generated_word_index": 8,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "call",
+            "a",
+            "cow",
+            "with",
+            "no"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 11,
+          "generated_word_index": 9,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "a",
+            "cow",
+            "with",
+            "no",
+            "legs"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 12,
+          "generated_word_index": 10,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "cow",
+            "with",
+            "no",
+            "legs",
+            "ground"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 14,
+          "generated_word_index": 11,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "with",
+            "no",
+            "legs",
+            "ground",
+            "beef"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 15,
+          "generated_word_index": 12,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -16.85572050333859,
+      "normalized_search_score": -6.580269962551897,
+      "equivalent_token_sequence_count": 10,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8148148148148148,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 0.6875,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7619047619047619,
+          "nearest_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 11,
+          "shared_fraction": 0.8461538461538461,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -6.580269962551897
+        },
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -7.300136205307873
+        }
+      ]
+    },
+    "text": "x - post from r / jokes. what do you call a cow with no legs? ground beef.",
+    "blind_id": "A014"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 5,
+    "prompt": "wanna hear a",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.1355468209325934,
+      "eligible_count": 3,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 9,
+      "text": "wanna hear a dirty joke? a white horse fell of the mud.",
+      "continuation": "dirty joke? a white horse fell of the mud.",
+      "ids": [
+        2,
+        462,
+        62,
+        6,
+        216,
+        50,
+        5,
+        6,
+        259,
+        308,
+        174,
+        20,
+        7,
+        428,
+        4,
+        3
+      ],
+      "prompt": "wanna hear a",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.75,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 12,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -12.193228517857788,
+      "average_log_probability": -1.016102376488149,
+      "search_lm_log_probability": -12.14841792145141,
+      "raw_copy_cost": 1.414213562373095,
+      "copy_penalty_cost": 1.0606601717798212,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "dirty",
+            "joke",
+            "a",
+            "white",
+            "horse"
+          ],
+          "document_frequency": 2,
+          "training_ids": [
+            "joke/1498",
+            "joke/545"
+          ],
+          "raw_cost": 0.7071067811865475,
+          "generated_token_index": 5,
+          "generated_word_index": 4,
+          "weighted_cost": 0.5303300858899106
+        },
+        {
+          "lexical_ngram": [
+            "joke",
+            "a",
+            "white",
+            "horse",
+            "fell"
+          ],
+          "document_frequency": 2,
+          "training_ids": [
+            "joke/1498",
+            "joke/545"
+          ],
+          "raw_cost": 0.7071067811865475,
+          "generated_token_index": 6,
+          "generated_word_index": 5,
+          "weighted_cost": 0.5303300858899106
+        }
+      ],
+      "search_score": -13.20907809323123,
+      "normalized_search_score": -6.371829380002586,
+      "equivalent_token_sequence_count": 4,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.9166666666666666,
+          "nearest_match_ids": [
+            "joke/545"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.75,
+          "shared_match_ids": [
+            "joke/545",
+            "joke/1498"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8888888888888888,
+          "nearest_match_ids": [
+            "joke/545"
+          ],
+          "max_shared_token_count": 6,
+          "shared_fraction": 0.6666666666666666,
+          "shared_match_ids": [
+            "joke/545",
+            "joke/1498"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -6.371829380002586
+        }
+      ]
+    },
+    "text": "wanna hear a dirty joke? a white horse fell of the mud.",
+    "blind_id": "A007"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 6,
+    "prompt": "did you know",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.1707116232746184,
+      "eligible_count": 2,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 10,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 8,
+      "text": "did you know what do you call a cow with no legs? lean beef.",
+      "continuation": "what do you call a cow with no legs? lean beef.",
+      "ids": [
+        2,
+        16,
+        9,
+        79,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        1324,
+        212,
+        4,
+        3
+      ],
+      "prompt": "did you know",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.75,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -15.782067989002552,
+      "average_log_probability": -1.1272905706430394,
+      "search_lm_log_probability": -15.633849876526156,
+      "raw_copy_cost": 1.5642083476100275,
+      "copy_penalty_cost": 1.1731562607075205,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "do",
+            "you",
+            "call",
+            "a",
+            "cow"
+          ],
+          "document_frequency": 10,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/208",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927",
+            "joke/980"
+          ],
+          "raw_cost": 0.31622776601683794,
+          "generated_token_index": 5,
+          "generated_word_index": 5,
+          "weighted_cost": 0.23717082451262844
+        },
+        {
+          "lexical_ngram": [
+            "you",
+            "call",
+            "a",
+            "cow",
+            "with"
+          ],
+          "document_frequency": 8,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927"
+          ],
+          "raw_cost": 0.35355339059327373,
+          "generated_token_index": 6,
+          "generated_word_index": 6,
+          "weighted_cost": 0.2651650429449553
+        },
+        {
+          "lexical_ngram": [
+            "call",
+            "a",
+            "cow",
+            "with",
+            "no"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 7,
+          "generated_word_index": 7,
+          "weighted_cost": 0.33541019662496846
+        },
+        {
+          "lexical_ngram": [
+            "a",
+            "cow",
+            "with",
+            "no",
+            "legs"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 8,
+          "generated_word_index": 8,
+          "weighted_cost": 0.33541019662496846
+        }
+      ],
+      "search_score": -16.807006137233678,
+      "normalized_search_score": -7.500128655763026,
+      "equivalent_token_sequence_count": 5,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.6428571428571429,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7368421052631579,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.8181818181818182,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -7.500128655763026
+        },
+        {
+          "copy_penalty": 1.5,
+          "normalized_search_score": -8.023649788365438
+        }
+      ]
+    },
+    "text": "did you know what do you call a cow with no legs? lean beef.",
+    "blind_id": "A008"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 7,
+    "prompt": "what type of",
+    "seen_prefix": true,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.270398103274856,
+      "eligible_count": 4,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "exact_full_copy",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 4,
+      "text": "what type of melon would romeo and juliet eat? cantelope",
+      "continuation": "melon would romeo and juliet eat? cantelope",
+      "ids": [
+        2,
+        8,
+        256,
+        20,
+        852,
+        113,
+        1471,
+        21,
+        1306,
+        155,
+        5,
+        1076,
+        3
+      ],
+      "prompt": "what type of",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 9,
+      "new_word_count": 7,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -10.608582929473704,
+      "average_log_probability": -1.1787314366081894,
+      "search_lm_log_probability": -10.593462634356156,
+      "raw_copy_cost": 2.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "melon",
+            "would",
+            "romeo",
+            "and",
+            "juliet"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/422"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 4,
+          "generated_word_index": 4,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "romeo",
+            "and",
+            "juliet",
+            "eat",
+            "cantelope"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/287"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 7,
+          "generated_word_index": 6,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -10.593462634356156,
+      "normalized_search_score": -5.854019831697244,
+      "equivalent_token_sequence_count": 1,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7619047619047619,
+          "nearest_match_ids": [
+            "joke/422"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.8,
+          "shared_match_ids": [
+            "joke/422"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8333333333333334,
+          "nearest_match_ids": [
+            "joke/287"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.7142857142857143,
+          "shared_match_ids": [
+            "joke/287",
+            "joke/422"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -5.854019831697244
+        },
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -6.682930080464034
+        }
+      ]
+    },
+    "text": "what type of melon would romeo and juliet eat? cantelope",
+    "blind_id": "A024"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 8,
+    "prompt": "i knew i",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.151998805913671,
+      "eligible_count": 8,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "copied_continuation"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 4,
+      "text": "i knew i used to be addicted... but it's definitely up there.",
+      "continuation": "used to be addicted... but it's definitely up there.",
+      "ids": [
+        2,
+        15,
+        420,
+        15,
+        460,
+        10,
+        64,
+        996,
+        4,
+        4,
+        4,
+        51,
+        60,
+        2232,
+        66,
+        71,
+        4,
+        3
+      ],
+      "prompt": "i knew i",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 14,
+      "new_word_count": 9,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -16.127983282791394,
+      "average_log_probability": -1.151998805913671,
+      "search_lm_log_probability": -15.929813391855495,
+      "raw_copy_cost": 1.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "but",
+            "its",
+            "definitely",
+            "up",
+            "there"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1043"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 11,
+          "generated_word_index": 8,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -15.929813391855495,
+      "normalized_search_score": -7.108681280036583,
+      "equivalent_token_sequence_count": 1,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.48,
+          "nearest_match_ids": [
+            "joke/831"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.4166666666666667,
+          "shared_match_ids": [
+            "joke/1043",
+            "joke/831",
+            "joke/1608"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5263157894736842,
+          "nearest_match_ids": [
+            "joke/831"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.5555555555555556,
+          "shared_match_ids": [
+            "joke/1043"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -7.108681280036583
+        },
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -7.443368876738332
+        }
+      ]
+    },
+    "text": "i knew i used to be addicted... but it's definitely up there.",
+    "blind_id": "A027"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 9,
+    "prompt": "i hate people",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.3788136023514719,
+      "eligible_count": 3,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 9,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 7,
+      "text": "i hate people to be addicted... but it's definitely up there.",
+      "continuation": "to be addicted... but it's definitely up there.",
+      "ids": [
+        2,
+        15,
+        415,
+        91,
+        10,
+        64,
+        996,
+        4,
+        4,
+        4,
+        51,
+        60,
+        2232,
+        66,
+        71,
+        4,
+        3
+      ],
+      "prompt": "i hate people",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 13,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -17.924576830569134,
+      "average_log_probability": -1.3788136023514719,
+      "search_lm_log_probability": -17.7482957519959,
+      "raw_copy_cost": 1.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "but",
+            "its",
+            "definitely",
+            "up",
+            "there"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1043"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 10,
+          "generated_word_index": 7,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -17.7482957519959,
+      "normalized_search_score": -8.225679401712986,
+      "equivalent_token_sequence_count": 8,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.4444444444444444,
+          "nearest_match_ids": [
+            "joke/1043"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.45454545454545453,
+          "shared_match_ids": [
+            "joke/1043"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.47619047619047616,
+          "nearest_match_ids": [
+            "joke/1043"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.625,
+          "shared_match_ids": [
+            "joke/1043"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -8.225679401712986
+        },
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -8.573276694291964
+        }
+      ]
+    },
+    "text": "i hate people to be addicted... but it's definitely up there.",
+    "blind_id": "A019"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 10,
+    "prompt": "do you have",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.225532868811362,
+      "eligible_count": 6,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 9,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 12,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 5,
+      "text": "do you have a problem with no eyes? don't worry, no one else remembered either.",
+      "continuation": "a problem with no eyes? don't worry, no one else remembered either.",
+      "ids": [
+        2,
+        13,
+        9,
+        41,
+        6,
+        369,
+        28,
+        57,
+        238,
+        5,
+        59,
+        556,
+        12,
+        57,
+        40,
+        2368,
+        3493,
+        1192,
+        4,
+        3
+      ],
+      "prompt": "do you have",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 16,
+      "new_word_count": 12,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -19.608525900981792,
+      "average_log_probability": -1.225532868811362,
+      "search_lm_log_probability": -19.490923618241407,
+      "raw_copy_cost": 3.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "dont",
+            "worry",
+            "no",
+            "one",
+            "else"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/493"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 11,
+          "generated_word_index": 9,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "worry",
+            "no",
+            "one",
+            "else",
+            "remembered"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/493"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 12,
+          "generated_word_index": 10,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "no",
+            "one",
+            "else",
+            "remembered",
+            "either"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/493"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 13,
+          "generated_word_index": 11,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -19.490923618241407,
+      "normalized_search_score": -8.109326538389263,
+      "equivalent_token_sequence_count": 5,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5384615384615384,
+          "nearest_match_ids": [
+            "joke/463"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.4666666666666667,
+          "shared_match_ids": [
+            "joke/493"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.56,
+          "nearest_match_ids": [
+            "joke/493"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5833333333333334,
+          "shared_match_ids": [
+            "joke/493"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -8.109326538389263
+        }
+      ]
+    },
+    "text": "do you have a problem with no eyes? don't worry, no one else remembered either.",
+    "blind_id": "A029"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 11,
+    "prompt": "first original joke",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.158307747931683,
+      "eligible_count": 8,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 13,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 4,
+      "text": "first original joke! what do you call a cow with no legs? lean beef.",
+      "continuation": "! what do you call a cow with no legs? lean beef.",
+      "ids": [
+        2,
+        200,
+        319,
+        50,
+        11,
+        8,
+        13,
+        9,
+        26,
+        6,
+        97,
+        28,
+        57,
+        126,
+        5,
+        1324,
+        212,
+        4,
+        3
+      ],
+      "prompt": "first original joke",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 15,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -16.723300429501563,
+      "average_log_probability": -1.1148866953001042,
+      "search_lm_log_probability": -16.557519556565616,
+      "raw_copy_cost": 1.5642083476100275,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "do",
+            "you",
+            "call",
+            "a",
+            "cow"
+          ],
+          "document_frequency": 10,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/208",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927",
+            "joke/980"
+          ],
+          "raw_cost": 0.31622776601683794,
+          "generated_token_index": 6,
+          "generated_word_index": 5,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "you",
+            "call",
+            "a",
+            "cow",
+            "with"
+          ],
+          "document_frequency": 8,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/1504",
+            "joke/271",
+            "joke/320",
+            "joke/589",
+            "joke/621",
+            "joke/927"
+          ],
+          "raw_cost": 0.35355339059327373,
+          "generated_token_index": 7,
+          "generated_word_index": 6,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "call",
+            "a",
+            "cow",
+            "with",
+            "no"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 8,
+          "generated_word_index": 7,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "a",
+            "cow",
+            "with",
+            "no",
+            "legs"
+          ],
+          "document_frequency": 5,
+          "training_ids": [
+            "joke/1019",
+            "joke/1338",
+            "joke/271",
+            "joke/320",
+            "joke/621"
+          ],
+          "raw_cost": 0.4472135954999579,
+          "generated_token_index": 9,
+          "generated_word_index": 8,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -16.557519556565616,
+      "normalized_search_score": -7.128204571617036,
+      "equivalent_token_sequence_count": 2,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.6428571428571429,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.7368421052631579,
+          "nearest_match_ids": [
+            "joke/1504",
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "max_shared_token_count": 9,
+          "shared_fraction": 0.8181818181818182,
+          "shared_match_ids": [
+            "joke/271",
+            "joke/1019",
+            "joke/320",
+            "joke/621",
+            "joke/1338"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -7.128204571617036
+        },
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -7.633261974220585
+        },
+        {
+          "copy_penalty": 1.5,
+          "normalized_search_score": -8.138319376824134
+        }
+      ]
+    },
+    "text": "first original joke! what do you call a cow with no legs? lean beef.",
+    "blind_id": "A001"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 12,
+    "prompt": "i wanna make",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.1782108834966525,
+      "eligible_count": 9,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 7,
+      "text": "i wanna make a tv program on various religious orders... and pulled a mussel.",
+      "continuation": "a tv program on various religious orders... and pulled a mussel.",
+      "ids": [
+        2,
+        15,
+        462,
+        80,
+        6,
+        377,
+        1434,
+        36,
+        4046,
+        908,
+        1390,
+        4,
+        4,
+        4,
+        21,
+        3429,
+        6,
+        3140,
+        4,
+        3
+      ],
+      "prompt": "i wanna make",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 16,
+      "new_word_count": 11,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -18.85137413594644,
+      "average_log_probability": -1.1782108834966525,
+      "search_lm_log_probability": -18.702194088616878,
+      "raw_copy_cost": 4.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "a",
+            "tv",
+            "program",
+            "on",
+            "various"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1493"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 4,
+          "generated_word_index": 4,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "tv",
+            "program",
+            "on",
+            "various",
+            "religious"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1493"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 5,
+          "generated_word_index": 5,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "program",
+            "on",
+            "various",
+            "religious",
+            "orders"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1493"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 6,
+          "generated_word_index": 6,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "on",
+            "various",
+            "religious",
+            "orders",
+            "and"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1493"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 10,
+          "generated_word_index": 7,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -18.702194088616878,
+      "normalized_search_score": -7.781170447304413,
+      "equivalent_token_sequence_count": 3,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.46153846153846156,
+          "nearest_match_ids": [
+            "joke/1162"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.5714285714285714,
+          "shared_match_ids": [
+            "joke/1493"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5,
+          "nearest_match_ids": [
+            "joke/1162"
+          ],
+          "max_shared_token_count": 8,
+          "shared_fraction": 0.7272727272727273,
+          "shared_match_ids": [
+            "joke/1493"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -7.781170447304413
+        }
+      ]
+    },
+    "text": "i wanna make a tv program on various religious orders... and pulled a mussel.",
+    "blind_id": "A030"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 13,
+    "prompt": "my relationship is",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.3484949113791953,
+      "eligible_count": 4,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 10,
+          "reasons": [
+            "too_short"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 6,
+      "text": "my relationship is a bar... the bartender says, \" i'm a wholesaler. \"",
+      "continuation": "a bar... the bartender says, \" i'm a wholesaler. \"",
+      "ids": [
+        2,
+        29,
+        3489,
+        27,
+        6,
+        101,
+        4,
+        4,
+        4,
+        7,
+        338,
+        84,
+        12,
+        14,
+        67,
+        6,
+        4137,
+        4,
+        14,
+        3
+      ],
+      "prompt": "my relationship is",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 16,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -21.575918582067125,
+      "average_log_probability": -1.3484949113791953,
+      "search_lm_log_probability": -21.54521555338424,
+      "raw_copy_cost": 1.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "a",
+            "bar",
+            "the",
+            "bartender",
+            "says"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/546"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 7,
+          "generated_word_index": 4,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -21.54521555338424,
+      "normalized_search_score": -8.964028164312307,
+      "equivalent_token_sequence_count": 4,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.3870967741935484,
+          "nearest_match_ids": [
+            "joke/546",
+            "joke/657"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.45454545454545453,
+          "shared_match_ids": [
+            "joke/546"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.48,
+          "nearest_match_ids": [
+            "joke/546",
+            "joke/657"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.625,
+          "shared_match_ids": [
+            "joke/546"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -8.964028164312307
+        }
+      ]
+    },
+    "text": "my relationship is a bar... the bartender says, \" i'm a wholesaler. \"",
+    "blind_id": "A016"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 14,
+    "prompt": "i'm going to",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.1519661697927805,
+      "eligible_count": 5,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 9,
+          "reasons": [
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 12,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 2,
+      "text": "i'm going to go to the other day... it was cancelled due to unforeseen events.",
+      "continuation": "go to the other day... it was cancelled due to unforeseen events.",
+      "ids": [
+        2,
+        67,
+        241,
+        10,
+        65,
+        10,
+        7,
+        69,
+        110,
+        4,
+        4,
+        4,
+        19,
+        23,
+        1991,
+        787,
+        10,
+        4023,
+        2405,
+        4,
+        3
+      ],
+      "prompt": "i'm going to",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.0,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 17,
+      "new_word_count": 12,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -18.07394212785658,
+      "average_log_probability": -1.0631730663445047,
+      "search_lm_log_probability": -17.909796820771337,
+      "raw_copy_cost": 4.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [
+        {
+          "lexical_ngram": [
+            "the",
+            "other",
+            "day",
+            "it",
+            "was"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1069"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 9,
+          "generated_word_index": 6,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "it",
+            "was",
+            "cancelled",
+            "due",
+            "to"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1344"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 12,
+          "generated_word_index": 9,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "was",
+            "cancelled",
+            "due",
+            "to",
+            "unforeseen"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1344"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 13,
+          "generated_word_index": 10,
+          "weighted_cost": 0.0
+        },
+        {
+          "lexical_ngram": [
+            "cancelled",
+            "due",
+            "to",
+            "unforeseen",
+            "events"
+          ],
+          "document_frequency": 1,
+          "training_ids": [
+            "joke/1344"
+          ],
+          "raw_cost": 1.0,
+          "generated_token_index": 14,
+          "generated_word_index": 11,
+          "weighted_cost": 0.0
+        }
+      ],
+      "search_score": -17.909796820771337,
+      "normalized_search_score": -7.212746317036009,
+      "equivalent_token_sequence_count": 6,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8,
+          "nearest_match_ids": [
+            "joke/1344"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.4666666666666667,
+          "shared_match_ids": [
+            "joke/1344"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.8275862068965517,
+          "nearest_match_ids": [
+            "joke/1344"
+          ],
+          "max_shared_token_count": 7,
+          "shared_fraction": 0.5833333333333334,
+          "shared_match_ids": [
+            "joke/1344"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.0,
+          "normalized_search_score": -7.212746317036009
+        }
+      ]
+    },
+    "text": "i'm going to go to the other day... it was cancelled due to unforeseen events.",
+    "blind_id": "A003"
+  },
+  {
+    "candidate": "semantic_late_mix50__direct_union",
+    "model_spec": {
+      "name": "semantic_late_mix50",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_alternatives/semantic_runs/glove_input_anchor01/checkpoints/best.pt",
+          "loader": "semantic_input",
+          "checkpoint_sha256": "ad1b06aa65381d7d3400263f82bcadaf8f2ae01529f144b9bb7964fc2ba8a0f7"
+        },
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "late_weight": 0.5,
+      "modes": [
+        "direct_union"
+      ]
+    },
+    "mode": "direct_union",
+    "prompt_index": 15,
+    "prompt": "what is invisible",
+    "seen_prefix": false,
+    "selection": {
+      "status": "selected",
+      "selection_score": -1.4603567582513741,
+      "eligible_count": 2,
+      "rejections": [
+        {
+          "candidate_id": 0,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "reasons": [
+            "copied_continuation"
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 10,
+          "reasons": [
+            "too_short",
+            "copied_continuation",
+            "question_without_answer"
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "reasons": [
+            "too_short",
+            "copied_continuation"
+          ]
+        }
+      ],
+      "method": "mean_original_likelihood_minus_soft_similarity_cost"
+    },
+    "result": {
+      "candidate_id": 9,
+      "text": "what is invisible and smells like carrots? because they have boooogers.",
+      "continuation": "and smells like carrots? because they have boooogers.",
+      "ids": [
+        2,
+        8,
+        27,
+        630,
+        21,
+        446,
+        61,
+        399,
+        5,
+        31,
+        44,
+        41,
+        1916,
+        4,
+        3
+      ],
+      "prompt": "what is invisible",
+      "sources": [
+        {
+          "strategy": "copy_aware_beam",
+          "seed": 1704,
+          "decoding": {
+            "strategy": "copy_aware_beam",
+            "beam_width": 12,
+            "max_new_tokens": 48,
+            "copy_penalty": 0.75,
+            "min_match_words": 5,
+            "num_return_sequences": 8,
+            "seed": 1704,
+            "seed_applies_to": "none; deterministic beam",
+            "min_new_tokens": 4,
+            "top_k": 40,
+            "min_relative_probability": 0.01,
+            "plausibility_reference": "Original model distribution, excluding special tokens and premature EOS; copy penalties and repetition constraints do not lower the reference maximum.",
+            "no_repeat_ngram_size": 3,
+            "repetition_penalty": 1.1,
+            "length_penalty": 0.7,
+            "boilerplate_document_frequency": 26,
+            "boilerplate_ngram_count": 1,
+            "penalty_definition": "Unnormalized path cost: copy_penalty/sqrt(training document frequency) per matching rare lexical n-gram extension."
+          }
+        }
+      ],
+      "ended_with_eos": true,
+      "finish_reason": "eos",
+      "generated_token_count": 11,
+      "new_word_count": 8,
+      "repeated_trigrams": 0,
+      "continuation_repeated_trigrams": 0,
+      "log_probability": -16.063924340765116,
+      "average_log_probability": -1.4603567582513741,
+      "search_lm_log_probability": -16.01394252523984,
+      "raw_copy_cost": 0.0,
+      "copy_penalty_cost": 0.0,
+      "copy_events": [],
+      "search_score": -16.01394252523984,
+      "normalized_search_score": -8.059723683636811,
+      "equivalent_token_sequence_count": 2,
+      "novelty": {
+        "training_record_count": 1297,
+        "full_text": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5263157894736842,
+          "nearest_match_ids": [
+            "joke/250",
+            "joke/1604"
+          ],
+          "max_shared_token_count": 5,
+          "shared_fraction": 0.45454545454545453,
+          "shared_match_ids": [
+            "joke/250",
+            "joke/1604"
+          ]
+        },
+        "continuation": {
+          "exact_copy": false,
+          "exact_match_ids": [],
+          "nearest_similarity": 0.5714285714285714,
+          "nearest_match_ids": [
+            "joke/1367"
+          ],
+          "max_shared_token_count": 4,
+          "shared_fraction": 0.5,
+          "shared_match_ids": [
+            "joke/250",
+            "joke/1604",
+            "joke/1367"
+          ],
+          "exact_training_span": false,
+          "exact_span_match_ids": [],
+          "exact_training_suffix": false,
+          "exact_suffix_match_ids": []
+        }
+      },
+      "search_paths": [
+        {
+          "copy_penalty": 0.75,
+          "normalized_search_score": -8.059723683636811
+        },
+        {
+          "copy_penalty": 1.5,
+          "normalized_search_score": -8.059723683636811
+        }
+      ]
+    },
+    "text": "what is invisible and smells like carrots? because they have boooogers.",
+    "blind_id": "A020"
+  }
+]

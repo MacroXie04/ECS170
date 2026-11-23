@@ -1,0 +1,16 @@
+{
+  "name": "tied128_dropout35",
+  "parameters": 641001,
+  "best_epoch": 34,
+  "epochs_completed": 46,
+  "validation": {
+    "loss": 5.065000777660797,
+    "accuracy": 0.2732006125574273,
+    "count": 3265
+  },
+  "last_validation": 5.114597141797473,
+  "train_seconds": 3.9924433967098594,
+  "checkpoint_sha256": "de4d8aebeb8bd8ee81e704687602145cda7f00e4bb5ca44bda2d44cc34430836",
+  "config_hash": "c72bd970987ae4723a1d614c9d186596c86bd4d204e7fd816538ea7500ab6bfc",
+  "test_evaluated": false
+}

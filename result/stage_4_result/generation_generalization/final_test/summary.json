@@ -1,0 +1,146 @@
+{
+  "summaries": [
+    {
+      "candidate": "previous_late_beam",
+      "panel_size": 16,
+      "coherence_score_counts": {
+        "0": 4,
+        "1": 4,
+        "2": 8
+      },
+      "coherent_count": 8,
+      "novel_coherent_count": 0,
+      "exact_training_copies": 6,
+      "copied_continuations": 12,
+      "high_similarity_outputs": 13,
+      "novelty_eligible_count": 2,
+      "output_count": 16,
+      "seen_coherent": 7,
+      "unseen_coherent": 1,
+      "model_spec": {
+        "name": "previous_late",
+        "components": [
+          {
+            "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+            "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+          }
+        ],
+        "modes": [
+          "beam"
+        ]
+      },
+      "mode": "beam",
+      "test_loss": 5.78562029033688,
+      "test_perplexity": 325.58393405786626,
+      "confirmatory_coherent_count": 9,
+      "confirmatory_novel_coherent_count": 0,
+      "reviewer_score_disagreements": 2
+    },
+    {
+      "candidate": "tied_mix25_beam",
+      "panel_size": 16,
+      "coherence_score_counts": {
+        "0": 9,
+        "1": 4,
+        "2": 3
+      },
+      "coherent_count": 3,
+      "novel_coherent_count": 0,
+      "exact_training_copies": 1,
+      "copied_continuations": 12,
+      "high_similarity_outputs": 13,
+      "novelty_eligible_count": 3,
+      "output_count": 16,
+      "seen_coherent": 2,
+      "unseen_coherent": 1,
+      "model_spec": {
+        "name": "tied_mix25",
+        "components": [
+          {
+            "loader": "regularized",
+            "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+            "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+          },
+          {
+            "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+            "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+          }
+        ],
+        "late_weight": 0.25,
+        "modes": [
+          "beam",
+          "screened"
+        ]
+      },
+      "mode": "beam",
+      "test_loss": 4.852380424687605,
+      "test_perplexity": 128.04482842642253,
+      "confirmatory_coherent_count": 3,
+      "confirmatory_novel_coherent_count": 0,
+      "reviewer_score_disagreements": 1
+    },
+    {
+      "candidate": "tied_mix25_screened",
+      "panel_size": 16,
+      "coherence_score_counts": {
+        "0": 7,
+        "1": 9,
+        "2": 0
+      },
+      "coherent_count": 0,
+      "novel_coherent_count": 0,
+      "exact_training_copies": 0,
+      "copied_continuations": 0,
+      "high_similarity_outputs": 0,
+      "novelty_eligible_count": 16,
+      "output_count": 16,
+      "seen_coherent": 0,
+      "unseen_coherent": 0,
+      "model_spec": {
+        "name": "tied_mix25",
+        "components": [
+          {
+            "loader": "regularized",
+            "checkpoint": "result/stage_4_result/generation_generalization/regularized_runs/tied256_dropout35_smooth05/checkpoints/best.pt",
+            "checkpoint_sha256": "50fd37edf1660a690af535bef61880125d83059125fe836a6102c8173826667a"
+          },
+          {
+            "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+            "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+          }
+        ],
+        "late_weight": 0.25,
+        "modes": [
+          "beam",
+          "screened"
+        ]
+      },
+      "mode": "screened",
+      "test_loss": 4.852380424687605,
+      "test_perplexity": 128.04482842642253,
+      "confirmatory_coherent_count": 0,
+      "confirmatory_novel_coherent_count": 0,
+      "reviewer_score_disagreements": 1
+    }
+  ],
+  "review_bindings": {
+    "outputs.json": "ce6c92697ea18c90bb0e13dfc27d35c9875385be9b339f565318fd5a301eae42",
+    "blind_review.json": "2f39506e170647fa3eb831b6e1d505799a1e8e6ebf31cdcd47ad95ecdb49ef4b",
+    "blind_mapping.json": "7c8daa3de351f8291d61d1e8af1c1c6d1b1052d50c071454f31dd134208fafcf",
+    "coherence_ratings.json": "61d3a09befc6b78d7514312b1df429a127352dd6b164b189135ab2238b86a2ce",
+    "metrics.json": "ccb3810791af0d39f8457d885ee13dede585d07696ffd0e5646ae2a1ecc3b34a",
+    "provenance.json": "68607ed81dad61e28073db753f3c9fc99cac671bd06788b88c3c7bc6f8ac7aea",
+    "confirmatory_ratings.json": "288359528e7d21474b306208201f4895dae40371f05dc5c87f9ec9c5f5cd1b4e"
+  },
+  "decision_sha256": "bb31d7d11a8ab29b551cff49b84dc6bf7f81cbc7ee11d5a7c4de4fc122fc27dd",
+  "source_sha256": {
+    "script/stage_4_script/summarize_generalization_test.py": "bf59255cf69e60c412e85cb61fed399eccfb15f6690308f34aa0eac2b20fd7c6",
+    "script/stage_4_script/finalize_generalization.py": "a0fdc368606a95a948eec7f3a30359a2854d96ce98610658ee64b34f472eb400"
+  },
+  "profile_selection_changed": false,
+  "limitations": [
+    "Two blinded assistant reviews, not a human humor study.",
+    "16 prefixes with in-vocabulary words; small descriptive panel.",
+    "No-copy behavior from screening is a policy outcome, not learned semantic generalization."
+  ]
+}

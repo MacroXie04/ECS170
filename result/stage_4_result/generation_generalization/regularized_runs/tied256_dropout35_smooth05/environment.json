@@ -1,0 +1,25 @@
+{
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "torch": "2.14.1+cu130",
+  "numpy": "2.5.3",
+  "platform": "Linux-7.0.0-1017-aws-x86_64-with-glibc2.43",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "command": [
+    "script/stage_4_script/train_regularized_generation.py",
+    "--device",
+    "cuda"
+  ],
+  "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+  "git_head": "6df65a8f48134d8752081043c88f4271bcf84987",
+  "source_sha256": {
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "local_code/stage_4_code/Experiment_Runner.py": "472aec96ad5aaad47d9728681dfbc128266dd43d9b97198d9532aab95f1a3a6a",
+    "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+    "local_code/stage_4_code/Regularized_Generation.py": "d9800c98c1c845013c38ffc63824c8d8c05bd9e7fd7d5b027f259fdf015ad6c1",
+    "script/stage_4_script/train_regularized_generation.py": "32e97d17d7de91d9486c65f2f9d2899b6f6141920220afc944f0efaac2719013"
+  },
+  "parameter_dtype": "float32",
+  "cudnn_deterministic": true,
+  "note": "No external data or pretrained weights. Test partition not evaluated."
+}

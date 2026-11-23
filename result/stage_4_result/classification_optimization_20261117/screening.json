@@ -1,0 +1,104 @@
+{
+  "screening_rule": "Seed 1704, earliest lowest-validation-loss checkpoint; rank accuracy, then loss, then parameter count",
+  "runs": [
+    {
+      "tag": "c_bigru128_meanmax_512_headtail_s1704",
+      "validation_accuracy": 0.9148,
+      "validation_loss": 0.2524251595282663,
+      "best_epoch": 6,
+      "train_seconds": 149.37002729909727,
+      "peak_gpu_memory_bytes": 653911040,
+      "config_hash": "ddeea6abf52f7f7b40a8fb131d5a90187f5577ce24c9845f69bb12da662b1dad",
+      "scheduler": false,
+      "parameters": 2759170
+    },
+    {
+      "tag": "d_bigru128_meanmax_sched_512_headtail_s1704",
+      "validation_accuracy": 0.9148,
+      "validation_loss": 0.2524251595282663,
+      "best_epoch": 6,
+      "train_seconds": 149.1425226260326,
+      "peak_gpu_memory_bytes": 653911040,
+      "config_hash": "a2902e6a9c123665ce7940f8020a8220104d8bd8c27cd8848a3d43bd2670f3d8",
+      "scheduler": true,
+      "parameters": 2759170
+    },
+    {
+      "tag": "d_bigru128_meanmax_drop50_512_headtail_s1704",
+      "validation_accuracy": 0.9084,
+      "validation_loss": 0.28780093651125016,
+      "best_epoch": 7,
+      "train_seconds": 159.58870383707108,
+      "peak_gpu_memory_bytes": 653911040,
+      "config_hash": "76b7c89e9f4d59c90db9bea1eca3616af17d7e012510da90348c960eb4968981",
+      "scheduler": false,
+      "parameters": 2759170
+    },
+    {
+      "tag": "a_gru512_headtail_s1704",
+      "validation_accuracy": 0.9072,
+      "validation_loss": 0.27240071748183875,
+      "best_epoch": 6,
+      "train_seconds": 84.2818235300947,
+      "peak_gpu_memory_bytes": 371159552,
+      "config_hash": "fbedb4f86142fb385143e64ba15df1d33730fc18b4aa82c91f625bc4d61aa932",
+      "scheduler": false,
+      "parameters": 2659330
+    },
+    {
+      "tag": "a_gru512_head_s1704",
+      "validation_accuracy": 0.9052,
+      "validation_loss": 0.27610446468855926,
+      "best_epoch": 6,
+      "train_seconds": 84.69830982590793,
+      "peak_gpu_memory_bytes": 371159552,
+      "config_hash": "c598a76d51d7bd6f8ebfb6542449cb59d418b2e5ec06c9be671f48e2ab51c349",
+      "scheduler": false,
+      "parameters": 2659330
+    },
+    {
+      "tag": "b_bilstm128_512_headtail_s1704",
+      "validation_accuracy": 0.9024,
+      "validation_loss": 0.25256411373865834,
+      "best_epoch": 4,
+      "train_seconds": 126.45217031997163,
+      "peak_gpu_memory_bytes": 656237568,
+      "config_hash": "5c691dcbbbbbd9a052d457f2932afa6ec6f3aa6edc71f01dd3e237f912c39a9c",
+      "scheduler": false,
+      "parameters": 2824706
+    },
+    {
+      "tag": "b_bigru128_512_headtail_s1704",
+      "validation_accuracy": 0.896,
+      "validation_loss": 0.2585845709760443,
+      "best_epoch": 4,
+      "train_seconds": 125.35053424106445,
+      "peak_gpu_memory_bytes": 653902848,
+      "config_hash": "4532e7df7cec7348c59d25889ead6029042c24794e5e5d3719dd2fc43ea664b7",
+      "scheduler": false,
+      "parameters": 2758658
+    },
+    {
+      "tag": "a_gru256_head_s1704",
+      "validation_accuracy": 0.8948,
+      "validation_loss": 0.29302335936572926,
+      "best_epoch": 7,
+      "train_seconds": 48.47705598297762,
+      "peak_gpu_memory_bytes": 292236288,
+      "config_hash": "032d966be22ee2188662184e9fdc095daaa283b4af69651e1be5f4858f1495e5",
+      "scheduler": false,
+      "parameters": 2659330
+    }
+  ],
+  "scheduler_and_unscheduled_best_model_tensors_identical": true,
+  "replication_configs": [
+    "c_bigru128_meanmax_512_headtail_s1704",
+    "d_bigru128_meanmax_drop50_512_headtail_s1704"
+  ],
+  "replication_seed_plan": [
+    1704,
+    1705,
+    1706
+  ],
+  "note": "The scheduled configuration ties the unscheduled one because the selected checkpoint predates the first LR reduction; identical model tensors are treated as one effective candidate. The next highest distinct candidate is dropout 0.5 (90.84 percent)."
+}

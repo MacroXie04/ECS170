@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "seed": 170499,
+  "prompts": [
+    {
+      "id": "joke/362",
+      "prompt": "i don't have",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/888",
+      "prompt": "where do you",
+      "train_prefix_count": 3,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/286",
+      "prompt": "why don't you",
+      "train_prefix_count": 2,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/87",
+      "prompt": "where did napoleon",
+      "train_prefix_count": 1,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/678",
+      "prompt": "what is a",
+      "train_prefix_count": 4,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/1190",
+      "prompt": "why does a",
+      "train_prefix_count": 4,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/505",
+      "prompt": "a skeleton walks",
+      "train_prefix_count": 2,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/1519",
+      "prompt": "what happens when",
+      "train_prefix_count": 5,
+      "prefix_seen_in_train": true,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/459",
+      "prompt": "why there should",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/1414",
+      "prompt": "i'm in the",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/1530",
+      "prompt": "if you're american",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/853",
+      "prompt": "whats the problem",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/988",
+      "prompt": "why does mr",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/1267",
+      "prompt": "nickelback walks into",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/716",
+      "prompt": "seven days without",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    },
+    {
+      "id": "joke/438",
+      "prompt": "why is it",
+      "train_prefix_count": 0,
+      "prefix_seen_in_train": false,
+      "source_split": "test"
+    }
+  ],
+  "sha256": "3f0956880426ce348829e5562041691470c74ef65dd327faa6fc3b47442c6e09",
+  "frozen_at_utc": "2026-11-12T12:10:08.981802+00:00",
+  "decision_sha256": "bb31d7d11a8ab29b551cff49b84dc6bf7f81cbc7ee11d5a7c4de4fc122fc27dd",
+  "train_rows_sha256": "90f320d8b053f64d866620d9b04198826df8f7e306354729debeddf7ec636f78",
+  "test_rows_sha256": "72278ab08c8ff7713f7d6046752af7db2acf0c0bb2a59e41ad34a7b6318f00be",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "source_sha256": {
+    "script/stage_4_script/evaluate_generalization_test.py": "ae9dad4d16b4203db7bf2439066f8a92b91311aa0cfb41951696a094aee1ccd6",
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9"
+  },
+  "coverage": {
+    "eligible_seen": 22,
+    "eligible_unseen": 49,
+    "selected_seen": 8,
+    "selected_unseen": 8
+  },
+  "selection": "Seeded unique in-vocabulary test prefixes, targeting8 seen+8 unseen; exclude all old12 and new16 development prefixes. No reference completions supplied to models/reviewer.",
+  "limitation": "New qualitative test-prefix evaluation after profile lock. The same dataset test loss was reported in previous coursework experiments; this is not an entirely new dataset. No tuning follows these results."
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "candidate": "previous_late__old_beam5",
+  "model_spec": {
+    "name": "previous_late",
+    "components": [
+      {
+        "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+        "loader": "original",
+        "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+      }
+    ],
+    "include_old_beam": true
+  },
+  "mode": "old_beam5",
+  "search": {
+    "beam_width": 12,
+    "max_new_tokens": 48,
+    "copy_penalties": [
+      0.0,
+      0.75,
+      1.5
+    ],
+    "min_match_words": 5,
+    "num_return_sequences": 8,
+    "seed": 1704,
+    "top_k": 40,
+    "min_relative_probability": 0.01
+  },
+  "data_binding": {
+    "source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+    "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+    "split_id_sha256": {
+      "train": "668af7671745f9449f4c64860bdbc9ce7c0ea5c40ccba6e4e1753849b5b2cd79",
+      "validation": "7219e01aebed35a474139128d09a102660e5aa1057ff6404097f07ea0e5db86c",
+      "test": "1a5f1560e24b8531c9eba26d1ac330ef9d212d603d49fb08100e066ee91a361a"
+    },
+    "train_rows_sha256": "90f320d8b053f64d866620d9b04198826df8f7e306354729debeddf7ec636f78"
+  },
+  "source_sha256": {
+    "local_code/stage_4_code/Alternative_Generation.py": "245211273775066e6a1ef0d4bd858a58c1f2172df9c0222ce99323b9371ec195",
+    "local_code/stage_4_code/Copy_Aware_Decoder.py": "935891b96d207a289987bb44107762cd3a270910472aedf8d84ac29138106e2c",
+    "local_code/stage_4_code/Dataset_Loader.py": "3dad16b95ef3ad33dbd68c49a22deebf34edd1cdd3c4af766fd4a5ef5d195ae9",
+    "local_code/stage_4_code/Generation_Decoder.py": "8aff028a2c487cb7e2f3648d7e750e23a0205cc2e8a679a9a6d8fc2b2b46d69e",
+    "local_code/stage_4_code/Generation_Ensemble.py": "b0a2327bf4dac95bba767c8a8509172f61eb65b29c02a8414a2c1e2afcc1159f",
+    "local_code/stage_4_code/Generation_Optimization.py": "1ce51b0d3690783a79b1568335805f33742f5d850542e9991a55ee835f715def",
+    "local_code/stage_4_code/Method_RNN.py": "50a9a4a89781c3ba09799df9d035b48a33545eada8a4f5acd5f5cfdbd19306df",
+    "local_code/stage_4_code/Novel_Generation.py": "7c418ac2b7a4145f14adb74db2fee19986bf1ee5a2a71966177bb528ba8687c7",
+    "local_code/stage_4_code/Regularized_Generation.py": "d9800c98c1c845013c38ffc63824c8d8c05bd9e7fd7d5b027f259fdf015ad6c1",
+    "local_code/stage_4_code/Semantic_Generation.py": "77454d1735c7d83dfa97adf5dc1c93026232f4b594740da1fb3871642c749cd2",
+    "local_code/stage_4_code/Semantic_Input_Generation.py": "e02a50ec5ed1d1e1905f912f8f3d9479d9eeb6d19968dd9d44a992732dff4e0c",
+    "script/stage_4_script/predict_alternative_generation.py": "125f9c7176a4d34ca650446a50ab5c57003e4710fc61f18d0f4ebef52c187e1f",
+    "script/stage_4_script/predict_novel_generation.py": "9d8bbb35ec52bbb65e362c606b78107a34c26e40ff9d042e12286d8f8d11050c"
+  },
+  "status": "previous_default_retained",
+  "dev_summary": {
+    "candidate": "previous_late__old_beam5",
+    "model_spec": {
+      "name": "previous_late",
+      "components": [
+        {
+          "checkpoint": "result/stage_4_result/generation_optimization/runs/generation_gru_compact256/checkpoints/last.pt",
+          "loader": "original",
+          "checkpoint_sha256": "2a73d578f989e6b574036f27d5c42d193e8e339f48251a5648c570b2a0a819ca"
+        }
+      ],
+      "include_old_beam": true
+    },
+    "mode": "old_beam5",
+    "count": 16,
+    "output_count": 16,
+    "coherent_count": 7,
+    "direct_copy_free_coherent_count": 1,
+    "strict_novel_coherent_count": 0,
+    "exact_full_copies": 4,
+    "copied_continuations": 7,
+    "direct_copy_count": 7,
+    "high_similarity_count": 12,
+    "seen_coherent": 6,
+    "unseen_coherent": 1,
+    "score_counts": {
+      "0": 3,
+      "1": 6,
+      "2": 7
+    },
+    "loss": 5.582583987366003,
+    "target_count": 3265,
+    "perplexity": 265.7574331697065,
+    "split": "validation"
+  },
+  "selection_rule": "Rank by strict novel-and-coherent count (unchanged .80 continuation screen), then direct-copy-free coherent count, then total coherence, fewer direct copies, lower validation NLL. Promote only if direct-copy-free coherent count improves versus previous_late__old_beam5, total coherence declines by at most2/16, combined direct-copy count declines, and strict novel-coherent count does not decline. Direct-copy-free excludes exact full/whole-continuation/span copies; it is NOT semantic originality. All16prompts including no-output remain denominator. Otherwise keep original default; no changes after final prefix test."
+}

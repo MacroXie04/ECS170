@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-11-12T12:08:39.646629+00:00",
+  "auditor_sha256": "3b0ec5660230d01394698137a92e045f31970e32d4c975305ba4c405fc937a6c",
+  "torch": "2.14.1+cu130",
+  "device": "cpu",
+  "data_source_sha256": "a4af796b82cc608c2cd25f272a4469a34413fc4c95efc2e6042a2e2b259a58c0",
+  "vocabulary_sha256": "8d3b60db1c854813b767af1c921ae70917aca09c0477815e53939f6a62e52199",
+  "audits": [
+    {
+      "comparison": "result/stage_4_result/generation_generalization/initial_comparison",
+      "status": "failed",
+      "error": "Candidate original-model likelihood mismatch"
+    },
+    {
+      "comparison": "result/stage_4_result/generation_generalization/regularized_comparison",
+      "status": "failed",
+      "error": "Candidate original-model likelihood mismatch"
+    },
+    {
+      "comparison": "result/stage_4_result/generation_generalization/tied_mixture_comparison",
+      "status": "failed",
+      "error": "Candidate original-model likelihood mismatch"
+    },
+    {
+      "comparison": "result/stage_4_result/generation_generalization/final_test",
+      "status": "skipped_incomplete",
+      "missing": [
+        "provenance.json",
+        "outputs.json",
+        "candidate_pools.json",
+        "metrics.json",
+        "blind_review.json",
+        "blind_mapping.json"
+      ]
+    }
+  ],
+  "status": "failed"
+}

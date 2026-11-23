@@ -1,0 +1,38 @@
+{
+  "tag": "a_gru512_head_s1704",
+  "config_hash": "c598a76d51d7bd6f8ebfb6542449cb59d418b2e5ec06c9be671f48e2ab51c349",
+  "best_checkpoint_sha256": "ffe802e0887f324e7170a6984972d5cd373c2a5ed76f647e74ec47b167468000",
+  "best_epoch": 6,
+  "epochs_completed": 14,
+  "parameters": 2659330,
+  "validation": {
+    "n_examples": 2500,
+    "loss": 0.27610446468855926,
+    "accuracy": 0.9052,
+    "macro_precision": 0.9060443123012267,
+    "macro_recall": 0.9052,
+    "macro_f1": 0.905150693536528,
+    "confusion_matrix": [
+      [
+        1103,
+        147
+      ],
+      [
+        90,
+        1160
+      ]
+    ]
+  },
+  "train_seconds": 84.69830982590793,
+  "total_seconds": 94.90609440999106,
+  "peak_gpu_memory_bytes": 371159552,
+  "split_id_sha256": {
+    "train": "39d9175e1d67966cd1ef82ab17cde187ea30d29fefc24403808097c81569c755",
+    "validation": "f191b8ba4ce6b737e97362ba1840a6a8c3f8158f19149a8402ab29e39b85cce9"
+  },
+  "vocabulary_sha256": "de8e34f46a7330e786fca93cad8de4bce2e7bf9a259bb77f3ed21c3153c01737",
+  "truncated_counts": {
+    "train": 2390,
+    "validation": 278
+  }
+}
